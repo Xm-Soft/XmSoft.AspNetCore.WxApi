@@ -1,0 +1,1268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XmSoft.AspNetCore.WxApi</name>
+    </assembly>
+    <members>
+        <member name="F:XmSoft.AspNetCore.WxApi.Constants.RepositoryName">
+             <summary>
+            Const Log4Net RepositoryName 
+             </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiCreateActivityIdRequest">
+            <summary>
+            创建被分享动态消息的 activity_id。详见动态消息。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiCreateActivityIdRequest.#ctor">
+            <summary>
+            创建被分享动态消息的 activity_id。详见动态消息。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiCreateActivityIdRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiSetUpdatableMsgRequest">
+            <summary>
+            修改被分享的动态消息。详见动态消息。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiSetUpdatableMsgRequest.#ctor">
+            <summary>
+            修改被分享的动态消息。详见动态消息。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiSetUpdatableMsgRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiSetUpdatableMsgRequest.Activity_id">
+            <summary>
+            动态消息的 ID，通过 CreateActivityId 接口获取
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiSetUpdatableMsgRequest.Target_state">
+            <summary>
+            动态消息修改后的状态（具体含义见后文） 0	未开始,1	已开始
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiSetUpdatableMsgRequest.Template_info">
+            <summary>
+            动态消息对应的模板信息
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiGetTempMediaRequest">
+            <summary>
+            获取客服消息内的临时素材。即下载临时的多媒体文件。目前小程序仅支持下载图片文件。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiGetTempMediaRequest.#ctor">
+            <summary>
+            获取客服消息内的临时素材。即下载临时的多媒体文件。目前小程序仅支持下载图片文件。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiGetTempMediaRequest.Media_id">
+            <summary>
+            媒体文件 ID
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest">
+            <summary>
+            发送客服消息给用户。详细规则见 发送客服消息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.#ctor">
+            <summary>
+            发送客服消息给用户。详细规则见 发送客服消息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Touser">
+            <summary>
+            用户的 OpenID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.MsgType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Content">
+            <summary>
+            文本消息内容，msgtype="text" 时必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Image">
+            <summary>
+            图片消息，msgtype="link" 时必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Link">
+            <summary>
+            图片消息，msgtype="link" 时必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Minprogrampage">
+            <summary>
+            小程序卡片，msgtype="miniprogrampage" 时必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.ImageObject.media_id">
+            <summary>
+            发送的图片的媒体ID，通过 新增素材接口 上传图片文件获得。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.LinkObject.title">
+            <summary>
+            消息标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.LinkObject.description">
+            <summary>
+            图文链接消息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.LinkObject.url">
+            <summary>
+            图文链接消息被点击后跳转的链接
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.LinkObject.thumb_url">
+            <summary>
+            图文链接消息的图片链接，支持 JPG、PNG 格式，较好的效果为大图 640 X 320，小图 80 X 80
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.Miniprogrampage.title">
+            <summary>
+            消息标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.Miniprogrampage.pagepath">
+            <summary>
+            小程序的页面路径，跟app.json对齐，支持参数，比如pages/index/index?foo=bar
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.Miniprogrampage.thumb_media_id">
+            <summary>
+            小程序消息卡片的封面， image 类型的 media_id，通过 新增素材接口 上传图片文件获得，建议大小为 520*416
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSetTypingRequest">
+            <summary>
+            下发客服当前输入状态给用户。详见 客服消息输入状态
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSetTypingRequest.#ctor">
+            <summary>
+            下发客服当前输入状态给用户。详见 客服消息输入状态
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSetTypingRequest.Touser">
+            <summary>
+            用户的 OpenID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSetTypingRequest.Command">
+            <summary>
+            命令
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiUploadTempMediaRequest">
+            <summary>
+            把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiUploadTempMediaRequest.#ctor">
+            <summary>
+            把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiUploadTempMediaRequest.Type">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiUploadTempMediaRequest.MediaPath">
+            <summary>
+            媒体文件路径
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyRetainRequest">
+            <summary>
+            获取用户访问小程序日留存
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyRetainRequest.#ctor">
+            <summary>
+             获取用户访问小程序日留存
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyRetainRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyRetainRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailySummaryRequest">
+            <summary>
+            获取用户访问小程序数据概况
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailySummaryRequest.#ctor">
+            <summary>
+            获取用户访问小程序数据概况
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailySummaryRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailySummaryRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyVisitTrendRequest">
+            <summary>
+            获取用户访问小程序数据日趋势
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyVisitTrendRequest.#ctor">
+             <summary>
+            获取用户访问小程序数据日趋势
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyVisitTrendRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyVisitTrendRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetMonthlyRetainRequest">
+            <summary>
+            获取用户访问小程序月留存
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetMonthlyRetainRequest.#ctor">
+            <summary>
+            获取用户访问小程序月留存
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetMonthlyRetainRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetMonthlyRetainRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetMonthlyVisitTrendRequest">
+            <summary>
+            获取用户访问小程序数据月趋势
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetMonthlyVisitTrendRequest.#ctor">
+            <summary>
+            获取用户访问小程序数据月趋势
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetMonthlyVisitTrendRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetMonthlyVisitTrendRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserPortraitRequest">
+            <summary>
+            获取小程序新增或活跃用户的画像分布数据。时间范围支持昨天、最近7天、最近30天。
+            其中，新增用户数为时间范围内首次访问小程序的去重用户数，活跃用户数为时间范围内访问过小程序的去重用户数
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserPortraitRequest.#ctor">
+            <summary>
+            获取小程序新增或活跃用户的画像分布数据。时间范围支持昨天、最近7天、最近30天。
+            <para>其中，新增用户数为时间范围内首次访问小程序的去重用户数，活跃用户数为时间范围内访问过小程序的去重用户数</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserPortraitRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserPortraitRequest.EndDate">
+            <summary>
+            结束日期，开始日期与结束日期相差的天数限定为0/6/29，分别表示查询最近1/7/30天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitDistributionRequest">
+            <summary>
+            获取用户小程序访问分布数据
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitDistributionRequest.#ctor">
+            <summary>
+             获取用户小程序访问分布数据
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitDistributionRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitDistributionRequest.EndDate">
+            <summary>
+            结束日期，限定查询 1 天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitPageRequest">
+            <summary>
+            访问页面。目前只提供按 page_visit_pv 排序的 top200。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitPageRequest.#ctor">
+            <summary>
+            访问页面。目前只提供按 page_visit_pv 排序的 top200。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitPageRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitPageRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyRetainRequest">
+            <summary>
+            获取用户访问小程序周留存
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyRetainRequest.#ctor">
+            <summary>
+            获取用户访问小程序周留存
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyRetainRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyRetainRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyVisitTrendRequest">
+            <summary>
+            获取用户访问小程序数据周趋势
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyVisitTrendRequest.#ctor">
+            <summary>
+            获取用户访问小程序数据周趋势
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyVisitTrendRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyVisitTrendRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiAddNearbyPoiRequest">
+             <summary>
+            添加地点
+             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiAddNearbyPoiRequest.#ctor">
+            <summary>
+            添加地点
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiAddNearbyPoiRequest.Related_name">
+            <summary>
+            经营资质主体，必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiAddNearbyPoiRequest.Related_credential">
+            <summary>
+            经营资质证件号，必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiAddNearbyPoiRequest.Related_address">
+            <summary>
+            经营资质地址，必填   
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiAddNearbyPoiRequest.Related_proof_material">
+            <summary>
+            相关证明材料照片临时素材 mediaid。经营资质主体与小程序同主体时不填;经营资质主体与小程序非同主体时必填。
+            可通过 customerServiceMessage.uploadTempMedia 接口上传照片临时素材。
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiDeleteNearbyPoiRequest">
+             <summary>
+            删除地点
+             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiDeleteNearbyPoiRequest.#ctor">
+            <summary>
+            删除地点
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiDeleteNearbyPoiRequest.Poi_id">
+            <summary>
+            附近地点 ID
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiGetListNearbyPoiRequest">
+             <summary>
+            查看地点列表
+             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiGetListNearbyPoiRequest.#ctor">
+            <summary>
+            查看地点列表
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiGetListNearbyPoiRequest.Page">
+            <summary>
+            起始页id（从1开始计数）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiGetListNearbyPoiRequest.Page_rows">
+            <summary>
+            每页展示个数（最多1000个）
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiSetShowStatusNearbyPoiRequest">
+             <summary>
+            展示/取消展示附近小程序
+             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiSetShowStatusNearbyPoiRequest.#ctor">
+            <summary>
+            展示/取消展示附近小程序
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiSetShowStatusNearbyPoiRequest.Poi_id">
+            <summary>
+            附近地点 ID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiSetShowStatusNearbyPoiRequest.Status">
+            <summary>
+            是否展示 0	不展示, 1	展示
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeRequest">
+            <summary>
+            获取小程序二维码，适用于需要的码数量较少的业务场景。
+            通过该接口生成的小程序码，永久有效，有数量限制，详见获取二维码。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeRequest.#ctor">
+            <summary>
+            获取小程序二维码，适用于需要的码数量较少的业务场景。
+            <para>通过该接口生成的小程序码，永久有效，有数量限制，详见获取二维码。</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeRequest.Path">
+            <summary>
+            扫码进入的小程序页面路径，最大长度 128 字节，不能为空；对于小游戏，
+            可以只传入 query 部分，来实现传参效果，如：传入 "?foo=bar"，
+            即可在 wx.getLaunchOptionsSync 接口中的 query 参数获取到 {foo:"bar"}。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeRequest.Width">
+            <summary>
+            二维码的宽度，单位 px。最小 280px，最大 1280px
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeRequest">
+            <summary>
+            获取小程序码，适用于需要的码数量较少的业务场景。通过该接口生成的小程序码，永久有效，有数量限制，详见获取二维码。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeRequest.#ctor">
+            <summary>
+            获取小程序码，适用于需要的码数量较少的业务场景。
+            <para>通过该接口生成的小程序码，永久有效，有数量限制，详见获取二维码。</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeRequest.Path">
+            <summary>
+            扫码进入的小程序页面路径，最大长度 128 字节，不能为空；对于小游戏，
+            可以只传入 query 部分，来实现传参效果，如：传入 "?foo=bar"，
+            即可在 wx.getLaunchOptionsSync 接口中的 query 参数获取到 {foo:"bar"}。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeRequest.Width">
+            <summary>
+            二维码的宽度，单位 px。最小 280px，最大 1280px
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeRequest.Auto_color">
+            <summary>
+            自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeRequest.Line_color">
+            <summary>
+            auto_color 为 false 时生效，使用 rgb 设置颜色 例如 {"r":"xxx","g":"xxx","b":"xxx"} 十进制表示
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeRequest.Is_hyaline">
+            <summary>
+            是否需要透明底色，为 true 时，生成透明底色的小程序码
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest">
+             <summary>
+            获取小程序码，适用于需要的码数量极多的业务场景。
+            通过该接口生成的小程序码，永久有效，数量暂无限制。 更多用法详见 获取二维码。
+             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.#ctor">
+            <summary>
+            获取小程序码，适用于需要的码数量极多的业务场景。
+            <para>通过该接口生成的小程序码，永久有效，数量暂无限制。 更多用法详见 获取二维码。</para>
+            </summary>
+        </member>
+        <!-- 对于成员“P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Scene”忽略有格式错误的 XML 注释 -->
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Page">
+            <summary>
+            必须是已经发布的小程序存在的页面（否则报错），例如 pages/index/index, 
+            根路径前不要填加 /,不能携带参数（参数请放在scene字段里），如果不填写这个字段，默认跳主页面
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Width">
+            <summary>
+            二维码的宽度，单位 px。最小 280px，最大 1280px
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Auto_color">
+            <summary>
+            自动配置线条颜色，如果颜色依然是黑色，则说明不建议配置主色调
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Line_color">
+            <summary>
+            auto_color 为 false 时生效，使用 rgb 设置颜色 例如 {"r":"xxx","g":"xxx","b":"xxx"} 十进制表示
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Is_hyaline">
+            <summary>
+            是否需要透明底色，为 true 时，生成透明底色的小程序码
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Security.WxApiImgSecCheckRequest">
+             <summary>
+            校验一张图片是否含有违法违规内容。
+             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Security.WxApiImgSecCheckRequest.#ctor">
+            <summary>
+            校验一张图片是否含有违法违规内容。
+            <para>图片智能鉴黄：涉及拍照的工具类应用(如美拍，识图类应用)用户拍照上传检测；电商类商品上架图片检测；媒体类用户文章里的图片检测等</para>
+            <para> 敏感人脸识别：用户头像；媒体类用户文章里的图片检测；社交类用户上传的图片检测等。 频率限制：单个 appId 调用上限为 2000 次/分钟，200,000 次/天*（图片大小限制：1M）</para>
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Security.WxApiMsgSecCheckRequest">
+             <summary>
+            检查一段文本是否含有违法违规内容。
+             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Security.WxApiMsgSecCheckRequest.#ctor">
+             <summary>
+             检查一段文本是否含有违法违规内容。
+            <para>用户个人资料违规文字检测；</para>
+            <para>媒体新闻类用户发表文章，评论内容检测；</para>
+            <para>游戏类用户编辑上传的素材(如答题类小游戏用户上传的问题及答案)检测等。 频率限制：单个 appId 调用上限为 4000 次/分钟，2,000,000 次/天*</para>
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Security.WxApiMsgSecCheckRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Security.WxApiMsgSecCheckRequest.Content">
+            <summary>
+            检查内容
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Security.WxApiMsgSecCheckRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Security.WxApiMsgSecCheckRequest.GetParameters">
+            <summary>
+            参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Security.WxApiMsgSecCheckRequest.IsPost">
+            <summary>
+            采用的方式 Get 还是 Post
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiAddTemplateRequest">
+            <summary>
+            组合模板并添加至帐号下的个人模板库
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiAddTemplateRequest.#ctor">
+            <summary>
+            组合模板并添加至帐号下的个人模板库
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiAddTemplateRequest.Id">
+            <summary>
+            用户的 OpenID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiAddTemplateRequest.Keyword_id_list">
+            <summary>
+            命令
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiDeleteTemplateRequest">
+            <summary>
+            删除帐号下的某个模板
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiDeleteTemplateRequest.#ctor">
+            <summary>
+             删除帐号下的某个模板
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiDeleteTemplateRequest.Template_id">
+            <summary>
+            要删除的模板id
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryByIdRequest">
+            <summary>
+            获取模板库某个模板标题下关键词库
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryByIdRequest.#ctor">
+            <summary>
+            获取模板库某个模板标题下关键词库
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryByIdRequest.Id">
+            <summary>
+            要删除的模板id
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryListRequest">
+            <summary>
+            获取小程序模板库标题列表
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryListRequest.#ctor">
+            <summary>
+            获取小程序模板库标题列表
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryListRequest.Offset">
+             <summary>
+            用于分页，表示从offset开始。从 0 开始计数。
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryListRequest.Count">
+            <summary>
+            用于分页，表示拉取count条记录。最大为 20。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryListRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryListRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateLibraryListRequest.IsPost">
+            <summary>
+            请求方式 Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateListRequest">
+            <summary>
+            获取帐号下已存在的模板列表
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateListRequest.#ctor">
+            <summary>
+            获取帐号下已存在的模板列表
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateListRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateListRequest.Offset">
+             <summary>
+            用于分页，表示从offset开始。从 0 开始计数。
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateListRequest.Count">
+            <summary>
+            用于分页，表示拉取count条记录。最大为 20。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateListRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateListRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiGetTemplateListRequest.IsPost">
+            <summary>
+            请求方式 Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest”忽略有格式错误的 XML 注释 -->
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.#ctor">
+            <summary>
+            发送模板消息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.Touser">
+            <summary>
+            接收者（用户）的 openid
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.Template_id">
+            <summary>
+            所需下发的模板消息的id
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.Page">
+            <summary>
+            点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数,（示例index?foo=bar）。该字段不填则模板无跳转。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.Form_id">
+            <summary>
+            表单提交场景下，为 submit 事件带上的 formId；支付场景下，为本次支付的 prepay_id
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.Data">
+            <summary>
+            模板内容，不填则下发空模板。具体格式请参考示例。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.Emphasis_keyword">
+            <summary>
+            模板需要放大的关键词，不填则默认无放大 可不填
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.IsPost">
+            <summary>
+            请求方式 Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest">
+            <summary>
+            登录凭证校验。通过 wx.login() 接口获得临时登录凭证 code 后传到开发者服务器调用此接口完成登录流程
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest.#ctor">
+            <summary>
+            登录凭证校验。通过 wx.login() 接口获得临时登录凭证 code 后传到开发者服务器调用此接口完成登录流程
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest.AppId">
+            <summary>
+            小程序 appId
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest.Secret">
+            <summary>
+            小程序 appSecret
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest.Code">
+             <summary>
+            登录时获取的 code
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest.GrantType">
+            <summary>
+            授权类型，此处只需填写 authorization_code
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccessTokenRequest">
+            <summary>
+            获取小程序全局唯一后台接口调用凭据（access_token）
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccessTokenRequest.#ctor">
+            <summary>
+            获取小程序全局唯一后台接口调用凭据（access_token）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccessTokenRequest.AppId">
+            <summary>
+            商户AppId
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccessTokenRequest.Secret">
+            <summary>
+            商户Secret
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccessTokenRequest.GrantType">
+            <summary>
+            默认类型 client_credential
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccessTokenRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccessTokenRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccessTokenRequest.IsPost">
+            <summary>
+            请求方式 Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest">
+            <summary>
+            下发小程序和公众号统一的服务消息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest.#ctor">
+             <summary>
+            下发小程序和公众号统一的服务消息
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest.AccessToken">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest.Touser">
+            <summary>
+            用户的 OpenID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest.Weapp_Template_Msg">
+             <summary>
+            小程序模板消息相关的信息，可以参考小程序模板消息接口; 有此节点则优先发送小程序模板消息 否
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest.Mp_Template_Msg">
+            <summary>
+            公众号模板消息相关的信息，可以参考公众号模板消息接口；有此节点并且没有weapp_template_msg节点时，发送公众号模板消息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiSendUniformMessageRequest.IsPost">
+            <summary>
+            请求方式Get Or Post
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.CustomerMessage.WxApiUploadTempMediaResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.CustomerMessage.WxApiUploadTempMediaResponse.Type">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.CustomerMessage.WxApiUploadTempMediaResponse.Media_id">
+            <summary>
+            媒体文件上传后，获取标识，3天内有效。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.CustomerMessage.WxApiUploadTempMediaResponse.Created_at">
+            <summary>
+            媒体文件上传时间戳
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.DailySummaryInfo.Visit_total">
+            <summary>
+            累计用户数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.DailySummaryInfo.Share_pv">
+            <summary>
+            转发次数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.DailySummaryInfo.Share_uv">
+            <summary>
+            转发人数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.ref_date">
+            <summary>
+            日期，格式为 yyyymmd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.session_cnt">
+            <summary>
+            打开次数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.visit_pv">
+            <summary>
+            访问次数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.visit_uv">
+            <summary>
+            访问人数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.visit_uv_new">
+            <summary>
+            新用户数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.stay_time_uv">
+            <summary>
+            人均停留时长 (浮点型，单位：秒)
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.stay_time_session">
+            <summary>
+            次均停留时长 (浮点型，单位：秒)
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.visit_depth">
+            <summary>
+            平均访问深度 (浮点型)
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Visit_Uv_New_User.Index">
+            <summary>
+            分布类型
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Visit_Uv_New_User.Genders">
+            <summary>
+            性别，包括男、女、未知
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Visit_Uv_New_User.Platforms">
+            <summary>
+            终端类型，包括 iPhone，android，其他
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Visit_Uv_New_User.Devices">
+            <summary>
+            机型，如苹果 iPhone 6，OPPO R9 等
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Visit_Uv_New_User.Ages">
+            <summary>
+            年龄，包括17岁以下、18-24岁等区间
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.ResponseObject.Id">
+            <summary>
+            属性值id
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.ResponseObject.Name">
+            <summary>
+            属性值名称，与id对应。如属性为 province 时，返回的属性值名称包括「广东」等。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.ResponseObject.Value">
+            <summary>
+            该场景访问uv
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.PageInfo.Page_path">
+            <summary>
+            页面路径
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.PageInfo.Page_visit_pv">
+            <summary>
+            访问次数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.PageInfo.Page_visit_uv">
+            <summary>
+            访问人数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.PageInfo.Page_staytime_pv">
+            <summary>
+            次均停留时长
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.PageInfo.Entrypage_pv">
+            <summary>
+            进入页次数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.PageInfo.Exitpage_pv">
+            <summary>
+            退出页次数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.PageInfo.Page_share_pv">
+            <summary>
+            ///转发次数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.PageInfo.Page_share_uv">
+            <summary>
+            转发人数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.NearbyPoi.Poi_list.poi_id">
+            <summary>
+            附近地点 ID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.NearbyPoi.Poi_list.qualification_address">
+            <summary>
+            资质证件地址
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.NearbyPoi.Poi_list.qualification_num">
+            <summary>
+            资质证件证件号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.NearbyPoi.Poi_list.audit_status">
+            <summary>
+            地点审核状态
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.NearbyPoi.Poi_list.display_status">
+            <summary>
+            地点展示在附近状态
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.NearbyPoi.Poi_list.refuse_reason">
+            <summary>
+            审核失败原因，audit_status=4 时返回
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.Keyword_list.Keyword_id">
+            <summary>
+            关键词 id，添加模板时需要
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.Keyword_list.Name">
+            <summary>
+            关键词内容
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.Keyword_list.Example">
+            <summary>
+            关键词内容对应的示例
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.WxApiGetTemplateLibraryListResponse.Id">
+            <summary>
+            模板标题id（获取模板标题下的关键词库时需要）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.WxApiGetTemplateLibraryListResponse.Title">
+            <summary>
+            模板标题内容
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.WxApiGetTemplateLibraryListResponse.Total_count">
+            <summary>
+            模板库标题总数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.WxApiGetTemplateListResponse.List">
+            <summary>
+            模板列表
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Utility.WxApiUtility">
+            <summary>
+            Utility
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Utility.WxApiUtility.BulidContent(System.Collections.Generic.SortedDictionary{System.String,System.String})">
+            <summary>
+            拼接普通文本请求内容
+            </summary>
+            <param name="dictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Utility.WxApiUtility.BulidJsonContent(System.Collections.Generic.SortedDictionary{System.String,System.String})">
+            <summary>
+            字典转Json字符串
+            </summary>
+            <param name="dictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.WxApiClient">
+            <summary>
+            执行操作
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.#ctor">
+            <summary>
+            WxApi Client
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.ExecuteAsync``1(XmSoft.AspNetCore.WxApi.IWxApiRequest{``0},System.String)">
+            <summary>
+            异步执行
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request">请求对象</param>
+            <param name="UploadFilePath">文件绝对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.Finalize">
+            <summary>
+            /析构函数
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.Dispose">
+            <summary>
+            释放该接口
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.Dispose(System.Boolean)">
+            <summary>
+            用以释放非托管资源 
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiObject.Body">
+            <summary>
+            原始内容
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiObject.Parameters">
+            <summary>
+            原始参数
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.IWxApiRequest`1.GetRequestUrl">
+            <summary>
+            API接口地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.IWxApiRequest`1.GetParameters">
+            <summary>
+            获取所有的Key-Value形式的文本请求参数字典。其中：
+            Key: 请求参数名
+            Value: 请求参数文本值
+            </summary>
+            <returns>文本请求参数字典</returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.IWxApiRequest`1.IsPost">
+            <summary>
+            请求方式
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
