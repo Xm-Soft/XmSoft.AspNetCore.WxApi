@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace XmSoft.AspNetCore.WxApi.Response.CustomerMessage
+namespace XmSoft.AspNetCore.WxApi.Response
 {
-    public class WxApiGetTempMediaResponse:WxApiResponse
+    public class WxApiFileResponse : WxApiResponse
     {
+
         [JsonProperty(PropertyName = "buffer")]
         public byte[] Buffer { get; set; }
         [JsonProperty(PropertyName = "errcode")]
@@ -14,5 +17,6 @@ namespace XmSoft.AspNetCore.WxApi.Response.CustomerMessage
 
         [JsonProperty(PropertyName = "errmsg")]
         public string Errmsg { get; set; }
+
     }
 }

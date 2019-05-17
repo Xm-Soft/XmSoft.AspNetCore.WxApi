@@ -1,26 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using Newtonsoft.Json;
-
+using System.Xml.Serialization;
 
 namespace XmSoft.AspNetCore.WxApi
 {
     /// <summary>
-    /// WxApi 基础对象。
+    /// 回调基础对象
     /// </summary>
-    public abstract class WxApiObject
+    public class WxApiXmlObject
     {
         /// <summary>
         /// 原始内容
         /// </summary>
-        [JsonIgnore]
+        [XmlIgnore]
         public string Body { get; set; }
 
         /// <summary>
         /// 原始参数
         /// </summary>
-        [JsonIgnore]
+        [XmlIgnore]
         public WxApiDictionary Parameters { get; internal set; }
     }
 }

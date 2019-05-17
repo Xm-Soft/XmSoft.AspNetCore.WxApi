@@ -3,7 +3,9 @@ using System.Threading.Tasks;
 using RestSharp;
 using Newtonsoft.Json;
 using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
-using XmSoft.AspNetCore.WxApi.Response.CustomerMessage;
+using XmSoft.AspNetCore.WxApi.Response;
+using XmSoft.AspNetCore.WxApi.Request.QRCode;
+
 
 namespace XmSoft.AspNetCore.WxApi
 {
@@ -82,11 +84,11 @@ namespace XmSoft.AspNetCore.WxApi
                 {
                     t.Wait();
                     var response = await t;
-                    if (request is WxApiGetTempMediaRequest)
+                    if (request is WxApiGetTempMediaRequest || request is WxApiShowQRCodeRequest)
                     {
                         if (!response.Content.Contains("errcode"))
                         {
-                            return new WxApiGetTempMediaResponse
+                            return new WxApiFileResponse
                             {
                                 ErrCode = 0,
                                 Errmsg = "",

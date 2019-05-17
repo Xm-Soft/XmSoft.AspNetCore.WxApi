@@ -10,6 +10,8 @@ using XmSoft.AspNetCore.WxApi.Request;
 using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
 using XmSoft.AspNetCore.WxApi.Request.Template;
 using XmSoft.AspNetCore.WxApi.Request.Security;
+using XmSoft.AspNetCore.WxApi.Request.Poi;
+using XmSoft.AspNetCore.WxApi.Request.User;
 
 namespace XmSoft.AspNetCore.Sample.Controllers
 {
@@ -460,5 +462,53 @@ namespace XmSoft.AspNetCore.Sample.Controllers
 
         }
 
+        #region 用户管理
+
+        #endregion
+        [HttpPost]
+        [Route("GetUserInfo")]
+        public async Task<JsonResult> GetUserInfo(string access_token)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiUserInfoRequest()
+                {
+                    AccessToken = access_token,
+                    Openid = "oCo3H5Vya8_O028KAh3ZjPzqEVQQ"
+                };
+                var response = await client.ExecuteAsync(request);
+
+                return Json(new { Code = 1, Msg = "成功", Data = response });
+            }
+
+        }
+        #region 门店
+        /// <summary>
+        /// 获取门店列表
+        /// </summary>
+        /// <param name="access_token"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("GetPoiList")]
+        public async Task<JsonResult> GetPoiList(string access_token)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiGetPoiListRequest()
+                {
+                    AccessToken = access_token,
+                    Buffer = new QueryPoi
+                    {
+                         begin = 0,
+                         limit = 10
+                    }
+                };
+                var response = await client.ExecuteAsync(request);
+
+                return Json(new { Code = 1, Msg = "成功", Data = response });
+            }
+
+        }
+        #endregion
     }
 }
