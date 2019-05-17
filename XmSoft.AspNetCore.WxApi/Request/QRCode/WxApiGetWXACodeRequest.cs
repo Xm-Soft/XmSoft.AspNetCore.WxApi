@@ -58,7 +58,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
                 { "path", Path },
                 { "width", Width },
                 { "auto_color", Auto_color },
-                { "line_color", Line_color },
+                { "line_color", Line_color == null? null: JsonConvert.SerializeObject(Line_color) },
                 { "is_hyaline", Is_hyaline }
                
             };

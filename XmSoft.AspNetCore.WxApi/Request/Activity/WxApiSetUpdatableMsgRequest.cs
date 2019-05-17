@@ -49,7 +49,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Activity
                 { "access_token", AccessToken },
                 { "activity_id", Activity_id },
                 { "target_state", Target_state },
-                { "template_info", Template_info }
+                { "template_info", Template_info == null ? null : JsonConvert.SerializeObject(Template_info) }
               
             };
             return parameters;

@@ -53,8 +53,8 @@ namespace XmSoft.AspNetCore.WxApi.Request
             {
                 { "access_token", AccessToken },
                 { "touser", Touser },
-                { "weapp_template_msg", Weapp_Template_Msg },
-                { "mp_template_msg", Mp_Template_Msg }
+                { "weapp_template_msg",Weapp_Template_Msg == null?null:JsonConvert.SerializeObject(Weapp_Template_Msg) },
+                { "mp_template_msg",Mp_Template_Msg == null ? null: JsonConvert.SerializeObject(Mp_Template_Msg) }
             };
             return parameters;
         }
@@ -64,7 +64,7 @@ namespace XmSoft.AspNetCore.WxApi.Request
         /// <returns></returns>
         public bool IsPost()
         {
-            return false;
+            return true;
         }
 
         #endregion
