@@ -8,7 +8,7 @@ using XmSoft.AspNetCore.WxApi.Parser;
 
 namespace XmSoft.AspNetCore.WxApi
 {
-    public class WxApiNotifyClient:IDisposable
+    public class WxApiNotifyClient : IDisposable, IWxApiNotifyClient
     {
         /// <summary>
         /// 回调通知
