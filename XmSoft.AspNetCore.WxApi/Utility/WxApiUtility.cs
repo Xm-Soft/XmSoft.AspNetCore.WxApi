@@ -36,7 +36,10 @@ namespace XmSoft.AspNetCore.WxApi.Utility
             {
                 if (dic.Key.Contains("access_token"))
                     continue;
-                content.Append("\"").Append(dic.Key).Append("\":\"").Append(dic.Value).Append("\",");
+                if(dic.Value.Contains("{") || dic.Value.Contains("[{"))
+                    content.Append("\"").Append(dic.Key).Append("\":").Append(dic.Value).Append(",");
+                else
+                    content.Append("\"").Append(dic.Key).Append("\":\"").Append(dic.Value).Append("\",");
             }
             if (content.ToString() == "{") //判断Json是否有数据，否则返回null
                 return null;

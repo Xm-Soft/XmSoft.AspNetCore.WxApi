@@ -99,6 +99,6 @@ namespace XmSoft.AspNetCore.WxApi.Response.User
         /// 二维码扫码场景描述（开发者自定义）
         /// </summary>
         [JsonProperty(PropertyName = "qr_scene_str")]
-        public int qr_scene_str { get; set; }
+        public string qr_scene_str { get; set; }
     }
 }

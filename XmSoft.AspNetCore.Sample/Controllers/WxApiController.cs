@@ -49,8 +49,8 @@ namespace XmSoft.AspNetCore.Sample.Controllers
             {
                 var request = new WxApiGetAccessTokenRequest()
                 {
-                    AppId = "wx3f66a34f3c56406c",
-                    Secret = "19e504a3602ab011f164b9e5a018d43c"
+                    AppId = "wx346f2583af4c5a8f",//"wx3f66a34f3c56406c",
+                    Secret = "54421a46b51f40b0956b54a736421ea9"//"19e504a3602ab011f164b9e5a018d43c"
                 };
                 var s = await client.ExecuteAsync(request);
                 return Json(new { Code = 1, Msg = "成功", Data = s });
@@ -300,13 +300,18 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 {
                     AccessToken = access_token,
                     Type = "image",
-                    MediaPath = @"E:\开发代码\SVN\ZYLPC\THOA20150824\upload\PubicWxQrcodeImg\EFC624C8-361B-4285-B233-3337199BBA92\860344047282604.png"
+                    MediaPath = @"E:\开发代码\SVN\ZYLPC\THOA20150824\upload\Person\7e03efef6da6447898312fc34f6bee80\ProdPictureQRCode\testing.png"
                 };
                 var s = await client.ExecuteAsync(request);
                 return Json(new { Code = 1, Msg = "成功", Data = s });
             }
 
         }
+        /// <summary>
+        /// 获取媒体文件下载
+        /// </summary>
+        /// <param name="access_token"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("GetTempMedia")]
         public async Task<IActionResult> GetTempMedia(string access_token)
@@ -316,7 +321,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiGetTempMediaRequest()
                 {
                     AccessToken = access_token,
-                    Media_id = "rsAQfRyfqHl-jYr6cV9oWOP3k-tYsM8FvW8KqIVXDGHdHlx1nQP09Vnq-bEsUZdg"
+                    Media_id = "sigZt2AL4ttDrHGo8DB7pIce5FmUbt4YSvU8AMHvtfrGS1hEKZvsmy4tzOi_cr_e"
 
                 };
                 var response = await client.ExecuteAsync(request);
@@ -343,6 +348,30 @@ namespace XmSoft.AspNetCore.Sample.Controllers
 
         }
 
+
+        [HttpPost]
+        [Route("SendMessage")]
+
+        public async Task<JsonResult> SendMessage(string access_token)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+
+                var request = new WxApiSendMessageRequest()
+                {
+                    AccessToken = access_token,
+                    Touser = "oyrsn1oWtGJrrMepQHaRTRao255E",
+                    MsgType = MsgType.text,
+                     Text = new TextObject { content = "212"}
+                     
+
+                };
+                var s = await client.ExecuteAsync(request);
+                return Json(new { Code = 1, Msg = "成功", Data = s });
+            }
+
+        }
+
         /// <summary>
         /// 下发小程序和公众号统一的服务消息
         /// </summary>
@@ -359,7 +388,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiSendUniformMessageRequest()
                 {
                     AccessToken = access_token,
-                    Touser = "OpenId",
+                    Touser = "oyrsn1oWtGJrrMepQHaRTRao255E",
                     Weapp_Template_Msg = new Weapp_Template_Msg
                     {
                         Data = new {
@@ -375,12 +404,12 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                     },
                     Mp_Template_Msg = new Mp_Template_Msg
                     {
-                        Appid = "appid",
+                        Appid = "wx346f2583af4c5a8f",
                         Template_id = "EMPLATE_ID",
                         Url = "http://weixin.qq.com/download",
                         Miniprogram = new Miniprogram
                         {
-                            Appid = "xiaochengxuappid12345",
+                            Appid = "wx346f2583af4c5a8f",
                             Pgepath = "index?foo=bar"
 
                         },
@@ -474,7 +503,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiUserInfoRequest()
                 {
                     AccessToken = access_token,
-                    Openid = "oCo3H5Vya8_O028KAh3ZjPzqEVQQ"
+                    Openid = "oyrsn1oWtGJrrMepQHaRTRao255E"
                 };
                 var response = await client.ExecuteAsync(request);
 
