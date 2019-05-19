@@ -15,11 +15,7 @@ namespace XmSoft.AspNetCore.WxApi.Response
 
         [JsonProperty(PropertyName = "visit_uv")]
         public List<Visit_Uv> Visit_Uv { get; set; }
-        [JsonProperty(PropertyName = "errcode")]
-        public int ErrCode { get; set; }
-
-        [JsonProperty(PropertyName = "errmsg")]
-        public string Errmsg { get; set; }
+        
 
 
     }

@@ -3,7 +3,6 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using System;
-using XmSoft.AspNetCore.WxApi.Utility;
 using XmSoft.AspNetCore.WxApi.Parser;
 
 namespace XmSoft.AspNetCore.WxApi
@@ -20,7 +19,7 @@ namespace XmSoft.AspNetCore.WxApi
 
         #region IWeChatPayNotifyClient Members
         /// <summary>
-        /// 获取的Body进行转化
+        /// 获取的Body XML数据流转化成相应的对象
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="body"></param>

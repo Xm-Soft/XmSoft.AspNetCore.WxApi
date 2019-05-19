@@ -22,15 +22,6 @@ namespace XmSoft.AspNetCore.WxApi.Response.Poi
         /// </summary>
         [JsonProperty(PropertyName = "poi_id")]
         public string Poi_id { get; set; }
-        /// <summary>
-        /// 错误码，0为正常
-        /// </summary>
-        [JsonProperty(PropertyName = "errcode")]
-        public int ErrCode { get; set; }
-        /// <summary>
-        /// 错误信息
-        /// </summary>
-        [JsonProperty(PropertyName = "errmsg")]
-        public string Errmsg { get; set; }
+       
     }
 }

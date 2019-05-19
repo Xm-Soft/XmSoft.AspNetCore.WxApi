@@ -12,10 +12,6 @@ namespace XmSoft.AspNetCore.WxApi.Response.QRCode
         public byte[] Buffer { get; set; }
 
 
-        [JsonProperty(PropertyName = "errcode")]
-        public int ErrCode { get; set; }
-
-        [JsonProperty(PropertyName = "errmsg")]
-        public string Errmsg { get; set; }
+       
     }
 }

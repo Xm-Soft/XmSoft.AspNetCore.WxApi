@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
 
-namespace XmSoft.AspNetCore.WxApi.Utility
+namespace XmSoft.AspNetCore.WxApi
 {
     /// <summary>
     /// Utility
     /// </summary>
-    public class WxApiUtility
+    public class Utility
     {
         /// <summary>
         /// 拼接普通文本请求内容
@@ -47,5 +48,28 @@ namespace XmSoft.AspNetCore.WxApi.Utility
             content.Append("}");
             return content.ToString();
         }
+
+
+        /// <summary>
+        /// 转换成消息类型 
+        /// </summary>
+        /// <param name="TypeName"></param>
+        /// <returns></returns>
+        public static object ToMsgType(string TypeName)
+        {
+            var type = Enum.Parse(typeof(MsgType), CultureInfo.CurrentCulture.TextInfo.ToTitleCase(TypeName.ToLower()));
+            return type;
+        }
+        /// <summary>
+        /// 转换成 事件类型
+        /// </summary>
+        /// <param name="TypeName"></param>
+        /// <returns></returns>
+        public static object ToEventType(string TypeName)
+        {
+            var type = Enum.Parse(typeof(MsgType), TypeName.ToLower());
+            return type;
+        }
+
     }
 }

@@ -78,7 +78,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
             {
                 { "access_token", AccessToken },
                 { "touser", Touser },
-                { "msgtype",Enum.GetName(typeof(MsgType), MsgType) },
+                { "msgtype",Enum.GetName(typeof(MsgType), MsgType).ToLower() },
                 {"text",Text == null?null:JsonConvert.SerializeObject(Text) },
                 {"image",Image == null? null: JsonConvert.SerializeObject(Image) },
                 {"link",Link == null ? null : JsonConvert.SerializeObject(Link) },
@@ -201,20 +201,5 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
     {
         public string content { get; set; }
     }
-    /// <summary>
-    /// 消息类型
-    /// </summary>
-    public enum MsgType
-    {
-        text,
-        image,
-        news,
-        voice,
-        music,
-        video,
-        mpnews,
-        link,
-        minprogrampage
-
-    }
+    
 }

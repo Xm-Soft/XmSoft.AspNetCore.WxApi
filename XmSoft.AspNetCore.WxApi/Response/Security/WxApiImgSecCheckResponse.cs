@@ -8,11 +8,7 @@ namespace XmSoft.AspNetCore.WxApi.Response.Security
     public class WxApiImgSecCheckResponse : WxApiResponse
     {
 
-        [JsonProperty(PropertyName = "errcode")]
-        public int ErrCode { get; set; }
-
-        [JsonProperty(PropertyName = "errmsg")]
-        public string Errmsg { get; set; }
+        
     }
     
 }

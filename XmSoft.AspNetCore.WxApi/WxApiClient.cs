@@ -36,7 +36,7 @@ namespace XmSoft.AspNetCore.WxApi
             try
             {
                 var sortedParams = new WxApiDictionary(request.GetParameters());
-                var content = Utility.WxApiUtility.BulidContent(sortedParams);
+                var content = Utility.BulidContent(sortedParams);
                 var IsPost = request.IsPost();
                 var url = !IsPost ? $"{request.GetRequestUrl()}?{content}" : request.GetRequestUrl();
 
@@ -67,7 +67,7 @@ namespace XmSoft.AspNetCore.WxApi
                     else
                     {
                         var contentType = "application/json;charset=UTF-8";
-                        content = Utility.WxApiUtility.BulidJsonContent(sortedParams);
+                        content = Utility.BulidJsonContent(sortedParams);
                         if(!string.IsNullOrEmpty(content))
                            restRequest.AddParameter(contentType, content, ParameterType.RequestBody);
                     }

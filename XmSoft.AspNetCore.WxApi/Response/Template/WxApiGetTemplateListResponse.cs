@@ -7,11 +7,7 @@ namespace XmSoft.AspNetCore.WxApi.Response.Template
 {
     public class WxApiGetTemplateListResponse : WxApiResponse
     {
-        [JsonProperty(PropertyName = "errcode")]
-        public int ErrCode { get; set; }
-
-        [JsonProperty(PropertyName = "errmsg")]
-        public string Errmsg { get; set; }
+      
         /// <summary>
         /// 模板列表
         /// </summary>

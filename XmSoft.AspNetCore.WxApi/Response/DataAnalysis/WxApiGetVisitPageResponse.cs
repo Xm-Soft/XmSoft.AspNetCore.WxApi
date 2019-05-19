@@ -13,11 +13,7 @@ namespace XmSoft.AspNetCore.WxApi.Response
         public List<PageInfo> list { get; set; }
        
 
-        [JsonProperty(PropertyName = "errcode")]
-        public int ErrCode { get; set; }
-
-        [JsonProperty(PropertyName = "errmsg")]
-        public string Errmsg { get; set; }
+       
 
     }
     public class PageInfo

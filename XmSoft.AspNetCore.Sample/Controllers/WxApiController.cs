@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using XmSoft.AspNetCore.WxApi;
 using XmSoft.AspNetCore.WxApi.Request;
 using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
 using XmSoft.AspNetCore.WxApi.Request.Template;
@@ -361,7 +362,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 {
                     AccessToken = access_token,
                     Touser = "oyrsn1oWtGJrrMepQHaRTRao255E",
-                    MsgType = MsgType.text,
+                     MsgType = MsgType.Text,
                      Text = new TextObject { content = "212"}
                      
 

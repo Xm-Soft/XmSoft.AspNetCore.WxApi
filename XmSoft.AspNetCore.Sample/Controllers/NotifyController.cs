@@ -16,20 +16,38 @@ namespace XmSoft.AspNetCore.Sample.Controllers
     [ApiController]
     public class NotifyController : Controller
     {
-        [Route("AddPoiNotify")]
+        [Route("WxApiNotify")]
         [HttpPost]
-        public async Task<IActionResult> AddPoiNotify()
+        public async Task<IActionResult> WxApiNotify()
         {
             try
             {
+               
                 using (var client = new WxApiNotifyClient())
                 {
-                    var notify = await client.ExecuteAsync<WxApiAddPoiNotify>(Request.Body);
-                    if (notify != null && notify.Result.ToLower().Contains("succ"))
+                    var notify = await client.ExecuteAsync<WxApiNotify>(Request.Body);
+                    if (notify != null )
                     {
-                        //处理业务
-                        //...
-
+                        var type = WxApi.Utility.ToMsgType(notify.MsgType);
+                        switch (type)
+                        {
+                            case MsgType.Event:
+                                var _event = Utility.ToEventType(notify.Event);
+                                switch(_event)
+                                {
+                                    case EventType.check_biz:
+                                        break;
+                                    case EventType.poi_check_notify:
+                                        var checknotify = await client.ExecuteAsync<WxApiAddPoiNotify>(Request.Body);
+                                        ///业务处理
+                                        ///。。。
+                                        break;
+                                }
+                                break;
+                            case MsgType.Text:
+                                break;
+                        }
+                     
 
                         return new ContentResult() { Content = WxApiNotifyResult.Success, ContentType = "text/xml", StatusCode = 200 };
                         

@@ -25,10 +25,6 @@ namespace XmSoft.AspNetCore.WxApi.Response.CustomerMessage
         /// </summary>
         [JsonProperty(PropertyName = "created_at")]
         public string Created_at { get; set; }
-        [JsonProperty(PropertyName = "errcode")]
-        public int ErrCode { get; set; }
-
-        [JsonProperty(PropertyName = "errmsg")]
-        public string Errmsg { get; set; }
+      
     }
 }

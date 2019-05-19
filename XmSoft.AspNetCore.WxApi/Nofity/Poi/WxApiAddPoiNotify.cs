@@ -10,7 +10,7 @@ namespace XmSoft.AspNetCore.WxApi.Notify.Poi
     /// 审核事件推送
     /// </summary>
     [XmlRoot("xml")]
-    public class WxApiAddPoiNotify : WxApiNotify
+    public class WxApiAddPoiNotify : WxApiEventNotify
     {
         /// <summary>
         ///审核事件推送
@@ -19,32 +19,6 @@ namespace XmSoft.AspNetCore.WxApi.Notify.Poi
         {
 
         }
-        /// <summary>
-        /// 发送方帐号（一个OpenID）
-        /// </summary>
-        [XmlElement("ToUserName")]
-        public string ToUserName { get; set; }
-
-        /// <summary>
-        /// 错误信息
-        /// </summary>
-        [XmlElement("FromUserName")]
-        public string FromUserName { get; set; }
-        /// <summary>
-        /// 消息创建时间（整型）
-        /// </summary>
-        [XmlElement("CreateTime")]
-        public string CreateTime { get; set; }
-        /// <summary>
-        /// 消息类型，event
-        /// </summary>
-        [XmlElement("MsgType")]
-        public string MsgType { get; set; }
-        /// <summary>
-        /// 事件类型，poi_check_notify
-        /// </summary>
-        [XmlElement("Event")]
-        public string Event { get; set; }
         /// <summary>
         /// 商户自己内部ID，即字段中的sid
         /// </summary>
@@ -66,6 +40,8 @@ namespace XmSoft.AspNetCore.WxApi.Notify.Poi
         /// </summary>
         [XmlElement("msg")]
         public string Msg { get; set; }
+
+        
 
     }
 }
