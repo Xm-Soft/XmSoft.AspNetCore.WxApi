@@ -59,5 +59,13 @@ namespace XmSoft.AspNetCore.WxApi
         /// 年审通知
         /// </summary>
         annual_renew,
+        /// <summary>
+        /// 订阅（关注）
+        /// </summary>
+        subscribe,
+        /// <summary>
+        /// 取消订阅
+        /// </summary>
+        unsubscribe
     }
 }

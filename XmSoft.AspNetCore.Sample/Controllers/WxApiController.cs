@@ -453,7 +453,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
         }
 
         /// <summary>
-        /// 校验一张图片是否含有违法违规内容。
+        /// 校验一张图片是否含有违法违规内容。 改动需测试
         /// </summary>
         /// <param name="access_token"></param>
         /// <param name="filePath"></param>
@@ -467,8 +467,9 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiImgSecCheckRequest()
                 {
                     AccessToken = access_token,
+                    MediaPath = filePath,
                 };
-                var response = await client.ExecuteAsync(request, filePath);
+                var response = await client.ExecuteAsync(request);
 
                 return Json(new { Code = 1, Msg = "成功", Data = response });
             }

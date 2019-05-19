@@ -21,8 +21,11 @@ namespace XmSoft.AspNetCore.WxApi.Request.Security
 
         }
         public string AccessToken { get; set; }
-       
-       
+
+        /// <summary>
+        /// 媒体文件路径
+        /// </summary>
+        public string MediaPath { get; set; }
 
 
         #region IWxApiRequest Members
@@ -36,7 +39,8 @@ namespace XmSoft.AspNetCore.WxApi.Request.Security
         {
             var parameters = new WxApiDictionary
             {
-                { "access_token", AccessToken }
+                { "access_token", AccessToken },
+                {"mediapath",MediaPath }
                
             };
             return parameters;

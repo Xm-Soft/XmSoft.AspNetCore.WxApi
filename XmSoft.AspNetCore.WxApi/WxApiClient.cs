@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using RestSharp;
 using Newtonsoft.Json;
 using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
+using XmSoft.AspNetCore.WxApi.Request.CustomerServer;
+using XmSoft.AspNetCore.WxApi.Request.Security;
 using XmSoft.AspNetCore.WxApi.Response;
 using XmSoft.AspNetCore.WxApi.Request.QRCode;
 
@@ -18,6 +20,7 @@ namespace XmSoft.AspNetCore.WxApi
         private const string access_token = "access_token";
         private const string type = "type";
         private const string media_path = "media_path";
+        private const string kf_account = "kf_account";
         /// <summary>
         /// WxApi Client
         /// </summary>
@@ -31,7 +34,7 @@ namespace XmSoft.AspNetCore.WxApi
         /// <param name="request">请求对象</param>
         /// <param name="UploadFilePath">文件绝对路径</param>
         /// <returns></returns>
-        public async Task<T> ExecuteAsync<T>(IWxApiRequest<T> request,string UploadFilePath = null) where T : WxApiResponse
+        public async Task<T> ExecuteAsync<T>(IWxApiRequest<T> request) where T : WxApiResponse
         {
             try
             {
@@ -48,6 +51,8 @@ namespace XmSoft.AspNetCore.WxApi
                         url += $"?{access_token}={sortedParams.GetValue(access_token)}";
                         if (sortedParams.ContainsKey(type))
                             url += $"&{type }={sortedParams.GetValue(type)}";
+                        if(sortedParams.ContainsKey(kf_account))//设置客服帐号的头像 -特殊
+                            url += $"&{kf_account }={sortedParams.GetValue(kf_account)}";
                     }
                 }
 
@@ -59,7 +64,8 @@ namespace XmSoft.AspNetCore.WxApi
                 if (IsPost)
                 {
                     //把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。
-                    if (request is WxApiUploadTempMediaRequest)
+                    if (request is WxApiUploadTempMediaRequest || request is WxApiSetCustomerHeadImgRequest 
+                        || request is WxApiImgSecCheckRequest)
                     {
                         var contentType = "application/x-www-form-urlencoded;charset=UTF-8";
                         restRequest.AddFile($"{Guid.NewGuid().ToString("N")}.jpg", sortedParams.GetValue(media_path), contentType);
@@ -75,10 +81,10 @@ namespace XmSoft.AspNetCore.WxApi
 
 
                 //上传文件绝对路径
-                if (!string.IsNullOrEmpty(UploadFilePath))
-                {
-                    restRequest.AddFile("media", UploadFilePath);
-                }
+                //if (!string.IsNullOrEmpty(UploadFilePath))
+                //{
+                //    restRequest.AddFile("media", UploadFilePath);
+                //}
 
                 using (var t = client.ExecuteTaskAsync(restRequest))
                 {

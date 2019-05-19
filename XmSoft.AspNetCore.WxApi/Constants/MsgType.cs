@@ -22,6 +22,8 @@ namespace XmSoft.AspNetCore.WxApi
         Link,
         MinProgrampage,
         Event,
+        Shortvideo,
+        Location
 
     }
    
