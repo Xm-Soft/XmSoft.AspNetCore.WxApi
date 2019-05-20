@@ -52,7 +52,7 @@ namespace XmSoft.AspNetCore.WxApi
                     if (sortedParams.ContainsKey(access_token))
                     {
                         url += $"?{access_token}={sortedParams.GetValue(access_token)}";
-                        if (sortedParams.ContainsKey(type))
+                        if (sortedParams.ContainsKey(type) && !(request is WxApiGetMaterialListRequest))
                             url += $"&{type }={sortedParams.GetValue(type)}";
                         if(sortedParams.ContainsKey(kf_account))//设置客服帐号的头像 -特殊
                             url += $"&{kf_account }={sortedParams.GetValue(kf_account)}";

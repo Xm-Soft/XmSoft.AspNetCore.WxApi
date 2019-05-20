@@ -593,6 +593,26 @@ namespace XmSoft.AspNetCore.Sample.Controllers
             }
 
         }
+
+        [HttpPost]
+        [Route("GetMaterialList")]
+        public async Task<JsonResult> GetMaterialList(string access_token, string type)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiGetMaterialListRequest()
+                {
+                    AccessToken = access_token,
+                    Type = type,
+                    Offset = 0,
+                    Count = 20
+                };
+                var response = await client.ExecuteAsync(request);
+
+                return Json(new { Code = 1, Msg = "成功", Data = response });
+            }
+
+        }
         #endregion
     }
 }

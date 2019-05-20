@@ -31,13 +31,25 @@ namespace XmSoft.AspNetCore.WxApi.Response.MaterialManager
         /// 视频描述
         /// </summary>
         [JsonProperty(PropertyName = "item")]
-        public Item item { get; set; }
+        public object item { get; set; }
        
 
 
     }
-    
+    /// <summary>
+    /// 其他类型（图片、语音、视频） - 获取素材列表
+    /// </summary>
     public class Item
+    {
+        public string media_id { get; set; }
+        public string name { get; set; }
+        public string update_time { get; set; }
+        public string url { get; set; }
+    }
+    /// <summary>
+    /// 永久图文消息素材 -- 获取素材列表
+    /// </summary>
+    public class ItemNews
     {
         public string media_id { get; set; }
         public string update_time { get; set; }
