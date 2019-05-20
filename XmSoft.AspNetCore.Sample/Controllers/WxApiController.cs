@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using XmSoft.AspNetCore.WxApi;
 using XmSoft.AspNetCore.WxApi.Request;
 using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
+using XmSoft.AspNetCore.WxApi.Request.MaterialManager;
 using XmSoft.AspNetCore.WxApi.Request.Template;
 using XmSoft.AspNetCore.WxApi.Request.Security;
 using XmSoft.AspNetCore.WxApi.Request.Poi;
@@ -301,7 +302,8 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 {
                     AccessToken = access_token,
                     Type = "image",
-                    MediaPath = @"E:\开发代码\SVN\ZYLPC\THOA20150824\upload\Person\7e03efef6da6447898312fc34f6bee80\ProdPictureQRCode\testing.png"
+                    MediaPath =  @"E:\开发代码\SVN\ZYLPC\THOA20150824\upload\Person\7e03efef6da6447898312fc34f6bee80\ProdPictureQRCode\testing.png"
+                    
                 };
                 var s = await client.ExecuteAsync(request);
                 return Json(new { Code = 1, Msg = "成功", Data = s });
@@ -322,15 +324,16 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiGetTempMediaRequest()
                 {
                     AccessToken = access_token,
-                    Media_id = "sigZt2AL4ttDrHGo8DB7pIce5FmUbt4YSvU8AMHvtfrGS1hEKZvsmy4tzOi_cr_e"
+                    Media_id = "MtXOCuJep2PrQjbXBFg_uGeD93-Wv6wT5cvJxy9aDOS6MdIVjPD4255TKbga124w"
 
                 };
                 var response = await client.ExecuteAsync(request);
 
                 if (response != null && response.ErrCode == 0 && response.Buffer.Length > 0)
                 {
+                    return new FileContentResult(response.Buffer,response.ContentType);
 
-                    return Content($"data:image/png;base64,{Convert.ToBase64String(response.Buffer)}", "image/jpg");
+                    //return Content($"data:image/png;base64,{Convert.ToBase64String(response.Buffer)}", "image/jpg");
                 }
                 else
                 {
@@ -533,6 +536,56 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                          begin = 0,
                          limit = 10
                     }
+                };
+                var response = await client.ExecuteAsync(request);
+
+                return Json(new { Code = 1, Msg = "成功", Data = response });
+            }
+
+        }
+        #endregion
+
+
+        #region 素材管理
+        /// <summary>
+        /// 上传其他类型的素材（视频，音频，等）
+        /// </summary>
+        /// <param name="access_token"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("UploadMaterial")]
+        public async Task<JsonResult> UploadMaterial(string access_token)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiUploadMaterialRequest()
+                {
+                    AccessToken = access_token,
+                    MediaPath = @"H:\迅雷下载\122.mp4",
+                    Type = MsgType.Video,
+                    Description = new Description
+                    {
+                        title = "测试",
+                        introduction = "介绍"
+                    }
+                };
+                var response = await client.ExecuteAsync(request);
+
+                return Json(new { Code = 1, Msg = "成功", Data = response });
+            }
+
+        }
+
+        [HttpPost]
+        [Route("GetMaterial")]
+        public async Task<JsonResult> GetMaterial(string access_token,string media_id)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiGetMaterialRequest()
+                {
+                    AccessToken = access_token,
+                    Media_id = media_id
                 };
                 var response = await client.ExecuteAsync(request);
 

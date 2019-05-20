@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using XmSoft.AspNetCore.WxApi.Response.Poi;
+using XmSoft.AspNetCore.WxApi.Response.MaterialManager;
 
-namespace XmSoft.AspNetCore.WxApi.Request.Poi
+namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
 {
     /// <summary>
-    /// 创建门店-上传图片
+    /// 上传图片
     /// </summary>
-    public class WxApiUploadImgForPoiRequest: IWxApiRequest<WxApiUploadImgForPoiResponse>
+    public class WxApiUploadImgRequest: IWxApiRequest<WxApiUploadImgResponse>
     {
         /// <summary>
-        /// 创建门店-上传图片请求参数 -- 公众平台
+        /// 上传图片请求参数 -- 公众平台
+        /// <para>本接口所上传的图片不占用公众号的素材库中图片数量的5000个的限制。图片仅支持jpg/png格式，大小必须在1MB以下。</para>
         /// </summary>
-        public WxApiUploadImgForPoiRequest()
+        public WxApiUploadImgRequest()
         {
            
         }
@@ -24,7 +25,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Poi
         /// <summary>
         /// 图片本地绝对路径
         /// </summary>
-        public string ImgPath { get; set; }
+        public string MediaPath { get; set; }
 
         #region IWxApiRequest Members
         /// <summary>
@@ -43,7 +44,8 @@ namespace XmSoft.AspNetCore.WxApi.Request.Poi
         {
             var parameters = new WxApiDictionary
             {
-                { "access_token", AccessToken }
+                { "access_token", AccessToken },
+                {"media_path",MediaPath }
             };
             return parameters;
         }

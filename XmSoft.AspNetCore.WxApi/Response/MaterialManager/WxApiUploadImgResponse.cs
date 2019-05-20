@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace XmSoft.AspNetCore.WxApi.Response.Poi
+namespace XmSoft.AspNetCore.WxApi.Response.MaterialManager
 {
     /// <summary>
-    /// 创建门店-上传图片
+    /// 上传图片
     /// </summary>
-    public class WxApiUploadImgForPoiResponse : WxApiResponse
+    public class WxApiUploadImgResponse : WxApiResponse
     {
         /// <summary>
-        /// 创建门店-上传图片
+        /// 上传图片 
         /// </summary>
-        public WxApiUploadImgForPoiResponse()
+        public WxApiUploadImgResponse()
         {
 
         }

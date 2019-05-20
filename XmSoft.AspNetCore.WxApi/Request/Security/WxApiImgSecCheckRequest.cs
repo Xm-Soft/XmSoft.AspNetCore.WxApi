@@ -40,7 +40,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Security
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                {"mediapath",MediaPath }
+                {"media_path",MediaPath }
                
             };
             return parameters;

@@ -1,40 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using XmSoft.AspNetCore.WxApi.Response.CustomerServer;
+using XmSoft.AspNetCore.WxApi.Response.MaterialManager;
 using XmSoft.AspNetCore.WxApi.Response;
 
-namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
+namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
 {
     /// <summary>
-    /// 设置客服帐号的头像
+    /// 删除永久素材
     /// </summary>
-    public class WxApiSetCustomerHeadImgRequest : IWxApiRequest<WxApiCustomerSeverResponse>
+    public class WxApiDeleteMaterialRequest : IWxApiRequest<WxApiDeleteMaterialResponse>
     {
         /// <summary>
-        /// 设置客服帐号的头像
+        ///删除永久素材 - 公众平台
         /// </summary>
-        public WxApiSetCustomerHeadImgRequest()
+        public WxApiDeleteMaterialRequest()
         {
 
         }
         public string AccessToken { get; set; }
         /// <summary>
-        /// 客户账号
+        /// 素材ID
         /// </summary>
-        public string KF_account { get; set; }
+        public string Media_id { get; set; }
+       
 
-
-        /// <summary>
-        /// 媒体文件路径
-        /// </summary>
-        public string MediaPath { get; set; }
 
         #region IWxApiRequest Members
 
         public string GetRequestUrl()
         {
-            return "http://api.weixin.qq.com/customservice/kfaccount/uploadheadimg";
+            return "https://api.weixin.qq.com/cgi-bin/material/del_material";
         }
 
         public IDictionary<string, string> GetParameters()
@@ -42,9 +38,9 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "kf_account", KF_account },
-                { "media_path", MediaPath }
-             
+                { "media_id", Media_id }
+               
+
             };
             return parameters;
         }
@@ -57,4 +53,5 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
         #endregion
     }
     
+
 }

@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
 using XmSoft.AspNetCore.WxApi.Request.CustomerServer;
 using XmSoft.AspNetCore.WxApi.Request.Security;
+using XmSoft.AspNetCore.WxApi.Request.MaterialManager;
 using XmSoft.AspNetCore.WxApi.Response;
 using XmSoft.AspNetCore.WxApi.Request.QRCode;
 
@@ -21,6 +22,8 @@ namespace XmSoft.AspNetCore.WxApi
         private const string type = "type";
         private const string media_path = "media_path";
         private const string kf_account = "kf_account";
+        private const string description = "description";
+        private const string mediatype ="video";
         /// <summary>
         /// WxApi Client
         /// </summary>
@@ -64,12 +67,24 @@ namespace XmSoft.AspNetCore.WxApi
                 if (IsPost)
                 {
                     //把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。
-                    if (request is WxApiUploadTempMediaRequest || request is WxApiSetCustomerHeadImgRequest 
-                        || request is WxApiImgSecCheckRequest)
+                    if (request is WxApiUploadTempMediaRequest || request is WxApiSetCustomerHeadImgRequest
+                        || request is WxApiImgSecCheckRequest || request is WxApiUploadImgRequest 
+                        || request is WxApiUploadMaterialRequest)
                     {
+
+                        var fileType = System.IO.Path.GetExtension(sortedParams.GetValue(media_path));
+                        var media_type = sortedParams.GetValue(type);
                         var contentType = "application/x-www-form-urlencoded;charset=UTF-8";
-                        restRequest.AddFile($"{Guid.NewGuid().ToString("N")}.jpg", sortedParams.GetValue(media_path), contentType);
+                        restRequest.AddFile(media_type == mediatype?"media": $"{Guid.NewGuid().ToString("N")}{fileType}", sortedParams.GetValue(media_path), contentType);
+                        
+                        if(request is WxApiUploadMaterialRequest && media_type == mediatype)
+                        {
+                            
+                            restRequest.AddParameter(description, sortedParams.GetValue(description));
+
+                        }
                     }
+                   
                     else
                     {
                         var contentType = "application/json;charset=UTF-8";
@@ -80,11 +95,6 @@ namespace XmSoft.AspNetCore.WxApi
                 }
 
 
-                //上传文件绝对路径
-                //if (!string.IsNullOrEmpty(UploadFilePath))
-                //{
-                //    restRequest.AddFile("media", UploadFilePath);
-                //}
 
                 using (var t = client.ExecuteTaskAsync(restRequest))
                 {
@@ -98,7 +108,8 @@ namespace XmSoft.AspNetCore.WxApi
                             {
                                 ErrCode = 0,
                                 Errmsg = "",
-                                Buffer = response.RawBytes
+                                Buffer = response.RawBytes,
+                                ContentType = response.ContentType
 
                             } as T;
                         }

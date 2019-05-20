@@ -12,7 +12,7 @@ namespace XmSoft.AspNetCore.WxApi.Response
 
         [JsonProperty(PropertyName = "buffer")]
         public byte[] Buffer { get; set; }
-        
-
+        [JsonProperty(PropertyName = "content-type")]
+        public string ContentType { get;set; }
     }
 }
