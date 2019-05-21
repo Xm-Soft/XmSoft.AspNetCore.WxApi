@@ -8,7 +8,7 @@ namespace XmSoft.AspNetCore.WxApi.Response.MaterialManager
     /// <summary>
     /// 获取永久素材
     /// </summary>
-    public class WxApiGetMaterialResponse : WxApiResponse
+    public class WxApiGetMaterialResponse : WxApiFileResponse
     {
         /// <summary>
         /// 获取永久素材 - 公众平台

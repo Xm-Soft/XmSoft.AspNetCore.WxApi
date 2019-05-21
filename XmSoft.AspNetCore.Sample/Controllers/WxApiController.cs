@@ -302,8 +302,9 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 {
                     AccessToken = access_token,
                     Type = "image",
-                    MediaPath =  @"E:\开发代码\SVN\ZYLPC\THOA20150824\upload\Person\7e03efef6da6447898312fc34f6bee80\ProdPictureQRCode\testing.png"
-                    
+                    MediaPath = @"E:\开发代码\SVN\ZYLPC\THOA20150824\upload\PubicWxQrcodeImg\EFC624C8-361B-4285-B233-3337199BBA92\A01001101900003B.png"
+                    //@"E:\开发代码\SVN\ZYLPC\THOA20150824\upload\Person\7e03efef6da6447898312fc34f6bee80\ProdPictureQRCode\testing.png"
+
                 };
                 var s = await client.ExecuteAsync(request);
                 return Json(new { Code = 1, Msg = "成功", Data = s });
@@ -324,7 +325,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiGetTempMediaRequest()
                 {
                     AccessToken = access_token,
-                    Media_id = "MtXOCuJep2PrQjbXBFg_uGeD93-Wv6wT5cvJxy9aDOS6MdIVjPD4255TKbga124w"
+                    Media_id = "AGjPx_uv7e0FHb9KN2CICgzwmpswsPZ5TSI8Ap0dd5PmKVIL5r_ZmJiaYXfEq5-E",//"MtXOCuJep2PrQjbXBFg_uGeD93-Wv6wT5cvJxy9aDOS6MdIVjPD4255TKbga124w"
 
                 };
                 var response = await client.ExecuteAsync(request);
@@ -498,7 +499,11 @@ namespace XmSoft.AspNetCore.Sample.Controllers
 
         #region 用户管理
 
-        #endregion
+        /// <summary>
+        /// 获取用户信息包含 UnionId
+        /// </summary>
+        /// <param name="access_token"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("GetUserInfo")]
         public async Task<JsonResult> GetUserInfo(string access_token)
@@ -516,6 +521,9 @@ namespace XmSoft.AspNetCore.Sample.Controllers
             }
 
         }
+        #endregion
+
+
         #region 门店
         /// <summary>
         /// 获取门店列表
@@ -562,11 +570,14 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 {
                     AccessToken = access_token,
                     MediaPath = @"H:\迅雷下载\122.mp4",
+                    //@"H:\迅雷下载\11519.mp3",
+                    //@"E:\开发代码\SVN\ZYLPC\THOA20150824\upload\PubicWxQrcodeImg\EFC624C8-361B-4285-B233-3337199BBA92\A01001101900003B.png",
+                    //@"H:\迅雷下载\122.mp4",
                     Type = MsgType.Video,
                     Description = new Description
                     {
-                        title = "测试",
-                        introduction = "介绍"
+                        title = "测试1",
+                        introduction = "介绍1"
                     }
                 };
                 var response = await client.ExecuteAsync(request);
@@ -578,7 +589,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
 
         [HttpPost]
         [Route("GetMaterial")]
-        public async Task<JsonResult> GetMaterial(string access_token,string media_id)
+        public async Task<IActionResult> GetMaterial(string access_token,string media_id)
         {
             using (var client = new WxApi.WxApiClient())
             {
@@ -589,7 +600,24 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 };
                 var response = await client.ExecuteAsync(request);
 
-                return Json(new { Code = 1, Msg = "成功", Data = response });
+                if (response != null && response.ErrCode == 0 && response.Buffer != null && response.Buffer.Length > 0)
+                {
+                    return new FileContentResult(response.Buffer,response.ContentType);
+
+                }
+                else
+                {
+
+                    var result = new
+                    {
+
+                        Code = 1,
+                        Msg = "成功",
+                        Data = response
+
+                    };
+                    return Content(JsonConvert.SerializeObject(result), "application/Json");
+                }
             }
 
         }

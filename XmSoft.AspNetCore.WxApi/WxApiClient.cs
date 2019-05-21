@@ -2,11 +2,13 @@
 using System.Threading.Tasks;
 using RestSharp;
 using Newtonsoft.Json;
+using XmSoft.AspNetCore.WxApi.Request.Intelligent;
 using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
 using XmSoft.AspNetCore.WxApi.Request.CustomerServer;
 using XmSoft.AspNetCore.WxApi.Request.Security;
 using XmSoft.AspNetCore.WxApi.Request.MaterialManager;
 using XmSoft.AspNetCore.WxApi.Response;
+using XmSoft.AspNetCore.WxApi.Response.MaterialManager;
 using XmSoft.AspNetCore.WxApi.Request.QRCode;
 
 
@@ -24,6 +26,11 @@ namespace XmSoft.AspNetCore.WxApi
         private const string kf_account = "kf_account";
         private const string description = "description";
         private const string mediatype ="video";
+        private const string imagetype = "image/jpg";
+        private const string voicetype = "audio/mp3";
+
+        private const string lfrom = "Lfrom";
+        private const string lto = "lto";
         /// <summary>
         /// WxApi Client
         /// </summary>
@@ -56,6 +63,12 @@ namespace XmSoft.AspNetCore.WxApi
                             url += $"&{type }={sortedParams.GetValue(type)}";
                         if(sortedParams.ContainsKey(kf_account))//设置客服帐号的头像 -特殊
                             url += $"&{kf_account }={sortedParams.GetValue(kf_account)}";
+                        if(request is WxApiTranslateContentRequest)
+                        {
+                            url += $"&{lfrom }={sortedParams.GetValue(lfrom)}";
+                            url += $"&{lto}={sortedParams.GetValue(lto)}";
+                        }
+
                     }
                 }
 
@@ -66,31 +79,38 @@ namespace XmSoft.AspNetCore.WxApi
                 };
                 if (IsPost)
                 {
-                    //把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。
-                    if (request is WxApiUploadTempMediaRequest || request is WxApiSetCustomerHeadImgRequest
-                        || request is WxApiImgSecCheckRequest || request is WxApiUploadImgRequest 
-                        || request is WxApiUploadMaterialRequest)
+                    
+                    //判断文件是否存在
+                    if (string.IsNullOrEmpty(sortedParams.GetValue(media_path)) && System.IO.File.Exists(media_path))
                     {
-
-                        var fileType = System.IO.Path.GetExtension(sortedParams.GetValue(media_path));
-                        var media_type = sortedParams.GetValue(type);
-                        var contentType = "application/x-www-form-urlencoded;charset=UTF-8";
-                        restRequest.AddFile(media_type == mediatype?"media": $"{Guid.NewGuid().ToString("N")}{fileType}", sortedParams.GetValue(media_path), contentType);
-                        
-                        if(request is WxApiUploadMaterialRequest && media_type == mediatype)
+                        /////把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。
+                        if (request is WxApiUploadTempMediaRequest || request is WxApiSetCustomerHeadImgRequest
+                            || request is WxApiImgSecCheckRequest || request is WxApiUploadImgRequest
+                            || request is WxApiUploadMaterialRequest || request is WxApiTranslateContentRequest)
                         {
-                            
-                            restRequest.AddParameter(description, sortedParams.GetValue(description));
 
+                            var fileType = System.IO.Path.GetExtension(sortedParams.GetValue(media_path));
+                            var media_type = sortedParams.GetValue(type);
+                            var contentType = "application/x-www-form-urlencoded;charset=UTF-8";
+                            //restRequest.AddFile(media_type == mediatype?"media": $"{Guid.NewGuid().ToString("N")}{fileType}", sortedParams.GetValue(media_path), contentType);
+                            restRequest.AddFile("media", sortedParams.GetValue(media_path), contentType);
+
+
+                            if (request is WxApiUploadMaterialRequest && media_type == mediatype)
+                            {
+
+                                restRequest.AddParameter(description, sortedParams.GetValue(description));
+
+                            }
                         }
                     }
-                   
+
                     else
                     {
                         var contentType = "application/json;charset=UTF-8";
                         content = Utility.BulidJsonContent(sortedParams);
-                        if(!string.IsNullOrEmpty(content))
-                           restRequest.AddParameter(contentType, content, ParameterType.RequestBody);
+                        if (!string.IsNullOrEmpty(content))
+                            restRequest.AddParameter(contentType, content, ParameterType.RequestBody);
                     }
                 }
 
@@ -100,16 +120,35 @@ namespace XmSoft.AspNetCore.WxApi
                 {
                     t.Wait();
                     var response = await t;
-                    if (request is WxApiGetTempMediaRequest || request is WxApiShowQRCodeRequest)
+                    if (request is WxApiGetTempMediaRequest || request is WxApiShowQRCodeRequest || request is WxApiGetMaterialRequest)
                     {
-                        if (!response.Content.Contains("errcode"))
+
+                        if (!response.ContentType.Contains("json") && !response.ContentType.Contains("text"))
                         {
+                            var contenttype = response.ContentType;
+
+                            ///判断返回的类型是否为空，若为空，根据数据获取对应的文件类型
+                            if(string.IsNullOrEmpty(response.ContentType)) 
+                               contenttype = FileContentType.Get(response.RawBytes);
+                            
+                            ///获取永久素材返回
+                            if (request is WxApiGetMaterialRequest)
+                            {
+                                return new WxApiGetMaterialResponse
+                                {
+                                    ErrCode = 0,
+                                    Errmsg = "",
+                                    Buffer = response.RawBytes,
+                                    ContentType = string.IsNullOrEmpty(response.ContentType) ? contenttype : response.ContentType
+
+                                } as T;
+                            }
                             return new WxApiFileResponse
                             {
                                 ErrCode = 0,
                                 Errmsg = "",
                                 Buffer = response.RawBytes,
-                                ContentType = response.ContentType
+                                ContentType = string.IsNullOrEmpty(response.ContentType) ? contenttype : response.ContentType
 
                             } as T;
                         }
