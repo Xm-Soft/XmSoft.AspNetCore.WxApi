@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmSoft.AspNetCore.WxApi", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmSoft.AspNetCore.Sample", "XmSoft.AspNetCore.Sample\XmSoft.AspNetCore.Sample.csproj", "{DCC0521C-E67D-4266-95C5-35615759DBC4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "测试接口", "测试接口", "{697EEA8C-D513-4EEA-808C-3E72B1DC19FB}"
+	ProjectSection(SolutionItems) = preProject
+		WxApiUnit.http = WxApiUnit.http
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

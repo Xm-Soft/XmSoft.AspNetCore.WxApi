@@ -31,7 +31,15 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
         /// 语言，zh_CN 或 en_US，默认中文
         /// </summary>
         public string Lang { get; set; }
+        /// <summary>
+        /// 文本内容，不是Json数据
+        /// </summary>
+        public string Body { get; set; }
 
+        /// <summary>
+        /// 上传 语音文件 文件格式 （只支持mp3，16k，单声道，最大1M）
+        /// </summary>
+        public string MediaPath { get; set; }
 
         #region IWxApiRequest Members
 
@@ -47,8 +55,9 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
                 { "access_token", AccessToken },
                 { "format", Format },
                 { "voice_id", Voice_id },
-                { "lang", Lang }
-
+                { "lang", Lang },
+                { "body",Body },
+                { "media_path",MediaPath }
 
             };
             return parameters;
@@ -56,7 +65,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
 
         public bool IsPost()
         {
-            return false;
+            return true;
         }
 
         #endregion

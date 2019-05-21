@@ -30,7 +30,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
         /// <summary>
         /// body 内容    与上传文件 二选一
         /// </summary>
-        public string Content { get; set; }
+        public string Body { get; set; }
 
         /// <summary>
         /// 上传 语音文件 文件格式 （只支持mp3，16k，单声道，最大1M）
@@ -51,8 +51,8 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
                 { "access_token", AccessToken },
                 { "lfrom", Lfrom },
                 { "lto", Lto },
-                { "content", Content },
-                { "mediaPath", MediaPath }
+                { "body", Body },
+                { "media_path", MediaPath }
 
 
             };

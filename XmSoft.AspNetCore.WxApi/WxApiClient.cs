@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using RestSharp;
 using Newtonsoft.Json;
 using XmSoft.AspNetCore.WxApi.Request.Intelligent;
@@ -29,8 +30,14 @@ namespace XmSoft.AspNetCore.WxApi
         private const string imagetype = "image/jpg";
         private const string voicetype = "audio/mp3";
 
-        private const string lfrom = "Lfrom";
+        private const string format = "format";
+        private const string voice_id = "voice_id";
+        private const string lang = "lang";
+
+        private const string lfrom = "lfrom";
         private const string lto = "lto";
+
+        private const string body = "body";
         /// <summary>
         /// WxApi Client
         /// </summary>
@@ -52,22 +59,44 @@ namespace XmSoft.AspNetCore.WxApi
                 var content = Utility.BulidContent(sortedParams);
                 var IsPost = request.IsPost();
                 var url = !IsPost ? $"{request.GetRequestUrl()}?{content}" : request.GetRequestUrl();
+                var filterKey = new List<string>(); // Post 中进行过滤掉的请求参数
 
                 if (IsPost)
                 {
+                    
                     //判断是否存在access_token参数
                     if (sortedParams.ContainsKey(access_token))
                     {
+                        filterKey.Add(access_token);
                         url += $"?{access_token}={sortedParams.GetValue(access_token)}";
                         if (sortedParams.ContainsKey(type) && !(request is WxApiGetMaterialListRequest))
+                        {
+                          
                             url += $"&{type }={sortedParams.GetValue(type)}";
-                        if(sortedParams.ContainsKey(kf_account))//设置客服帐号的头像 -特殊
+                            filterKey.Add(type);
+                        }
+                        if (sortedParams.ContainsKey(kf_account) && request is WxApiSetCustomerHeadImgRequest)//设置客服帐号的头像 -特殊
+                        {
                             url += $"&{kf_account }={sortedParams.GetValue(kf_account)}";
+                            filterKey.Add(kf_account);
+                        }
                         if(request is WxApiTranslateContentRequest)
                         {
                             url += $"&{lfrom }={sortedParams.GetValue(lfrom)}";
+                            filterKey.Add(lfrom);
                             url += $"&{lto}={sortedParams.GetValue(lto)}";
+                            filterKey.Add(lto);
                         }
+                        if(request is WxApiAddVoiceTorecofortextRequest)
+                        {
+                            url += $"&{format}={sortedParams.GetValue(format)}";
+                            filterKey.Add(format);
+                            url += $"&{voice_id}={sortedParams.GetValue(voice_id)}";
+                            filterKey.Add(voice_id);
+                            url += $"&{lang}={sortedParams.GetValue(lang)}";
+                            filterKey.Add(lang);
+                        }
+                        
 
                     }
                 }
@@ -108,7 +137,14 @@ namespace XmSoft.AspNetCore.WxApi
                     else
                     {
                         var contentType = "application/json;charset=UTF-8";
-                        content = Utility.BulidJsonContent(sortedParams);
+                        if (sortedParams.ContainsKey(body)) //参数中是否包含 body 字符串，不是Json数据
+                        {
+                            contentType = "text/plain";
+                            content = sortedParams.GetValue(body);
+                        }
+                        else
+                            content = Utility.BulidJsonContent(sortedParams, filterKey);
+
                         if (!string.IsNullOrEmpty(content))
                             restRequest.AddParameter(contentType, content, ParameterType.RequestBody);
                     }

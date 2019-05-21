@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace XmSoft.AspNetCore.WxApi
 {
@@ -29,13 +30,13 @@ namespace XmSoft.AspNetCore.WxApi
         /// </summary>
         /// <param name="dictionary"></param>
         /// <returns></returns>
-        public static string BulidJsonContent(SortedDictionary<string, string> dictionary)
+        public static string BulidJsonContent(SortedDictionary<string, string> dictionary,List<string> filterkey)
         {
             var content = new StringBuilder();
             content.Append("{");
             foreach (var dic in dictionary)
             {
-                if (dic.Key.Contains("access_token"))
+                if (filterkey.Contains(dic.Key))
                     continue;
                 if(dic.Value.Contains("{") || dic.Value.Contains("[{"))
                     content.Append("\"").Append(dic.Key).Append("\":").Append(dic.Value).Append(",");

@@ -14,6 +14,7 @@ using XmSoft.AspNetCore.WxApi.Request.Template;
 using XmSoft.AspNetCore.WxApi.Request.Security;
 using XmSoft.AspNetCore.WxApi.Request.Poi;
 using XmSoft.AspNetCore.WxApi.Request.User;
+using XmSoft.AspNetCore.WxApi.Request.Intelligent;
 
 namespace XmSoft.AspNetCore.Sample.Controllers
 {
@@ -634,6 +635,29 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                     Type = type,
                     Offset = 0,
                     Count = 20
+                };
+                var response = await client.ExecuteAsync(request);
+
+                return Json(new { Code = 1, Msg = "成功", Data = response });
+            }
+
+        }
+        #endregion
+
+        #region 智能接口
+        [HttpPost]
+        [Route("TranslateContent")]
+        public async Task<JsonResult> TranslateContent(string access_token, string type)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiTranslateContentRequest()
+                {
+                    AccessToken = access_token,
+                    Lfrom = "zh_CN",
+                    Lto = "en_US",
+                    Body = "美好的一天",
+                    
                 };
                 var response = await client.ExecuteAsync(request);
 
