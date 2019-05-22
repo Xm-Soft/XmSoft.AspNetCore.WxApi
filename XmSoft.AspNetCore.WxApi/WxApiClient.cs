@@ -80,7 +80,7 @@ namespace XmSoft.AspNetCore.WxApi
                             url += $"&{kf_account }={sortedParams.GetValue(kf_account)}";
                             filterKey.Add(kf_account);
                         }
-                        if(request is WxApiTranslateContentRequest)
+                        if(request is WxApiTranslateContentRequest) //提交语音
                         {
                             url += $"&{lfrom }={sortedParams.GetValue(lfrom)}";
                             filterKey.Add(lfrom);

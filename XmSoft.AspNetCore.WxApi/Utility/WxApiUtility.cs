@@ -47,6 +47,9 @@ namespace XmSoft.AspNetCore.WxApi
                 return null;
             content = content.Replace(",", "", content.Length - 1, 1);
             content.Append("}");
+            if (content.ToString() == "{}")
+                return string.Empty; //获取的没有Json参数，返回空
+
             return content.ToString();
         }
 

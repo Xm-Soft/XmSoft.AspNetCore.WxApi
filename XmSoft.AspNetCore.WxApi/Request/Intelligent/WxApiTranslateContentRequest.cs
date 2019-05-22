@@ -7,12 +7,12 @@ using XmSoft.AspNetCore.WxApi.Response;
 namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
 {
     /// <summary>
-    /// 提交语音
+    /// 微信翻译
     /// </summary>
     public class WxApiTranslateContentRequest : IWxApiRequest<WxApiTranslateContentResponse>
     {
         /// <summary>
-        ///提交语音 - 公众平台
+        ///微信翻译 - 公众平台
         /// </summary>
         public WxApiTranslateContentRequest()
         {
