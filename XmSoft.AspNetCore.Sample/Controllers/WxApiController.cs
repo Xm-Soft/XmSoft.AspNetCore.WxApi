@@ -31,8 +31,8 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiCode2SessionRequest()
                 {
 
-                    AppId = "wx13c069c9a4a9aa48",
-                    Code = "071FJfuF0N0gCc2bxHtF0q1AuF0FJfuB",
+                    AppId = "wx346f2583af4c5a8f",
+                    Code = "",
                     Secret = ""
                 };
                 var s = await client.ExecuteAsync(request);
@@ -52,8 +52,8 @@ namespace XmSoft.AspNetCore.Sample.Controllers
             {
                 var request = new WxApiGetAccessTokenRequest()
                 {
-                    AppId = "wx346f2583af4c5a8f",//"wx3f66a34f3c56406c",
-                    Secret = "54421a46b51f40b0956b54a736421ea9"//"19e504a3602ab011f164b9e5a018d43c"
+                    AppId = "wx346f2583af4c5a8f",
+                    Secret = "54421a46b51f40b0956b54a736421ea9"//
                 };
                 var s = await client.ExecuteAsync(request);
                 return Json(new { Code = 1, Msg = "成功", Data = s });

@@ -9,6 +9,341 @@
             Const Log4Net RepositoryName 
              </summary>
         </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.EventType">
+            <summary>
+            事件类型 枚举
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.add_express_path">
+            <summary>
+            运单轨迹更新事件
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.add_waybill">
+            <summary>
+            请求下单事件
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.cancel_waybill">
+            <summary>
+            取消订单事件
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.check_biz">
+            <summary>
+            审核商户事件
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.get_quota">
+            <summary>
+            查询商户余额事件
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.poi_check_notify">
+            <summary>
+            审核事件推送-门店
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.location">
+            <summary>
+            获取用户地理位置
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.qualification_verify_success">
+            <summary>
+            资质认证成功（此时立即获得接口权限）
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.qualification_verify_fail">
+            <summary>
+            资质认证失败
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.naming_verify_success">
+            <summary>
+            名称认证成功（即命名成功）
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.naming_verify_fail">
+            <summary>
+            名称认证失败（这时虽然客户端不打勾，但仍有接口权限）
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.annual_renew">
+            <summary>
+            年审通知
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.subscribe">
+            <summary>
+            订阅（关注）
+            </summary>
+        </member>
+        <member name="F:XmSoft.AspNetCore.WxApi.EventType.unsubscribe">
+            <summary>
+            取消订阅
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.MsgType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.Attestation.WxApiVerifyNotify">
+            <summary>
+            资质认证成功/失败（此时立即获得接口权限）
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.Attestation.WxApiVerifyNotify.#ctor">
+             <summary>
+            资质认证成功/失败，名称认证，年审通知（此时立即获得接口权限） - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Attestation.WxApiVerifyNotify.ExpiredTime">
+             <summary>
+            有效期 (整形)，指的是时间戳，将于该时间戳认证过期
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Attestation.WxApiVerifyNotify.FailTime">
+            <summary>
+            	失败发生时间 (整形)，时间戳
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Attestation.WxApiVerifyNotify.FailReason">
+            <summary>
+            认证失败的原因
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.EventPush.WxApiCustomerMenuClickNotify">
+            <summary>
+            用户点击自定义菜单后，微信会把点击事件推送给开发者，请注意，点击菜单弹出子菜单，不会产生上报。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.EventPush.WxApiCustomerMenuClickNotify.#ctor">
+            <summary>
+            点击菜单拉取消息时的事件推送
+            <para>用户点击自定义菜单后，微信会把点击事件推送给开发者，请注意，点击菜单弹出子菜单，不会产生上报。</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.EventPush.WxApiCustomerMenuClickNotify.EventKey">
+             <summary>
+            事件KEY值，与自定义菜单接口中KEY值对应
+             </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.EventPush.WxApiScanNotify">
+            <summary>
+            扫描带参数二维码事件
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.EventPush.WxApiScanNotify.#ctor">
+            <summary>
+            扫描带参数二维码事件 - 公众平台
+            <para>1、用户未关注时，进行关注后的事件推送 Event : subscribe</para>
+            <para>2. 用户已关注时的事件推送 Event: SCAN</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.EventPush.WxApiScanNotify.EventKey">
+             <summary>
+            事件KEY值，qrscene_为前缀，后面为二维码的参数值
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.EventPush.WxApiScanNotify.Ticket">
+            <summary>
+            	二维码的ticket，可用来换取二维码图片
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiImageNotify">
+            <summary>
+            图片消息 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiImageNotify.#ctor">
+            <summary>
+            图片消息 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiImageNotify.PicUrl">
+             <summary>
+            图片链接（由系统生成）
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiImageNotify.MediaId">
+            <summary>
+            	图片消息媒体id，可以调用获取临时素材接口拉取数据。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiImageNotify.MsgId">
+            <summary>
+            	消息id，64位整型
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiLocationNotify">
+            <summary>
+            地理位置消息 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiLocationNotify.#ctor">
+            <summary>
+            地理位置消息 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiLocationNotify.Location_X">
+            <summary>
+            地理位置维度
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiLocationNotify.Location_Y">
+            <summary>
+            地理位置经度
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiLocationNotify.Scale">
+            <summary>
+            地图缩放大小
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiLocationNotify.Label">
+            <summary>
+            地理位置信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiLocationNotify.MsgId">
+            <summary>
+            	消息id，64位整型
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiTextNotify">
+            <summary>
+            文本消息 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiTextNotify.#ctor">
+            <summary>
+            文本消息 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiTextNotify.Content">
+             <summary>
+            文本消息内容
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiTextNotify.MsgId">
+            <summary>
+            	消息id，64位整型
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVideoNotify">
+            <summary>
+            视频/小视频 消息 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVideoNotify.#ctor">
+            <summary>
+            视频消息 - 公众平台
+            </summary>
+        </member>
+        <!-- 对于成员“P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVideoNotify.ThumbMediaId”忽略有格式错误的 XML 注释 -->
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVideoNotify.MediaId">
+            <summary>
+            	视频消息媒体id，可以调用获取临时素材接口拉取数据。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVideoNotify.MsgId">
+            <summary>
+            	消息id，64位整型
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVioceNotify">
+            <summary>
+            语音消息 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVioceNotify.#ctor">
+            <summary>
+            语音消息 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVioceNotify.Format">
+             <summary>
+            语音格式，如amr，speex等
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVioceNotify.MediaId">
+            <summary>
+            	语音消息媒体id，可以调用获取临时素材接口拉取数据。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVioceNotify.MsgId">
+            <summary>
+            	消息id，64位整型
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVioceNotify.Recognition">
+            <summary>
+            语音识别结果，UTF8编码
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.Poi.WxApiAddPoiNotify">
+            <summary>
+            审核事件推送
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.Poi.WxApiAddPoiNotify.#ctor">
+             <summary>
+            审核事件推送
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Poi.WxApiAddPoiNotify.UniqId">
+            <summary>
+            商户自己内部ID，即字段中的sid
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Poi.WxApiAddPoiNotify.PoiId">
+            <summary>
+            微信的门店ID，微信内门店唯一标示ID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Poi.WxApiAddPoiNotify.Result">
+            <summary>
+            审核结果，成功succ 或失败fail
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.Poi.WxApiAddPoiNotify.Msg">
+            <summary>
+            成功的通知信息，或审核失败的驳回理由
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Notify.User.WxApiGetLocationNotify">
+            <summary>
+            获取用户地理位置
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Notify.User.WxApiGetLocationNotify.#ctor">
+             <summary>
+            获取用户地理位置
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.User.WxApiGetLocationNotify.Latitude">
+            <summary>
+            	地理位置纬度
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.User.WxApiGetLocationNotify.Longitude">
+            <summary>
+            	地理位置经度
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Notify.User.WxApiGetLocationNotify.Precision">
+            <summary>
+            地理位置精度
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Parser.WxApixmlParser`1">
+            <summary>
+            xApi XML 解释器。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Activity.WxApiCreateActivityIdRequest">
             <summary>
             创建被分享动态消息的 activity_id。详见动态消息。
@@ -89,7 +424,7 @@
             消息类型
             </summary>
         </member>
-        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Content">
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Text">
             <summary>
             文本消息内容，msgtype="text" 时必填
             </summary>
@@ -107,6 +442,31 @@
         <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Minprogrampage">
             <summary>
             小程序卡片，msgtype="miniprogrampage" 时必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Video">
+            <summary>
+            发送视频消息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Voice">
+            <summary>
+            发送语音消息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.Music">
+            <summary>
+            发送音乐消息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.News">
+            <summary>
+            发送图文消息（点击跳转到外链） 图文消息条数限制在1条以内，注意，如果图文数超过1，则将会返回错误码45008。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSendMessageRequest.MpNews">
+            <summary>
+            图文消息 （点击跳转到图文消息页面） 图文消息条数限制在1条以内，注意，如果图文数超过1，则将会返回错误码45008。
             </summary>
         </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.ImageObject.media_id">
@@ -149,6 +509,36 @@
             小程序消息卡片的封面， image 类型的 media_id，通过 新增素材接口 上传图片文件获得，建议大小为 520*416
             </summary>
         </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.VoiceObject.media_id">
+            <summary>
+            发送的语音的媒体ID，通过 新增素材接口 上传图片文件获得。
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.VideoObject">
+            <summary>
+            视频
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.MusicObject">
+            <summary>
+            音乐
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.NewsObject">
+            <summary>
+            新闻消息：发送图文消息（点击跳转到外链） 图文消息条数限制在1条以内，注意，如果图文数超过1，则将会返回错误码45008。
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.MpNews">
+            <summary>
+            发送图文消息（点击跳转到图文消息页面） 图文消息条数限制在1条以内，注意，如果图文数超过1，则将会返回错误码45008。
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.TextObject">
+            <summary>
+            文本
+            </summary>
+        </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiSetTypingRequest">
             <summary>
             下发客服当前输入状态给用户。详见 客服消息输入状态
@@ -181,12 +571,118 @@
         </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiUploadTempMediaRequest.Type">
             <summary>
-            文件类型
+            文件类型 媒体文件类型，分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）
             </summary>
         </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerMessage.WxApiUploadTempMediaRequest.MediaPath">
             <summary>
             媒体文件路径
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiAddCustomerAccountRequest">
+            <summary>
+            添加客服帐号
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiAddCustomerAccountRequest.#ctor">
+            <summary>
+            添加客服帐号
+            <para>开发者可以通过本接口为公众号添加客服账号，每个公众号最多添加10个客服账号</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiAddCustomerAccountRequest.KF_account">
+            <summary>
+            客户账号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiAddCustomerAccountRequest.Nickname">
+            <summary>
+            客户名
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiAddCustomerAccountRequest.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiCustomerListRequest">
+            <summary>
+            客服帐号列表
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiCustomerListRequest.#ctor">
+            <summary>
+            客服帐号列表 -- 公众平台
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiDeleteCustomerAccountRequest">
+            <summary>
+            删除客服帐号
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiDeleteCustomerAccountRequest.#ctor">
+            <summary>
+            删除客服帐号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiDeleteCustomerAccountRequest.KF_account">
+            <summary>
+            客户账号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiDeleteCustomerAccountRequest.Nickname">
+            <summary>
+            客户名
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiDeleteCustomerAccountRequest.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiSetCustomerHeadImgRequest">
+            <summary>
+            设置客服帐号的头像
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiSetCustomerHeadImgRequest.#ctor">
+            <summary>
+            设置客服帐号的头像
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiSetCustomerHeadImgRequest.KF_account">
+            <summary>
+            客户账号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiSetCustomerHeadImgRequest.MediaPath">
+            <summary>
+            媒体文件路径
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiUpdateCustomerAccountRequest">
+            <summary>
+            修改客服帐号
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiUpdateCustomerAccountRequest.#ctor">
+            <summary>
+            修改客服帐号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiUpdateCustomerAccountRequest.KF_account">
+            <summary>
+            客户账号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiUpdateCustomerAccountRequest.Nickname">
+            <summary>
+            客户名
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.CustomerServer.WxApiUpdateCustomerAccountRequest.Password">
+            <summary>
+            密码
             </summary>
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetDailyRetainRequest">
@@ -289,6 +785,26 @@
             结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
             </summary>
         </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserCumulateRequest">
+            <summary>
+            获取累计用户数据
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserCumulateRequest.#ctor">
+            <summary>
+             获取累计用户数据 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserCumulateRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyy-mm-dd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserCumulateRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserPortraitRequest">
             <summary>
             获取小程序新增或活跃用户的画像分布数据。时间范围支持昨天、最近7天、最近30天。
@@ -309,6 +825,26 @@
         <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserPortraitRequest.EndDate">
             <summary>
             结束日期，开始日期与结束日期相差的天数限定为0/6/29，分别表示查询最近1/7/30天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserSummaryRequest">
+            <summary>
+            获取用户增减数据
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserSummaryRequest.#ctor">
+            <summary>
+             获取用户增减数据 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserSummaryRequest.BeginDate">
+            <summary>
+            开始日期。格式为 yyyy-mm-dd
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetUserSummaryRequest.EndDate">
+            <summary>
+            结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
             </summary>
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetVisitDistributionRequest">
@@ -389,6 +925,326 @@
         <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetWeeklyVisitTrendRequest.EndDate">
             <summary>
             结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiAddVoiceTorecofortextRequest">
+            <summary>
+            提交语音
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiAddVoiceTorecofortextRequest.#ctor">
+             <summary>
+            提交语音 - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiAddVoiceTorecofortextRequest.Format">
+            <summary>
+            文件格式 （只支持mp3，16k，单声道，最大1M）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiAddVoiceTorecofortextRequest.Voice_id">
+            <summary>
+            语音唯一标识
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiAddVoiceTorecofortextRequest.Lang">
+            <summary>
+            语言，zh_CN 或 en_US，默认中文
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiAddVoiceTorecofortextRequest.Body">
+            <summary>
+            文本内容，不是Json数据
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiAddVoiceTorecofortextRequest.MediaPath">
+            <summary>
+            上传 语音文件 文件格式 （只支持mp3，16k，单声道，最大1M）
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiQueryRecoresultfortextRequest">
+            <summary>
+            提交语音
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiQueryRecoresultfortextRequest.#ctor">
+             <summary>
+            提交语音 - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiQueryRecoresultfortextRequest.Voice_id">
+            <summary>
+            语音唯一标识
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiQueryRecoresultfortextRequest.Lang">
+            <summary>
+            语言，zh_CN 或 en_US，默认中文
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiTranslateContentRequest">
+            <summary>
+            微信翻译
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiTranslateContentRequest.#ctor">
+             <summary>
+            微信翻译 - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiTranslateContentRequest.Lfrom">
+            <summary>
+            源语言，zh_CN 或 en_US
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiTranslateContentRequest.Lto">
+            <summary>
+            目标语言，zh_CN 或 en_US
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiTranslateContentRequest.Body">
+            <summary>
+            body 内容    与上传文件 二选一
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiTranslateContentRequest.MediaPath">
+            <summary>
+            上传 语音文件 文件格式 （只支持mp3，16k，单声道，最大1M）
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiAddForeverNewsRequest">
+            <summary>
+            新增永久图文素材
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiAddForeverNewsRequest.#ctor">
+             <summary>
+            新增永久图文素材 - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiAddForeverNewsRequest.Articles">
+            <summary>
+            图文素材
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.thumb_media_id">
+            <summary>
+            图文消息的封面图片素材id（必须是永久mediaID）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.digest">
+            <summary>
+            图文消息的摘要，仅有单图文消息才有摘要，多图文此处为空。如果本字段为没有填写，则默认抓取正文前64个字。 非必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.show_cover_pic">
+            <summary>
+            是否显示封面，0为false，即不显示，1为true，即显示
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.content">
+            <summary>
+            图文消息的具体内容，支持HTML标签，必须少于2万字符，小于1M，
+            且此处会去除JS,涉及图片url必须来源 "上传图文消息内的图片获取URL"接口获取。外部图片url将被过滤
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.content_source_url">
+            <summary>
+            图文消息的原文地址，即点击“阅读原文”后的URL
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.need_open_comment">
+            <summary>
+            Uint32 是否打开评论，0不打开，1打开 非必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Articles.only_fans_can_comment">
+            <summary>
+            Uint32 是否粉丝才可评论，0所有人可评论，1粉丝才可评论 非必填
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiDeleteMaterialRequest">
+            <summary>
+            删除永久素材
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiDeleteMaterialRequest.#ctor">
+             <summary>
+            删除永久素材 - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiDeleteMaterialRequest.Media_id">
+            <summary>
+            素材ID
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialCountRequest">
+            <summary>
+            获取素材总数
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialCountRequest.#ctor">
+             <summary>
+            获取素材总数 - 公众平台
+             </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialListRequest">
+            <summary>
+            获取素材列表
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialListRequest.#ctor">
+             <summary>
+            获取素材列表 - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialListRequest.Type">
+            <summary>
+            	素材的类型，图片（image）、视频（video）、语音 （voice）、图文（news）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialListRequest.Offset">
+            <summary>
+            从全部素材的该偏移位置开始返回，0表示从第一个素材 返回
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialListRequest.Count">
+            <summary>
+            返回素材的数量，取值在1到20之间
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialRequest">
+            <summary>
+            获取永久素材
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialRequest.#ctor">
+             <summary>
+            获取永久素材 - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiGetMaterialRequest.Media_id">
+            <summary>
+            素材ID
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUpdateForeverNewsRequest">
+            <summary>
+            修改永久图文素材
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUpdateForeverNewsRequest.#ctor">
+             <summary>
+            修改永久图文素材 - 公众平台
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUpdateForeverNewsRequest.Media_id">
+            <summary>
+            素材ID
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadImgRequest">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadImgRequest.#ctor">
+            <summary>
+            上传图片请求参数 -- 公众平台
+            <para>本接口所上传的图片不占用公众号的素材库中图片数量的5000个的限制。图片仅支持jpg/png格式，大小必须在1MB以下。</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadImgRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadImgRequest.MediaPath">
+            <summary>
+            图片本地绝对路径
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadImgRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadImgRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadImgRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest">
+            <summary>
+            新增其他类型永久素材
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest.#ctor">
+            <summary>
+            新增其他类型永久素材 -- 公众平台
+            <para>通过POST表单来调用接口，表单id为media，包含需要上传的素材内容，有filename、filelength、content-type等信息。</para>
+            <para>请注意：图片素材将进入公众平台官网素材管理模块中的默认分组</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest.Type">
+            <summary>
+            媒体文件类型，分别有图片（image）、语音（voice）、视频（video）和缩略图（thumb）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest.MediaPath">
+            <summary>
+            文件本地绝对路径
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest.Description">
+            <summary>
+            在上传视频素材时需要POST另一个表单，id为description，包含素材的描述信息，内容格式为JSON
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.MaterialManager.WxApiUploadMaterialRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.MaterialManager.Description">
+            <summary>
+            针对视频
             </summary>
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.NearbyPoi.WxApiAddNearbyPoiRequest">
@@ -476,6 +1332,433 @@
             <summary>
             是否展示 0	不展示, 1	展示
             </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiAddPoiRequest">
+            <summary>
+            创建门店
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiAddPoiRequest.#ctor">
+            <summary>
+            创建门店 -- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiAddPoiRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiAddPoiRequest.Buffer">
+            <summary>
+            创建门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiAddPoiRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiAddPoiRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiAddPoiRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Poi.Business">
+            <summary>
+            门店
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.Business.base_info">
+            <summary>
+            基础数据
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo">
+            <summary>
+            门店基础信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.sid">
+            <summary>
+            商户自己的id，用于后续审核通过收到poi_id 的通知时，做对应关系。请商户自己保证唯一识别性
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.business_name">
+            <summary>
+            门店名称（仅为商户名，如：国美、麦当劳，不应包含地区、地址、分店名等信息，错误示例：北京国美） 不能为空，15个汉字或30个英文字符内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.branch_name">
+            <summary>
+            分店名称（不应包含地区信息，不应与门店名有重复，错误示例：北京王府井店） 20 个字 以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.province">
+            <summary>
+            门店所在的省份（直辖市填城市名,如：北京 市） 10个字 以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.city">
+            <summary>
+            门店所在的城市 10个字 以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.district">
+            <summary>
+            门店所在地区 10个字 以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.address">
+            <summary>
+            门店所在的详细街道地址（不要填写省市信息）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.telephone">
+            <summary>
+            门店的电话（纯数字，区号、分机号均由“-”隔开）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.categories">
+            <summary>
+            门店的类型（不同级分类用“,”隔开，如：美食，川菜，火锅。详细分类参见附件：微信门店类目表）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.offset_type">
+            <summary>
+            坐标类型： 1 为火星坐标 2 为sogou经纬度 3 为百度经纬度 4 为mapbar经纬度 
+            <para>5 为GPS坐标 6 为sogou墨卡托坐标 注：高德经纬度无需转换可直接使用</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.longitude">
+            <summary>
+            门店所在地理位置的经度
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.latitude">
+            <summary>
+            门店所在地理位置的纬度（经纬度均为火星坐标，最好选用腾讯地图标记的坐标）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.photo_list">
+            <summary>
+            图片列表，url 形式，可以有多张图片，尺寸为 640*340px。必须为上一接口生成的url。 
+            <para>图片内容不允许与门店不相关，不允许为二维码、员工合照（或模特肖像）、营业执照、无门店正门的街景、地图截图、公交地铁站牌、菜单截图等</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.recommend">
+            <summary>
+            推荐品，餐厅可为推荐菜；酒店为推荐套房；景点为推荐游玩景点等，针对自己行业的推荐内容 200字以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.special">
+            <summary>
+            特色服务，如免费wifi，免费停车，送货上门等商户能提供的特色功能或服务
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.introduction">
+            <summary>
+            商户简介，主要介绍商户信息等 300字以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.open_time">
+            <summary>
+            	营业时间，24 小时制表示，用“-”连接，如 8:00-20:00
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.BaseInfo.avg_price">
+            <summary>
+            人均价格，大于0 的整数
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Poi.PictureList">
+            <summary>
+            图片信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.PictureList.photo_url">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiDeletePoiRequest">
+            <summary>
+            删除门店信息
+            </summary>L
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiDeletePoiRequest.#ctor">
+            <summary>
+            删除门店信息 商户可以通过该接口，删除已经成功创建的门店。请商户慎重调用该接口 -- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiDeletePoiRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiDeletePoiRequest.Buffer">
+            <summary>
+            创建门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiDeletePoiRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiDeletePoiRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiDeletePoiRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiListRequest">
+            <summary>
+            查询门店列表信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiListRequest.#ctor">
+            <summary>
+            查询门店列表信息 -- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiListRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiListRequest.Buffer">
+            <summary>
+            创建门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiListRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiListRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiListRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.QueryPoi.begin">
+            <summary>
+            开始位置，0 即为从第一条开始查询
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.QueryPoi.limit">
+            <summary>
+            返回数据条数，最大允许50，默认为20
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiRequest">
+            <summary>
+            获取门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiRequest.#ctor">
+            <summary>
+            获取门店信息 -- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiRequest.Buffer">
+            <summary>
+            创建门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiGetPoiRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.Poi.poi_id">
+            <summary>
+            门店Id
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiUpdatePoiRequest">
+            <summary>
+            修改门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiUpdatePoiRequest.#ctor">
+            <summary>
+            修改门店信息 -- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiUpdatePoiRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiUpdatePoiRequest.Buffer">
+            <summary>
+            创建门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiUpdatePoiRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiUpdatePoiRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Poi.WxApiUpdatePoiRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeForeverTicketRequest">
+            <summary>
+            生成永久带参数二维码的接口
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeForeverTicketRequest.#ctor">
+            <summary>
+            生成永久带参数二维码的接口 -- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeForeverTicketRequest.AccessToken">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeForeverTicketRequest.action_name">
+            <summary>
+            	二维码类型，QR_SCENE为临时的整型参数值，QR_STR_SCENE为临时的字符串参数值，
+            	QR_LIMIT_SCENE为永久的整型参数值，QR_LIMIT_STR_SCENE为永久的字符串参数值
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeForeverTicketRequest.action_info">
+            <summary>
+            二维码详细信息
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeShortTimeTicketRequest">
+            <summary>
+            生成临时带参数二维码的接口
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeShortTimeTicketRequest.#ctor">
+            <summary>
+            生成临时带参数二维码的接口 -- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeShortTimeTicketRequest.AccessToken">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeShortTimeTicketRequest.expire_seconds">
+            <summary>
+            该二维码有效时间，以秒为单位。 最大不超过2592000（即30天），此字段如果不填，则默认有效期为30秒。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeShortTimeTicketRequest.action_name">
+            <summary>
+            	二维码类型，QR_SCENE为临时的整型参数值，QR_STR_SCENE为临时的字符串参数值，
+            	QR_LIMIT_SCENE为永久的整型参数值，QR_LIMIT_STR_SCENE为永久的字符串参数值
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeShortTimeTicketRequest.action_info">
+            <summary>
+            二维码详细信息
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.QRCode.ActionInfo">
+            <summary>
+            二维码详细信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.ActionInfo.scene">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.scene.scene_id">
+            <summary>
+            场景值ID，临时二维码时为32位非0整型，永久二维码时最大值为100000（目前参数只支持1--100000）
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiShowQRCodeRequest">
+            <summary>
+            ticket换取二维码图片
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiShowQRCodeRequest.#ctor">
+            <summary>
+            通过 Ticket换取二维码图片-- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiShowQRCodeRequest.Ticket">
+            <summary>
+            ticket 数据
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiShowQRCodeRequest.GetRequestUrl">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiShowQRCodeRequest.GetParameters">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiShowQRCodeRequest.IsPost">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiCreateQRCodeRequest">
             <summary>
@@ -590,6 +1873,11 @@
             <para> 敏感人脸识别：用户头像；媒体类用户文章里的图片检测；社交类用户上传的图片检测等。 频率限制：单个 appId 调用上限为 2000 次/分钟，200,000 次/天*（图片大小限制：1M）</para>
             </summary>
         </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Security.WxApiImgSecCheckRequest.MediaPath">
+            <summary>
+            媒体文件路径
+            </summary>
+        </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Security.WxApiMsgSecCheckRequest">
              <summary>
             检查一段文本是否含有违法违规内容。
@@ -630,6 +1918,110 @@
             采用的方式 Get 还是 Post
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiDelTemplateRequest">
+            <summary>
+            删除模板
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiDelTemplateRequest.#ctor">
+            <summary>
+            删除模板-- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiDelTemplateRequest.Template_id">
+            <summary>
+            公众帐号下模板消息ID
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetAllTemplateRequest">
+            <summary>
+            获取模板列表
+            </summary>
+        </member>
+        <!-- 对于成员“M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetAllTemplateRequest.#ctor”忽略有格式错误的 XML 注释 -->
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetIndustryRequest">
+            <summary>
+            获取设置的行业信息
+            </summary>
+        </member>
+        <!-- 对于成员“M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetIndustryRequest.#ctor”忽略有格式错误的 XML 注释 -->
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest">
+            <summary>
+            获得模板ID
+            </summary>
+        </member>
+        <!-- 对于成员“M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.#ctor”忽略有格式错误的 XML 注释 -->
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.Template_id_short">
+            <summary>
+            模板库中模板的编号，有“TM**”和“OPENTMTM**”等形式
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSetIndustryRequest">
+            <summary>
+            设置所属行业
+            </summary>
+        </member>
+        <!-- 对于成员“M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSetIndustryRequest.#ctor”忽略有格式错误的 XML 注释 -->
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSetIndustryRequest.Industry_id1">
+            <summary>
+            公众号模板消息所属行业编号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSetIndustryRequest.Industry_id2">
+            <summary>
+            公众号模板消息所属行业编号
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest">
+             <summary>
+            发送模板消息
+             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.#ctor">
+            <summary>
+            发送模板消息 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Template_id">
+            <summary>
+            公众帐号下模板消息ID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Touser">
+            <summary>
+            接收者openid
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Url">
+            <summary>
+            模板跳转链接（海外帐号没有跳转能力）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Miniprogram">
+            <summary>
+            跳小程序所需数据，不需跳小程序可不用传该数据 非必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Data">
+            <summary>
+            模板数据 Json 数据
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Color">
+            <summary>
+            模板内容字体颜色，不填默认为黑色 非必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.MiniProgram.appid">
+            <summary>
+            所需跳转到的小程序appid（该小程序appid必须与发模板消息的公众号是绑定关联关系，暂不支持小游戏）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.MiniProgram.pagepath">
+            <summary>
+            所需跳转到小程序的具体页面路径，支持带参数,（示例index?foo=bar），要求该小程序已发布，暂不支持小游戏
+            </summary>
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiAddTemplateRequest">
             <summary>
@@ -821,6 +2213,201 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetBlackUserListRequest">
+            <summary>
+             获取公众号的黑名单列表 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetBlackUserListRequest.#ctor">
+            <summary>
+             获取公众号的黑名单列表  - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetBlackUserListRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetBlackUserListRequest.Begin_openid">
+            <summary>
+            当 begin_openid 为空时，默认从开头拉取。
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetBlackUserListRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetBlackUserListRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetBlackUserListRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetUserListRequest">
+            <summary>
+            获取用户列表 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetUserListRequest.#ctor">
+            <summary>
+            获取用户列表  - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetUserListRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetUserListRequest.Next_Openid">
+            <summary>
+            第一个拉取的OPENID，不填默认从头开始拉取
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetUserListRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetUserListRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiGetUserListRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.User.WxApiUpdateUserRemarkRequest">
+            <summary>
+            设置用户备注名 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUpdateUserRemarkRequest.#ctor">
+            <summary>
+            设置用户备注名  - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiUpdateUserRemarkRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiUpdateUserRemarkRequest.Openid">
+            <summary>
+            用户OpenId
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiUpdateUserRemarkRequest.Remark">
+            <summary>
+            备注名
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUpdateUserRemarkRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUpdateUserRemarkRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUpdateUserRemarkRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserCreateTagRequest">
+            <summary>
+            创建用户标签 - 公众平台
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserCreateTagRequest.#ctor">
+            <summary>
+            创建用户标签 - 公众平台 (一个公众号，最多可以创建100个标签。)
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserCreateTagRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserCreateTagRequest.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserCreateTagRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserCreateTagRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserCreateTagRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.TagRequest.name">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserInfoRequest">
+            <summary>
+            获取用户基本信息（包括UnionID机制）- 
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserInfoRequest.#ctor">
+            <summary>
+            获取用户基本信息（包括UnionID机制）-- 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserInfoRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserInfoRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserInfoRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.User.WxApiUserInfoRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiCode2SessionRequest">
             <summary>
             登录凭证校验。通过 wx.login() 接口获得临时登录凭证 code 后传到开发者服务器调用此接口完成登录流程
@@ -980,6 +2567,31 @@
             媒体文件上传时间戳
             </summary>
         </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.CustomerServer.WxApiCustomerListResponse.kf_list">
+            <summary>
+            客服列表
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.CustomerServer.KFList.kf_account">
+            <summary>
+            完整客服账号，格式为：账号前缀@公众号微信号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.CustomerServer.KFList.kf_nick">
+            <summary>
+            客服昵称
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.CustomerServer.KFList.kf_id">
+            <summary>
+            	客服工号
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.CustomerServer.KFList.kf_headimgurl">
+            <summary>
+            客服昵称，最长6个汉字或12个英文字符
+            </summary>
+        </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Response.DailySummaryInfo.Visit_total">
             <summary>
             累计用户数
@@ -1033,6 +2645,27 @@
         <member name="P:XmSoft.AspNetCore.WxApi.Response.VisitTrend.visit_depth">
             <summary>
             平均访问深度 (浮点型)
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.DataAnalysis.UserCumulate.cumulate_user">
+            <summary>
+            总用户量
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.DataAnalysis.UserSummary.User_source">
+            <summary>
+            	用户的渠道，数值代表的含义如下： 0代表其他合计 1代表公众号搜索 17代表名片分享 30代表扫描二维码 
+            	<para>43代表图文页右上角菜单 51代表支付后关注（在支付完成页） 57代表图文页内公众号名称 75代表公众号文章广告 78代表朋友圈广告</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.DataAnalysis.UserSummary.New_user">
+            <summary>
+            新增的用户数量
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.DataAnalysis.UserSummary.Cancel_user">
+            <summary>
+            取消关注的用户数量，new_user减去cancel_user即为净增用户数量
             </summary>
         </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Response.Visit_Uv_New_User.Index">
@@ -1115,6 +2748,197 @@
             转发人数
             </summary>
         </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiAddForeverNewsResponse.Media_id">
+            <summary>
+            返回新增的图文消息素材的media_id。
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiDeleteMaterialResponse">
+            <summary>
+            删除永久素材
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialCountResponse">
+            <summary>
+            获取素材总数
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialCountResponse.#ctor">
+            <summary>
+            获取素材总数 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialCountResponse.Voice_Count">
+            <summary>
+            图文素材
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialCountResponse.Video_Count">
+            <summary>
+            视频素材标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialCountResponse.Image_Count">
+            <summary>
+            视频描述
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialCountResponse.Down_url">
+            <summary>
+            视频下载地址
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialListResponse">
+            <summary>
+            获取素材列表
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialListResponse.#ctor">
+            <summary>
+            获取素材列表 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialListResponse.total_count">
+            <summary>
+            图文素材
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialListResponse.item_count">
+            <summary>
+            视频素材标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialListResponse.item">
+            <summary>
+            视频描述
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.Item">
+            <summary>
+            其他类型（图片、语音、视频） - 获取素材列表
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.ItemNews">
+            <summary>
+            永久图文消息素材 -- 获取素材列表
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialResponse">
+            <summary>
+            获取永久素材
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialResponse.#ctor">
+            <summary>
+            获取永久素材 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialResponse.News_item">
+            <summary>
+            图文素材
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialResponse.title">
+            <summary>
+            视频素材标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialResponse.Description">
+            <summary>
+            视频描述
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiGetMaterialResponse.Down_url">
+            <summary>
+            视频下载地址
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.thumb_media_id">
+            <summary>
+            图文消息的封面图片素材id（必须是永久mediaID）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.digest">
+            <summary>
+            图文消息的摘要，仅有单图文消息才有摘要，多图文此处为空。如果本字段为没有填写，则默认抓取正文前64个字。 非必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.show_cover_pic">
+            <summary>
+            是否显示封面，0为false，即不显示，1为true，即显示
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.content">
+            <summary>
+            图文消息的具体内容，支持HTML标签，必须少于2万字符，小于1M，
+            且此处会去除JS,涉及图片url必须来源 "上传图文消息内的图片获取URL"接口获取。外部图片url将被过滤
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.content_source_url">
+            <summary>
+            图文消息的原文地址，即点击“阅读原文”后的URL
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.need_open_comment">
+            <summary>
+            Uint32 是否打开评论，0不打开，1打开 非必填
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.NewItem.only_fans_can_comment">
+            <summary>
+            Uint32 是否粉丝才可评论，0所有人可评论，1粉丝才可评论 非必填
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiUpdateForeverNewsResponse">
+            <summary>
+            修改永久图文素材
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiUploadImgResponse">
+            <summary>
+            上传图片
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiUploadImgResponse.#ctor">
+            <summary>
+            上传图片 
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiUploadImgResponse.UrL">
+            <summary>
+            返回路径
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiUploadMaterialResponse">
+            <summary>
+            新增其他类型永久素材
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiUploadMaterialResponse.#ctor">
+            <summary>
+            新增其他类型永久素材 
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiUploadMaterialResponse.UrL">
+            <summary>
+            新增的图片素材的图片URL（仅新增图片素材时会返回该字段）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.MaterialManager.WxApiUploadMaterialResponse.Media_id">
+            <summary>
+            新增的永久素材的media_id
+            </summary>
+        </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Response.NearbyPoi.Poi_list.poi_id">
             <summary>
             附近地点 ID
@@ -1143,6 +2967,238 @@
         <member name="P:XmSoft.AspNetCore.WxApi.Response.NearbyPoi.Poi_list.refuse_reason">
             <summary>
             审核失败原因，audit_status=4 时返回
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiAddPoiResponse">
+            <summary>
+            创建门店
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiAddPoiResponse.#ctor">
+            <summary>
+            创建门店
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiAddPoiResponse.Poi_id">
+            <summary>
+            唯一的poiid 门店Id
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiDeletePoiResponse">
+            <summary>
+            删除门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiDeletePoiResponse.#ctor">
+            <summary>
+            删除门店返回信息
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiGetPoiListResponse">
+            <summary>
+            查询门店列表信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiGetPoiListResponse.#ctor">
+            <summary>
+            查询门店列表信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiGetPoiListResponse.TotalCount">
+            <summary>
+            门店总数量
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiGetPoiListResponse.Businesslist">
+            <summary>
+            门店信息
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiGetPoiResponse">
+            <summary>
+            获取门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiGetPoiResponse.#ctor">
+            <summary>
+            获取门店信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiGetPoiResponse.business">
+            <summary>
+            门店信息
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Poi.Business">
+            <summary>
+            门店
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.Business.base_info">
+            <summary>
+            基础数据
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo">
+            <summary>
+            门店基础信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.sid">
+            <summary>
+            商户自己的id，用于后续审核通过收到poi_id 的通知时，做对应关系。请商户自己保证唯一识别性
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.business_name">
+            <summary>
+            门店名称（仅为商户名，如：国美、麦当劳，不应包含地区、地址、分店名等信息，错误示例：北京国美） 不能为空，15个汉字或30个英文字符内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.branch_name">
+            <summary>
+            分店名称（不应包含地区信息，不应与门店名有重复，错误示例：北京王府井店） 20 个字 以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.province">
+            <summary>
+            门店所在的省份（直辖市填城市名,如：北京 市） 10个字 以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.city">
+            <summary>
+            门店所在的城市 10个字 以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.district">
+            <summary>
+            门店所在地区 10个字 以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.address">
+            <summary>
+            门店所在的详细街道地址（不要填写省市信息）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.telephone">
+            <summary>
+            门店的电话（纯数字，区号、分机号均由“-”隔开）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.categories">
+            <summary>
+            门店的类型（不同级分类用“,”隔开，如：美食，川菜，火锅。详细分类参见附件：微信门店类目表）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.offset_type">
+            <summary>
+            坐标类型： 1 为火星坐标 2 为sogou经纬度 3 为百度经纬度 4 为mapbar经纬度 
+            <para>5 为GPS坐标 6 为sogou墨卡托坐标 注：高德经纬度无需转换可直接使用</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.longitude">
+            <summary>
+            门店所在地理位置的经度
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.latitude">
+            <summary>
+            门店所在地理位置的纬度（经纬度均为火星坐标，最好选用腾讯地图标记的坐标）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.photo_list">
+            <summary>
+            图片列表，url 形式，可以有多张图片，尺寸为 640*340px。必须为上一接口生成的url。 
+            <para>图片内容不允许与门店不相关，不允许为二维码、员工合照（或模特肖像）、营业执照、无门店正门的街景、地图截图、公交地铁站牌、菜单截图等</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.recommend">
+            <summary>
+            推荐品，餐厅可为推荐菜；酒店为推荐套房；景点为推荐游玩景点等，针对自己行业的推荐内容 200字以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.special">
+            <summary>
+            特色服务，如免费wifi，免费停车，送货上门等商户能提供的特色功能或服务
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.introduction">
+            <summary>
+            商户简介，主要介绍商户信息等 300字以内
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.open_time">
+            <summary>
+            	营业时间，24 小时制表示，用“-”连接，如 8:00-20:00
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.BaseInfo.avg_price">
+            <summary>
+            人均价格，大于0 的整数
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Poi.PictureList">
+            <summary>
+            图片信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Poi.PictureList.photo_url">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiUpdatePoiResponse">
+            <summary>
+            修改门店信息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Response.Poi.WxApiUpdatePoiResponse.#ctor">
+            <summary>
+            修改门店信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.QRCode.WxApiCreateQRCodeForeverTicketResponse.Ticket">
+            <summary>
+            获取的二维码ticket，凭借此ticket可以在有效时间内换取二维码。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.QRCode.WxApiCreateQRCodeForeverTicketResponse.Expire_seconds">
+            <summary>
+            	该二维码有效时间，以秒为单位。 最大不超过2592000（即30天）。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.QRCode.WxApiCreateQRCodeForeverTicketResponse.Url">
+            <summary>
+            二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.QRCode.WxApiCreateQRCodeShortTimeTicketResponse.Ticket">
+            <summary>
+            获取的二维码ticket，凭借此ticket可以在有效时间内换取二维码。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.QRCode.WxApiCreateQRCodeShortTimeTicketResponse.Expire_seconds">
+            <summary>
+            	该二维码有效时间，以秒为单位。 最大不超过2592000（即30天）。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.QRCode.WxApiCreateQRCodeShortTimeTicketResponse.Url">
+            <summary>
+            二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.Message.WxApiGetAllTemplateResponse.template_list">
+            <summary>
+            获取模板列表
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.Message.WxApiGetIndustryResponse.primary_industry">
+            <summary>
+            帐号设置的主营行业
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.Message.WxApiGetIndustryResponse.secondary_industry">
+            <summary>
+            帐号设置的副营行业
             </summary>
         </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.Keyword_list.Keyword_id">
@@ -1180,23 +3236,145 @@
             模板列表
             </summary>
         </member>
-        <member name="T:XmSoft.AspNetCore.WxApi.Utility.WxApiUtility">
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiGetUserListResponse.Data">
+            <summary>
+            [JsonProperty(PropertyName = "data")]
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserCreateTagResponse.Tag">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.TagResponse.id">
+            <summary>
+            标签id，由微信分配
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.TagResponse.name">
+            <summary>
+            	标签名，UTF8编码
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.subscribe">
+            <summary>
+            	用户是否订阅该公众号标识，值为0时，代表此用户没有关注该公众号，拉取不到其余信息。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.openid">
+            <summary>
+            用户的标识，对当前公众号唯一
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.nickname">
+            <summary>
+            用户的昵称
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.sex">
+            <summary>
+            用户的性别，值为1时是男性，值为2时是女性，值为0时是未知
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.city">
+            <summary>
+            用户所在城市
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.country">
+            <summary>
+            用户所在国家
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.province">
+            <summary>
+            用户所在省份
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.language">
+            <summary>
+            用户的语言，简体中文为zh_CN
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.headimgurl">
+            <summary>
+            用户头像，最后一个数值代表正方形头像大小（有0、46、64、96、132数值可选，0代表640*640正方形头像），用户没有头像时该项为空。
+            若用户更换头像，原有头像URL将失效。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.subscribe_time">
+            <summary>
+            用户关注时间，为时间戳。如果用户曾多次关注，则取最后关注时间
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.unionid">
+            <summary>
+            只有在用户将公众号绑定到微信开放平台帐号后，才会出现该字段。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.remark">
+            <summary>
+            公众号运营者对粉丝的备注，公众号运营者可在微信公众平台用户管理界面对粉丝添加备注
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.groupid">
+            <summary>
+            用户所在的分组ID（兼容旧的用户分组接口）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.tagid_list">
+            <summary>
+            用户被打上的标签ID列表
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.subscribe_scene">
+            <summary>
+            返回用户关注的渠道来源，ADD_SCENE_SEARCH 公众号搜索，ADD_SCENE_ACCOUNT_MIGRATION 公众号迁移，ADD_SCENE_PROFILE_CARD 名片分享，
+            <para>ADD_SCENE_QR_CODE 扫描二维码，ADD_SCENEPROFILE LINK 图文页内名称点击，ADD_SCENE_PROFILE_ITEM 图文页右上角菜单</para>
+            <para>ADD_SCENE_PAID 支付后关注，ADD_SCENE_OTHERS 其他</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.qr_scene">
+            <summary>
+            二维码扫码场景（开发者自定义）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.qr_scene_str">
+            <summary>
+            二维码扫码场景描述（开发者自定义）
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Utility">
             <summary>
             Utility
             </summary>
         </member>
-        <member name="M:XmSoft.AspNetCore.WxApi.Utility.WxApiUtility.BulidContent(System.Collections.Generic.SortedDictionary{System.String,System.String})">
+        <member name="M:XmSoft.AspNetCore.WxApi.Utility.BulidContent(System.Collections.Generic.SortedDictionary{System.String,System.String})">
             <summary>
             拼接普通文本请求内容
             </summary>
             <param name="dictionary"></param>
             <returns></returns>
         </member>
-        <member name="M:XmSoft.AspNetCore.WxApi.Utility.WxApiUtility.BulidJsonContent(System.Collections.Generic.SortedDictionary{System.String,System.String})">
+        <member name="M:XmSoft.AspNetCore.WxApi.Utility.BulidJsonContent(System.Collections.Generic.SortedDictionary{System.String,System.String},System.Collections.Generic.List{System.String})">
             <summary>
             字典转Json字符串
             </summary>
             <param name="dictionary"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Utility.ToMsgType(System.String)">
+            <summary>
+            转换成消息类型 
+            </summary>
+            <param name="TypeName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Utility.ToEventType(System.String)">
+            <summary>
+            转换成 事件类型
+            </summary>
+            <param name="TypeName"></param>
             <returns></returns>
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.WxApiClient">
@@ -1209,7 +3387,7 @@
             WxApi Client
             </summary>
         </member>
-        <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.ExecuteAsync``1(XmSoft.AspNetCore.WxApi.IWxApiRequest{``0},System.String)">
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.ExecuteAsync``1(XmSoft.AspNetCore.WxApi.IWxApiRequest{``0})">
             <summary>
             异步执行
             </summary>
@@ -1233,6 +3411,86 @@
             用以释放非托管资源 
             </summary>
             <param name="disposing"></param>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.WxApiEventNotify">
+            <summary>
+            回调：事件基层
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.WxApiNotify">
+            <summary>
+            回调的基层信息。
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiNotify.ToUserName">
+            <summary>
+            发送方帐号（一个OpenID）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiNotify.FromUserName">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiNotify.CreateTime">
+            <summary>
+            消息创建时间（整型）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiNotify.MsgType">
+            <summary>
+            消息类型
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiNotify.Event">
+            <summary>
+            事件类型
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiNotifyClient.#ctor">
+            <summary>
+            回调通知
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiNotifyClient.ExecuteAsync``1(System.IO.Stream)">
+            <summary>
+            获取的Body XML数据流转化成相应的对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="body"></param>
+            <param name="optionsName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiNotifyClient.Finalize">
+            <summary>
+            /析构函数
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiNotifyClient.Dispose">
+            <summary>
+            释放该接口
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiNotifyClient.Dispose(System.Boolean)">
+            <summary>
+            用以释放非托管资源 
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiNotifyResult.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiNotifyResult.Failure">
+            <summary>
+            失败
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.WxApiObject">
+            <summary>
+            WxApi 基础对象。
+            </summary>
         </member>
         <member name="P:XmSoft.AspNetCore.WxApi.WxApiObject.Body">
             <summary>
@@ -1263,6 +3521,31 @@
             请求方式
             </summary>
             <returns></returns>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiResponse.ErrCode">
+            <summary>
+            错误码，0为正常
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiResponse.Errmsg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.WxApiXmlObject">
+            <summary>
+            回调基础对象
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiXmlObject.Body">
+            <summary>
+            原始内容
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.WxApiXmlObject.Parameters">
+            <summary>
+            原始参数
+            </summary>
         </member>
     </members>
 </doc>
