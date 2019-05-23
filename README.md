@@ -20,6 +20,7 @@ XmSoft.AspNetCore.WxApi      | [![NuGet](https://img.shields.io/nuget/v/XmSoft.A
 #### 
 
 * 登录凭证校验
+```
 using (var client = new WxApi.WxApiClient())
 {
    var request = new WxApiCode2SessionRequest()
@@ -32,7 +33,9 @@ using (var client = new WxApi.WxApiClient())
    var response = await client.ExecuteAsync(request);
    return Json(new { Code = 1, Msg = "成功", Data = response });
 }
+```
 * 获取小程序全局唯一后台接口调用凭据
+```
 using (var client = new WxApi.WxApiClient())
 {
       var request = new WxApiGetAccessTokenRequest()
@@ -43,6 +46,9 @@ using (var client = new WxApi.WxApiClient())
       var response = await client.ExecuteAsync(request);
       return Json(new { Code = 1, Msg = "成功", Data = response });
  }
+```
+......
+
 
 ## 官方文档
 
