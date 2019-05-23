@@ -16,7 +16,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
         /// </summary>
         public WxApiShortUrlRequest()
         {
-           
+            Action = "long2short";
         }
         /// <summary>
         /// token
