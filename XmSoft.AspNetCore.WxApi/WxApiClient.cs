@@ -27,8 +27,8 @@ namespace XmSoft.AspNetCore.WxApi
         private const string kf_account = "kf_account";
         private const string description = "description";
         private const string mediatype ="video";
-        private const string imagetype = "image/jpg";
-        private const string voicetype = "audio/mp3";
+        //private const string imagetype = "image/jpg";
+        //private const string voicetype = "audio/mp3";
 
         private const string format = "format";
         private const string voice_id = "voice_id";
@@ -80,14 +80,14 @@ namespace XmSoft.AspNetCore.WxApi
                             url += $"&{kf_account }={sortedParams.GetValue(kf_account)}";
                             filterKey.Add(kf_account);
                         }
-                        if(request is WxApiTranslateContentRequest) //提交语音
+                        if(request is WxApiTranslateContentRequest) //微信翻译
                         {
                             url += $"&{lfrom }={sortedParams.GetValue(lfrom)}";
                             filterKey.Add(lfrom);
                             url += $"&{lto}={sortedParams.GetValue(lto)}";
                             filterKey.Add(lto);
                         }
-                        if(request is WxApiAddVoiceTorecofortextRequest)
+                        if(request is WxApiAddVoiceTorecofortextRequest)//提交语音
                         {
                             url += $"&{format}={sortedParams.GetValue(format)}";
                             filterKey.Add(format);

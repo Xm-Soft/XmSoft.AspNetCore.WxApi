@@ -194,6 +194,52 @@ namespace XmSoft.AspNetCore.Sample.Controllers
 
         }
         /// <summary>
+        /// 获取用户增减数据
+        /// </summary>
+        /// <param name="access_token"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("GetUserSummary")]
+
+        public async Task<JsonResult> GetUserSummary(string access_token)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiGetUserSummaryRequest()
+                {
+                    AccessToken = access_token,
+                    BeginDate = "2019-05-17",
+                    EndDate = "2019-05-22"
+                };
+                var s = await client.ExecuteAsync(request);
+                return Json(new { Code = 1, Msg = "成功", Data = s });
+            }
+
+        }
+        /// <summary>
+        /// 获取累计用户数据
+        /// </summary>
+        /// <param name="access_token"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("GetUserCumulate")]
+
+        public async Task<JsonResult> GetUserCumulate(string access_token)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiGetUserCumulateRequest()
+                {
+                    AccessToken = access_token,
+                    BeginDate = "2019-05-20",
+                    EndDate = "2019-05-22"
+                };
+                var s = await client.ExecuteAsync(request);
+                return Json(new { Code = 1, Msg = "成功", Data = s });
+            }
+
+        }
+        /// <summary>
         /// 获取小程序新增或活跃用户的画像分布数据。时间范围支持昨天、最近7天、最近30天。
         /// 其中，新增用户数为时间范围内首次访问小程序的去重用户数，活跃用户数为时间范围内访问过小程序的去重用户数。
         /// </summary>
