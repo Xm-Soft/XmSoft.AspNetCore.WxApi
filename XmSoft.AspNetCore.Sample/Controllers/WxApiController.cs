@@ -93,6 +93,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
         {
             using (var client = new WxApi.WxApiClient())
             {
+
                 var request = new WxApiGetMonthlyRetainRequest()
                 {
                     AccessToken = access_token,
