@@ -4,7 +4,7 @@
     <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
+  <!--<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
     <DocumentationFile>G:\Work\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
   </PropertyGroup>
 
@@ -18,7 +18,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <DocumentationFile>G:\Work\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
-  </PropertyGroup>
+  </PropertyGroup>-->
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />

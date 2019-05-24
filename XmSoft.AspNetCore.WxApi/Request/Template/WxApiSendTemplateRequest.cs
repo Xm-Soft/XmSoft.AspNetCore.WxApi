@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using XmSoft.AspNetCore.WxApi.Response.Template;
+using Newtonsoft.Json;
 
 namespace XmSoft.AspNetCore.WxApi.Request.Template
 {
@@ -91,7 +92,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template
                 { "template_id", Template_id },
                 { "page", Page },
                 { "form_id", Form_id },
-                { "data", Data },
+                { "data",  Data == null ? null : JsonConvert.SerializeObject( Data )},
                 { "emphasis_keyword", Emphasis_keyword }
                
 
