@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using XmSoft.AspNetCore.WxApi.Response.Card;
+using XmSoft.AspNetCore.WxApi.Model.Card;
+using Newtonsoft.Json;
 
 namespace XmSoft.AspNetCore.WxApi.Request
 {
@@ -18,14 +20,16 @@ namespace XmSoft.AspNetCore.WxApi.Request
            
         }
         public string AccessToken { get; set; }
-        /// <summary>
-        /// 商户Secret
-        /// </summary>
-        public string Secret { get; set; }
-        /// <summary>
-        /// 默认类型 client_credential
-        /// </summary>
-        public string GrantType { get; set; }
+       
+        public CardGroupon groupon { get; set; }
+
+        public CardCash cash { get; set; }
+
+        public CardDiscount discount { get; set; }
+
+        public CardGeneralCoupon generalCoupon { get; set; }
+
+        public CardGift gift { get; set; }
 
         #region IWxApiRequest Members
         /// <summary>
@@ -34,7 +38,7 @@ namespace XmSoft.AspNetCore.WxApi.Request
         /// <returns></returns>
         public string GetRequestUrl()
         {
-            return "https://api.weixin.qq.com/cgi-bin/token";
+            return "https://api.weixin.qq.com/card/create";
         }
         /// <summary>
         /// 获取参数
@@ -44,7 +48,12 @@ namespace XmSoft.AspNetCore.WxApi.Request
         {
             var parameters = new WxApiDictionary
             {
-                
+                { "access_token", AccessToken },
+                { "card",groupon != null ? JsonConvert.SerializeObject(groupon)
+                :gift != null ? JsonConvert.SerializeObject(gift)
+                :cash != null ? JsonConvert.SerializeObject(cash)
+                :discount != null ? JsonConvert.SerializeObject(discount)
+                :JsonConvert.SerializeObject(generalCoupon) }
             };
             return parameters;
         }
