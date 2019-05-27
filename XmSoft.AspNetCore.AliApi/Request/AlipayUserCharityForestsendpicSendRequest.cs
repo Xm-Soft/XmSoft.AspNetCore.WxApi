@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.charity.forestsendpic.send
+    /// AliApi API: alipay.user.charity.forestsendpic.send
     /// </summary>
     public class AlipayUserCharityForestsendpicSendRequest : IAliApiRequest<AlipayUserCharityForestsendpicSendResponse>
     {

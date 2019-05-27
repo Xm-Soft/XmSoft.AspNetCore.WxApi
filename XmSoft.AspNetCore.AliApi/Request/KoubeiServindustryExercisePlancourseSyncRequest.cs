@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.servindustry.exercise.plancourse.sync
+    /// AliApi API: koubei.servindustry.exercise.plancourse.sync
     /// </summary>
     public class KoubeiServindustryExercisePlancourseSyncRequest : IAliApiRequest<KoubeiServindustryExercisePlancourseSyncResponse>
     {

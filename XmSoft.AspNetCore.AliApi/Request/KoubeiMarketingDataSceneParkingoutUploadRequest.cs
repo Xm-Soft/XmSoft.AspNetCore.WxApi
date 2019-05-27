@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.data.scene.parkingout.upload
+    /// AliApi API: koubei.marketing.data.scene.parkingout.upload
     /// </summary>
     public class KoubeiMarketingDataSceneParkingoutUploadRequest : IAliApiRequest<KoubeiMarketingDataSceneParkingoutUploadResponse>
     {

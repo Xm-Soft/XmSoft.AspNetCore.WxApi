@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.trade.fastpay.third.notify
+    /// AliApi API: alipay.trade.fastpay.third.notify
     /// </summary>
     public class AlipayTradeFastpayThirdNotifyRequest : IAliApiRequest<AlipayTradeFastpayThirdNotifyResponse>
     {

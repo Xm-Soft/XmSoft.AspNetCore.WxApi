@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.advert.commission.role.query
+    /// AliApi API: koubei.advert.commission.role.query
     /// </summary>
     public class KoubeiAdvertCommissionRoleQueryRequest : IAliApiRequest<KoubeiAdvertCommissionRoleQueryResponse>
     {

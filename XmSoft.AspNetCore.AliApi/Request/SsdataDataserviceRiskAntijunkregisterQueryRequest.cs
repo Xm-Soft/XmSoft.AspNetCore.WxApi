@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.risk.antijunkregister.query
+    /// AliApi API: ssdata.dataservice.risk.antijunkregister.query
     /// </summary>
     public class SsdataDataserviceRiskAntijunkregisterQueryRequest : IAliApiRequest<SsdataDataserviceRiskAntijunkregisterQueryResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ecard.edu.balance.get
+    /// AliApi API: alipay.ecard.edu.balance.get
     /// </summary>
     public class AlipayEcardEduBalanceGetRequest : IAliApiRequest<AlipayEcardEduBalanceGetResponse>
     {

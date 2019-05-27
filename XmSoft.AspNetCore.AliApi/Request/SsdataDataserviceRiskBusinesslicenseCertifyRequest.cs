@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.risk.businesslicense.certify
+    /// AliApi API: ssdata.dataservice.risk.businesslicense.certify
     /// </summary>
     public class SsdataDataserviceRiskBusinesslicenseCertifyRequest : IAliApiUploadRequest<SsdataDataserviceRiskBusinesslicenseCertifyResponse>
     {

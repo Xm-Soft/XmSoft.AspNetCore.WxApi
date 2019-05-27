@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.guarantee.writeoff.pay
+    /// AliApi API: mybank.credit.guarantee.writeoff.pay
     /// </summary>
     public class MybankCreditGuaranteeWriteoffPayRequest : IAliApiRequest<MybankCreditGuaranteeWriteoffPayResponse>
     {

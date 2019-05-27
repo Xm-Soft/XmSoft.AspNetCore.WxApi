@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.group.query
+    /// AliApi API: alipay.social.base.group.query
     /// </summary>
     public class AlipaySocialBaseGroupQueryRequest : IAliApiRequest<AlipaySocialBaseGroupQueryResponse>
     {

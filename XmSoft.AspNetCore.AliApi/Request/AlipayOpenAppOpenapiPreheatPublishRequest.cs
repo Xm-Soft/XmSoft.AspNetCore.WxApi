@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.app.openapi.preheat.publish
+    /// AliApi API: alipay.open.app.openapi.preheat.publish
     /// </summary>
     public class AlipayOpenAppOpenapiPreheatPublishRequest : IAliApiRequest<AlipayOpenAppOpenapiPreheatPublishResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.credit.ep.freedeposit.orderrisk.query
+    /// AliApi API: zhima.credit.ep.freedeposit.orderrisk.query
     /// </summary>
     public class ZhimaCreditEpFreedepositOrderriskQueryRequest : IAliApiRequest<ZhimaCreditEpFreedepositOrderriskQueryResponse>
     {

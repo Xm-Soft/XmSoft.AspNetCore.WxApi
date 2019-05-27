@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.exsc.user.firstfundinpour.get
+    /// AliApi API: alipay.exsc.user.firstfundinpour.get
     /// </summary>
     public class AlipayExscUserFirstfundinpourGetRequest : IAliApiRequest<AlipayExscUserFirstfundinpourGetResponse>
     {

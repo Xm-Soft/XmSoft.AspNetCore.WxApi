@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.samsung.puc.charge
+    /// AliApi API: alipay.samsung.puc.charge
     /// </summary>
     public class AlipaySamsungPucChargeRequest : IAliApiRequest<AlipaySamsungPucChargeResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.authentication.customer.faceability.identify
+    /// AliApi API: zoloz.authentication.customer.faceability.identify
     /// </summary>
     public class ZolozAuthenticationCustomerFaceabilityIdentifyRequest : IAliApiRequest<ZolozAuthenticationCustomerFaceabilityIdentifyResponse>
     {

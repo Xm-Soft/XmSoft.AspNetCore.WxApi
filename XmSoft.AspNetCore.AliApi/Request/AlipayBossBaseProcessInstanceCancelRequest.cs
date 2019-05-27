@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.boss.base.process.instance.cancel
+    /// AliApi API: alipay.boss.base.process.instance.cancel
     /// </summary>
     public class AlipayBossBaseProcessInstanceCancelRequest : IAliApiRequest<AlipayBossBaseProcessInstanceCancelResponse>
     {

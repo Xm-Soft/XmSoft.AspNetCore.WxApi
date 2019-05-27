@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.micropay.order.freezepayurl.get
+    /// AliApi API: alipay.micropay.order.freezepayurl.get
     /// </summary>
     public class AlipayMicropayOrderFreezepayurlGetRequest : IAliApiRequest<AlipayMicropayOrderFreezepayurlGetResponse>
     {

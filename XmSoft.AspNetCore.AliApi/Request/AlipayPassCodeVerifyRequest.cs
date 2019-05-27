@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.pass.code.verify
+    /// AliApi API: alipay.pass.code.verify
     /// </summary>
     public class AlipayPassCodeVerifyRequest : IAliApiRequest<AlipayPassCodeVerifyResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.recommend.get
+    /// AliApi API: alipay.mobile.recommend.get
     /// </summary>
     public class AlipayMobileRecommendGetRequest : IAliApiRequest<AlipayMobileRecommendGetResponse>
     {

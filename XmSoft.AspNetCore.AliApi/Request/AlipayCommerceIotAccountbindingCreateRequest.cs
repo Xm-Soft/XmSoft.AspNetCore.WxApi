@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.iot.accountbinding.create
+    /// AliApi API: alipay.commerce.iot.accountbinding.create
     /// </summary>
     public class AlipayCommerceIotAccountbindingCreateRequest : IAliApiRequest<AlipayCommerceIotAccountbindingCreateResponse>
     {

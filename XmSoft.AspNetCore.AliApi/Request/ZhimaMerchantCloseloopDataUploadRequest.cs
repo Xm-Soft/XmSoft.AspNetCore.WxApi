@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.merchant.closeloop.data.upload
+    /// AliApi API: zhima.merchant.closeloop.data.upload
     /// </summary>
     public class ZhimaMerchantCloseloopDataUploadRequest : IAliApiUploadRequest<ZhimaMerchantCloseloopDataUploadResponse>
     {

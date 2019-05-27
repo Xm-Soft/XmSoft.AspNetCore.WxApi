@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.data.morse.operate.sync
+    /// AliApi API: zhima.data.morse.operate.sync
     /// </summary>
     public class ZhimaDataMorseOperateSyncRequest : IAliApiRequest<ZhimaDataMorseOperateSyncResponse>
     {

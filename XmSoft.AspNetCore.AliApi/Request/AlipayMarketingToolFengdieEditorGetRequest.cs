@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.tool.fengdie.editor.get
+    /// AliApi API: alipay.marketing.tool.fengdie.editor.get
     /// </summary>
     public class AlipayMarketingToolFengdieEditorGetRequest : IAliApiRequest<AlipayMarketingToolFengdieEditorGetResponse>
     {

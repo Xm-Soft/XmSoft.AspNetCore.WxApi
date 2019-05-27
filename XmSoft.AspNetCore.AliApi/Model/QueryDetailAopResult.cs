@@ -4,10 +4,10 @@ using System.Xml.Serialization;
 namespace XmSoft.AspNetCore.AliApi.Model
 {
     /// <summary>
-    /// QueryDetailAopResult Data Structure.
+    /// QueryDetailAliApiResult Data Structure.
     /// </summary>
     [Serializable]
-    public class QueryDetailAopResult : AliApiObject
+    public class QueryDetailAliApiResult : AliApiObject
     {
         /// <summary>
         /// 批次编号；此单据对应的批次编号

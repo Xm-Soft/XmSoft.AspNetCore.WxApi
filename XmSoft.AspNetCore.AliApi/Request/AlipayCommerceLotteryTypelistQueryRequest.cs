@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.lottery.typelist.query
+    /// AliApi API: alipay.commerce.lottery.typelist.query
     /// </summary>
     public class AlipayCommerceLotteryTypelistQueryRequest : IAliApiRequest<AlipayCommerceLotteryTypelistQueryResponse>
     {

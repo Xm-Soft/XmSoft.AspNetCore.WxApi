@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.order.push.sign
+    /// AliApi API: koubei.catering.order.push.sign
     /// </summary>
     public class KoubeiCateringOrderPushSignRequest : IAliApiRequest<KoubeiCateringOrderPushSignResponse>
     {

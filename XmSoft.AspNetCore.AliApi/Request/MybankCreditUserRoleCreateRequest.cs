@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.user.role.create
+    /// AliApi API: mybank.credit.user.role.create
     /// </summary>
     public class MybankCreditUserRoleCreateRequest : IAliApiRequest<MybankCreditUserRoleCreateResponse>
     {

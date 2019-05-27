@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.iservice.cognitive.ocr.driverlicense.query
+    /// AliApi API: alipay.iservice.cognitive.ocr.driverlicense.query
     /// </summary>
     public class AlipayIserviceCognitiveOcrDriverlicenseQueryRequest : IAliApiRequest<AlipayIserviceCognitiveOcrDriverlicenseQueryResponse>
     {

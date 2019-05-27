@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.public.gis.get
+    /// AliApi API: alipay.mobile.public.gis.get
     /// </summary>
     public class AlipayMobilePublicGisGetRequest : IAliApiRequest<AlipayMobilePublicGisGetResponse>
     {

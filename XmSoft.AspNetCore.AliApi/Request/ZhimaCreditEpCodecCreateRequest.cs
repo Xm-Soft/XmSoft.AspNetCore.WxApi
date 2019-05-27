@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.credit.ep.codec.create
+    /// AliApi API: zhima.credit.ep.codec.create
     /// </summary>
     public class ZhimaCreditEpCodecCreateRequest : IAliApiUploadRequest<ZhimaCreditEpCodecCreateResponse>
     {

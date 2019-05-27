@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.identification.user.web.initialize
+    /// AliApi API: zoloz.identification.user.web.initialize
     /// </summary>
     public class ZolozIdentificationUserWebInitializeRequest : IAliApiRequest<ZolozIdentificationUserWebInitializeResponse>
     {

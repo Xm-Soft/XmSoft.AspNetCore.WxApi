@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.servindustry.portfolio.opus.create
+    /// AliApi API: koubei.servindustry.portfolio.opus.create
     /// </summary>
     public class KoubeiServindustryPortfolioOpusCreateRequest : IAliApiRequest<KoubeiServindustryPortfolioOpusCreateResponse>
     {

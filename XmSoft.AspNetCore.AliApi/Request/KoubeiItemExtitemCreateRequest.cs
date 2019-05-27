@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.item.extitem.create
+    /// AliApi API: koubei.item.extitem.create
     /// </summary>
     public class KoubeiItemExtitemCreateRequest : IAliApiRequest<KoubeiItemExtitemCreateResponse>
     {

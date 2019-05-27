@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.account.finrisk.giriskrequest.create
+    /// AliApi API: alipay.account.finrisk.giriskrequest.create
     /// </summary>
     public class AlipayAccountFinriskGiriskrequestCreateRequest : IAliApiRequest<AlipayAccountFinriskGiriskrequestCreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.tools.file.upload
+    /// AliApi API: alipay.tools.file.upload
     /// </summary>
     public class AlipayToolsFileUploadRequest : IAliApiUploadRequest<AlipayToolsFileUploadResponse>
     {

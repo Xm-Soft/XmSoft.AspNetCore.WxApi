@@ -4,7 +4,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi
 {
     /// <summary>
-    /// AOP上传请求接口，支持同时上传多个文件。
+    /// AliApi上传请求接口，支持同时上传多个文件。
     /// </summary>
     public interface IAliApiUploadRequest<T> : IAliApiRequest<T> where T : AliApiResponse
     {

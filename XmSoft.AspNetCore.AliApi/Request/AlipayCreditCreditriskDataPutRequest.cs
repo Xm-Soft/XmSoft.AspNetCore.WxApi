@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.credit.creditrisk.data.put
+    /// AliApi API: alipay.credit.creditrisk.data.put
     /// </summary>
     public class AlipayCreditCreditriskDataPutRequest : IAliApiRequest<AlipayCreditCreditriskDataPutResponse>
     {

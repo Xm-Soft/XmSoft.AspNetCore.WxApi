@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ecapiprod.drawndn.lendingrecord.query
+    /// AliApi API: alipay.ecapiprod.drawndn.lendingrecord.query
     /// </summary>
     public class AlipayEcapiprodDrawndnLendingrecordQueryRequest : IAliApiRequest<AlipayEcapiprodDrawndnLendingrecordQueryResponse>
     {

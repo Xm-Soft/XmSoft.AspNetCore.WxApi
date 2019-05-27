@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.identification.customer.certify.query
+    /// AliApi API: zoloz.identification.customer.certify.query
     /// </summary>
     public class ZolozIdentificationCustomerCertifyQueryRequest : IAliApiRequest<ZolozIdentificationCustomerCertifyQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.risk.ipprofile.query
+    /// AliApi API: ssdata.dataservice.risk.ipprofile.query
     /// </summary>
     public class SsdataDataserviceRiskIpprofileQueryRequest : IAliApiRequest<SsdataDataserviceRiskIpprofileQueryResponse>
     {

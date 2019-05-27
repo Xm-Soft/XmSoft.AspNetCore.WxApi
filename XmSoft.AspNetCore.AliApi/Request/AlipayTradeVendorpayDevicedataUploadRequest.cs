@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.trade.vendorpay.devicedata.upload
+    /// AliApi API: alipay.trade.vendorpay.devicedata.upload
     /// </summary>
     public class AlipayTradeVendorpayDevicedataUploadRequest : IAliApiRequest<AlipayTradeVendorpayDevicedataUploadResponse>
     {

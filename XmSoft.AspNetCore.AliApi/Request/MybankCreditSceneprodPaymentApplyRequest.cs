@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.sceneprod.payment.apply
+    /// AliApi API: mybank.credit.sceneprod.payment.apply
     /// </summary>
     public class MybankCreditSceneprodPaymentApplyRequest : IAliApiRequest<MybankCreditSceneprodPaymentApplyResponse>
     {

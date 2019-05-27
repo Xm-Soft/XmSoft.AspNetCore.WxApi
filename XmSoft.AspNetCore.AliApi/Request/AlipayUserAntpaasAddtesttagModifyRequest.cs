@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.antpaas.addtesttag.modify
+    /// AliApi API: alipay.user.antpaas.addtesttag.modify
     /// </summary>
     public class AlipayUserAntpaasAddtesttagModifyRequest : IAliApiRequest<AlipayUserAntpaasAddtesttagModifyResponse>
     {

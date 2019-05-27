@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.overseas.travel.apple.campprize.detect
+    /// AliApi API: alipay.overseas.travel.apple.campprize.detect
     /// </summary>
     public class AlipayOverseasTravelAppleCampprizeDetectRequest : IAliApiRequest<AlipayOverseasTravelAppleCampprizeDetectResponse>
     {

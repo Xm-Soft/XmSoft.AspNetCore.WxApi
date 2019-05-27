@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.zdataservice.unidata.query
+    /// AliApi API: alipay.zdataservice.unidata.query
     /// </summary>
     public class AlipayZdataserviceUnidataQueryRequest : IAliApiRequest<AlipayZdataserviceUnidataQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.matchuser.label.delete
+    /// AliApi API: alipay.open.public.matchuser.label.delete
     /// </summary>
     public class AlipayOpenPublicMatchuserLabelDeleteRequest : IAliApiRequest<AlipayOpenPublicMatchuserLabelDeleteResponse>
     {

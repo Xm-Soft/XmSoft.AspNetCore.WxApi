@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.risk.directional.ipprofile.query
+    /// AliApi API: alipay.security.risk.directional.ipprofile.query
     /// </summary>
     public class AlipaySecurityRiskDirectionalIpprofileQueryRequest : IAliApiRequest<AlipaySecurityRiskDirectionalIpprofileQueryResponse>
     {

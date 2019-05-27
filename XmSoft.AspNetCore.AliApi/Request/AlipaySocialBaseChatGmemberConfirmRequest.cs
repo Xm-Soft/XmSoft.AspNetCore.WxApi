@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.chat.gmember.confirm
+    /// AliApi API: alipay.social.base.chat.gmember.confirm
     /// </summary>
     public class AlipaySocialBaseChatGmemberConfirmRequest : IAliApiRequest<AlipaySocialBaseChatGmemberConfirmResponse>
     {

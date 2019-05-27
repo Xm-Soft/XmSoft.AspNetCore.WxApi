@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.stepcounter.sync
+    /// AliApi API: alipay.user.stepcounter.sync
     /// </summary>
     public class AlipayUserStepcounterSyncRequest : IAliApiRequest<AlipayUserStepcounterSyncResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.pass.grouplist.query
+    /// AliApi API: alipay.user.pass.grouplist.query
     /// </summary>
     public class AlipayUserPassGrouplistQueryRequest : IAliApiRequest<AlipayUserPassGrouplistQueryResponse>
     {

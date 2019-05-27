@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.pos.material.delete
+    /// AliApi API: koubei.catering.pos.material.delete
     /// </summary>
     public class KoubeiCateringPosMaterialDeleteRequest : IAliApiRequest<KoubeiCateringPosMaterialDeleteResponse>
     {

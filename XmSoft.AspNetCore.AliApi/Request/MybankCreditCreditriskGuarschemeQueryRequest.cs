@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.creditrisk.guarscheme.query
+    /// AliApi API: mybank.credit.creditrisk.guarscheme.query
     /// </summary>
     public class MybankCreditCreditriskGuarschemeQueryRequest : IAliApiRequest<MybankCreditCreditriskGuarschemeQueryResponse>
     {

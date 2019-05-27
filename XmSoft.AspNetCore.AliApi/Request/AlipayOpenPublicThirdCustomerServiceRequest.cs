@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.third.customer.service
+    /// AliApi API: alipay.open.public.third.customer.service
     /// </summary>
     public class AlipayOpenPublicThirdCustomerServiceRequest : IAliApiRequest<AlipayOpenPublicThirdCustomerServiceResponse>
     {

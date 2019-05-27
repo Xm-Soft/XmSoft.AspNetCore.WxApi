@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.mycar.violation.vehicle.query
+    /// AliApi API: alipay.eco.mycar.violation.vehicle.query
     /// </summary>
     public class AlipayEcoMycarViolationVehicleQueryRequest : IAliApiRequest<AlipayEcoMycarViolationVehicleQueryResponse>
     {

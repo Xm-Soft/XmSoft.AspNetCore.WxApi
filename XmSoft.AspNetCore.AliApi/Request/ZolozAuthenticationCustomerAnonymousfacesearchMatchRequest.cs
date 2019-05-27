@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.authentication.customer.anonymousfacesearch.match
+    /// AliApi API: zoloz.authentication.customer.anonymousfacesearch.match
     /// </summary>
     public class ZolozAuthenticationCustomerAnonymousfacesearchMatchRequest : IAliApiRequest<ZolozAuthenticationCustomerAnonymousfacesearchMatchResponse>
     {

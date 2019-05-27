@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.prod.ifaa.devicepubkey.query
+    /// AliApi API: alipay.security.prod.ifaa.devicepubkey.query
     /// </summary>
     public class AlipaySecurityProdIfaaDevicepubkeyQueryRequest : IAliApiRequest<AlipaySecurityProdIfaaDevicepubkeyQueryResponse>
     {

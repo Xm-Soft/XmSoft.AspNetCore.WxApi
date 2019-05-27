@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.auth.info.authquery
+    /// AliApi API: zhima.auth.info.authquery
     /// </summary>
     public class ZhimaAuthInfoAuthqueryRequest : IAliApiRequest<ZhimaAuthInfoAuthqueryResponse>
     {

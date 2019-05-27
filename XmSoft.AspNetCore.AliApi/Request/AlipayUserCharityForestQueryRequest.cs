@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.charity.forest.query
+    /// AliApi API: alipay.user.charity.forest.query
     /// </summary>
     public class AlipayUserCharityForestQueryRequest : IAliApiRequest<AlipayUserCharityForestQueryResponse>
     {

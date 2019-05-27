@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.public.message.label.send
+    /// AliApi API: alipay.mobile.public.message.label.send
     /// </summary>
     public class AlipayMobilePublicMessageLabelSendRequest : IAliApiRequest<AlipayMobilePublicMessageLabelSendResponse>
     {

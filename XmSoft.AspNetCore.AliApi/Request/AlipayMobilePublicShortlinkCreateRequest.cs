@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.public.shortlink.create
+    /// AliApi API: alipay.mobile.public.shortlink.create
     /// </summary>
     public class AlipayMobilePublicShortlinkCreateRequest : IAliApiRequest<AlipayMobilePublicShortlinkCreateResponse>
     {

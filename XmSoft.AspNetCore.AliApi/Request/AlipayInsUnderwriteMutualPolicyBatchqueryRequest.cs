@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.underwrite.mutual.policy.batchquery
+    /// AliApi API: alipay.ins.underwrite.mutual.policy.batchquery
     /// </summary>
     public class AlipayInsUnderwriteMutualPolicyBatchqueryRequest : IAliApiRequest<AlipayInsUnderwriteMutualPolicyBatchqueryResponse>
     {

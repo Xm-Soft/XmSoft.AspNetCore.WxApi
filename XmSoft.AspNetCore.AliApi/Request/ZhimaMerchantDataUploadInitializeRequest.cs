@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.merchant.data.upload.initialize
+    /// AliApi API: zhima.merchant.data.upload.initialize
     /// </summary>
     public class ZhimaMerchantDataUploadInitializeRequest : IAliApiRequest<ZhimaMerchantDataUploadInitializeResponse>
     {

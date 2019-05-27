@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.merchant.activity.batchquery
+    /// AliApi API: zhima.merchant.activity.batchquery
     /// </summary>
     public class ZhimaMerchantActivityBatchqueryRequest : IAliApiRequest<ZhimaMerchantActivityBatchqueryResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.member.brandowner.name.query
+    /// AliApi API: koubei.member.brandowner.name.query
     /// </summary>
     public class KoubeiMemberBrandownerNameQueryRequest : IAliApiRequest<KoubeiMemberBrandownerNameQueryResponse>
     {

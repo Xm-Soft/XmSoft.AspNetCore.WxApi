@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.gotone.message.courier.send
+    /// AliApi API: alipay.gotone.message.courier.send
     /// </summary>
     public class AlipayGotoneMessageCourierSendRequest : IAliApiRequest<AlipayGotoneMessageCourierSendResponse>
     {

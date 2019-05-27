@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.credit.creditrisk.dashboard.query
+    /// AliApi API: alipay.credit.creditrisk.dashboard.query
     /// </summary>
     public class AlipayCreditCreditriskDashboardQueryRequest : IAliApiRequest<AlipayCreditCreditriskDashboardQueryResponse>
     {

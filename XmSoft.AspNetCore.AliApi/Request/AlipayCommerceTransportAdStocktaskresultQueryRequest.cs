@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.transport.ad.stocktaskresult.query
+    /// AliApi API: alipay.commerce.transport.ad.stocktaskresult.query
     /// </summary>
     public class AlipayCommerceTransportAdStocktaskresultQueryRequest : IAliApiRequest<AlipayCommerceTransportAdStocktaskresultQueryResponse>
     {

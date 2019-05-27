@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.operator.create
+    /// AliApi API: koubei.merchant.operator.create
     /// </summary>
     public class KoubeiMerchantOperatorCreateRequest : IAliApiRequest<KoubeiMerchantOperatorCreateResponse>
     {

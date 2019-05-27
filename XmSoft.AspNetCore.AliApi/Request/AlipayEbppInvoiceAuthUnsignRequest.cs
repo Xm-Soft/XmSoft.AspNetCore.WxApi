@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.invoice.auth.unsign
+    /// AliApi API: alipay.ebpp.invoice.auth.unsign
     /// </summary>
     public class AlipayEbppInvoiceAuthUnsignRequest : IAliApiRequest<AlipayEbppInvoiceAuthUnsignResponse>
     {

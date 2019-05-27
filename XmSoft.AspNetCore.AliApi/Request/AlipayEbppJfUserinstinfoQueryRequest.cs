@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.jf.userinstinfo.query
+    /// AliApi API: alipay.ebpp.jf.userinstinfo.query
     /// </summary>
     public class AlipayEbppJfUserinstinfoQueryRequest : IAliApiRequest<AlipayEbppJfUserinstinfoQueryResponse>
     {

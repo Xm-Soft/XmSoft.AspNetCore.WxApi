@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.campaign.rule.tag.create
+    /// AliApi API: alipay.marketing.campaign.rule.tag.create
     /// </summary>
     public class AlipayMarketingCampaignRuleTagCreateRequest : IAliApiUploadRequest<AlipayMarketingCampaignRuleTagCreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.risk.audio.verify
+    /// AliApi API: ssdata.dataservice.risk.audio.verify
     /// </summary>
     public class SsdataDataserviceRiskAudioVerifyRequest : IAliApiRequest<SsdataDataserviceRiskAudioVerifyResponse>
     {

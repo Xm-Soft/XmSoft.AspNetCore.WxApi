@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.gift.stock.upload
+    /// AliApi API: alipay.social.gift.stock.upload
     /// </summary>
     public class AlipaySocialGiftStockUploadRequest : IAliApiRequest<AlipaySocialGiftStockUploadResponse>
     {

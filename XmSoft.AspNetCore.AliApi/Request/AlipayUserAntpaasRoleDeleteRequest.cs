@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.antpaas.role.delete
+    /// AliApi API: alipay.user.antpaas.role.delete
     /// </summary>
     public class AlipayUserAntpaasRoleDeleteRequest : IAliApiRequest<AlipayUserAntpaasRoleDeleteResponse>
     {

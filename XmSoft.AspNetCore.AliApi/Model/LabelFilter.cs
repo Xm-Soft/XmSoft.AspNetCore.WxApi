@@ -11,7 +11,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
     public class LabelFilter : AliApiObject
     {
         /// <summary>
-        /// 标签组名，商户自定义的标签固定为label_id_list，支付宝开放的标签详见<a href="http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/FirstPartOfTagsFromAlipay.xlsx">支付宝开放标签</a>
+        /// 标签组名，商户自定义的标签固定为label_id_list，支付宝开放的标签详见<a href="http://AliApisdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/FirstPartOfTagsFromAlipay.xlsx">支付宝开放标签</a>
         /// </summary>
         [XmlElement("column_name")]
         public string ColumnName { get; set; }

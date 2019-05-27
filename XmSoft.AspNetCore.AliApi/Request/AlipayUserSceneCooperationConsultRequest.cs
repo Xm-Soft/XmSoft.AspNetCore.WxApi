@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.scene.cooperation.consult
+    /// AliApi API: alipay.user.scene.cooperation.consult
     /// </summary>
     public class AlipayUserSceneCooperationConsultRequest : IAliApiRequest<AlipayUserSceneCooperationConsultResponse>
     {

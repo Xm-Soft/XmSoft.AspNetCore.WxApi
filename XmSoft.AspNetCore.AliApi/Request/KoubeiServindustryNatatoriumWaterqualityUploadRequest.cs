@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.servindustry.natatorium.waterquality.upload
+    /// AliApi API: koubei.servindustry.natatorium.waterquality.upload
     /// </summary>
     public class KoubeiServindustryNatatoriumWaterqualityUploadRequest : IAliApiRequest<KoubeiServindustryNatatoriumWaterqualityUploadResponse>
     {

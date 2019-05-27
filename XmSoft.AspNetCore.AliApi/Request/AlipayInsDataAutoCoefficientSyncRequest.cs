@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.data.auto.coefficient.sync
+    /// AliApi API: alipay.ins.data.auto.coefficient.sync
     /// </summary>
     public class AlipayInsDataAutoCoefficientSyncRequest : IAliApiUploadRequest<AlipayInsDataAutoCoefficientSyncResponse>
     {

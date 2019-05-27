@@ -4,10 +4,10 @@ using System.Xml.Serialization;
 namespace XmSoft.AspNetCore.AliApi.Model
 {
     /// <summary>
-    /// MybankFinanceYulibaoPriceQueryModel Data Structure.
+    /// MybankFinanceYulibAliApiriceQueryModel Data Structure.
     /// </summary>
     [Serializable]
-    public class MybankFinanceYulibaoPriceQueryModel : AliApiObject
+    public class MybankFinanceYulibAliApiriceQueryModel : AliApiObject
     {
         /// <summary>
         /// 查询行情的截止日期，必须是格式为yyyyMMdd的日期字符串且日期要大于等于start_date，时间最大跨度为30天，如start_date为20160808，则end_date最大值为20160906

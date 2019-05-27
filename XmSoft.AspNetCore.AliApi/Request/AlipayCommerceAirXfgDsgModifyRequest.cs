@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.air.xfg.dsg.modify
+    /// AliApi API: alipay.commerce.air.xfg.dsg.modify
     /// </summary>
     public class AlipayCommerceAirXfgDsgModifyRequest : IAliApiRequest<AlipayCommerceAirXfgDsgModifyResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.public.messagebatch.push
+    /// AliApi API: alipay.mobile.public.messagebatch.push
     /// </summary>
     public class AlipayMobilePublicMessagebatchPushRequest : IAliApiRequest<AlipayMobilePublicMessagebatchPushResponse>
     {

@@ -4,10 +4,10 @@ using System.Xml.Serialization;
 namespace XmSoft.AspNetCore.AliApi.Model
 {
     /// <summary>
-    /// SsdataFindataOperatorSmsQueryModel Data Structure.
+    /// SsdataFindatAliApieratorSmsQueryModel Data Structure.
     /// </summary>
     [Serializable]
-    public class SsdataFindataOperatorSmsQueryModel : AliApiObject
+    public class SsdataFindatAliApieratorSmsQueryModel : AliApiObject
     {
         /// <summary>
         /// 系统的业务流水号，在调用提交用户信息时得到的biz_no

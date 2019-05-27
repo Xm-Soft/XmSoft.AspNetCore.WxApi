@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.antarchive.face.identify
+    /// AliApi API: alipay.user.antarchive.face.identify
     /// </summary>
     public class AlipayUserAntarchiveFaceIdentifyRequest : IAliApiRequest<AlipayUserAntarchiveFaceIdentifyResponse>
     {

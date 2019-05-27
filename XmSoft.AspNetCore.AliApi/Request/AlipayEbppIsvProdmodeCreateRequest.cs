@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.isv.prodmode.create
+    /// AliApi API: alipay.ebpp.isv.prodmode.create
     /// </summary>
     public class AlipayEbppIsvProdmodeCreateRequest : IAliApiRequest<AlipayEbppIsvProdmodeCreateResponse>
     {

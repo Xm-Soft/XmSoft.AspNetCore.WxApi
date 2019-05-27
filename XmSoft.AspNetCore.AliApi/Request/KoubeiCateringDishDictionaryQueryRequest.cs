@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.dish.dictionary.query
+    /// AliApi API: koubei.catering.dish.dictionary.query
     /// </summary>
     public class KoubeiCateringDishDictionaryQueryRequest : IAliApiRequest<KoubeiCateringDishDictionaryQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.medicalcare.hos.reportnotify
+    /// AliApi API: alipay.eco.medicalcare.hos.reportnotify
     /// </summary>
     public class AlipayEcoMedicalcareHosReportnotifyRequest : IAliApiRequest<AlipayEcoMedicalcareHosReportnotifyResponse>
     {

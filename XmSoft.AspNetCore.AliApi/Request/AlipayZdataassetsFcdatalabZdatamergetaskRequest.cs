@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.zdataassets.fcdatalab.zdatamergetask
+    /// AliApi API: alipay.zdataassets.fcdatalab.zdatamergetask
     /// </summary>
     public class AlipayZdataassetsFcdatalabZdatamergetaskRequest : IAliApiRequest<AlipayZdataassetsFcdatalabZdatamergetaskResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.prod.fingerprint.delete
+    /// AliApi API: alipay.security.prod.fingerprint.delete
     /// </summary>
     public class AlipaySecurityProdFingerprintDeleteRequest : IAliApiRequest<AlipaySecurityProdFingerprintDeleteResponse>
     {

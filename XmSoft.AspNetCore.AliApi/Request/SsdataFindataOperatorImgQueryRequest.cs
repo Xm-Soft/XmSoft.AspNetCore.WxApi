@@ -6,9 +6,9 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.findata.operator.img.query
+    /// AliApi API: ssdata.findata.operator.img.query
     /// </summary>
-    public class SsdataFindataOperatorImgQueryRequest : IAliApiRequest<SsdataFindataOperatorImgQueryResponse>
+    public class SsdataFindatAliApieratorImgQueryRequest : IAliApiRequest<SsdataFindatAliApieratorImgQueryResponse>
     {
         /// <summary>
         /// 获取图片验证码

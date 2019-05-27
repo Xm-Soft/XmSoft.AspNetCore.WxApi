@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.mycar.promo.voucher.verify
+    /// AliApi API: alipay.eco.mycar.promo.voucher.verify
     /// </summary>
     public class AlipayEcoMycarPromoVoucherVerifyRequest : IAliApiRequest<AlipayEcoMycarPromoVoucherVerifyResponse>
     {

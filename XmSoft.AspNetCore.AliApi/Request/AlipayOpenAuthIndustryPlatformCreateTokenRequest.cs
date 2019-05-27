@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.auth.industry.platform.create.token
+    /// AliApi API: alipay.open.auth.industry.platform.create.token
     /// </summary>
     public class AlipayOpenAuthIndustryPlatformCreateTokenRequest : IAliApiRequest<AlipayOpenAuthIndustryPlatformCreateTokenResponse>
     {

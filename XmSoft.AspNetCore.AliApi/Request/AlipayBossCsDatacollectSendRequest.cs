@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.boss.cs.datacollect.send
+    /// AliApi API: alipay.boss.cs.datacollect.send
     /// </summary>
     public class AlipayBossCsDatacollectSendRequest : IAliApiRequest<AlipayBossCsDatacollectSendResponse>
     {

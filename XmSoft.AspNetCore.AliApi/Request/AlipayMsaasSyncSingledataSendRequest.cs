@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.msaas.sync.singledata.send
+    /// AliApi API: alipay.msaas.sync.singledata.send
     /// </summary>
     public class AlipayMsaasSyncSingledataSendRequest : IAliApiRequest<AlipayMsaasSyncSingledataSendResponse>
     {

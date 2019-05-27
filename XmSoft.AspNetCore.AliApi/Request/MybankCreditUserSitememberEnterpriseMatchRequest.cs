@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.user.sitemember.enterprise.match
+    /// AliApi API: mybank.credit.user.sitemember.enterprise.match
     /// </summary>
     public class MybankCreditUserSitememberEnterpriseMatchRequest : IAliApiRequest<MybankCreditUserSitememberEnterpriseMatchResponse>
     {

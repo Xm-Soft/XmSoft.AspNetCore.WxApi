@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.bksigntoken.verify
+    /// AliApi API: alipay.mobile.bksigntoken.verify
     /// </summary>
     public class AlipayMobileBksigntokenVerifyRequest : IAliApiRequest<AlipayMobileBksigntokenVerifyResponse>
     {

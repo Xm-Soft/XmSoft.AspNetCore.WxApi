@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.industry.kms.pubkey.query
+    /// AliApi API: alipay.ebpp.industry.kms.pubkey.query
     /// </summary>
     public class AlipayEbppIndustryKmsPubkeyQueryRequest : IAliApiRequest<AlipayEbppIndustryKmsPubkeyQueryResponse>
     {

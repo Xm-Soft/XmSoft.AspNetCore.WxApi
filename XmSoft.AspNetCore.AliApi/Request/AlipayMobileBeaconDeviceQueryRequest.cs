@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.beacon.device.query
+    /// AliApi API: alipay.mobile.beacon.device.query
     /// </summary>
     public class AlipayMobileBeaconDeviceQueryRequest : IAliApiRequest<AlipayMobileBeaconDeviceQueryResponse>
     {

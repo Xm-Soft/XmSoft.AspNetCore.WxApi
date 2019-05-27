@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.offline.provider.equipment.auth.remove
+    /// AliApi API: alipay.offline.provider.equipment.auth.remove
     /// </summary>
     public class AlipayOfflineProviderEquipmentAuthRemoveRequest : IAliApiRequest<AlipayOfflineProviderEquipmentAuthRemoveResponse>
     {

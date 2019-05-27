@@ -6,9 +6,9 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.open.app.keyan.lql.create
+    /// AliApi API: zhima.open.app.keyan.lql.create
     /// </summary>
-    public class ZhimaOpenAppKeyanLqlCreateRequest : IAliApiRequest<ZhimaOpenAppKeyanLqlCreateResponse>
+    public class ZhimAliApienAppKeyanLqlCreateRequest : IAliApiRequest<ZhimAliApienAppKeyanLqlCreateResponse>
     {
         /// <summary>
         /// keyantestoneone

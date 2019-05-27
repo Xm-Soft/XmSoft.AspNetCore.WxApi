@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.public.label.delete
+    /// AliApi API: alipay.mobile.public.label.delete
     /// </summary>
     public class AlipayMobilePublicLabelDeleteRequest : IAliApiRequest<AlipayMobilePublicLabelDeleteResponse>
     {

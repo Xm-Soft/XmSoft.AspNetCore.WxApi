@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: antfortune.quotation.plate.index.query
+    /// AliApi API: antfortune.quotation.plate.index.query
     /// </summary>
     public class AntfortuneQuotationPlateIndexQueryRequest : IAliApiRequest<AntfortuneQuotationPlateIndexQueryResponse>
     {

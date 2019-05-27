@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.risk.offlinevars.query
+    /// AliApi API: ssdata.dataservice.risk.offlinevars.query
     /// </summary>
     public class SsdataDataserviceRiskOfflinevarsQueryRequest : IAliApiRequest<SsdataDataserviceRiskOfflinevarsQueryResponse>
     {

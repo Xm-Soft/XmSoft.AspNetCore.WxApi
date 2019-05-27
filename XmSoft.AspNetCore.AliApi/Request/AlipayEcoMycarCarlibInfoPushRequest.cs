@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.mycar.carlib.info.push
+    /// AliApi API: alipay.eco.mycar.carlib.info.push
     /// </summary>
     public class AlipayEcoMycarCarlibInfoPushRequest : IAliApiRequest<AlipayEcoMycarCarlibInfoPushResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.iservice.cognitive.ocr.imageclassify.query
+    /// AliApi API: alipay.iservice.cognitive.ocr.imageclassify.query
     /// </summary>
     public class AlipayIserviceCognitiveOcrImageclassifyQueryRequest : IAliApiRequest<AlipayIserviceCognitiveOcrImageclassifyQueryResponse>
     {

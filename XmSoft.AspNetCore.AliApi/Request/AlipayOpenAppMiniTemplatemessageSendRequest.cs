@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.app.mini.templatemessage.send
+    /// AliApi API: alipay.open.app.mini.templatemessage.send
     /// </summary>
     public class AlipayOpenAppMiniTemplatemessageSendRequest : IAliApiRequest<AlipayOpenAppMiniTemplatemessageSendResponse>
     {

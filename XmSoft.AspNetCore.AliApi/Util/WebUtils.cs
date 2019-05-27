@@ -141,7 +141,7 @@ namespace XmSoft.AspNetCore.AliApi.Util
             req.ServicePoint.Expect100Continue = false;
             req.Method = method;
             req.KeepAlive = true;
-            req.UserAgent = "Aop4Net";
+            req.UserAgent = "AliApi4Net";
             req.Timeout = this._timeout;
             return req;
         }

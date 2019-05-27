@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.prod.fingerprint.apply
+    /// AliApi API: alipay.security.prod.fingerprint.apply
     /// </summary>
     public class AlipaySecurityProdFingerprintApplyRequest : IAliApiRequest<AlipaySecurityProdFingerprintApplyResponse>
     {

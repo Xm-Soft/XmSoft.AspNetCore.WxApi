@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.data.item.recommend.batchquery
+    /// AliApi API: alipay.open.data.item.recommend.batchquery
     /// </summary>
     public class AlipayOpenDataItemRecommendBatchqueryRequest : IAliApiRequest<AlipayOpenDataItemRecommendBatchqueryResponse>
     {

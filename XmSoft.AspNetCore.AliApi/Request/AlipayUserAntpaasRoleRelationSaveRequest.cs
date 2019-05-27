@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.antpaas.role.relation.save
+    /// AliApi API: alipay.user.antpaas.role.relation.save
     /// </summary>
     public class AlipayUserAntpaasRoleRelationSaveRequest : IAliApiRequest<AlipayUserAntpaasRoleRelationSaveResponse>
     {

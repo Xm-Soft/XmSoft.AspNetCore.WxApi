@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.item.taobao.index.query
+    /// AliApi API: koubei.item.taobao.index.query
     /// </summary>
     public class KoubeiItemTaobaoIndexQueryRequest : IAliApiRequest<KoubeiItemTaobaoIndexQueryResponse>
     {

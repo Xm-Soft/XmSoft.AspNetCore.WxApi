@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.merchant.expand.item.modify
+    /// AliApi API: ant.merchant.expand.item.modify
     /// </summary>
     public class AntMerchantExpandItemModifyRequest : IAliApiRequest<AntMerchantExpandItemModifyResponse>
     {

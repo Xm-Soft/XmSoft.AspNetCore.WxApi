@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.kbcloud.subuserlogout.effect
+    /// AliApi API: koubei.merchant.kbcloud.subuserlogout.effect
     /// </summary>
     public class KoubeiMerchantKbcloudSubuserlogoutEffectRequest : IAliApiRequest<KoubeiMerchantKbcloudSubuserlogoutEffectResponse>
     {

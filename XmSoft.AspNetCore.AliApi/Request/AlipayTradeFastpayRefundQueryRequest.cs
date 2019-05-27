@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.trade.fastpay.refund.query
+    /// AliApi API: alipay.trade.fastpay.refund.query
     /// </summary>
     public class AlipayTradeFastpayRefundQueryRequest : IAliApiRequest<AlipayTradeFastpayRefundQueryResponse>
     {

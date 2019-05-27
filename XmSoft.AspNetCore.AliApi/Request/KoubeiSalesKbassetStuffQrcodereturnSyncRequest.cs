@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.sales.kbasset.stuff.qrcodereturn.sync
+    /// AliApi API: koubei.sales.kbasset.stuff.qrcodereturn.sync
     /// </summary>
     public class KoubeiSalesKbassetStuffQrcodereturnSyncRequest : IAliApiRequest<KoubeiSalesKbassetStuffQrcodereturnSyncResponse>
     {

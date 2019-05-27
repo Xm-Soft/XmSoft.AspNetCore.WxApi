@@ -28,7 +28,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
         public long ExtraWeightUnit { get; set; }
 
         /// <summary>
-        /// 发货区域代码  区域类型为省代码时为省代码；  区域类型为市代码时为市代码；  省市区代码采用国家标准编码，详见国家统计局数据，<a href="http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7395905.0.0.IwSSLe&file=2016.xls">点此下载</a>。
+        /// 发货区域代码  区域类型为省代码时为省代码；  区域类型为市代码时为市代码；  省市区代码采用国家标准编码，详见国家统计局数据，<a href="http://AliApisdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7395905.0.0.IwSSLe&file=2016.xls">点此下载</a>。
         /// </summary>
         [XmlElement("from_code")]
         public string FromCode { get; set; }
@@ -58,7 +58,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
         public string ProductTypeCode { get; set; }
 
         /// <summary>
-        /// 收货区域代码  区域类型为省代码时为省代码；  区域类型为市代码时为市代码；  省市区代码采用国家标准编码，详见国家统计局数据，<a href="http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7395905.0.0.IwSSLe&file=2016.xls">点此下载</a>。
+        /// 收货区域代码  区域类型为省代码时为省代码；  区域类型为市代码时为市代码；  省市区代码采用国家标准编码，详见国家统计局数据，<a href="http://AliApisdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7395905.0.0.IwSSLe&file=2016.xls">点此下载</a>。
         /// </summary>
         [XmlElement("to_code")]
         public string ToCode { get; set; }

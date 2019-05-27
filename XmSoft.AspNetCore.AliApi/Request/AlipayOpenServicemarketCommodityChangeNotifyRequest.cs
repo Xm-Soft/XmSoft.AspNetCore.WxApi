@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.servicemarket.commodity.change.notify
+    /// AliApi API: alipay.open.servicemarket.commodity.change.notify
     /// </summary>
     public class AlipayOpenServicemarketCommodityChangeNotifyRequest : IAliApiRequest<AlipayOpenServicemarketCommodityChangeNotifyResponse>
     {

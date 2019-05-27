@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.flashsales.stock.sync.update
+    /// AliApi API: alipay.flashsales.stock.sync.update
     /// </summary>
     public class AlipayFlashsalesStockSyncUpdateRequest : IAliApiRequest<AlipayFlashsalesStockSyncUpdateResponse>
     {

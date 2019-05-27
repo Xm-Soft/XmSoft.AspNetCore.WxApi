@@ -106,7 +106,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
         public string RefuseDesc { get; set; }
 
         /// <summary>
-        /// 站点所在区县编码，快递站点接单时必填。采用国家标准编码，详见国家统计局数据，<a href="http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7395905.0.0.IwSSLe&file=2016.xls">点此下载</a>。
+        /// 站点所在区县编码，快递站点接单时必填。采用国家标准编码，详见国家统计局数据，<a href="http://AliApisdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls?spm=a219a.7395905.0.0.IwSSLe&file=2016.xls">点此下载</a>。
         /// </summary>
         [XmlElement("site_area_code")]
         public string SiteAreaCode { get; set; }

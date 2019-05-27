@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.databiz.core.payment.ability.update
+    /// AliApi API: alipay.databiz.core.payment.ability.update
     /// </summary>
     public class AlipayDatabizCorePaymentAbilityUpdateRequest : IAliApiRequest<AlipayDatabizCorePaymentAbilityUpdateResponse>
     {

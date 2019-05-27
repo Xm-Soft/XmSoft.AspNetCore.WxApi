@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.identification.zolozid.get
+    /// AliApi API: zoloz.identification.zolozid.get
     /// </summary>
     public class ZolozIdentificationZolozidGetRequest : IAliApiRequest<ZolozIdentificationZolozidGetResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.transfer.thirdparty.bill.create
+    /// AliApi API: alipay.transfer.thirdparty.bill.create
     /// </summary>
     public class AlipayTransferThirdpartyBillCreateRequest : IAliApiRequest<AlipayTransferThirdpartyBillCreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.servicemarket.order.reject
+    /// AliApi API: alipay.open.servicemarket.order.reject
     /// </summary>
     public class AlipayOpenServicemarketOrderRejectRequest : IAliApiRequest<AlipayOpenServicemarketOrderRejectResponse>
     {

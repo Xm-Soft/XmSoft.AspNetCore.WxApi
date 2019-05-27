@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.advert.data.promotedetail.batchquery
+    /// AliApi API: koubei.advert.data.promotedetail.batchquery
     /// </summary>
     public class KoubeiAdvertDataPromotedetailBatchqueryRequest : IAliApiRequest<KoubeiAdvertDataPromotedetailBatchqueryResponse>
     {

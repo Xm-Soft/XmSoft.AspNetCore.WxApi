@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.servindustry.exercise.member.create
+    /// AliApi API: koubei.servindustry.exercise.member.create
     /// </summary>
     public class KoubeiServindustryExerciseMemberCreateRequest : IAliApiRequest<KoubeiServindustryExerciseMemberCreateResponse>
     {

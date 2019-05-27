@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.cooperation.product.qrcode.apply
+    /// AliApi API: alipay.ins.cooperation.product.qrcode.apply
     /// </summary>
     public class AlipayInsCooperationProductQrcodeApplyRequest : IAliApiRequest<AlipayInsCooperationProductQrcodeApplyResponse>
     {

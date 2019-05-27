@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.pdeduct.sign.cancel
+    /// AliApi API: alipay.ebpp.pdeduct.sign.cancel
     /// </summary>
     public class AlipayEbppPdeductSignCancelRequest : IAliApiRequest<AlipayEbppPdeductSignCancelResponse>
     {

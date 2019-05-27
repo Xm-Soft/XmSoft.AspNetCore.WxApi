@@ -6,9 +6,9 @@ using XmSoft.AspNetCore.AliApi.Model;
 namespace XmSoft.AspNetCore.AliApi.Response
 {
     /// <summary>
-    /// MybankFinanceYulibaoPriceQueryResponse.
+    /// MybankFinanceYulibAliApiriceQueryResponse.
     /// </summary>
-    public class MybankFinanceYulibaoPriceQueryResponse : AliApiResponse
+    public class MybankFinanceYulibAliApiriceQueryResponse : AliApiResponse
     {
         /// <summary>
         /// 余利宝行情信息列表

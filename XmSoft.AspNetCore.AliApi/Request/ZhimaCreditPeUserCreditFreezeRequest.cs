@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.credit.pe.user.credit.freeze
+    /// AliApi API: zhima.credit.pe.user.credit.freeze
     /// </summary>
     public class ZhimaCreditPeUserCreditFreezeRequest : IAliApiRequest<ZhimaCreditPeUserCreditFreezeResponse>
     {

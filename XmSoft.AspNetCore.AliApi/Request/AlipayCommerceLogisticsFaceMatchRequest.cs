@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.logistics.face.match
+    /// AliApi API: alipay.commerce.logistics.face.match
     /// </summary>
     public class AlipayCommerceLogisticsFaceMatchRequest : IAliApiRequest<AlipayCommerceLogisticsFaceMatchResponse>
     {

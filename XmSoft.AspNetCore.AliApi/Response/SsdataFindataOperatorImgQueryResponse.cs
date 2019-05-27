@@ -5,9 +5,9 @@ using XmSoft.AspNetCore.AliApi.Model;
 namespace XmSoft.AspNetCore.AliApi.Response
 {
     /// <summary>
-    /// SsdataFindataOperatorImgQueryResponse.
+    /// SsdataFindatAliApieratorImgQueryResponse.
     /// </summary>
-    public class SsdataFindataOperatorImgQueryResponse : AliApiResponse
+    public class SsdataFindatAliApieratorImgQueryResponse : AliApiResponse
     {
         /// <summary>
         /// 系统业务流水号

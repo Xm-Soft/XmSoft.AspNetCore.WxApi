@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.mini.setintentiondata.set
+    /// AliApi API: alipay.open.mini.setintentiondata.set
     /// </summary>
     public class AlipayOpenMiniSetintentiondataSetRequest : IAliApiRequest<AlipayOpenMiniSetintentiondataSetResponse>
     {

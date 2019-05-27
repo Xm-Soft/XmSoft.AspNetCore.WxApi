@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.daowei.weike.taskview.query
+    /// AliApi API: alipay.daowei.weike.taskview.query
     /// </summary>
     public class AlipayDaoweiWeikeTaskviewQueryRequest : IAliApiRequest<AlipayDaoweiWeikeTaskviewQueryResponse>
     {

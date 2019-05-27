@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.offline.market.shop.public.bind
+    /// AliApi API: alipay.offline.market.shop.public.bind
     /// </summary>
     public class AlipayOfflineMarketShopPublicBindRequest : IAliApiRequest<AlipayOfflineMarketShopPublicBindResponse>
     {

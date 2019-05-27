@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.supplychain.trade.pay.confirm
+    /// AliApi API: mybank.credit.supplychain.trade.pay.confirm
     /// </summary>
     public class MybankCreditSupplychainTradePayConfirmRequest : IAliApiRequest<MybankCreditSupplychainTradePayConfirmResponse>
     {

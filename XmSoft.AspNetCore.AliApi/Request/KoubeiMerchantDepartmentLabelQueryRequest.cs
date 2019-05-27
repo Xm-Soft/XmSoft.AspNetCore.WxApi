@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.department.label.query
+    /// AliApi API: koubei.merchant.department.label.query
     /// </summary>
     public class KoubeiMerchantDepartmentLabelQueryRequest : IAliApiRequest<KoubeiMerchantDepartmentLabelQueryResponse>
     {

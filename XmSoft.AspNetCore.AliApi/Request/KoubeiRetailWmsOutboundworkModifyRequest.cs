@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.wms.outboundwork.modify
+    /// AliApi API: koubei.retail.wms.outboundwork.modify
     /// </summary>
     public class KoubeiRetailWmsOutboundworkModifyRequest : IAliApiRequest<KoubeiRetailWmsOutboundworkModifyResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.app.xwbtstabc.query
+    /// AliApi API: alipay.open.app.xwbtstabc.query
     /// </summary>
     public class AlipayOpenAppXwbtstabcQueryRequest : IAliApiRequest<AlipayOpenAppXwbtstabcQueryResponse>
     {

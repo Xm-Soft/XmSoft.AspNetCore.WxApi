@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.merchant.activity.participation.query
+    /// AliApi API: zhima.merchant.activity.participation.query
     /// </summary>
     public class ZhimaMerchantActivityParticipationQueryRequest : IAliApiRequest<ZhimaMerchantActivityParticipationQueryResponse>
     {

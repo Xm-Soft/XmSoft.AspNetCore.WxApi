@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.scene.application.query
+    /// AliApi API: alipay.ins.scene.application.query
     /// </summary>
     public class AlipayInsSceneApplicationQueryRequest : IAliApiRequest<AlipayInsSceneApplicationQueryResponse>
     {

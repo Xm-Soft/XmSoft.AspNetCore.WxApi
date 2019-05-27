@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.merchant.expand.shop.close
+    /// AliApi API: ant.merchant.expand.shop.close
     /// </summary>
     public class AntMerchantExpandShopCloseRequest : IAliApiRequest<AntMerchantExpandShopCloseResponse>
     {

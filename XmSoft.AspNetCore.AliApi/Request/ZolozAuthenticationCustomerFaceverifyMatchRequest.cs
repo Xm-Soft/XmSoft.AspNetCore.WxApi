@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.authentication.customer.faceverify.match
+    /// AliApi API: zoloz.authentication.customer.faceverify.match
     /// </summary>
     public class ZolozAuthenticationCustomerFaceverifyMatchRequest : IAliApiRequest<ZolozAuthenticationCustomerFaceverifyMatchResponse>
     {

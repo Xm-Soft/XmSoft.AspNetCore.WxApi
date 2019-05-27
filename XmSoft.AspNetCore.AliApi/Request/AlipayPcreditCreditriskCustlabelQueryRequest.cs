@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.pcredit.creditrisk.custlabel.query
+    /// AliApi API: alipay.pcredit.creditrisk.custlabel.query
     /// </summary>
     public class AlipayPcreditCreditriskCustlabelQueryRequest : IAliApiRequest<AlipayPcreditCreditriskCustlabelQueryResponse>
     {

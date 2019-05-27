@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.iot.modellist.create
+    /// AliApi API: alipay.commerce.iot.modellist.create
     /// </summary>
     public class AlipayCommerceIotModellistCreateRequest : IAliApiRequest<AlipayCommerceIotModellistCreateResponse>
     {

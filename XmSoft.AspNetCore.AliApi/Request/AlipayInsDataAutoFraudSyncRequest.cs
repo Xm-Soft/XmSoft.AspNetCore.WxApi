@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.data.auto.fraud.sync
+    /// AliApi API: alipay.ins.data.auto.fraud.sync
     /// </summary>
     public class AlipayInsDataAutoFraudSyncRequest : IAliApiRequest<AlipayInsDataAutoFraudSyncResponse>
     {

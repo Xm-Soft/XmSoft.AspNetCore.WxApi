@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.risk.antifraud.verify
+    /// AliApi API: ssdata.dataservice.risk.antifraud.verify
     /// </summary>
     public class SsdataDataserviceRiskAntifraudVerifyRequest : IAliApiRequest<SsdataDataserviceRiskAntifraudVerifyResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.agreement.sign.effect
+    /// AliApi API: alipay.user.agreement.sign.effect
     /// </summary>
     public class AlipayUserAgreementSignEffectRequest : IAliApiRequest<AlipayUserAgreementSignEffectResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.pos.deskarea.query
+    /// AliApi API: koubei.catering.pos.deskarea.query
     /// </summary>
     public class KoubeiCateringPosDeskareaQueryRequest : IAliApiRequest<KoubeiCateringPosDeskareaQueryResponse>
     {

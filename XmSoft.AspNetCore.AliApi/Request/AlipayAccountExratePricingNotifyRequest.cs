@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.account.exrate.pricing.notify
+    /// AliApi API: alipay.account.exrate.pricing.notify
     /// </summary>
     public class AlipayAccountExratePricingNotifyRequest : IAliApiRequest<AlipayAccountExratePricingNotifyResponse>
     {

@@ -11,7 +11,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
     public class KoubeiCraftsmanDataProviderCreateModel : AliApiObject
     {
         /// <summary>
-        /// 手艺人账户名，仅支持小写字母和数字。上限12个小写字母或者数字。举例，若商户在口碑商家的登录账号为 testaop01@alipay.com,手艺人账号名为zhangsan，则手艺人登录口碑商家的账号名为 testaop01@alipay.com#zhangsan，获取登录密码需要扫商户app的员工激活码。从口碑商家app的员工管理进入员工详情页获取登录密码。
+        /// 手艺人账户名，仅支持小写字母和数字。上限12个小写字母或者数字。举例，若商户在口碑商家的登录账号为 testAliApi01@alipay.com,手艺人账号名为zhangsan，则手艺人登录口碑商家的账号名为 testAliApi01@alipay.com#zhangsan，获取登录密码需要扫商户app的员工激活码。从口碑商家app的员工管理进入员工详情页获取登录密码。
         /// </summary>
         [XmlElement("account")]
         public string Account { get; set; }

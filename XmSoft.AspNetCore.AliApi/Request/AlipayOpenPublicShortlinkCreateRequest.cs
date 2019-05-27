@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.shortlink.create
+    /// AliApi API: alipay.open.public.shortlink.create
     /// </summary>
     public class AlipayOpenPublicShortlinkCreateRequest : IAliApiRequest<AlipayOpenPublicShortlinkCreateResponse>
     {

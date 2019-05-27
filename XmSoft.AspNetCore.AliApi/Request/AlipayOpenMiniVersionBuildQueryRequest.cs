@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.mini.version.build.query
+    /// AliApi API: alipay.open.mini.version.build.query
     /// </summary>
     public class AlipayOpenMiniVersionBuildQueryRequest : IAliApiRequest<AlipayOpenMiniVersionBuildQueryResponse>
     {

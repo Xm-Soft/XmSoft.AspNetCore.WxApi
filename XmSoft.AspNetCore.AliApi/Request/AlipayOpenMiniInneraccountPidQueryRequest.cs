@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.mini.inneraccount.pid.query
+    /// AliApi API: alipay.open.mini.inneraccount.pid.query
     /// </summary>
     public class AlipayOpenMiniInneraccountPidQueryRequest : IAliApiRequest<AlipayOpenMiniInneraccountPidQueryResponse>
     {

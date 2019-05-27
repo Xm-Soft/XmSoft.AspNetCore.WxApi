@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.follow.create
+    /// AliApi API: alipay.open.public.follow.create
     /// </summary>
     public class AlipayOpenPublicFollowCreateRequest : IAliApiRequest<AlipayOpenPublicFollowCreateResponse>
     {

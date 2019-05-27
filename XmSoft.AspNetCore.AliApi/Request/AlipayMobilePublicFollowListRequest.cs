@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.public.follow.list
+    /// AliApi API: alipay.mobile.public.follow.list
     /// </summary>
     public class AlipayMobilePublicFollowListRequest : IAliApiRequest<AlipayMobilePublicFollowListResponse>
     {

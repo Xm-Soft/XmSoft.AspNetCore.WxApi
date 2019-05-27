@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.zmscore.zrank.get
+    /// AliApi API: alipay.zmscore.zrank.get
     /// </summary>
     public class AlipayZmscoreZrankGetRequest : IAliApiRequest<AlipayZmscoreZrankGetResponse>
     {

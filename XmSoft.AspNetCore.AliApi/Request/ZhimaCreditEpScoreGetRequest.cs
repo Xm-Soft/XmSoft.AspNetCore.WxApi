@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.credit.ep.score.get
+    /// AliApi API: zhima.credit.ep.score.get
     /// </summary>
     public class ZhimaCreditEpScoreGetRequest : IAliApiRequest<ZhimaCreditEpScoreGetResponse>
     {

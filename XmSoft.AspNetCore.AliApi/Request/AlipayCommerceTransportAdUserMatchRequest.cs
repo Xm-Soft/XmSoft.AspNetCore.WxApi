@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.transport.ad.user.match
+    /// AliApi API: alipay.commerce.transport.ad.user.match
     /// </summary>
     public class AlipayCommerceTransportAdUserMatchRequest : IAliApiRequest<AlipayCommerceTransportAdUserMatchResponse>
     {

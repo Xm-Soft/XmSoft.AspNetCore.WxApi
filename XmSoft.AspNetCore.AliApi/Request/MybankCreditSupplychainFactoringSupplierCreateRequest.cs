@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.supplychain.factoring.supplier.create
+    /// AliApi API: mybank.credit.supplychain.factoring.supplier.create
     /// </summary>
     public class MybankCreditSupplychainFactoringSupplierCreateRequest : IAliApiRequest<MybankCreditSupplychainFactoringSupplierCreateResponse>
     {

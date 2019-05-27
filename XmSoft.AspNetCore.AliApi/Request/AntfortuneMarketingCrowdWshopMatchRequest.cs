@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: antfortune.marketing.crowd.wshop.match
+    /// AliApi API: antfortune.marketing.crowd.wshop.match
     /// </summary>
     public class AntfortuneMarketingCrowdWshopMatchRequest : IAliApiRequest<AntfortuneMarketingCrowdWshopMatchResponse>
     {

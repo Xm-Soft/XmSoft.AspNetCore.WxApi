@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.coupon.template.create
+    /// AliApi API: alipay.marketing.coupon.template.create
     /// </summary>
     public class AlipayMarketingCouponTemplateCreateRequest : IAliApiRequest<AlipayMarketingCouponTemplateCreateResponse>
     {

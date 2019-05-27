@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.risk.deviceidentity.query
+    /// AliApi API: ssdata.dataservice.risk.deviceidentity.query
     /// </summary>
     public class SsdataDataserviceRiskDeviceidentityQueryRequest : IAliApiRequest<SsdataDataserviceRiskDeviceidentityQueryResponse>
     {

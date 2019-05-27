@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mdata.tag.get
+    /// AliApi API: alipay.mdata.tag.get
     /// </summary>
     public class AlipayMdataTagGetRequest : IAliApiRequest<AlipayMdataTagGetResponse>
     {

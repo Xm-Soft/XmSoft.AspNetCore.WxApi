@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.credit.pe.user.order.sync
+    /// AliApi API: zhima.credit.pe.user.order.sync
     /// </summary>
     public class ZhimaCreditPeUserOrderSyncRequest : IAliApiRequest<ZhimaCreditPeUserOrderSyncResponse>
     {

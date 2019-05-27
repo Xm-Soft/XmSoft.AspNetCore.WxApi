@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.account.search
+    /// AliApi API: alipay.user.account.search
     /// </summary>
     public class AlipayUserAccountSearchRequest : IAliApiRequest<AlipayUserAccountSearchResponse>
     {

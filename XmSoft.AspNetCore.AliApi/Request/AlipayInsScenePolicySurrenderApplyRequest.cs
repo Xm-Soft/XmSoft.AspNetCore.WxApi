@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.scene.policy.surrender.apply
+    /// AliApi API: alipay.ins.scene.policy.surrender.apply
     /// </summary>
     public class AlipayInsScenePolicySurrenderApplyRequest : IAliApiRequest<AlipayInsScenePolicySurrenderApplyResponse>
     {

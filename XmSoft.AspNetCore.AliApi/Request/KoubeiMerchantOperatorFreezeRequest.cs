@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.operator.freeze
+    /// AliApi API: koubei.merchant.operator.freeze
     /// </summary>
     public class KoubeiMerchantOperatorFreezeRequest : IAliApiRequest<KoubeiMerchantOperatorFreezeResponse>
     {

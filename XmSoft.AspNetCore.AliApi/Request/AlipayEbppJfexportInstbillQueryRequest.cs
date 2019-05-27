@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.jfexport.instbill.query
+    /// AliApi API: alipay.ebpp.jfexport.instbill.query
     /// </summary>
     public class AlipayEbppJfexportInstbillQueryRequest : IAliApiRequest<AlipayEbppJfexportInstbillQueryResponse>
     {

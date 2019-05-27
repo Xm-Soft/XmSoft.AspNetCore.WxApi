@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.chat.group.create
+    /// AliApi API: alipay.social.base.chat.group.create
     /// </summary>
     public class AlipaySocialBaseChatGroupCreateRequest : IAliApiRequest<AlipaySocialBaseChatGroupCreateResponse>
     {

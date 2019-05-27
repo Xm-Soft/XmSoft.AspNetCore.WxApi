@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.prod.afsrc.vul.create
+    /// AliApi API: alipay.security.prod.afsrc.vul.create
     /// </summary>
     public class AlipaySecurityProdAfsrcVulCreateRequest : IAliApiUploadRequest<AlipaySecurityProdAfsrcVulCreateResponse>
     {

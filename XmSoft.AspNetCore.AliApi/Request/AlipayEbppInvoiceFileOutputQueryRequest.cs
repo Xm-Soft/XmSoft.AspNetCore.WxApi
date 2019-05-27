@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.invoice.file.output.query
+    /// AliApi API: alipay.ebpp.invoice.file.output.query
     /// </summary>
     public class AlipayEbppInvoiceFileOutputQueryRequest : IAliApiRequest<AlipayEbppInvoiceFileOutputQueryResponse>
     {

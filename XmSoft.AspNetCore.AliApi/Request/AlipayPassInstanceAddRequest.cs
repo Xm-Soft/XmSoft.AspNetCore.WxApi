@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.pass.instance.add
+    /// AliApi API: alipay.pass.instance.add
     /// </summary>
     public class AlipayPassInstanceAddRequest : IAliApiRequest<AlipayPassInstanceAddResponse>
     {

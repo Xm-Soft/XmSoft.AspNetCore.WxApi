@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.advert.commission.mission.create
+    /// AliApi API: koubei.advert.commission.mission.create
     /// </summary>
     public class KoubeiAdvertCommissionMissionCreateRequest : IAliApiRequest<KoubeiAdvertCommissionMissionCreateResponse>
     {

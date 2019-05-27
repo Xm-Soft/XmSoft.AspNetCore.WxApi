@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.newscene.tag.query
+    /// AliApi API: alipay.user.newscene.tag.query
     /// </summary>
     public class AlipayUserNewsceneTagQueryRequest : IAliApiRequest<AlipayUserNewsceneTagQueryResponse>
     {

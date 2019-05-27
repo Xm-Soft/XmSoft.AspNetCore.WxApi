@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.merchant.expand.image.upload
+    /// AliApi API: ant.merchant.expand.image.upload
     /// </summary>
     public class AntMerchantExpandImageUploadRequest : IAliApiUploadRequest<AntMerchantExpandImageUploadResponse>
     {

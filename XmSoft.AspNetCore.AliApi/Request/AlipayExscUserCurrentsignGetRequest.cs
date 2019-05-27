@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.exsc.user.currentsign.get
+    /// AliApi API: alipay.exsc.user.currentsign.get
     /// </summary>
     public class AlipayExscUserCurrentsignGetRequest : IAliApiRequest<AlipayExscUserCurrentsignGetResponse>
     {

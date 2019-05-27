@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.pos.dish.batchquery
+    /// AliApi API: koubei.catering.pos.dish.batchquery
     /// </summary>
     public class KoubeiCateringPosDishBatchqueryRequest : IAliApiRequest<KoubeiCateringPosDishBatchqueryResponse>
     {

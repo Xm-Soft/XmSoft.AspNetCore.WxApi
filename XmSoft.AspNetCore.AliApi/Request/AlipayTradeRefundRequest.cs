@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.trade.refund
+    /// AliApi API: alipay.trade.refund
     /// </summary>
     public class AlipayTradeRefundRequest : IAliApiRequest<AlipayTradeRefundResponse>
     {

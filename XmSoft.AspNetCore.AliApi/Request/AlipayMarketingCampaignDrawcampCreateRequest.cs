@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.campaign.drawcamp.create
+    /// AliApi API: alipay.marketing.campaign.drawcamp.create
     /// </summary>
     public class AlipayMarketingCampaignDrawcampCreateRequest : IAliApiRequest<AlipayMarketingCampaignDrawcampCreateResponse>
     {

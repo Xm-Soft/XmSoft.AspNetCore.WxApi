@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.craftsman.data.work.delete
+    /// AliApi API: koubei.craftsman.data.work.delete
     /// </summary>
     public class KoubeiCraftsmanDataWorkDeleteRequest : IAliApiRequest<KoubeiCraftsmanDataWorkDeleteResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.merchant.borrow.entity.upload
+    /// AliApi API: zhima.merchant.borrow.entity.upload
     /// </summary>
     public class ZhimaMerchantBorrowEntityUploadRequest : IAliApiRequest<ZhimaMerchantBorrowEntityUploadResponse>
     {

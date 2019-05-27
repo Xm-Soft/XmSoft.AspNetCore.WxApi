@@ -22,7 +22,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
         public string Country { get; set; }
 
         /// <summary>
-        /// 蚂蚁通行证登录密码，原始密码使用RSA加密后传输,示例：a11111:JuZeA/DR9NJU8aJPONdq9ZMbXI2zNHyoq3MwOxmjjY17ItpsbyuaPrfKsOzVBX9IFKyfr1Whrhlbl4WbYu9q2Xai6mWCNTKbYwvCDuY+pjel6dkka+/kK5ZwWjsN2W6eWAf5TNdy2pqheI08ZMvv1gD6t5zIQBbLGh/rv19NTd2gMwSTO++5Onek9saJi8iG+W32AOPPBWcaMv6yNJJCyA0QloBY5qFQdTOoW8DAg3dyfmFEDWNrdUxBZdL5+ZUS7HdK4i+k+vATH7tX0isEA8F40wSNzrrgTX8Dq+NcGzrAlGpSAqxgUDcxog2hrhDXBl4puYfLHskHBNKhwv0BIw==
+        /// 蚂蚁通行证登录密码，原始密码使用RSA加密后传输,示例：a11111:JuZeA/DR9NJU8aJPONdq9ZMbXI2zNHyoq3MwOxmjjY17ItpsbyuaPrfKsOzVBX9IFKyfr1Whrhlbl4WbYu9q2Xai6mWCNTKbYwvCDuY+pjel6dkka+/kK5ZwWjsN2W6eWAf5TNdy2pqheI08ZMvv1gD6t5zIQBbLGh/rv19NTd2gMwSTO++5Onek9saJi8iG+W32AliApiPBWcaMv6yNJJCyA0QloBY5qFQdTOoW8DAg3dyfmFEDWNrdUxBZdL5+ZUS7HdK4i+k+vATH7tX0isEA8F40wSNzrrgTX8Dq+NcGzrAlGpSAqxgUDcxog2hrhDXBl4puYfLHskHBNKhwv0BIw==
         /// </summary>
         [XmlElement("login_password")]
         public string LoginPassword { get; set; }

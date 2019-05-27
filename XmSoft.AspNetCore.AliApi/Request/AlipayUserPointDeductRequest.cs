@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.point.deduct
+    /// AliApi API: alipay.user.point.deduct
     /// </summary>
     public class AlipayUserPointDeductRequest : IAliApiRequest<AlipayUserPointDeductResponse>
     {

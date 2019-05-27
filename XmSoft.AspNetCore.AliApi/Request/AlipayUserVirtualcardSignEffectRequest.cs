@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.virtualcard.sign.effect
+    /// AliApi API: alipay.user.virtualcard.sign.effect
     /// </summary>
     public class AlipayUserVirtualcardSignEffectRequest : IAliApiRequest<AlipayUserVirtualcardSignEffectResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.prodmode.sign.query
+    /// AliApi API: alipay.ebpp.prodmode.sign.query
     /// </summary>
     public class AlipayEbppProdmodeSignQueryRequest : IAliApiRequest<AlipayEbppProdmodeSignQueryResponse>
     {

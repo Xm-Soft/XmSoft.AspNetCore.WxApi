@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.data.autodamage.image.upload
+    /// AliApi API: alipay.ins.data.autodamage.image.upload
     /// </summary>
     public class AlipayInsDataAutodamageImageUploadRequest : IAliApiUploadRequest<AlipayInsDataAutodamageImageUploadResponse>
     {

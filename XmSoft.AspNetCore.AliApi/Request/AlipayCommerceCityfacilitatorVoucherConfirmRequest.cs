@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.cityfacilitator.voucher.confirm
+    /// AliApi API: alipay.commerce.cityfacilitator.voucher.confirm
     /// </summary>
     public class AlipayCommerceCityfacilitatorVoucherConfirmRequest : IAliApiRequest<AlipayCommerceCityfacilitatorVoucherConfirmResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.zdataassets.metadata
+    /// AliApi API: alipay.zdataassets.metadata
     /// </summary>
     public class AlipayZdataassetsMetadataRequest : IAliApiRequest<AlipayZdataassetsMetadataResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.campaign.member.template.online
+    /// AliApi API: koubei.marketing.campaign.member.template.online
     /// </summary>
     public class KoubeiMarketingCampaignMemberTemplateOnlineRequest : IAliApiRequest<KoubeiMarketingCampaignMemberTemplateOnlineResponse>
     {

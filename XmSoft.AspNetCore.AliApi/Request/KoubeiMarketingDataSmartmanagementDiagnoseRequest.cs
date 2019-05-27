@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.data.smartmanagement.diagnose
+    /// AliApi API: koubei.marketing.data.smartmanagement.diagnose
     /// </summary>
     public class KoubeiMarketingDataSmartmanagementDiagnoseRequest : IAliApiRequest<KoubeiMarketingDataSmartmanagementDiagnoseResponse>
     {

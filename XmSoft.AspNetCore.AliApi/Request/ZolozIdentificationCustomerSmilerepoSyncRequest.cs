@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.identification.customer.smilerepo.sync
+    /// AliApi API: zoloz.identification.customer.smilerepo.sync
     /// </summary>
     public class ZolozIdentificationCustomerSmilerepoSyncRequest : IAliApiRequest<ZolozIdentificationCustomerSmilerepoSyncResponse>
     {

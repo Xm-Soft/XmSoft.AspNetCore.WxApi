@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.benefit.edit
+    /// AliApi API: alipay.user.benefit.edit
     /// </summary>
     public class AlipayUserBenefitEditRequest : IAliApiRequest<AlipayUserBenefitEditResponse>
     {

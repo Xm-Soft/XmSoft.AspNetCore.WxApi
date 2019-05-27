@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.boss.fnc.invoicereceipt.batchquery
+    /// AliApi API: alipay.boss.fnc.invoicereceipt.batchquery
     /// </summary>
     public class AlipayBossFncInvoicereceiptBatchqueryRequest : IAliApiRequest<AlipayBossFncInvoicereceiptBatchqueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.cms.cdata.upload
+    /// AliApi API: alipay.eco.cms.cdata.upload
     /// </summary>
     public class AlipayEcoCmsCdataUploadRequest : IAliApiRequest<AlipayEcoCmsCdataUploadResponse>
     {

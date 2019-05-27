@@ -18,7 +18,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
         public List<string> AssociatedPois { get; set; }
 
         /// <summary>
-        /// 地级市编码，国标码，详见国家统计局数据 <a href="http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls">点此下载</a>。
+        /// 地级市编码，国标码，详见国家统计局数据 <a href="http://AliApisdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls">点此下载</a>。
         /// </summary>
         [XmlElement("city_code")]
         public string CityCode { get; set; }
@@ -43,7 +43,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
         public string CommunityName { get; set; }
 
         /// <summary>
-        /// 区县编码，国标码，详见国家统计局数据 <a href="http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls">点此下载</a>。
+        /// 区县编码，国标码，详见国家统计局数据 <a href="http://AliApisdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls">点此下载</a>。
         /// </summary>
         [XmlElement("district_code")]
         public string DistrictCode { get; set; }
@@ -61,7 +61,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
         public string OutCommunityId { get; set; }
 
         /// <summary>
-        /// 省份编码，国标码，详见国家统计局数据 <a href="http://aopsdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls">点此下载</a>。
+        /// 省份编码，国标码，详见国家统计局数据 <a href="http://AliApisdkdownload.cn-hangzhou.alipay-pub.aliyun-inc.com/doc/2016.xls">点此下载</a>。
         /// </summary>
         [XmlElement("province_code")]
         public string ProvinceCode { get; set; }

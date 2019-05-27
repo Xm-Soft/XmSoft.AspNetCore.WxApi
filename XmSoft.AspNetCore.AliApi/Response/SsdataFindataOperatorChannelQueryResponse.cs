@@ -6,9 +6,9 @@ using XmSoft.AspNetCore.AliApi.Model;
 namespace XmSoft.AspNetCore.AliApi.Response
 {
     /// <summary>
-    /// SsdataFindataOperatorChannelQueryResponse.
+    /// SsdataFindatAliApieratorChannelQueryResponse.
     /// </summary>
-    public class SsdataFindataOperatorChannelQueryResponse : AliApiResponse
+    public class SsdataFindatAliApieratorChannelQueryResponse : AliApiResponse
     {
         /// <summary>
         /// 运营商渠道信息，其中item_status枚举：ENABLE（可用），DISABLE(不可用)。

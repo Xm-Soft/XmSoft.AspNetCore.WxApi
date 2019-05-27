@@ -4,10 +4,10 @@ using System.Xml.Serialization;
 namespace XmSoft.AspNetCore.AliApi.Model
 {
     /// <summary>
-    /// SsdataFindataOperatorUserinfoCertifyModel Data Structure.
+    /// SsdataFindatAliApieratorUserinfoCertifyModel Data Structure.
     /// </summary>
     [Serializable]
-    public class SsdataFindataOperatorUserinfoCertifyModel : AliApiObject
+    public class SsdataFindatAliApieratorUserinfoCertifyModel : AliApiObject
     {
         /// <summary>
         /// 业务流水号，提交用户信息时系统返回

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.campaign.qrcode.query
+    /// AliApi API: koubei.marketing.campaign.qrcode.query
     /// </summary>
     public class KoubeiMarketingCampaignQrcodeQueryRequest : IAliApiRequest<KoubeiMarketingCampaignQrcodeQueryResponse>
     {

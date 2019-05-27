@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.boss.base.process.instance.create
+    /// AliApi API: alipay.boss.base.process.instance.create
     /// </summary>
     public class AlipayBossBaseProcessInstanceCreateRequest : IAliApiRequest<AlipayBossBaseProcessInstanceCreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.craftsman.data.provider.create
+    /// AliApi API: koubei.craftsman.data.provider.create
     /// </summary>
     public class KoubeiCraftsmanDataProviderCreateRequest : IAliApiRequest<KoubeiCraftsmanDataProviderCreateResponse>
     {

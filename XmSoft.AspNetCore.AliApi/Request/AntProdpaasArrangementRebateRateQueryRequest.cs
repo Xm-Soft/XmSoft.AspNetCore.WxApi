@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.prodpaas.arrangement.rebate.rate.query
+    /// AliApi API: ant.prodpaas.arrangement.rebate.rate.query
     /// </summary>
     public class AntProdpaasArrangementRebateRateQueryRequest : IAliApiRequest<AntProdpaasArrangementRebateRateQueryResponse>
     {

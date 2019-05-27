@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.fund.trans.collect.singlemoneytoken.create
+    /// AliApi API: alipay.fund.trans.collect.singlemoneytoken.create
     /// </summary>
     public class AlipayFundTransCollectSinglemoneytokenCreateRequest : IAliApiRequest<AlipayFundTransCollectSinglemoneytokenCreateResponse>
     {

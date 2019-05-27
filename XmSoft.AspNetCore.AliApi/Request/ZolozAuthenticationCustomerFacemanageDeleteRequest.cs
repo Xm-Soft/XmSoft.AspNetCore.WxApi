@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.authentication.customer.facemanage.delete
+    /// AliApi API: zoloz.authentication.customer.facemanage.delete
     /// </summary>
     public class ZolozAuthenticationCustomerFacemanageDeleteRequest : IAliApiRequest<ZolozAuthenticationCustomerFacemanageDeleteResponse>
     {

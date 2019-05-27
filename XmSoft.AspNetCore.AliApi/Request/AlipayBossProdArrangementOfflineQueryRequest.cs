@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.boss.prod.arrangement.offline.query
+    /// AliApi API: alipay.boss.prod.arrangement.offline.query
     /// </summary>
     public class AlipayBossProdArrangementOfflineQueryRequest : IAliApiRequest<AlipayBossProdArrangementOfflineQueryResponse>
     {

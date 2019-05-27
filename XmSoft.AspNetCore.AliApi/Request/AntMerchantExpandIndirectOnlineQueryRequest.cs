@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.merchant.expand.indirect.online.query
+    /// AliApi API: ant.merchant.expand.indirect.online.query
     /// </summary>
     public class AntMerchantExpandIndirectOnlineQueryRequest : IAliApiRequest<AntMerchantExpandIndirectOnlineQueryResponse>
     {

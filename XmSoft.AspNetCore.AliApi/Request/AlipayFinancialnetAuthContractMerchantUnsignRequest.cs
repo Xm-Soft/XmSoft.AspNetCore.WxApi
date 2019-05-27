@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.financialnet.auth.contract.merchant.unsign
+    /// AliApi API: alipay.financialnet.auth.contract.merchant.unsign
     /// </summary>
     public class AlipayFinancialnetAuthContractMerchantUnsignRequest : IAliApiRequest<AlipayFinancialnetAuthContractMerchantUnsignResponse>
     {

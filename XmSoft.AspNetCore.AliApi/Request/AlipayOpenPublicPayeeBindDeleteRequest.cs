@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.payee.bind.delete
+    /// AliApi API: alipay.open.public.payee.bind.delete
     /// </summary>
     public class AlipayOpenPublicPayeeBindDeleteRequest : IAliApiRequest<AlipayOpenPublicPayeeBindDeleteResponse>
     {

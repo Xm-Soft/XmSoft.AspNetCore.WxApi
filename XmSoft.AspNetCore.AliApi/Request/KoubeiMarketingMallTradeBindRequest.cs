@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.mall.trade.bind
+    /// AliApi API: koubei.marketing.mall.trade.bind
     /// </summary>
     public class KoubeiMarketingMallTradeBindRequest : IAliApiRequest<KoubeiMarketingMallTradeBindResponse>
     {

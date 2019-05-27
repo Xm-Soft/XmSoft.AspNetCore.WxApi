@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.facetoface.decode.use
+    /// AliApi API: alipay.marketing.facetoface.decode.use
     /// </summary>
     public class AlipayMarketingFacetofaceDecodeUseRequest : IAliApiRequest<AlipayMarketingFacetofaceDecodeUseResponse>
     {

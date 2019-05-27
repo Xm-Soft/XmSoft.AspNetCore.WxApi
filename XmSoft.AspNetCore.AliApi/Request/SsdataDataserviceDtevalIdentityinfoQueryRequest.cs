@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.dteval.identityinfo.query
+    /// AliApi API: ssdata.dataservice.dteval.identityinfo.query
     /// </summary>
     public class SsdataDataserviceDtevalIdentityinfoQueryRequest : IAliApiRequest<SsdataDataserviceDtevalIdentityinfoQueryResponse>
     {

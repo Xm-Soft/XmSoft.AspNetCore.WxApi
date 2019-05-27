@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.shopitem.upload
+    /// AliApi API: koubei.retail.shopitem.upload
     /// </summary>
     public class KoubeiRetailShopitemUploadRequest : IAliApiRequest<KoubeiRetailShopitemUploadResponse>
     {

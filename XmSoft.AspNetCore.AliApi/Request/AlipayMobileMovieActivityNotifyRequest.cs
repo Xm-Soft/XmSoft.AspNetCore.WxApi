@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.movie.activity.notify
+    /// AliApi API: alipay.mobile.movie.activity.notify
     /// </summary>
     public class AlipayMobileMovieActivityNotifyRequest : IAliApiRequest<AlipayMobileMovieActivityNotifyResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.pos.qrcode.sync
+    /// AliApi API: koubei.catering.pos.qrcode.sync
     /// </summary>
     public class KoubeiCateringPosQrcodeSyncRequest : IAliApiRequest<KoubeiCateringPosQrcodeSyncResponse>
     {

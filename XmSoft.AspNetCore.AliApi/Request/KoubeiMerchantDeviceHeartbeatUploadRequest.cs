@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.device.heartbeat.upload
+    /// AliApi API: koubei.merchant.device.heartbeat.upload
     /// </summary>
     public class KoubeiMerchantDeviceHeartbeatUploadRequest : IAliApiRequest<KoubeiMerchantDeviceHeartbeatUploadResponse>
     {

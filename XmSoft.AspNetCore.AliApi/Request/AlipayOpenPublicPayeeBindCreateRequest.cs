@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.payee.bind.create
+    /// AliApi API: alipay.open.public.payee.bind.create
     /// </summary>
     public class AlipayOpenPublicPayeeBindCreateRequest : IAliApiRequest<AlipayOpenPublicPayeeBindCreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.card.template.create
+    /// AliApi API: alipay.marketing.card.template.create
     /// </summary>
     public class AlipayMarketingCardTemplateCreateRequest : IAliApiRequest<AlipayMarketingCardTemplateCreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.fund.auth.order.freeze
+    /// AliApi API: alipay.fund.auth.order.freeze
     /// </summary>
     public class AlipayFundAuthOrderFreezeRequest : IAliApiRequest<AlipayFundAuthOrderFreezeResponse>
     {

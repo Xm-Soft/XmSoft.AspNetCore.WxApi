@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.findata.report.query
+    /// AliApi API: ssdata.findata.report.query
     /// </summary>
     public class SsdataFindataReportQueryRequest : IAliApiRequest<SsdataFindataReportQueryResponse>
     {

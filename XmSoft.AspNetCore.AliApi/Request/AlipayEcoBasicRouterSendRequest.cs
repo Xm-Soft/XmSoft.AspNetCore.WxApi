@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.basic.router.send
+    /// AliApi API: alipay.eco.basic.router.send
     /// </summary>
     public class AlipayEcoBasicRouterSendRequest : IAliApiRequest<AlipayEcoBasicRouterSendResponse>
     {

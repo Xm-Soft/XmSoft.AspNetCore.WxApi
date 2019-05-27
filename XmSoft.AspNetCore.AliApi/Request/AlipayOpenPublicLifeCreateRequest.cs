@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.life.create
+    /// AliApi API: alipay.open.public.life.create
     /// </summary>
     public class AlipayOpenPublicLifeCreateRequest : IAliApiUploadRequest<AlipayOpenPublicLifeCreateResponse>
     {

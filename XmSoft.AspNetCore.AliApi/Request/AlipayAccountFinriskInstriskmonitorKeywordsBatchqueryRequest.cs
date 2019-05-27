@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.account.finrisk.instriskmonitor.keywords.batchquery
+    /// AliApi API: alipay.account.finrisk.instriskmonitor.keywords.batchquery
     /// </summary>
     public class AlipayAccountFinriskInstriskmonitorKeywordsBatchqueryRequest : IAliApiRequest<AlipayAccountFinriskInstriskmonitorKeywordsBatchqueryResponse>
     {

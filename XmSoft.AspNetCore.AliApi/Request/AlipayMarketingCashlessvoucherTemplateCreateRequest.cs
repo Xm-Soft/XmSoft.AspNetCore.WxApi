@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.cashlessvoucher.template.create
+    /// AliApi API: alipay.marketing.cashlessvoucher.template.create
     /// </summary>
     public class AlipayMarketingCashlessvoucherTemplateCreateRequest : IAliApiRequest<AlipayMarketingCashlessvoucherTemplateCreateResponse>
     {

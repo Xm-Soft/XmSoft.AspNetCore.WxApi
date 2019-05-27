@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.item.extitem.info.delete
+    /// AliApi API: koubei.item.extitem.info.delete
     /// </summary>
     public class KoubeiItemExtitemInfoDeleteRequest : IAliApiRequest<KoubeiItemExtitemInfoDeleteResponse>
     {

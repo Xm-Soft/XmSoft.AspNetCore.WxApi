@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.marketing.campaign.prize.list.consult
+    /// AliApi API: mybank.marketing.campaign.prize.list.consult
     /// </summary>
     public class MybankMarketingCampaignPrizeListConsultRequest : IAliApiRequest<MybankMarketingCampaignPrizeListConsultResponse>
     {

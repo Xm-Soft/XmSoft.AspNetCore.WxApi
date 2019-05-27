@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.scene.product.sign.confirm
+    /// AliApi API: alipay.ins.scene.product.sign.confirm
     /// </summary>
     public class AlipayInsSceneProductSignConfirmRequest : IAliApiRequest<AlipayInsSceneProductSignConfirmResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.pdeduct.sign.validate
+    /// AliApi API: alipay.ebpp.pdeduct.sign.validate
     /// </summary>
     public class AlipayEbppPdeductSignValidateRequest : IAliApiRequest<AlipayEbppPdeductSignValidateResponse>
     {

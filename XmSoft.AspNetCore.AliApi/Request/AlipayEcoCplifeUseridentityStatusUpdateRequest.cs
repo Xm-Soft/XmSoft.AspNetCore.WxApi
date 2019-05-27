@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.cplife.useridentity.status.update
+    /// AliApi API: alipay.eco.cplife.useridentity.status.update
     /// </summary>
     public class AlipayEcoCplifeUseridentityStatusUpdateRequest : IAliApiRequest<AlipayEcoCplifeUseridentityStatusUpdateResponse>
     {

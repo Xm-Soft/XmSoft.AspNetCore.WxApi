@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.trade.ticket.ticketcode.query
+    /// AliApi API: koubei.trade.ticket.ticketcode.query
     /// </summary>
     public class KoubeiTradeTicketTicketcodeQueryRequest : IAliApiRequest<KoubeiTradeTicketTicketcodeQueryResponse>
     {

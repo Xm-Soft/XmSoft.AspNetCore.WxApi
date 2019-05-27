@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.chat.ginfo.query
+    /// AliApi API: alipay.social.base.chat.ginfo.query
     /// </summary>
     public class AlipaySocialBaseChatGinfoQueryRequest : IAliApiRequest<AlipaySocialBaseChatGinfoQueryResponse>
     {

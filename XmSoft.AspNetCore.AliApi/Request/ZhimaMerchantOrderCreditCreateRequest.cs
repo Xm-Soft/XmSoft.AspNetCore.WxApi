@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.merchant.order.credit.create
+    /// AliApi API: zhima.merchant.order.credit.create
     /// </summary>
     public class ZhimaMerchantOrderCreditCreateRequest : IAliApiRequest<ZhimaMerchantOrderCreditCreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.idpsource.sync
+    /// AliApi API: alipay.social.base.idpsource.sync
     /// </summary>
     public class AlipaySocialBaseIdpsourceSyncRequest : IAliApiRequest<AlipaySocialBaseIdpsourceSyncResponse>
     {

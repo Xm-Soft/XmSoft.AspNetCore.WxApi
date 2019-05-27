@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.multimedia.download.proxy
+    /// AliApi API: alipay.open.public.multimedia.download.proxy
     /// </summary>
     public class AlipayOpenPublicMultimediaDownloadProxyRequest : IAliApiRequest<AlipayOpenPublicMultimediaDownloadProxyResponse>
     {

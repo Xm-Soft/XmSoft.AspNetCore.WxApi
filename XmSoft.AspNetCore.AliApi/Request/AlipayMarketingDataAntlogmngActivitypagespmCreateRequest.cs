@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.data.antlogmng.activitypagespm.create
+    /// AliApi API: alipay.marketing.data.antlogmng.activitypagespm.create
     /// </summary>
     public class AlipayMarketingDataAntlogmngActivitypagespmCreateRequest : IAliApiRequest<AlipayMarketingDataAntlogmngActivitypagespmCreateResponse>
     {

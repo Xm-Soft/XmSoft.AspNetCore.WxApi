@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.data.dataservice.holographic.factor.query
+    /// AliApi API: alipay.data.dataservice.holographic.factor.query
     /// </summary>
     public class AlipayDataDataserviceHolographicFactorQueryRequest : IAliApiRequest<AlipayDataDataserviceHolographicFactorQueryResponse>
     {

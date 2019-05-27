@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.role.permission.create
+    /// AliApi API: koubei.merchant.role.permission.create
     /// </summary>
     public class KoubeiMerchantRolePermissionCreateRequest : IAliApiRequest<KoubeiMerchantRolePermissionCreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.campaign.member.relation.unbind
+    /// AliApi API: koubei.marketing.campaign.member.relation.unbind
     /// </summary>
     public class KoubeiMarketingCampaignMemberRelationUnbindRequest : IAliApiRequest<KoubeiMarketingCampaignMemberRelationUnbindResponse>
     {

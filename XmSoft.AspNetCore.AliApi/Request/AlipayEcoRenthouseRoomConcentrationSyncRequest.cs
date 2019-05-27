@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.renthouse.room.concentration.sync
+    /// AliApi API: alipay.eco.renthouse.room.concentration.sync
     /// </summary>
     public class AlipayEcoRenthouseRoomConcentrationSyncRequest : IAliApiRequest<AlipayEcoRenthouseRoomConcentrationSyncResponse>
     {

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace XmSoft.AspNetCore.AliApi.Model
 {
     /// <summary>
-    /// ConsumeRecordAOPModel Data Structure.
+    /// ConsumeRecordAliApiModel Data Structure.
     /// </summary>
     [Serializable]
-    public class ConsumeRecordAOPModel : AliApiObject
+    public class ConsumeRecordAliApiModel : AliApiObject
     {
         /// <summary>
         /// 接入渠道

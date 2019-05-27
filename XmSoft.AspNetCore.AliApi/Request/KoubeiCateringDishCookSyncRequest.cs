@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.dish.cook.sync
+    /// AliApi API: koubei.catering.dish.cook.sync
     /// </summary>
     public class KoubeiCateringDishCookSyncRequest : IAliApiRequest<KoubeiCateringDishCookSyncResponse>
     {

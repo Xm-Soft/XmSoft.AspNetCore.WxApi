@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.data.message.deliver
+    /// AliApi API: koubei.marketing.data.message.deliver
     /// </summary>
     public class KoubeiMarketingDataMessageDeliverRequest : IAliApiRequest<KoubeiMarketingDataMessageDeliverResponse>
     {

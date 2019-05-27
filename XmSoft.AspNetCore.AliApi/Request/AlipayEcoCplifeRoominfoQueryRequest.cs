@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.cplife.roominfo.query
+    /// AliApi API: alipay.eco.cplife.roominfo.query
     /// </summary>
     public class AlipayEcoCplifeRoominfoQueryRequest : IAliApiRequest<AlipayEcoCplifeRoominfoQueryResponse>
     {

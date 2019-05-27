@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.prod.facerepo.add
+    /// AliApi API: alipay.security.prod.facerepo.add
     /// </summary>
     public class AlipaySecurityProdFacerepoAddRequest : IAliApiRequest<AlipaySecurityProdFacerepoAddResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.wms.inboundorder.batchquery
+    /// AliApi API: koubei.retail.wms.inboundorder.batchquery
     /// </summary>
     public class KoubeiRetailWmsInboundorderBatchqueryRequest : IAliApiRequest<KoubeiRetailWmsInboundorderBatchqueryResponse>
     {

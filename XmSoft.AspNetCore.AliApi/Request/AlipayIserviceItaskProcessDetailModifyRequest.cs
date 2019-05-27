@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.iservice.itask.process.detail.modify
+    /// AliApi API: alipay.iservice.itask.process.detail.modify
     /// </summary>
     public class AlipayIserviceItaskProcessDetailModifyRequest : IAliApiRequest<AlipayIserviceItaskProcessDetailModifyResponse>
     {

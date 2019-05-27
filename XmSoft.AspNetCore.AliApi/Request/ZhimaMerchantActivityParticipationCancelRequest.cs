@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.merchant.activity.participation.cancel
+    /// AliApi API: zhima.merchant.activity.participation.cancel
     /// </summary>
     public class ZhimaMerchantActivityParticipationCancelRequest : IAliApiRequest<ZhimaMerchantActivityParticipationCancelResponse>
     {

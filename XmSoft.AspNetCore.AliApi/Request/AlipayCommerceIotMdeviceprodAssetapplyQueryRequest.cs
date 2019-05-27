@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.iot.mdeviceprod.assetapply.query
+    /// AliApi API: alipay.commerce.iot.mdeviceprod.assetapply.query
     /// </summary>
     public class AlipayCommerceIotMdeviceprodAssetapplyQueryRequest : IAliApiRequest<AlipayCommerceIotMdeviceprodAssetapplyQueryResponse>
     {

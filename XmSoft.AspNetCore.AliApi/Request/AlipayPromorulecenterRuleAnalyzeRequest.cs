@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.promorulecenter.rule.analyze
+    /// AliApi API: alipay.promorulecenter.rule.analyze
     /// </summary>
     public class AlipayPromorulecenterRuleAnalyzeRequest : IAliApiRequest<AlipayPromorulecenterRuleAnalyzeResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.gotone.ackcode.verify
+    /// AliApi API: alipay.gotone.ackcode.verify
     /// </summary>
     public class AlipayGotoneAckcodeVerifyRequest : IAliApiRequest<AlipayGotoneAckcodeVerifyResponse>
     {

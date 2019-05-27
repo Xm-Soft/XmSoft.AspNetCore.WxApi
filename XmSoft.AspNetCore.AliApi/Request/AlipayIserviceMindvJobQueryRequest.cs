@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.iservice.mindv.job.query
+    /// AliApi API: alipay.iservice.mindv.job.query
     /// </summary>
     public class AlipayIserviceMindvJobQueryRequest : IAliApiRequest<AlipayIserviceMindvJobQueryResponse>
     {

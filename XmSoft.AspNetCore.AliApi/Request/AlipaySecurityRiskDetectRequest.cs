@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.risk.detect
+    /// AliApi API: alipay.security.risk.detect
     /// </summary>
     public class AlipaySecurityRiskDetectRequest : IAliApiRequest<AlipaySecurityRiskDetectResponse>
     {

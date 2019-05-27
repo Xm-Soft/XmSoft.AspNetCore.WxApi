@@ -5,10 +5,10 @@ using System.Collections.Generic;
 namespace XmSoft.AspNetCore.AliApi.Model
 {
     /// <summary>
-    /// BatchFundItemAOPModel Data Structure.
+    /// BatchFundItemAliApiModel Data Structure.
     /// </summary>
     [Serializable]
-    public class BatchFundItemAOPModel : AliApiObject
+    public class BatchFundItemAliApiModel : AliApiObject
     {
         /// <summary>
         /// 批次号
@@ -33,7 +33,7 @@ namespace XmSoft.AspNetCore.AliApi.Model
         /// </summary>
         [XmlArray("fund_item_list")]
         [XmlArrayItem("fund_item_a_o_p_model")]
-        public List<FundItemAOPModel> FundItemList { get; set; }
+        public List<FundItemAliApiModel> FundItemList { get; set; }
 
         /// <summary>
         /// 批次创建时间

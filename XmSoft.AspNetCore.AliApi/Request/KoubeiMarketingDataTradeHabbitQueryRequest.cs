@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.data.trade.habbit.query
+    /// AliApi API: koubei.marketing.data.trade.habbit.query
     /// </summary>
     public class KoubeiMarketingDataTradeHabbitQueryRequest : IAliApiRequest<KoubeiMarketingDataTradeHabbitQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.supplychain.prepayment.cancel
+    /// AliApi API: mybank.credit.supplychain.prepayment.cancel
     /// </summary>
     public class MybankCreditSupplychainPrepaymentCancelRequest : IAliApiRequest<MybankCreditSupplychainPrepaymentCancelResponse>
     {

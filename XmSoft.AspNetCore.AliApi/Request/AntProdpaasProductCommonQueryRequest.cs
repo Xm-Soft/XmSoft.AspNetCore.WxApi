@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.prodpaas.product.common.query
+    /// AliApi API: ant.prodpaas.product.common.query
     /// </summary>
     public class AntProdpaasProductCommonQueryRequest : IAliApiRequest<AntProdpaasProductCommonQueryResponse>
     {

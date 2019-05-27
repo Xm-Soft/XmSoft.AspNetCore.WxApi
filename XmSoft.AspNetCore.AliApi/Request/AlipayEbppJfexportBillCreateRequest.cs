@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.jfexport.bill.create
+    /// AliApi API: alipay.ebpp.jfexport.bill.create
     /// </summary>
     public class AlipayEbppJfexportBillCreateRequest : IAliApiRequest<AlipayEbppJfexportBillCreateResponse>
     {

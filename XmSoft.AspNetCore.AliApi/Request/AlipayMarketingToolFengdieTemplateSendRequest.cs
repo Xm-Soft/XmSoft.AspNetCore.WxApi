@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.tool.fengdie.template.send
+    /// AliApi API: alipay.marketing.tool.fengdie.template.send
     /// </summary>
     public class AlipayMarketingToolFengdieTemplateSendRequest : IAliApiRequest<AlipayMarketingToolFengdieTemplateSendResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.wms.inboundorder.create
+    /// AliApi API: koubei.retail.wms.inboundorder.create
     /// </summary>
     public class KoubeiRetailWmsInboundorderCreateRequest : IAliApiRequest<KoubeiRetailWmsInboundorderCreateResponse>
     {

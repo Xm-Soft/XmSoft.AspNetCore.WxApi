@@ -5,9 +5,9 @@ using System.Collections.Generic;
 namespace XmSoft.AspNetCore.AliApi.Response
 {
     /// <summary>
-    /// SsdataFindataOperatorUserinfoCertifyResponse.
+    /// SsdataFindatAliApieratorUserinfoCertifyResponse.
     /// </summary>
-    public class SsdataFindataOperatorUserinfoCertifyResponse : AliApiResponse
+    public class SsdataFindatAliApieratorUserinfoCertifyResponse : AliApiResponse
     {
         /// <summary>
         /// 系统业务流水号

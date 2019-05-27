@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.invoice.title.list.get
+    /// AliApi API: alipay.ebpp.invoice.title.list.get
     /// </summary>
     public class AlipayEbppInvoiceTitleListGetRequest : IAliApiRequest<AlipayEbppInvoiceTitleListGetResponse>
     {

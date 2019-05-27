@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.prod.signature.file.upload
+    /// AliApi API: alipay.security.prod.signature.file.upload
     /// </summary>
     public class AlipaySecurityProdSignatureFileUploadRequest : IAliApiUploadRequest<AlipaySecurityProdSignatureFileUploadResponse>
     {

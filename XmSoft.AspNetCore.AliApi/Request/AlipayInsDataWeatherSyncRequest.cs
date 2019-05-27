@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.data.weather.sync
+    /// AliApi API: alipay.ins.data.weather.sync
     /// </summary>
     public class AlipayInsDataWeatherSyncRequest : IAliApiRequest<AlipayInsDataWeatherSyncResponse>
     {

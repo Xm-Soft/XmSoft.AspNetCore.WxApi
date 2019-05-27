@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.tool.fengdie.sites.delete
+    /// AliApi API: alipay.marketing.tool.fengdie.sites.delete
     /// </summary>
     public class AlipayMarketingToolFengdieSitesDeleteRequest : IAliApiRequest<AlipayMarketingToolFengdieSitesDeleteResponse>
     {

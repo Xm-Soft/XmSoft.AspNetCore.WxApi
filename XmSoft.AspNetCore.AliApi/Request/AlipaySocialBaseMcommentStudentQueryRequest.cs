@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.mcomment.student.query
+    /// AliApi API: alipay.social.base.mcomment.student.query
     /// </summary>
     public class AlipaySocialBaseMcommentStudentQueryRequest : IAliApiRequest<AlipaySocialBaseMcommentStudentQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.marketing.certificate.batchcreate
+    /// AliApi API: alipay.ins.marketing.certificate.batchcreate
     /// </summary>
     public class AlipayInsMarketingCertificateBatchcreateRequest : IAliApiRequest<AlipayInsMarketingCertificateBatchcreateResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.mini.tinyapp.exist.query
+    /// AliApi API: alipay.open.mini.tinyapp.exist.query
     /// </summary>
     public class AlipayOpenMiniTinyappExistQueryRequest : IAliApiRequest<AlipayOpenMiniTinyappExistQueryResponse>
     {

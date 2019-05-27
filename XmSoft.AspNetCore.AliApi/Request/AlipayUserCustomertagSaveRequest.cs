@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.customertag.save
+    /// AliApi API: alipay.user.customertag.save
     /// </summary>
     public class AlipayUserCustomertagSaveRequest : IAliApiRequest<AlipayUserCustomertagSaveResponse>
     {

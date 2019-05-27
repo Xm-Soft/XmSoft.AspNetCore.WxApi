@@ -4,10 +4,10 @@ using System.Xml.Serialization;
 namespace XmSoft.AspNetCore.AliApi.Model
 {
     /// <summary>
-    /// FundItemAOPModel Data Structure.
+    /// FundItemAliApiModel Data Structure.
     /// </summary>
     [Serializable]
-    public class FundItemAOPModel : AliApiObject
+    public class FundItemAliApiModel : AliApiObject
     {
         /// <summary>
         /// 财务外部单据号

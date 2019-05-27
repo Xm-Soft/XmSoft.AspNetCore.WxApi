@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.contentlib.offer.sync
+    /// AliApi API: alipay.social.base.contentlib.offer.sync
     /// </summary>
     public class AlipaySocialBaseContentlibOfferSyncRequest : IAliApiRequest<AlipaySocialBaseContentlibOfferSyncResponse>
     {

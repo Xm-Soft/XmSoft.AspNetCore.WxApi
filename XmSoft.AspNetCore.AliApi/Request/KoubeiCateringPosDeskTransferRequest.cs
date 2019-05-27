@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.pos.desk.transfer
+    /// AliApi API: koubei.catering.pos.desk.transfer
     /// </summary>
     public class KoubeiCateringPosDeskTransferRequest : IAliApiRequest<KoubeiCateringPosDeskTransferResponse>
     {

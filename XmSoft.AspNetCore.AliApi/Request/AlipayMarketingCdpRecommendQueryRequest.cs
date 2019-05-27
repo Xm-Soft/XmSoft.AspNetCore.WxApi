@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.cdp.recommend.query
+    /// AliApi API: alipay.marketing.cdp.recommend.query
     /// </summary>
     public class AlipayMarketingCdpRecommendQueryRequest : IAliApiRequest<AlipayMarketingCdpRecommendQueryResponse>
     {

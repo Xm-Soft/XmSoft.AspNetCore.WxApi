@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.point.authbase.send
+    /// AliApi API: alipay.user.point.authbase.send
     /// </summary>
     public class AlipayUserPointAuthbaseSendRequest : IAliApiRequest<AlipayUserPointAuthbaseSendResponse>
     {

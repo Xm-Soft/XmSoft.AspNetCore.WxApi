@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.campaign.rule.rulelist.query
+    /// AliApi API: alipay.marketing.campaign.rule.rulelist.query
     /// </summary>
     public class AlipayMarketingCampaignRuleRulelistQueryRequest : IAliApiRequest<AlipayMarketingCampaignRuleRulelistQueryResponse>
     {

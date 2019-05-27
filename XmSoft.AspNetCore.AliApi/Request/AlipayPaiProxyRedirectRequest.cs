@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.pai.proxy.redirect
+    /// AliApi API: alipay.pai.proxy.redirect
     /// </summary>
     public class AlipayPaiProxyRedirectRequest : IAliApiRequest<AlipayPaiProxyRedirectResponse>
     {

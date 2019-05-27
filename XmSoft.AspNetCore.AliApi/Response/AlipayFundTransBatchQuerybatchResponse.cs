@@ -49,7 +49,7 @@ namespace XmSoft.AspNetCore.AliApi.Response
         /// 批次详情
         /// </summary>
         [XmlElement("detail_list")]
-        public QueryDetailAopResult DetailList { get; set; }
+        public QueryDetailAliApiResult DetailList { get; set; }
 
         /// <summary>
         /// 扩展数据，创建批次时传入的扩展数据；注：长度限制100

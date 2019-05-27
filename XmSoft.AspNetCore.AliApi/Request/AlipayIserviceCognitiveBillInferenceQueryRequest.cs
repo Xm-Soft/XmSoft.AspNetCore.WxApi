@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.iservice.cognitive.bill.inference.query
+    /// AliApi API: alipay.iservice.cognitive.bill.inference.query
     /// </summary>
     public class AlipayIserviceCognitiveBillInferenceQueryRequest : IAliApiRequest<AlipayIserviceCognitiveBillInferenceQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.mycar.parking.config.set
+    /// AliApi API: alipay.eco.mycar.parking.config.set
     /// </summary>
     public class AlipayEcoMycarParkingConfigSetRequest : IAliApiRequest<AlipayEcoMycarParkingConfigSetResponse>
     {

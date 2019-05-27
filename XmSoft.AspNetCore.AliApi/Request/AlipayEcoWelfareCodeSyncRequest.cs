@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.welfare.code.sync
+    /// AliApi API: alipay.eco.welfare.code.sync
     /// </summary>
     public class AlipayEcoWelfareCodeSyncRequest : IAliApiRequest<AlipayEcoWelfareCodeSyncResponse>
     {

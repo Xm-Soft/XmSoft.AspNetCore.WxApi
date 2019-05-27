@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.supplychain.inventory.out.consult
+    /// AliApi API: mybank.credit.supplychain.inventory.out.consult
     /// </summary>
     public class MybankCreditSupplychainInventoryOutConsultRequest : IAliApiRequest<MybankCreditSupplychainInventoryOutConsultResponse>
     {

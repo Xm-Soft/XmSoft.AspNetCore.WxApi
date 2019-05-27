@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.personalized.extension.create
+    /// AliApi API: alipay.open.public.personalized.extension.create
     /// </summary>
     public class AlipayOpenPublicPersonalizedExtensionCreateRequest : IAliApiRequest<AlipayOpenPublicPersonalizedExtensionCreateResponse>
     {

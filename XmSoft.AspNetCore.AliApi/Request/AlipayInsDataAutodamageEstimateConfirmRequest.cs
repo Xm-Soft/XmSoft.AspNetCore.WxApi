@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.data.autodamage.estimate.confirm
+    /// AliApi API: alipay.ins.data.autodamage.estimate.confirm
     /// </summary>
     public class AlipayInsDataAutodamageEstimateConfirmRequest : IAliApiRequest<AlipayInsDataAutodamageEstimateConfirmResponse>
     {

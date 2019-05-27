@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.boss.fnc.xwbtest.ret.modify
+    /// AliApi API: alipay.boss.fnc.xwbtest.ret.modify
     /// </summary>
     public class AlipayBossFncXwbtestRetModifyRequest : IAliApiRequest<AlipayBossFncXwbtestRetModifyResponse>
     {

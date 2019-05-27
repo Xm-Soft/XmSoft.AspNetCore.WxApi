@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.point.budget.get
+    /// AliApi API: alipay.point.budget.get
     /// </summary>
     public class AlipayPointBudgetGetRequest : IAliApiRequest<AlipayPointBudgetGetResponse>
     {

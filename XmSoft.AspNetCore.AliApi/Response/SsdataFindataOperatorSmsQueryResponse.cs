@@ -4,9 +4,9 @@ using System.Xml.Serialization;
 namespace XmSoft.AspNetCore.AliApi.Response
 {
     /// <summary>
-    /// SsdataFindataOperatorSmsQueryResponse.
+    /// SsdataFindatAliApieratorSmsQueryResponse.
     /// </summary>
-    public class SsdataFindataOperatorSmsQueryResponse : AliApiResponse
+    public class SsdataFindatAliApieratorSmsQueryResponse : AliApiResponse
     {
         /// <summary>
         /// 系统业务流水号

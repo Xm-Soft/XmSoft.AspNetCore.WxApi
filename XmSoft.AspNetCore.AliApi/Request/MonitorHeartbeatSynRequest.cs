@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: monitor.heartbeat.syn
+    /// AliApi API: monitor.heartbeat.syn
     /// </summary>
     public class MonitorHeartbeatSynRequest : IAliApiRequest<MonitorHeartbeatSynResponse>
     {

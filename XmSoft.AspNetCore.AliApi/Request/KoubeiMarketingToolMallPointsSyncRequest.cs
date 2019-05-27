@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.tool.mall.points.sync
+    /// AliApi API: koubei.marketing.tool.mall.points.sync
     /// </summary>
     public class KoubeiMarketingToolMallPointsSyncRequest : IAliApiRequest<KoubeiMarketingToolMallPointsSyncResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.overseas.travel.content.count.sync
+    /// AliApi API: alipay.overseas.travel.content.count.sync
     /// </summary>
     public class AlipayOverseasTravelContentCountSyncRequest : IAliApiRequest<AlipayOverseasTravelContentCountSyncResponse>
     {

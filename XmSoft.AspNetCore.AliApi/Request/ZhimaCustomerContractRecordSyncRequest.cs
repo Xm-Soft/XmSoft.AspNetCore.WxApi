@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.customer.contract.record.sync
+    /// AliApi API: zhima.customer.contract.record.sync
     /// </summary>
     public class ZhimaCustomerContractRecordSyncRequest : IAliApiRequest<ZhimaCustomerContractRecordSyncResponse>
     {

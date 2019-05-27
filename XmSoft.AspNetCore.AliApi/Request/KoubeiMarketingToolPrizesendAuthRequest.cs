@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.tool.prizesend.auth
+    /// AliApi API: koubei.marketing.tool.prizesend.auth
     /// </summary>
     public class KoubeiMarketingToolPrizesendAuthRequest : IAliApiRequest<KoubeiMarketingToolPrizesendAuthResponse>
     {

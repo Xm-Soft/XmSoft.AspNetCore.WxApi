@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.credit.ep.rating.inner.initialize
+    /// AliApi API: zhima.credit.ep.rating.inner.initialize
     /// </summary>
     public class ZhimaCreditEpRatingInnerInitializeRequest : IAliApiRequest<ZhimaCreditEpRatingInnerInitializeResponse>
     {

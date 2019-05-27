@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.operator.role.delete
+    /// AliApi API: koubei.merchant.operator.role.delete
     /// </summary>
     public class KoubeiMerchantOperatorRoleDeleteRequest : IAliApiRequest<KoubeiMerchantOperatorRoleDeleteResponse>
     {

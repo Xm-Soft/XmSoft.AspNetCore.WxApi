@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.advert.commission.channel.delete
+    /// AliApi API: koubei.advert.commission.channel.delete
     /// </summary>
     public class KoubeiAdvertCommissionChannelDeleteRequest : IAliApiRequest<KoubeiAdvertCommissionChannelDeleteResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.cook.condition.batchquery
+    /// AliApi API: koubei.catering.cook.condition.batchquery
     /// </summary>
     public class KoubeiCateringCookConditionBatchqueryRequest : IAliApiRequest<KoubeiCateringCookConditionBatchqueryResponse>
     {

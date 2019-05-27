@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.gis.query
+    /// AliApi API: alipay.open.public.gis.query
     /// </summary>
     public class AlipayOpenPublicGisQueryRequest : IAliApiRequest<AlipayOpenPublicGisQueryResponse>
     {

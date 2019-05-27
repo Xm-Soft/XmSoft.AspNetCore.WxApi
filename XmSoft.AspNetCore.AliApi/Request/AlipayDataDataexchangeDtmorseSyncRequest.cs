@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.data.dataexchange.dtmorse.sync
+    /// AliApi API: alipay.data.dataexchange.dtmorse.sync
     /// </summary>
     public class AlipayDataDataexchangeDtmorseSyncRequest : IAliApiRequest<AlipayDataDataexchangeDtmorseSyncResponse>
     {

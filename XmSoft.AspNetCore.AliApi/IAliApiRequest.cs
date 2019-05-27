@@ -8,25 +8,25 @@ namespace XmSoft.AspNetCore.AliApi
     {
 
         /// <summary>
-        /// 获取AOP的异步通知地址。
+        /// 获取AliApi的异步通知地址。
         /// </summary>
         /// <returns>异步通知地址</returns>
         string GetNotifyUrl();
 
         /// <summary>
-        /// 设置AOP的异步通知地址。
+        /// 设置AliApi的异步通知地址。
         /// </summary>
         /// <returns>异步通知地址</returns>
         void SetNotifyUrl(string notifyUrl);
 
         /// <summary>
-        /// 获取AOP的同步通知地址。
+        /// 获取AliApi的同步通知地址。
         /// </summary>
         /// <returns>异步通知地址</returns>
         string GetReturnUrl();
 
         /// <summary>
-        /// 设置AOP的同步通知地址。
+        /// 设置AliApi的同步通知地址。
         /// </summary>
         /// <returns>异步通知地址</returns>
         void SetReturnUrl(string returnUrl);
@@ -37,13 +37,13 @@ namespace XmSoft.AspNetCore.AliApi
         void SetNeedEncrypt(bool needEncrypt);
 
         /// <summary>
-        /// 获取AOP请求是否需要加密
+        /// 获取AliApi请求是否需要加密
         /// </summary>
         /// <returns>结果是否加密</returns>
         bool GetNeedEncrypt();
 
         /// <summary>
-        /// 获取AOP的API名称。
+        /// 获取AliApi的API名称。
         /// </summary>
         /// <returns>API名称</returns>
         string GetApiName();

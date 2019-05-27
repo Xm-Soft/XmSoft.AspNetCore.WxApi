@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.app.token.get
+    /// AliApi API: alipay.app.token.get
     /// </summary>
     public class AlipayAppTokenGetRequest : IAliApiRequest<AlipayAppTokenGetResponse>
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace XmSoft.AspNetCore.AliApi
 {
     /// <summary>
-    /// 符合AOP习惯的纯字符串字典结构。
+    /// 符合AliApi习惯的纯字符串字典结构。
     /// </summary>
     public class AliApiDictionary : Dictionary<string, string>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.iot.device.delete
+    /// AliApi API: alipay.commerce.iot.device.delete
     /// </summary>
     public class AlipayCommerceIotDeviceDeleteRequest : IAliApiRequest<AlipayCommerceIotDeviceDeleteResponse>
     {

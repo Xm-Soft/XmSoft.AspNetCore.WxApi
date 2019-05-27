@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.antpaas.userid.get
+    /// AliApi API: alipay.user.antpaas.userid.get
     /// </summary>
     public class AlipayUserAntpaasUseridGetRequest : IAliApiRequest<AlipayUserAntpaasUseridGetResponse>
     {

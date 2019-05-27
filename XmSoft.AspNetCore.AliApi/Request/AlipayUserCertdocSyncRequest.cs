@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.certdoc.sync
+    /// AliApi API: alipay.user.certdoc.sync
     /// </summary>
     public class AlipayUserCertdocSyncRequest : IAliApiRequest<AlipayUserCertdocSyncResponse>
     {

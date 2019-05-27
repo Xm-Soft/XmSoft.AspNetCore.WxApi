@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.auth.zhimaper.inner.apply
+    /// AliApi API: alipay.user.auth.zhimaper.inner.apply
     /// </summary>
     public class AlipayUserAuthZhimaperInnerApplyRequest : IAliApiRequest<AlipayUserAuthZhimaperInnerApplyResponse>
     {

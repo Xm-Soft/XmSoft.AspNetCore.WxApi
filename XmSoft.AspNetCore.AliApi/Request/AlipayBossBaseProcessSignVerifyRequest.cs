@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.boss.base.process.sign.verify
+    /// AliApi API: alipay.boss.base.process.sign.verify
     /// </summary>
     public class AlipayBossBaseProcessSignVerifyRequest : IAliApiRequest<AlipayBossBaseProcessSignVerifyResponse>
     {

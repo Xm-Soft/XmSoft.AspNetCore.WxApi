@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.zdatafront.datatransfered.fileupload
+    /// AliApi API: alipay.zdatafront.datatransfered.fileupload
     /// </summary>
     public class AlipayZdatafrontDatatransferedFileuploadRequest : IAliApiUploadRequest<AlipayZdatafrontDatatransferedFileuploadResponse>
     {

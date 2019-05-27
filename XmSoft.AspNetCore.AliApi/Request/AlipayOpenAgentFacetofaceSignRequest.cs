@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.agent.facetoface.sign
+    /// AliApi API: alipay.open.agent.facetoface.sign
     /// </summary>
     public class AlipayOpenAgentFacetofaceSignRequest : IAliApiUploadRequest<AlipayOpenAgentFacetofaceSignResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.advert.delete
+    /// AliApi API: alipay.open.public.advert.delete
     /// </summary>
     public class AlipayOpenPublicAdvertDeleteRequest : IAliApiRequest<AlipayOpenPublicAdvertDeleteResponse>
     {

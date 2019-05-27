@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.pcredit.loan.third.notify
+    /// AliApi API: alipay.pcredit.loan.third.notify
     /// </summary>
     public class AlipayPcreditLoanThirdNotifyRequest : IAliApiRequest<AlipayPcreditLoanThirdNotifyResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.overseas.travel.content.create
+    /// AliApi API: alipay.overseas.travel.content.create
     /// </summary>
     public class AlipayOverseasTravelContentCreateRequest : IAliApiRequest<AlipayOverseasTravelContentCreateResponse>
     {

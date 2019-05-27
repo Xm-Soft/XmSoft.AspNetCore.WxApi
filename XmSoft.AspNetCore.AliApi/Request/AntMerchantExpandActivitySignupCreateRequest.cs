@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.merchant.expand.activity.signup.create
+    /// AliApi API: ant.merchant.expand.activity.signup.create
     /// </summary>
     public class AntMerchantExpandActivitySignupCreateRequest : IAliApiRequest<AntMerchantExpandActivitySignupCreateResponse>
     {

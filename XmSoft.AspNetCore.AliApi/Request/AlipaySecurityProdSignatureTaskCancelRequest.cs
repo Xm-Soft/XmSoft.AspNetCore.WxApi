@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.prod.signature.task.cancel
+    /// AliApi API: alipay.security.prod.signature.task.cancel
     /// </summary>
     public class AlipaySecurityProdSignatureTaskCancelRequest : IAliApiRequest<AlipaySecurityProdSignatureTaskCancelResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.msaas.mediarecog.afts.car.identify
+    /// AliApi API: alipay.msaas.mediarecog.afts.car.identify
     /// </summary>
     public class AlipayMsaasMediarecogAftsCarIdentifyRequest : IAliApiRequest<AlipayMsaasMediarecogAftsCarIdentifyResponse>
     {

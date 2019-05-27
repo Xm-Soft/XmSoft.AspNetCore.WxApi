@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.asset.point.accountlog.query
+    /// AliApi API: alipay.asset.point.accountlog.query
     /// </summary>
     public class AlipayAssetPointAccountlogQueryRequest : IAliApiRequest<AlipayAssetPointAccountlogQueryResponse>
     {

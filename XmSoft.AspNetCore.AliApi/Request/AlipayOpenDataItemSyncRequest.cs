@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.data.item.sync
+    /// AliApi API: alipay.open.data.item.sync
     /// </summary>
     public class AlipayOpenDataItemSyncRequest : IAliApiRequest<AlipayOpenDataItemSyncResponse>
     {

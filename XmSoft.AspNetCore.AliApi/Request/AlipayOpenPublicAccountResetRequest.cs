@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.account.reset
+    /// AliApi API: alipay.open.public.account.reset
     /// </summary>
     public class AlipayOpenPublicAccountResetRequest : IAliApiRequest<AlipayOpenPublicAccountResetResponse>
     {

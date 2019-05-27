@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.daowei.service.modify
+    /// AliApi API: alipay.daowei.service.modify
     /// </summary>
     public class AlipayDaoweiServiceModifyRequest : IAliApiRequest<AlipayDaoweiServiceModifyResponse>
     {

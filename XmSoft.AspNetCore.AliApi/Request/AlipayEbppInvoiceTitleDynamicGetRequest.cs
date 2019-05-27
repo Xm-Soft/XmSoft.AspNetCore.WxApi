@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.invoice.title.dynamic.get
+    /// AliApi API: alipay.ebpp.invoice.title.dynamic.get
     /// </summary>
     public class AlipayEbppInvoiceTitleDynamicGetRequest : IAliApiRequest<AlipayEbppInvoiceTitleDynamicGetResponse>
     {

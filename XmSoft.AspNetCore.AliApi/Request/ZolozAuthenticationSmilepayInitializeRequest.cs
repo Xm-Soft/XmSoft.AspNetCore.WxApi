@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.authentication.smilepay.initialize
+    /// AliApi API: zoloz.authentication.smilepay.initialize
     /// </summary>
     public class ZolozAuthenticationSmilepayInitializeRequest : IAliApiRequest<ZolozAuthenticationSmilepayInitializeResponse>
     {

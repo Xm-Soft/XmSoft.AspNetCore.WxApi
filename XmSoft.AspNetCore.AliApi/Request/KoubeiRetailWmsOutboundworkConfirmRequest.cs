@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.wms.outboundwork.confirm
+    /// AliApi API: koubei.retail.wms.outboundwork.confirm
     /// </summary>
     public class KoubeiRetailWmsOutboundworkConfirmRequest : IAliApiRequest<KoubeiRetailWmsOutboundworkConfirmResponse>
     {

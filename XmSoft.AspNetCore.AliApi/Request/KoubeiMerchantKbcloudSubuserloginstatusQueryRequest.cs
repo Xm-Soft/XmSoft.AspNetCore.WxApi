@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.kbcloud.subuserloginstatus.query
+    /// AliApi API: koubei.merchant.kbcloud.subuserloginstatus.query
     /// </summary>
     public class KoubeiMerchantKbcloudSubuserloginstatusQueryRequest : IAliApiRequest<KoubeiMerchantKbcloudSubuserloginstatusQueryResponse>
     {

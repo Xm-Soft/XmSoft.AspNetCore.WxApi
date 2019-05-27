@@ -4,10 +4,10 @@ using System.Xml.Serialization;
 namespace XmSoft.AspNetCore.AliApi.Model
 {
     /// <summary>
-    /// SsdataFindataOperatorImgQueryModel Data Structure.
+    /// SsdataFindatAliApieratorImgQueryModel Data Structure.
     /// </summary>
     [Serializable]
-    public class SsdataFindataOperatorImgQueryModel : AliApiObject
+    public class SsdataFindatAliApieratorImgQueryModel : AliApiObject
     {
         /// <summary>
         /// 系统业务流水号，在提交用户信息时获得

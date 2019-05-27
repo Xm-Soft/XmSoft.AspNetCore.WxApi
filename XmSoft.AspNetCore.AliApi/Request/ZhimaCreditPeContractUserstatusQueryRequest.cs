@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.credit.pe.contract.userstatus.query
+    /// AliApi API: zhima.credit.pe.contract.userstatus.query
     /// </summary>
     public class ZhimaCreditPeContractUserstatusQueryRequest : IAliApiRequest<ZhimaCreditPeContractUserstatusQueryResponse>
     {

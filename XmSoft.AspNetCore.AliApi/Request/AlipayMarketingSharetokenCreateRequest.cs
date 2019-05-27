@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.sharetoken.create
+    /// AliApi API: alipay.marketing.sharetoken.create
     /// </summary>
     public class AlipayMarketingSharetokenCreateRequest : IAliApiRequest<AlipayMarketingSharetokenCreateResponse>
     {

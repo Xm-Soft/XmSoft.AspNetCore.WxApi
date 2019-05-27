@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.member.data.oauth.query
+    /// AliApi API: koubei.member.data.oauth.query
     /// </summary>
     public class KoubeiMemberDataOauthQueryRequest : IAliApiRequest<KoubeiMemberDataOauthQueryResponse>
     {

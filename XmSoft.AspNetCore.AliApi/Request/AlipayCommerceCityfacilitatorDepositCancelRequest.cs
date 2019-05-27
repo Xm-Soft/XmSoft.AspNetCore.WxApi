@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.cityfacilitator.deposit.cancel
+    /// AliApi API: alipay.commerce.cityfacilitator.deposit.cancel
     /// </summary>
     public class AlipayCommerceCityfacilitatorDepositCancelRequest : IAliApiRequest<AlipayCommerceCityfacilitatorDepositCancelResponse>
     {

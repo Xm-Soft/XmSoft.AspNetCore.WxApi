@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.security.risk.event.send
+    /// AliApi API: koubei.security.risk.event.send
     /// </summary>
     public class KoubeiSecurityRiskEventSendRequest : IAliApiRequest<KoubeiSecurityRiskEventSendResponse>
     {

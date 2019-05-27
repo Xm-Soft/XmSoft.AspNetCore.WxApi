@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.iservice.cognitive.image.route.query
+    /// AliApi API: alipay.iservice.cognitive.image.route.query
     /// </summary>
     public class AlipayIserviceCognitiveImageRouteQueryRequest : IAliApiRequest<AlipayIserviceCognitiveImageRouteQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.iot.msgcenter.send
+    /// AliApi API: alipay.commerce.iot.msgcenter.send
     /// </summary>
     public class AlipayCommerceIotMsgcenterSendRequest : IAliApiRequest<AlipayCommerceIotMsgcenterSendResponse>
     {

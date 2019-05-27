@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.department.tree.query
+    /// AliApi API: koubei.merchant.department.tree.query
     /// </summary>
     public class KoubeiMerchantDepartmentTreeQueryRequest : IAliApiRequest<KoubeiMerchantDepartmentTreeQueryResponse>
     {

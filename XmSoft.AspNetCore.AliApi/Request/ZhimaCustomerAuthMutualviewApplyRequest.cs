@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.customer.auth.mutualview.apply
+    /// AliApi API: zhima.customer.auth.mutualview.apply
     /// </summary>
     public class ZhimaCustomerAuthMutualviewApplyRequest : IAliApiRequest<ZhimaCustomerAuthMutualviewApplyResponse>
     {

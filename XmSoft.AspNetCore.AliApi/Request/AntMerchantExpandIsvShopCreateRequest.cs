@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.merchant.expand.isv.shop.create
+    /// AliApi API: ant.merchant.expand.isv.shop.create
     /// </summary>
     public class AntMerchantExpandIsvShopCreateRequest : IAliApiRequest<AntMerchantExpandIsvShopCreateResponse>
     {

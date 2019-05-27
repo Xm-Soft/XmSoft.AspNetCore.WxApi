@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.public.info.query
+    /// AliApi API: alipay.mobile.public.info.query
     /// </summary>
     public class AlipayMobilePublicInfoQueryRequest : IAliApiRequest<AlipayMobilePublicInfoQueryResponse>
     {

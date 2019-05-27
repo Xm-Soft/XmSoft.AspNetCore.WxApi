@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.boss.prod.submerchant.modify
+    /// AliApi API: alipay.boss.prod.submerchant.modify
     /// </summary>
     public class AlipayBossProdSubmerchantModifyRequest : IAliApiRequest<AlipayBossProdSubmerchantModifyResponse>
     {

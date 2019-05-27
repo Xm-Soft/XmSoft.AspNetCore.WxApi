@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.data.dpc.alisis.olapprocessor
+    /// AliApi API: alipay.data.dpc.alisis.olapprocessor
     /// </summary>
     public class AlipayDataDpcAlisisOlapprocessorRequest : IAliApiRequest<AlipayDataDpcAlisisOlapprocessorResponse>
     {

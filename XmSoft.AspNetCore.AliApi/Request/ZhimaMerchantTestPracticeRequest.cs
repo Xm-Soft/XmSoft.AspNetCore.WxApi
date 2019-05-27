@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.merchant.test.practice
+    /// AliApi API: zhima.merchant.test.practice
     /// </summary>
     public class ZhimaMerchantTestPracticeRequest : IAliApiRequest<ZhimaMerchantTestPracticeResponse>
     {

@@ -11,7 +11,7 @@ namespace XmSoft.AspNetCore.AliApi.Util
 {
     /// <summary>
     public abstract class AliApiUtils
-    {    /// AOP系统工具类。
+    {    /// AliApi系统工具类。
     /// </summary>
 
 
@@ -29,18 +29,18 @@ namespace XmSoft.AspNetCore.AliApi.Util
         }
 
         /// <summary>
-        /// 给AOP请求签名。
+        /// 给AliApi请求签名。
         /// <remarks>建议使用<code>AlipaySignature.RSASign(parameters, privateKeyPem)</code>></remarks>
         /// </summary>
-        /// <param name="parameters">所有字符型的AOP请求参数</param>
+        /// <param name="parameters">所有字符型的AliApi请求参数</param>
         /// <param name="privateKeyPem">签名密钥</param>
         /// <returns>签名</returns>
-        public static string SignAopRequest(IDictionary<string, string> parameters, string privateKeyPem, string charset, string signType)
+        public static string SignAliApiRequest(IDictionary<string, string> parameters, string privateKeyPem, string charset, string signType)
         {
             return AlipaySignature.RSASign(parameters, privateKeyPem, charset, signType);
         }
 
-        public static string SignAopRequest(IDictionary<string, string> parameters, string privateKeyPem, string charset, bool keyFromFile,string signType)
+        public static string SignAliApiRequest(IDictionary<string, string> parameters, string privateKeyPem, string charset, bool keyFromFile,string signType)
         {
             return AlipaySignature.RSASign(parameters, privateKeyPem, charset, keyFromFile,signType);
         }

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.platform.openid.get
+    /// AliApi API: alipay.platform.openid.get
     /// </summary>
     public class AlipayPlatformOpenidGetRequest : IAliApiRequest<AlipayPlatformOpenidGetResponse>
     {

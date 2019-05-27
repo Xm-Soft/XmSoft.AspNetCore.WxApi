@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.fund.trans.app.merge.confirm
+    /// AliApi API: alipay.fund.trans.app.merge.confirm
     /// </summary>
     public class AlipayFundTransAppMergeConfirmRequest : IAliApiRequest<AlipayFundTransAppMergeConfirmResponse>
     {

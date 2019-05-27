@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.security.risk.authentication.cancel
+    /// AliApi API: alipay.security.risk.authentication.cancel
     /// </summary>
     public class AlipaySecurityRiskAuthenticationCancelRequest : IAliApiRequest<AlipaySecurityRiskAuthenticationCancelResponse>
     {

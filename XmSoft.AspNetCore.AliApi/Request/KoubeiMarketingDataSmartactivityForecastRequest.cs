@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.marketing.data.smartactivity.forecast
+    /// AliApi API: koubei.marketing.data.smartactivity.forecast
     /// </summary>
     public class KoubeiMarketingDataSmartactivityForecastRequest : IAliApiRequest<KoubeiMarketingDataSmartactivityForecastResponse>
     {

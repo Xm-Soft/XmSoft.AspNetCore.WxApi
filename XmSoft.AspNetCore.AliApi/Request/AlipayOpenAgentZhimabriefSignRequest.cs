@@ -7,7 +7,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.agent.zhimabrief.sign
+    /// AliApi API: alipay.open.agent.zhimabrief.sign
     /// </summary>
     public class AlipayOpenAgentZhimabriefSignRequest : IAliApiUploadRequest<AlipayOpenAgentZhimabriefSignResponse>
     {

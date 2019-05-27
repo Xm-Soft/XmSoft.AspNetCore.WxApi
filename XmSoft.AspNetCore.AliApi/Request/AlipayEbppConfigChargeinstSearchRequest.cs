@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.config.chargeinst.search
+    /// AliApi API: alipay.ebpp.config.chargeinst.search
     /// </summary>
     public class AlipayEbppConfigChargeinstSearchRequest : IAliApiRequest<AlipayEbppConfigChargeinstSearchResponse>
     {

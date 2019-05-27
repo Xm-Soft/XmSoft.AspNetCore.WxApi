@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.life.msg.send
+    /// AliApi API: alipay.open.public.life.msg.send
     /// </summary>
     public class AlipayOpenPublicLifeMsgSendRequest : IAliApiUploadRequest<AlipayOpenPublicLifeMsgSendResponse>
     {
@@ -66,7 +66,7 @@ namespace XmSoft.AspNetCore.AliApi.Request
         public string VideoSize { get; set; }
 
         /// <summary>
-        /// 视频资源来源id（视频类消息必填），取值限定youku, miaopai, taobao, sina中的一个
+        /// 视频资源来源id（视频类消息必填），取值限定youku, miAliApiai, taobao, sina中的一个
         /// </summary>
         public string VideoSource { get; set; }
 

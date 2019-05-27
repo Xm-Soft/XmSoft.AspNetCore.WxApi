@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.weibo.puc.charge
+    /// AliApi API: alipay.weibo.puc.charge
     /// </summary>
     public class AlipayWeiboPucChargeRequest : IAliApiRequest<AlipayWeiboPucChargeResponse>
     {

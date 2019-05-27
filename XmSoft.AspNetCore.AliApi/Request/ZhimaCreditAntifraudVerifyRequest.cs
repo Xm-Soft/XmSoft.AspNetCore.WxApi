@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.credit.antifraud.verify
+    /// AliApi API: zhima.credit.antifraud.verify
     /// </summary>
     public class ZhimaCreditAntifraudVerifyRequest : IAliApiRequest<ZhimaCreditAntifraudVerifyResponse>
     {

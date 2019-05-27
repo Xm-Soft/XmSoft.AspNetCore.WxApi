@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.identification.customer.enroll.cancel
+    /// AliApi API: zoloz.identification.customer.enroll.cancel
     /// </summary>
     public class ZolozIdentificationCustomerEnrollCancelRequest : IAliApiRequest<ZolozIdentificationCustomerEnrollCancelResponse>
     {

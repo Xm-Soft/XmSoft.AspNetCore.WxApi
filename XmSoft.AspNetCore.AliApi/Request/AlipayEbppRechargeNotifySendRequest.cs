@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.recharge.notify.send
+    /// AliApi API: alipay.ebpp.recharge.notify.send
     /// </summary>
     public class AlipayEbppRechargeNotifySendRequest : IAliApiRequest<AlipayEbppRechargeNotifySendResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.acquire.close
+    /// AliApi API: alipay.acquire.close
     /// </summary>
     public class AlipayAcquireCloseRequest : IAliApiRequest<AlipayAcquireCloseResponse>
     {

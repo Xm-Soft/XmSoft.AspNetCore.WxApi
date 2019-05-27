@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.data.dataservice.sdfsdf
+    /// AliApi API: alipay.data.dataservice.sdfsdf
     /// </summary>
     public class AlipayDataDataserviceSdfsdfRequest : IAliApiRequest<AlipayDataDataserviceSdfsdfResponse>
     {

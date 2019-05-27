@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.data.dataservice.hellobike.log.sync
+    /// AliApi API: alipay.data.dataservice.hellobike.log.sync
     /// </summary>
     public class AlipayDataDataserviceHellobikeLogSyncRequest : IAliApiRequest<AlipayDataDataserviceHellobikeLogSyncResponse>
     {

@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.merchant.config.get
+    /// AliApi API: alipay.ebpp.merchant.config.get
     /// </summary>
     public class AlipayEbppMerchantConfigGetRequest : IAliApiRequest<AlipayEbppMerchantConfigGetResponse>
     {

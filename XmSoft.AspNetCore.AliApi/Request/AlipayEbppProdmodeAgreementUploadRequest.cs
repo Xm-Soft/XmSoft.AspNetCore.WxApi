@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.prodmode.agreement.upload
+    /// AliApi API: alipay.ebpp.prodmode.agreement.upload
     /// </summary>
     public class AlipayEbppProdmodeAgreementUploadRequest : IAliApiUploadRequest<AlipayEbppProdmodeAgreementUploadResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.merchant.expand.assetproduce.complete.sync
+    /// AliApi API: ant.merchant.expand.assetproduce.complete.sync
     /// </summary>
     public class AntMerchantExpandAssetproduceCompleteSyncRequest : IAliApiRequest<AntMerchantExpandAssetproduceCompleteSyncResponse>
     {

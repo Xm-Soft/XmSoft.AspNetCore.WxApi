@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.metainfo.sync
+    /// AliApi API: ssdata.dataservice.metainfo.sync
     /// </summary>
     public class SsdataDataserviceMetainfoSyncRequest : IAliApiRequest<SsdataDataserviceMetainfoSyncResponse>
     {

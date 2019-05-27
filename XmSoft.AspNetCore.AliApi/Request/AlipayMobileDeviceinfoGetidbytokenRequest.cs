@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.mobile.deviceinfo.getidbytoken
+    /// AliApi API: alipay.mobile.deviceinfo.getidbytoken
     /// </summary>
     public class AlipayMobileDeviceinfoGetidbytokenRequest : IAliApiRequest<AlipayMobileDeviceinfoGetidbytokenResponse>
     {

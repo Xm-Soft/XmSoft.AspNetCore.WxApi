@@ -6,9 +6,9 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.findata.operator.userinfo.certify
+    /// AliApi API: ssdata.findata.operator.userinfo.certify
     /// </summary>
-    public class SsdataFindataOperatorUserinfoCertifyRequest : IAliApiRequest<SsdataFindataOperatorUserinfoCertifyResponse>
+    public class SsdataFindatAliApieratorUserinfoCertifyRequest : IAliApiRequest<SsdataFindatAliApieratorUserinfoCertifyResponse>
     {
         /// <summary>
         /// 校验用户信息

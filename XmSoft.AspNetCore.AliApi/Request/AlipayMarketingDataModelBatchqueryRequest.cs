@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.data.model.batchquery
+    /// AliApi API: alipay.marketing.data.model.batchquery
     /// </summary>
     public class AlipayMarketingDataModelBatchqueryRequest : IAliApiRequest<AlipayMarketingDataModelBatchqueryResponse>
     {

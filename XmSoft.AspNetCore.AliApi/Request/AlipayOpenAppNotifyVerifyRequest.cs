@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.app.notify.verify
+    /// AliApi API: alipay.open.app.notify.verify
     /// </summary>
     public class AlipayOpenAppNotifyVerifyRequest : IAliApiRequest<AlipayOpenAppNotifyVerifyResponse>
     {

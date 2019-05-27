@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.shop.mall.page.query
+    /// AliApi API: koubei.shop.mall.page.query
     /// </summary>
     public class KoubeiShopMallPageQueryRequest : IAliApiRequest<KoubeiShopMallPageQueryResponse>
     {

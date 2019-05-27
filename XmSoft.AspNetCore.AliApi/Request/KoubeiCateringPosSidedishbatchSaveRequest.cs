@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.pos.sidedishbatch.save
+    /// AliApi API: koubei.catering.pos.sidedishbatch.save
     /// </summary>
     public class KoubeiCateringPosSidedishbatchSaveRequest : IAliApiRequest<KoubeiCateringPosSidedishbatchSaveResponse>
     {

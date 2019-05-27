@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.info.share
+    /// AliApi API: alipay.user.info.share
     /// </summary>
     public class AlipayUserInfoShareRequest : IAliApiRequest<AlipayUserInfoShareResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.item.category.children.batchquery
+    /// AliApi API: koubei.item.category.children.batchquery
     /// </summary>
     public class KoubeiItemCategoryChildrenBatchqueryRequest : IAliApiRequest<KoubeiItemCategoryChildrenBatchqueryResponse>
     {

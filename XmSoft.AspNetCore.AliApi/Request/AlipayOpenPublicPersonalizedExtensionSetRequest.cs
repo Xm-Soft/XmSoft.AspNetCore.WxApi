@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.personalized.extension.set
+    /// AliApi API: alipay.open.public.personalized.extension.set
     /// </summary>
     public class AlipayOpenPublicPersonalizedExtensionSetRequest : IAliApiRequest<AlipayOpenPublicPersonalizedExtensionSetResponse>
     {

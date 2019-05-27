@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.offline.provider.equipment.auth.querybypage
+    /// AliApi API: alipay.offline.provider.equipment.auth.querybypage
     /// </summary>
     public class AlipayOfflineProviderEquipmentAuthQuerybypageRequest : IAliApiRequest<AlipayOfflineProviderEquipmentAuthQuerybypageResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.topic.delete
+    /// AliApi API: alipay.open.public.topic.delete
     /// </summary>
     public class AlipayOpenPublicTopicDeleteRequest : IAliApiRequest<AlipayOpenPublicTopicDeleteResponse>
     {

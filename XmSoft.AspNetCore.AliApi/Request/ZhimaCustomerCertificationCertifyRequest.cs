@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.customer.certification.certify
+    /// AliApi API: zhima.customer.certification.certify
     /// </summary>
     public class ZhimaCustomerCertificationCertifyRequest : IAliApiRequest<ZhimaCustomerCertificationCertifyResponse>
     {

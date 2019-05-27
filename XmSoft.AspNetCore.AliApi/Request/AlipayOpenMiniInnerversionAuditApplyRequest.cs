@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.mini.innerversion.audit.apply
+    /// AliApi API: alipay.open.mini.innerversion.audit.apply
     /// </summary>
     public class AlipayOpenMiniInnerversionAuditApplyRequest : IAliApiRequest<AlipayOpenMiniInnerversionAuditApplyResponse>
     {

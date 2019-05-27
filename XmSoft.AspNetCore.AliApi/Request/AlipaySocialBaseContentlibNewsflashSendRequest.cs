@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.contentlib.newsflash.send
+    /// AliApi API: alipay.social.base.contentlib.newsflash.send
     /// </summary>
     public class AlipaySocialBaseContentlibNewsflashSendRequest : IAliApiRequest<AlipaySocialBaseContentlibNewsflashSendResponse>
     {

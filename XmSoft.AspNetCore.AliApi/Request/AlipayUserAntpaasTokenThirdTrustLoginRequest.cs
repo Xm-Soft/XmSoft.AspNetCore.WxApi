@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.antpaas.token.third.trust.login
+    /// AliApi API: alipay.user.antpaas.token.third.trust.login
     /// </summary>
     public class AlipayUserAntpaasTokenThirdTrustLoginRequest : IAliApiRequest<AlipayUserAntpaasTokenThirdTrustLoginResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.wms.inventoryrecord.query
+    /// AliApi API: koubei.retail.wms.inventoryrecord.query
     /// </summary>
     public class KoubeiRetailWmsInventoryrecordQueryRequest : IAliApiRequest<KoubeiRetailWmsInventoryrecordQueryResponse>
     {

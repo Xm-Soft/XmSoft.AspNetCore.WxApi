@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.mycar.data.external.send
+    /// AliApi API: alipay.eco.mycar.data.external.send
     /// </summary>
     public class AlipayEcoMycarDataExternalSendRequest : IAliApiRequest<AlipayEcoMycarDataExternalSendResponse>
     {

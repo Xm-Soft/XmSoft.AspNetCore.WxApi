@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.catering.pos.dishcate.transfer
+    /// AliApi API: koubei.catering.pos.dishcate.transfer
     /// </summary>
     public class KoubeiCateringPosDishcateTransferRequest : IAliApiRequest<KoubeiCateringPosDishcateTransferResponse>
     {

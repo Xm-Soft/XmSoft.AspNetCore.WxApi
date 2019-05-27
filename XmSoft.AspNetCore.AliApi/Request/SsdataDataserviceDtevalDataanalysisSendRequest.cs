@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.dataservice.dteval.dataanalysis.send
+    /// AliApi API: ssdata.dataservice.dteval.dataanalysis.send
     /// </summary>
     public class SsdataDataserviceDtevalDataanalysisSendRequest : IAliApiRequest<SsdataDataserviceDtevalDataanalysisSendResponse>
     {

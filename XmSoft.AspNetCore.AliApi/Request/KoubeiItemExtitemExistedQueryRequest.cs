@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.item.extitem.existed.query
+    /// AliApi API: koubei.item.extitem.existed.query
     /// </summary>
     public class KoubeiItemExtitemExistedQueryRequest : IAliApiRequest<KoubeiItemExtitemExistedQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.topinstance.query
+    /// AliApi API: koubei.retail.topinstance.query
     /// </summary>
     public class KoubeiRetailTopinstanceQueryRequest : IAliApiRequest<KoubeiRetailTopinstanceQueryResponse>
     {

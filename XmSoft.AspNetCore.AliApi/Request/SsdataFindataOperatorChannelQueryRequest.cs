@@ -5,9 +5,9 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.findata.operator.channel.query
+    /// AliApi API: ssdata.findata.operator.channel.query
     /// </summary>
-    public class SsdataFindataOperatorChannelQueryRequest : IAliApiRequest<SsdataFindataOperatorChannelQueryResponse>
+    public class SsdataFindatAliApieratorChannelQueryRequest : IAliApiRequest<SsdataFindatAliApieratorChannelQueryResponse>
     {
         #region IAliApiRequest Members
 		private bool  needEncrypt=false;

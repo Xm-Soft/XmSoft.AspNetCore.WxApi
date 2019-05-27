@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.servindustry.shop.license.query
+    /// AliApi API: koubei.servindustry.shop.license.query
     /// </summary>
     public class KoubeiServindustryShopLicenseQueryRequest : IAliApiRequest<KoubeiServindustryShopLicenseQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ebpp.invoice.title.batchquery.inner
+    /// AliApi API: alipay.ebpp.invoice.title.batchquery.inner
     /// </summary>
     public class AlipayEbppInvoiceTitleBatchqueryInnerRequest : IAliApiRequest<AlipayEbppInvoiceTitleBatchqueryInnerResponse>
     {

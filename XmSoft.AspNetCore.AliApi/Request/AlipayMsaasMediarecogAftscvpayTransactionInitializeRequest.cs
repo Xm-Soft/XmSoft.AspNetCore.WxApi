@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.msaas.mediarecog.aftscvpay.transaction.initialize
+    /// AliApi API: alipay.msaas.mediarecog.aftscvpay.transaction.initialize
     /// </summary>
     public class AlipayMsaasMediarecogAftscvpayTransactionInitializeRequest : IAliApiRequest<AlipayMsaasMediarecogAftscvpayTransactionInitializeResponse>
     {

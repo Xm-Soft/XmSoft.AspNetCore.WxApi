@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.member.data.tag.query
+    /// AliApi API: koubei.member.data.tag.query
     /// </summary>
     public class KoubeiMemberDataTagQueryRequest : IAliApiRequest<KoubeiMemberDataTagQueryResponse>
     {

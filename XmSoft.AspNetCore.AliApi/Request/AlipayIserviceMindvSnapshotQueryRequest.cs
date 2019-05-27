@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.iservice.mindv.snapshot.query
+    /// AliApi API: alipay.iservice.mindv.snapshot.query
     /// </summary>
     public class AlipayIserviceMindvSnapshotQueryRequest : IAliApiRequest<AlipayIserviceMindvSnapshotQueryResponse>
     {

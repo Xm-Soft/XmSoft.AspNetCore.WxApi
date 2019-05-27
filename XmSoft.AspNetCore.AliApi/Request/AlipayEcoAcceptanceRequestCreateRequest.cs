@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.eco.acceptance.request.create
+    /// AliApi API: alipay.eco.acceptance.request.create
     /// </summary>
     public class AlipayEcoAcceptanceRequestCreateRequest : IAliApiRequest<AlipayEcoAcceptanceRequestCreateResponse>
     {

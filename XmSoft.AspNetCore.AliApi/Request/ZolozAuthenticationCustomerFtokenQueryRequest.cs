@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zoloz.authentication.customer.ftoken.query
+    /// AliApi API: zoloz.authentication.customer.ftoken.query
     /// </summary>
     public class ZolozAuthenticationCustomerFtokenQueryRequest : IAliApiRequest<ZolozAuthenticationCustomerFtokenQueryResponse>
     {

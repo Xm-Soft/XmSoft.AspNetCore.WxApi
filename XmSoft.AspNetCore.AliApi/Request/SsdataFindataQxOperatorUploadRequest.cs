@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.findata.qx.operator.upload
+    /// AliApi API: ssdata.findata.qx.operator.upload
     /// </summary>
     public class SsdataFindataQxOperatorUploadRequest : IAliApiUploadRequest<SsdataFindataQxOperatorUploadResponse>
     {

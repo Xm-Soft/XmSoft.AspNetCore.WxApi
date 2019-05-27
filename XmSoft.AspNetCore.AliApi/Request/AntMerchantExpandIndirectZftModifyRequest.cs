@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ant.merchant.expand.indirect.zft.modify
+    /// AliApi API: ant.merchant.expand.indirect.zft.modify
     /// </summary>
     public class AntMerchantExpandIndirectZftModifyRequest : IAliApiRequest<AntMerchantExpandIndirectZftModifyResponse>
     {

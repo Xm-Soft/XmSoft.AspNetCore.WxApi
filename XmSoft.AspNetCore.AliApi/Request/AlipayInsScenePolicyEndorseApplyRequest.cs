@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.ins.scene.policy.endorse.apply
+    /// AliApi API: alipay.ins.scene.policy.endorse.apply
     /// </summary>
     public class AlipayInsScenePolicyEndorseApplyRequest : IAliApiRequest<AlipayInsScenePolicyEndorseApplyResponse>
     {

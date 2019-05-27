@@ -5,7 +5,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.app.silan.apigraytwo.query
+    /// AliApi API: alipay.open.app.silan.apigraytwo.query
     /// </summary>
     public class AlipayOpenAppSilanApigraytwoQueryRequest : IAliApiRequest<AlipayOpenAppSilanApigraytwoQueryResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.instance.transfer
+    /// AliApi API: koubei.retail.instance.transfer
     /// </summary>
     public class KoubeiRetailInstanceTransferRequest : IAliApiRequest<KoubeiRetailInstanceTransferResponse>
     {

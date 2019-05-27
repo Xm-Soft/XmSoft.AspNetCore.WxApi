@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Util;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: zhima.data.batch.feedback
+    /// AliApi API: zhima.data.batch.feedback
     /// </summary>
     public class ZhimaDataBatchFeedbackRequest : IAliApiUploadRequest<ZhimaDataBatchFeedbackResponse>
     {

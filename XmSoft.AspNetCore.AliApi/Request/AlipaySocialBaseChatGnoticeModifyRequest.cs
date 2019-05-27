@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.social.base.chat.gnotice.modify
+    /// AliApi API: alipay.social.base.chat.gnotice.modify
     /// </summary>
     public class AlipaySocialBaseChatGnoticeModifyRequest : IAliApiRequest<AlipaySocialBaseChatGnoticeModifyResponse>
     {

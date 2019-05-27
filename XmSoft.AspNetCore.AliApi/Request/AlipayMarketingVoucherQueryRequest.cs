@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.voucher.query
+    /// AliApi API: alipay.marketing.voucher.query
     /// </summary>
     public class AlipayMarketingVoucherQueryRequest : IAliApiRequest<AlipayMarketingVoucherQueryResponse>
     {

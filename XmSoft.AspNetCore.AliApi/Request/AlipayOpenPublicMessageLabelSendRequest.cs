@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.public.message.label.send
+    /// AliApi API: alipay.open.public.message.label.send
     /// </summary>
     public class AlipayOpenPublicMessageLabelSendRequest : IAliApiRequest<AlipayOpenPublicMessageLabelSendResponse>
     {

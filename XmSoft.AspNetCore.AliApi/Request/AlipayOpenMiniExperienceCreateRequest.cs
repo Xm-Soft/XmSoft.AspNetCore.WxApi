@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.open.mini.experience.create
+    /// AliApi API: alipay.open.mini.experience.create
     /// </summary>
     public class AlipayOpenMiniExperienceCreateRequest : IAliApiRequest<AlipayOpenMiniExperienceCreateResponse>
     {

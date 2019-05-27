@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.msaas.promotion.cpainfo.create
+    /// AliApi API: alipay.msaas.promotion.cpainfo.create
     /// </summary>
     public class AlipayMsaasPromotionCpainfoCreateRequest : IAliApiRequest<AlipayMsaasPromotionCpainfoCreateResponse>
     {

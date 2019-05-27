@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.merchant.department.batch.bind
+    /// AliApi API: koubei.merchant.department.batch.bind
     /// </summary>
     public class KoubeiMerchantDepartmentBatchBindRequest : IAliApiRequest<KoubeiMerchantDepartmentBatchBindResponse>
     {

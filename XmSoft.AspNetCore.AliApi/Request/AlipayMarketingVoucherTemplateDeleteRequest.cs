@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.voucher.template.delete
+    /// AliApi API: alipay.marketing.voucher.template.delete
     /// </summary>
     public class AlipayMarketingVoucherTemplateDeleteRequest : IAliApiRequest<AlipayMarketingVoucherTemplateDeleteResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.credit.loantrade.repay.initiative.apply
+    /// AliApi API: mybank.credit.loantrade.repay.initiative.apply
     /// </summary>
     public class MybankCreditLoantradeRepayInitiativeApplyRequest : IAliApiRequest<MybankCreditLoantradeRepayInitiativeApplyResponse>
     {

@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.trade.kbpayment.payorder.sync
+    /// AliApi API: koubei.trade.kbpayment.payorder.sync
     /// </summary>
     public class KoubeiTradeKbpaymentPayorderSyncRequest : IAliApiRequest<KoubeiTradeKbpaymentPayorderSyncResponse>
     {

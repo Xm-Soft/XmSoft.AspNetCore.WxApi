@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.shop.external.data.sync
+    /// AliApi API: koubei.shop.external.data.sync
     /// </summary>
     public class KoubeiShopExternalDataSyncRequest : IAliApiRequest<KoubeiShopExternalDataSyncResponse>
     {

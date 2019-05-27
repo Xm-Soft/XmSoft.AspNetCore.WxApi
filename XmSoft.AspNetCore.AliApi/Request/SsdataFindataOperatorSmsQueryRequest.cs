@@ -6,9 +6,9 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: ssdata.findata.operator.sms.query
+    /// AliApi API: ssdata.findata.operator.sms.query
     /// </summary>
-    public class SsdataFindataOperatorSmsQueryRequest : IAliApiRequest<SsdataFindataOperatorSmsQueryResponse>
+    public class SsdataFindatAliApieratorSmsQueryRequest : IAliApiRequest<SsdataFindatAliApieratorSmsQueryResponse>
     {
         /// <summary>
         /// 获取运营商短信验证码

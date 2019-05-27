@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.commerce.transport.offlinepay.userblacklist.query
+    /// AliApi API: alipay.commerce.transport.offlinepay.userblacklist.query
     /// </summary>
     public class AlipayCommerceTransportOfflinepayUserblacklistQueryRequest : IAliApiRequest<AlipayCommerceTransportOfflinepayUserblacklistQueryResponse>
     {

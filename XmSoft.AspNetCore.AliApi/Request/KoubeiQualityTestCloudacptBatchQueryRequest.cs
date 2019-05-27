@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.quality.test.cloudacpt.batch.query
+    /// AliApi API: koubei.quality.test.cloudacpt.batch.query
     /// </summary>
     public class KoubeiQualityTestCloudacptBatchQueryRequest : IAliApiRequest<KoubeiQualityTestCloudacptBatchQueryResponse>
     {

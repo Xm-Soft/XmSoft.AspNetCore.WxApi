@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.trade.ticket.ticketcode.delay
+    /// AliApi API: koubei.trade.ticket.ticketcode.delay
     /// </summary>
     public class KoubeiTradeTicketTicketcodeDelayRequest : IAliApiRequest<KoubeiTradeTicketTicketcodeDelayResponse>
     {

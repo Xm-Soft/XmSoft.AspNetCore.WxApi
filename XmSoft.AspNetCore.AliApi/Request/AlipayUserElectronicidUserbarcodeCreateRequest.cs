@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.user.electronicid.userbarcode.create
+    /// AliApi API: alipay.user.electronicid.userbarcode.create
     /// </summary>
     public class AlipayUserElectronicidUserbarcodeCreateRequest : IAliApiRequest<AlipayUserElectronicidUserbarcodeCreateResponse>
     {

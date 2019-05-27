@@ -6,9 +6,9 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: mybank.finance.yulibao.price.query
+    /// AliApi API: mybank.finance.yulibao.price.query
     /// </summary>
-    public class MybankFinanceYulibaoPriceQueryRequest : IAliApiRequest<MybankFinanceYulibaoPriceQueryResponse>
+    public class MybankFinanceYulibAliApiriceQueryRequest : IAliApiRequest<MybankFinanceYulibAliApiriceQueryResponse>
     {
         /// <summary>
         /// 查询余利宝行情信息（七日年化收益率、万份收益金额）

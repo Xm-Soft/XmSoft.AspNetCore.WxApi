@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: alipay.marketing.card.delete
+    /// AliApi API: alipay.marketing.card.delete
     /// </summary>
     public class AlipayMarketingCardDeleteRequest : IAliApiRequest<AlipayMarketingCardDeleteResponse>
     {

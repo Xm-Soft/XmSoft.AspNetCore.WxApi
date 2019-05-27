@@ -4,9 +4,9 @@ using System.Xml.Serialization;
 namespace XmSoft.AspNetCore.AliApi.Response
 {
     /// <summary>
-    /// ZhimaOpenAppKeyanLqlCreateResponse.
+    /// ZhimAliApienAppKeyanLqlCreateResponse.
     /// </summary>
-    public class ZhimaOpenAppKeyanLqlCreateResponse : AliApiResponse
+    public class ZhimAliApienAppKeyanLqlCreateResponse : AliApiResponse
     {
     }
 }

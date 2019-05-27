@@ -6,7 +6,7 @@ using XmSoft.AspNetCore.AliApi.Response;
 namespace XmSoft.AspNetCore.AliApi.Request
 {
     /// <summary>
-    /// AOP API: koubei.retail.kbcode.create
+    /// AliApi API: koubei.retail.kbcode.create
     /// </summary>
     public class KoubeiRetailKbcodeCreateRequest : IAliApiRequest<KoubeiRetailKbcodeCreateResponse>
     {
