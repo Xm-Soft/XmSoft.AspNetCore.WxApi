@@ -66,6 +66,10 @@ namespace XmSoft.AspNetCore.WxApi
         /// <summary>
         /// 取消订阅
         /// </summary>
-        unsubscribe
+        unsubscribe,
+        /// <summary>
+        /// 微信买单事件
+        /// </summary>
+        user_pay_from_pay_cell,
     }
 }

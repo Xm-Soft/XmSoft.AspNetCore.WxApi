@@ -8,30 +8,28 @@ using Newtonsoft.Json;
 namespace XmSoft.AspNetCore.WxApi.Request.Card
 {
     /// <summary>
-    /// 创建卡券
+    /// 卡券-创建二维码接口
     /// </summary>
-    public class WxApiCreateCardRequest : IWxApiRequest<WxApiCreateCardResponse>
+    public class WxApiCreateQRCodeByCardRequest : IWxApiRequest<WxApiCreateQRCodeByCardResponse>
     {
         private JsonSerializerSettings settings;
         /// <summary>
-        /// 创建卡券 -- 公众平台
+        /// 卡券-创建二维码接口 -- 公众平台
         /// </summary>
-        public WxApiCreateCardRequest()
+        public WxApiCreateQRCodeByCardRequest()
         {
             settings = new JsonSerializerSettings();
+            //过滤掉空值的属性
             settings.NullValueHandling = NullValueHandling.Ignore;
+            
         }
         public string AccessToken { get; set; }
        
-        public CardGroupon groupon { get; set; }
+        public string Action_name { get; set; }
 
-        public CardCash cash { get; set; }
+        public int Expire_seconds { get; set; }
 
-        public CardDiscount discount { get; set; }
-
-        public CardGeneralCoupon generalCoupon { get; set; }
-
-        public CardGift gift { get; set; }
+        public ActionInfo Action_info { get; set; }
 
         #region IWxApiRequest Members
         /// <summary>
@@ -40,7 +38,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
         /// <returns></returns>
         public string GetRequestUrl()
         {
-            return "https://api.weixin.qq.com/card/create";
+            return "https://api.weixin.qq.com/card/qrcode/create";
         }
         /// <summary>
         /// 获取参数
@@ -51,11 +49,10 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "card",groupon != null ? JsonConvert.SerializeObject(groupon,settings)
-                :gift != null ? JsonConvert.SerializeObject(gift,settings)
-                :cash != null ? JsonConvert.SerializeObject(cash,settings)
-                :discount != null ? JsonConvert.SerializeObject(discount,settings)
-                :JsonConvert.SerializeObject(generalCoupon,settings) }
+                { "action_name",Action_name },
+                { "expire_seconds", Expire_seconds},
+                
+                { "action_info", Action_info == null ? null: JsonConvert.SerializeObject(Action_info,settings) }
             };
             return parameters;
         }

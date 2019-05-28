@@ -8,30 +8,30 @@ using Newtonsoft.Json;
 namespace XmSoft.AspNetCore.WxApi.Request.Card
 {
     /// <summary>
-    /// 创建卡券
+    /// 设置买单接口
     /// </summary>
-    public class WxApiCreateCardRequest : IWxApiRequest<WxApiCreateCardResponse>
+    public class WxApiSetPayCellRequest : IWxApiRequest<WxApiSetPayCellResponse>
     {
-        private JsonSerializerSettings settings;
+
         /// <summary>
-        /// 创建卡券 -- 公众平台
+        /// 设置买单接口 -- 公众平台
+        /// <para>1.设置快速买单的卡券须支持至少一家有核销员门店，否则无法设置成功；</para>
+        ///<para>2.若该卡券设置了center_url（居中使用跳转链接）,须先将该设置更新为空后再设置自快速买单方可生效。</para>
         /// </summary>
-        public WxApiCreateCardRequest()
+        public WxApiSetPayCellRequest()
         {
-            settings = new JsonSerializerSettings();
-            settings.NullValueHandling = NullValueHandling.Ignore;
+           
         }
         public string AccessToken { get; set; }
-       
-        public CardGroupon groupon { get; set; }
+        /// <summary>
+        /// 	卡券ID。
+        /// </summary>
+        public string Card_id { get; set; }
+        /// <summary>
+        /// 是否开启买单功能，填true/false
+        /// </summary>
+        public bool Is_open { get; set; }
 
-        public CardCash cash { get; set; }
-
-        public CardDiscount discount { get; set; }
-
-        public CardGeneralCoupon generalCoupon { get; set; }
-
-        public CardGift gift { get; set; }
 
         #region IWxApiRequest Members
         /// <summary>
@@ -40,7 +40,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
         /// <returns></returns>
         public string GetRequestUrl()
         {
-            return "https://api.weixin.qq.com/card/create";
+            return "https://api.weixin.qq.com/card/paycell/set";
         }
         /// <summary>
         /// 获取参数
@@ -51,11 +51,8 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "card",groupon != null ? JsonConvert.SerializeObject(groupon,settings)
-                :gift != null ? JsonConvert.SerializeObject(gift,settings)
-                :cash != null ? JsonConvert.SerializeObject(cash,settings)
-                :discount != null ? JsonConvert.SerializeObject(discount,settings)
-                :JsonConvert.SerializeObject(generalCoupon,settings) }
+                { "card_id",Card_id },
+                { "is_open",Is_open }
             };
             return parameters;
         }
