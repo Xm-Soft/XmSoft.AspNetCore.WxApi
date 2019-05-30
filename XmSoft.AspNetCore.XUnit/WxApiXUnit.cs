@@ -169,6 +169,34 @@ namespace XmSoft.AspNetCore.XUnit
                 var result = client.ExecuteAsync(request);
             }
         }
+
+        [Fact]
+        public void CreateLandingPage()
+        {
+            using (var client = new WxApiClient())
+            {
+                var request = new WxApiCreateLandingPageRequest
+                {
+                    AccessToken = "21_gfFABZSIa0ci0ux68S9ZAiHC8Lc9z2CU1QjGC-qvJY0pnnZ0if_IlbIORYErGiS_xYWNM9NFSZ3uyGp6anSinm9HlnDivKentyhsLK72hLZlk3iFGFHzYZL3jg9_Myebv03zVGVDY9QVjMdOKAFgAJAEUZ",
+                    Buffer = new BufferInfo
+                    {
+                        banner = "http://test.ten10.com.cn/joycity/img/1-1.png",
+                        title = "惠城优惠大派送",
+                        can_share = false,
+                        scene = "SCENE_NEAR_BY",
+                        card_list = new List<CardList>
+                    {
+                        new CardList
+                        {
+                            card_id = "pyrsn1q0Oxn4bq4Fo_mC3F6mpZrM",
+                            thumb_url = "http://test.ten10.com.cn/joycity/img/share.png"
+                        }
+                    }
+                    }
+                };
+                var result = client.ExecuteAsync(request);
+            }
+        }
     }
 
 }
