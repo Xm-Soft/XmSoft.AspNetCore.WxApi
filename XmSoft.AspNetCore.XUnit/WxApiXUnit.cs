@@ -11,6 +11,21 @@ namespace XmSoft.AspNetCore.XUnit
     public class WxApiXUnit
     {
         [Fact]
+        public void Tests()
+        {
+            int s = 1;
+            DateTime dt = DateTime.Now;
+            string str = "121212";
+            decimal d = 12;
+
+            var s_name = s.GetType().Name;
+            var dt_name = dt.GetType().Name;
+            var d_name = d.GetType().Name;
+            var str_name = str.GetType().Name;
+            
+        }
+
+        [Fact]
         public void AccessToken()
         {
             using (var client = new WxApiClient())
@@ -34,7 +49,7 @@ namespace XmSoft.AspNetCore.XUnit
             {
                 var request = new WxApiCreateCardRequest()
                 {
-                    AccessToken = "21_dJtsSPGDx3NsPrKdLPlR3WN_96Q2POj-y2mJKfMzhsDTZkQODyKQpOwI5SivfYJTy_xPFQrNoqh1Ic8lCsHssEOds4TU4PudnAlt54ipCsMYw-4rml7A5_TOxNoPopJePjSNx3KgRiR-4dhGYVIiABALIV",
+                    AccessToken = "22_6MfjsJ-TxJqeYytgn07nFYI21r2Csvy-NeZ-MJxeWEAXuXijSgquPakSMQLyT29zPhw9cDcML6WgoSO5CdHGmkP5o21O1Tl9lkK6eF_ZTR1gg4uaSxEVKipzQy0BodY5EjbKgV3CaG_TBqgZRICeACAULF-RcsstPHqsZDPAgAAAPBM",
                     groupon = new WxApi.Model.Card.CardGroupon
                     {
                         card_type = "GROUPON",
@@ -53,8 +68,8 @@ namespace XmSoft.AspNetCore.XUnit
                                 date_info = new WxApi.Model.Card.Date_info
                                 {
                                     type = "DATE_TYPE_FIX_TIME_RANGE",
-                                    begin_timestamp = 1559006737,
-                                    end_timestamp = 1559093137
+                                    begin_timestamp = 1559371842,
+                                    end_timestamp = 1560906571
                                 },
                                 sku = new WxApi.Model.Card.Sku
                                 {
@@ -177,9 +192,8 @@ namespace XmSoft.AspNetCore.XUnit
             {
                 var request = new WxApiCreateLandingPageRequest
                 {
-                    AccessToken = "21_gfFABZSIa0ci0ux68S9ZAiHC8Lc9z2CU1QjGC-qvJY0pnnZ0if_IlbIORYErGiS_xYWNM9NFSZ3uyGp6anSinm9HlnDivKentyhsLK72hLZlk3iFGFHzYZL3jg9_Myebv03zVGVDY9QVjMdOKAFgAJAEUZ",
-                    Buffer = new BufferInfo
-                    {
+                    AccessToken = "22_lcPW7ejzZKvcSbhaySm1nNT7x8_kA1TohTpyY85fzYV1JfAvFxv_XGGwhg8YigSqfoT0RI6AAj2PDVgqFuvbYYi0BpWfN4zQ374ziMFxYqFrmvYdXpGq5zB-HSykdTlrOjj03sSsQkUcPx88HJOfAEABDI",
+                   
                         banner = "http://test.ten10.com.cn/joycity/img/1-1.png",
                         title = "惠城优惠大派送",
                         can_share = false,
@@ -192,7 +206,7 @@ namespace XmSoft.AspNetCore.XUnit
                             thumb_url = "http://test.ten10.com.cn/joycity/img/share.png"
                         }
                     }
-                    }
+                    
                 };
                 var result = client.ExecuteAsync(request);
             }

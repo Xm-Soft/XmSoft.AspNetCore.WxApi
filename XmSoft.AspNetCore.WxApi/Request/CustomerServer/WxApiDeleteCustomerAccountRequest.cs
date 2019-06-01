@@ -40,7 +40,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
             return "https://api.weixin.qq.com/customservice/kfaccount/del";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

@@ -8,6 +8,7 @@ using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
 using XmSoft.AspNetCore.WxApi.Request.CustomerServer;
 using XmSoft.AspNetCore.WxApi.Request.Security;
 using XmSoft.AspNetCore.WxApi.Request.MaterialManager;
+using XmSoft.AspNetCore.WxApi.Request.Card;
 using XmSoft.AspNetCore.WxApi.Response;
 using XmSoft.AspNetCore.WxApi.Response.MaterialManager;
 using XmSoft.AspNetCore.WxApi.Request.QRCode;
@@ -110,7 +111,7 @@ namespace XmSoft.AspNetCore.WxApi
                 {
                     
                     //判断文件是否存在
-                    if (string.IsNullOrEmpty(sortedParams.GetValue(media_path)) && System.IO.File.Exists(media_path))
+                    if (!string.IsNullOrEmpty(sortedParams.GetValue(media_path)?.ToString()) && System.IO.File.Exists(media_path))
                     {
                         /////把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。
                         if (request is WxApiUploadTempMediaRequest || request is WxApiSetCustomerHeadImgRequest
@@ -118,12 +119,12 @@ namespace XmSoft.AspNetCore.WxApi
                             || request is WxApiUploadMaterialRequest || request is WxApiTranslateContentRequest)
                         {
 
-                            var fileType = System.IO.Path.GetExtension(sortedParams.GetValue(media_path));
+                            var fileType = System.IO.Path.GetExtension(sortedParams.GetValue(media_path).ToString());
                             var media_type = sortedParams.GetValue(type);
                             var contentType = "application/x-www-form-urlencoded;charset=UTF-8";
                             //restRequest.AddFile(media_type == mediatype?"media": $"{Guid.NewGuid().ToString("N")}{fileType}", sortedParams.GetValue(media_path), contentType);
-                            restRequest.AddFile("media", sortedParams.GetValue(media_path), contentType);
-
+                            restRequest.AddFile("media", sortedParams.GetValue(media_path).ToString(), contentType);
+                            
 
                             if (request is WxApiUploadMaterialRequest && media_type == mediatype)
                             {
@@ -133,14 +134,21 @@ namespace XmSoft.AspNetCore.WxApi
                             }
                         }
                     }
-
+                    //else if(request is WxApiCreateLandingPageRequest)
+                    //{
+                    //    content = Utility.BulidJsonContent(sortedParams, filterKey);
+                    //    var bytes = System.Text.Encoding.Default.GetBytes(content);
+                    //    var contentType = "application/x-www-form-urlencoded;charset=UTF-8";
+                    //    //restRequest.AddFile(media_type == mediatype?"media": $"{Guid.NewGuid().ToString("N")}{fileType}", sortedParams.GetValue(media_path), contentType);
+                    //    restRequest.AddFileBytes("buffer", bytes, contentType);
+                    //}
                     else
                     {
                         var contentType = "application/json;charset=UTF-8";
                         if (sortedParams.ContainsKey(body)) //参数中是否包含 body 字符串，不是Json数据
                         {
                             contentType = "text/plain";
-                            content = sortedParams.GetValue(body);
+                            content = sortedParams.GetValue(body).ToString();
                         }
                         else
                             content = Utility.BulidJsonContent(sortedParams, filterKey);

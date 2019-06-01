@@ -36,7 +36,7 @@ namespace XmSoft.AspNetCore.WxApi.Request
             return "https://api.weixin.qq.com/datacube/getweanalysisappiduserportrait";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

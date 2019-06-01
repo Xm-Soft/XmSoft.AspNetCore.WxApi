@@ -29,7 +29,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
             return "https://api.weixin.qq.com/cgi-bin/customservice/getkflist";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

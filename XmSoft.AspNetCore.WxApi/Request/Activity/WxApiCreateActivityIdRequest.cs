@@ -29,7 +29,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Activity
             return "https://api.weixin.qq.com/cgi-bin/message/wxopen/activityid/create";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

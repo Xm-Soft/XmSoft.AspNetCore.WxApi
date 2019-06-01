@@ -16,7 +16,7 @@ namespace XmSoft.AspNetCore.WxApi
         /// </summary>
         /// <param name="dictionary"></param>
         /// <returns></returns>
-        public static string BulidContent(SortedDictionary<string,string> dictionary)
+        public static string BulidContent(SortedDictionary<string,object> dictionary)
         {
             var content = new StringBuilder();
             foreach(var dic in dictionary)
@@ -30,7 +30,7 @@ namespace XmSoft.AspNetCore.WxApi
         /// </summary>
         /// <param name="dictionary"></param>
         /// <returns></returns>
-        public static string BulidJsonContent(SortedDictionary<string, string> dictionary,List<string> filterkey)
+        public static string BulidJsonContent(SortedDictionary<string, object> dictionary,List<string> filterkey)
         {
             var content = new StringBuilder();
             content.Append("{");
@@ -38,10 +38,16 @@ namespace XmSoft.AspNetCore.WxApi
             {
                 if (filterkey.Contains(dic.Key))
                     continue;
-                if(dic.Value.Contains("{") || dic.Value.Contains("[{"))
+                if (dic.Value.ToString().Contains("{") || dic.Value.ToString().Contains("[{"))
                     content.Append("\"").Append(dic.Key).Append("\":").Append(dic.Value).Append(",");
                 else
-                    content.Append("\"").Append(dic.Key).Append("\":\"").Append(dic.Value).Append("\",");
+                {
+                    var valueType = dic.Value.GetType().Name;
+                    if(valueType == "String" || valueType == "DateTime")
+                        content.Append("\"").Append(dic.Key).Append("\":\"").Append(dic.Value).Append("\",");
+                    else
+                        content.Append("\"").Append(dic.Key).Append("\":").Append(dic.Value.ToString().ToLower()).Append(",");
+                }
             }
             if (content.ToString() == "{") //判断Json是否有数据，否则返回null
                 return null;

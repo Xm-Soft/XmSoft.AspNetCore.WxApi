@@ -18,7 +18,7 @@ namespace XmSoft.AspNetCore.WxApi
         /// Value: 请求参数文本值
         /// </summary>
         /// <returns>文本请求参数字典</returns>
-        IDictionary<string, string> GetParameters();
+        IDictionary<string, object> GetParameters();
         /// <summary>
         /// 请求方式
         /// </summary>

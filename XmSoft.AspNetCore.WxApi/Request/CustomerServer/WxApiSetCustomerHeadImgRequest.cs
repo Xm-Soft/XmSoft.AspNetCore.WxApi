@@ -37,7 +37,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
             return "http://api.weixin.qq.com/customservice/kfaccount/uploadheadimg";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

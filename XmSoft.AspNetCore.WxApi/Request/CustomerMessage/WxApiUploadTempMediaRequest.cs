@@ -35,7 +35,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
             return "https://api.weixin.qq.com/cgi-bin/media/upload";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

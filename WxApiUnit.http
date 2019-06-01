@@ -142,5 +142,24 @@ Content-Type: application/json
 
 
 //card id:pyrsn1q0Oxn4bq4Fo_mC3F6mpZrM
+//pyrsn1lm26wDGhpD_mtQ9SNHENZ8
 
 //{"errcode":0,"errmsg":"ok","ticket":"gQFW8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyQzB5S0lQYVhjRG0xVnB1SU5zNE0AAgRRl_xcAwQIBwAA","expire_seconds":1800,"url":"http:\/\/weixin.qq.com\/q\/02C0yKIPaXcDm1VpuINs4M","show_qrcode_url":"https:\/\/mp.weixin.qq.com\/cgi-bin\/showqrcode?ticket=gQFW8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyQzB5S0lQYVhjRG0xVnB1SU5zNE0AAgRRl_xcAwQIBwAA"}
+
+POST https://api.weixin.qq.com/card/landingpage/create
+?access_token=22_-UzdUncrNYwMMAioshrhp0lde-xcNzQypqa_1bhuwevKlgLSHRv0XABGz_ETX5SH2ONOlNJEmbELBblPJwZfiBhBxbZkiAdY7Jvsaaq7sXWjsXsgKRM7-N4Zmo91Ofgdurydoun0FFtpfZShTXCiAHALPU
+Content-Type: application/json
+
+{
+ //"banner":"https://www.qq.com/a.jpg",
+   "page_title": "惠城优惠大派送",
+   "can_share": true,
+   "scene": "SCENE_NEAR_BY",
+   "card_list": [
+       {
+           "card_id": "pyrsn1q0Oxn4bq4Fo_mC3F6mpZrM"
+           //"thumb_url": "www.qq.com/a.jpg"
+       }
+      
+    ]
+ }

@@ -41,7 +41,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.User
         /// 获取参数
         /// </summary>
         /// <returns></returns>
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

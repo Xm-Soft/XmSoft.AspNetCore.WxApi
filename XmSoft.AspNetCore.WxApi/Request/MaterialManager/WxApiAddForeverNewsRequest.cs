@@ -33,7 +33,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
             return "https://api.weixin.qq.com/cgi-bin/material/add_news";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

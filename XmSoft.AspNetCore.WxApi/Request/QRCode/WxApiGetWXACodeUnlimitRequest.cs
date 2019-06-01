@@ -55,7 +55,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
             return "https://api.weixin.qq.com/wxa/getwxacodeunlimit";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {

@@ -35,7 +35,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Security
             return "https://api.weixin.qq.com/wxa/img_sec_check";
         }
 
-        public IDictionary<string, string> GetParameters()
+        public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
             {
