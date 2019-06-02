@@ -120,7 +120,7 @@ namespace XmSoft.AspNetCore.WxApi
                         {
 
                             var fileType = System.IO.Path.GetExtension(sortedParams.GetValue(media_path).ToString());
-                            var media_type = sortedParams.GetValue(type);
+                            var media_type = sortedParams.GetValue(type).ToString();
                             var contentType = "application/x-www-form-urlencoded;charset=UTF-8";
                             //restRequest.AddFile(media_type == mediatype?"media": $"{Guid.NewGuid().ToString("N")}{fileType}", sortedParams.GetValue(media_path), contentType);
                             restRequest.AddFile("media", sortedParams.GetValue(media_path).ToString(), contentType);

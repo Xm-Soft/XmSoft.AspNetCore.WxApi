@@ -13,15 +13,18 @@ namespace XmSoft.AspNetCore.XUnit
         [Fact]
         public void Tests()
         {
-            int s = 1;
+            
+            var s = 1;
             DateTime dt = DateTime.Now;
-            string str = "121212";
+            var str = "121212";
             decimal d = 12;
+            double d2 = 12.20;
 
             var s_name = s.GetType().Name;
             var dt_name = dt.GetType().Name;
             var d_name = d.GetType().Name;
             var str_name = str.GetType().Name;
+            var d2_name = d2.GetType().Name;
             
         }
 
