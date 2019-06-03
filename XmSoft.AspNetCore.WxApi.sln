@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "测试接口", "测试接�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmSoft.AspNetCore.AliApi", "XmSoft.AspNetCore.AliApi\XmSoft.AspNetCore.AliApi.csproj", "{7BD525E1-ED08-44D2-BBB4-1CD1B40DC19D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmSoft.AspNetCore.XUnit", "XmSoft.AspNetCore.XUnit\XmSoft.AspNetCore.XUnit.csproj", "{2B11F360-9B20-480B-B37C-EDD326F1B2F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmSoft.AspNetCore.XUnit", "XmSoft.AspNetCore.XUnit\XmSoft.AspNetCore.XUnit.csproj", "{2B11F360-9B20-480B-B37C-EDD326F1B2F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
