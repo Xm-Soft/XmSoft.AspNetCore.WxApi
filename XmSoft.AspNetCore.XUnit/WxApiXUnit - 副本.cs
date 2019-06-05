@@ -8,26 +8,8 @@ using XmSoft.AspNetCore.WxApi.Request;
 
 namespace XmSoft.AspNetCore.XUnit
 {
-    public class WxApiXUnit
+    public class WxApiXUnit1
     {
-        [Fact]
-        public void Tests()
-        {
-            
-            var s = 1;
-            DateTime dt = DateTime.Now;
-            var str = "121212";
-            decimal d = 12;
-            double d2 = 12.20;
-
-            var s_name = s.GetType().Name;
-            var dt_name = dt.GetType().Name;
-            var d_name = d.GetType().Name;
-            var str_name = str.GetType().Name;
-            var d2_name = d2.GetType().Name;
-            
-        }
-
         [Fact]
         public void AccessToken()
         {
@@ -52,7 +34,7 @@ namespace XmSoft.AspNetCore.XUnit
             {
                 var request = new WxApiCreateCardRequest()
                 {
-                    AccessToken = "22_fOtMJTQ1LOpQWLcPYyTEfRzlX9lauaiXTA0_VGSJ_Got7ikCfbTpJO9S8y7sJWEJmTRiQWt2UzzzemkoFcpW5lMDOujE_cbkuFYjWCJ_ZTB9bZGKp26qmSmDeVkabaMGUxt9_F-b7ZKC_jaTCHGdACAJON",
+                    AccessToken = "21_dJtsSPGDx3NsPrKdLPlR3WN_96Q2POj-y2mJKfMzhsDTZkQODyKQpOwI5SivfYJTy_xPFQrNoqh1Ic8lCsHssEOds4TU4PudnAlt54ipCsMYw-4rml7A5_TOxNoPopJePjSNx3KgRiR-4dhGYVIiABALIV",
                     groupon = new WxApi.Model.Card.CardGroupon
                     {
                         card_type = "GROUPON",
@@ -71,8 +53,8 @@ namespace XmSoft.AspNetCore.XUnit
                                 date_info = new WxApi.Model.Card.Date_info
                                 {
                                     type = "DATE_TYPE_FIX_TIME_RANGE",
-                                    begin_timestamp = 1559722698,
-                                    end_timestamp = 1562314684
+                                    begin_timestamp = 1559006737,
+                                    end_timestamp = 1559093137
                                 },
                                 sku = new WxApi.Model.Card.Sku
                                 {
@@ -177,7 +159,7 @@ namespace XmSoft.AspNetCore.XUnit
                     {
                         card = new WxApi.Model.Card.CardInfo
                         {
-                            card_id = "pyrsn1q0Oxn4bq4Fo_mC3F6mpZrM",//pyrsn1pIfrGgtugz3ch2Mo2yjpU0
+                            card_id = "pyrsn1q0Oxn4bq4Fo_mC3F6mpZrM",
                             code = "110201201245",
                             is_unique_code = false,
                             outer_str = "12b"
@@ -195,25 +177,51 @@ namespace XmSoft.AspNetCore.XUnit
             {
                 var request = new WxApiCreateLandingPageRequest
                 {
-                    AccessToken = "22_lcPW7ejzZKvcSbhaySm1nNT7x8_kA1TohTpyY85fzYV1JfAvFxv_XGGwhg8YigSqfoT0RI6AAj2PDVgqFuvbYYi0BpWfN4zQ374ziMFxYqFrmvYdXpGq5zB-HSykdTlrOjj03sSsQkUcPx88HJOfAEABDI",
-                   
-                        banner = "http://test.ten10.com.cn/joycity/img/1-1.png",
-                        title = "惠城优惠大派送",
-                        can_share = false,
-                        scene = "SCENE_NEAR_BY",
-                        card_list = new List<CardList>
-                    {
-                        new CardList
-                        {
-                            card_id = "pyrsn1q0Oxn4bq4Fo_mC3F6mpZrM",
-                            thumb_url = "http://test.ten10.com.cn/joycity/img/share.png"
-                        }
-                    }
-                    
+                    AccessToken = "21_gfFABZSIa0ci0ux68S9ZAiHC8Lc9z2CU1QjGC-qvJY0pnnZ0if_IlbIORYErGiS_xYWNM9NFSZ3uyGp6anSinm9HlnDivKentyhsLK72hLZlk3iFGFHzYZL3jg9_Myebv03zVGVDY9QVjMdOKAFgAJAEUZ",
+                    //Buffer = new BufferInfo
+                    //{
+                    //    banner = "http://test.ten10.com.cn/joycity/img/1-1.png",
+                    //    title = "惠城优惠大派送",
+                    //    can_share = false,
+                    //    scene = "SCENE_NEAR_BY",
+                    //    card_list = new List<CardList>
+                    //{
+                    //    new CardList
+                    //    {
+                    //        card_id = "pyrsn1q0Oxn4bq4Fo_mC3F6mpZrM",
+                    //        thumb_url = "http://test.ten10.com.cn/joycity/img/share.png"
+                    //    }
+                    //}
+                    //}
                 };
                 var result = client.ExecuteAsync(request);
             }
         }
+
+        [Fact]
+        public void Test()
+        {
+            var test = new Test
+            {
+                UserId = "1000110",
+                Age = 12
+            };
+            SetTest(test);
+
+            var name = test.Name;
+        }
+        private void SetTest(Test test)
+        {
+            test.Name = "张三";
+        }
+
+    }
+    public class Test
+    {
+        public string UserId { get; set; }
+        public string Name { get; set; }
+
+        public int Age { get; set; }
     }
 
 }
