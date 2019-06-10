@@ -571,7 +571,6 @@ namespace XmSoft.AspNetCore.Sample.Controllers
         }
         #endregion
 
-
         #region 门店
         /// <summary>
         /// 获取门店列表
@@ -600,7 +599,6 @@ namespace XmSoft.AspNetCore.Sample.Controllers
 
         }
         #endregion
-
 
         #region 素材管理
         /// <summary>
