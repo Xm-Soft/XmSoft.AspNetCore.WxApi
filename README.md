@@ -59,7 +59,7 @@ using (var client = new WxApi.WxApiClient())
 
 ## 运行环境
 * .NET Core 2.0+
-* .Net Framework 4.5+
+* .Net Framework 4.6+
 
 
 
