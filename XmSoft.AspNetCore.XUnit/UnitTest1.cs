@@ -8,6 +8,11 @@ namespace XmSoft.AspNetCore.XUnit
     public class UnitTest1
     {
         [Fact]
+        public void Test2()
+        {
+            var ss = DateTime.Parse("2020");
+        }
+        [Fact]
         public void Test1()
         {
             string serverUrl = "http://openapi.alipaydev.com/gateway.do";

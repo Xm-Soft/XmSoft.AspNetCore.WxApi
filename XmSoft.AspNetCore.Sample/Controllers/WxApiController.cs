@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using XmSoft.AspNetCore.WxApi;
 using XmSoft.AspNetCore.WxApi.Request;
 using XmSoft.AspNetCore.WxApi.Request.CustomerMessage;
@@ -15,6 +16,7 @@ using XmSoft.AspNetCore.WxApi.Request.Security;
 using XmSoft.AspNetCore.WxApi.Request.Poi;
 using XmSoft.AspNetCore.WxApi.Request.User;
 using XmSoft.AspNetCore.WxApi.Request.Intelligent;
+using log4net;
 
 namespace XmSoft.AspNetCore.Sample.Controllers
 {
@@ -22,6 +24,15 @@ namespace XmSoft.AspNetCore.Sample.Controllers
     [Route("Api/[controller]")]
     public class WxApiController : Controller
     {
+        private ILogger<WxApiController> logging;
+        private ILog logger;
+        public WxApiController(ILogger<WxApiController> _logging)
+        {
+            logging = _logging;
+            logger = LogManager.GetLogger("NetCoreRepository", typeof(WxApiController));
+
+
+        }
         [HttpPost]
         [Route("Code2Session")]
         public async Task<JsonResult> Code2Session()
@@ -31,11 +42,12 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiCode2SessionRequest()
                 {
 
-                    AppId = "wx346f2583af4c5a8f",
-                    Code = "",
-                    Secret = ""
+                    AppId = "wx13c069c9a4a9aa48",
+                    Code = "0518i80w3h8gOU2dKz1w38Cfdk28i80Q",
+                    Secret = "73cc6fe4cb0dbc22f432e297e4e685da" //oknLJ1aXS1vhkw_wg6UrKXFEGFRg
                 };
                 var s = await client.ExecuteAsync(request);
+                logging.LogInformation(s.ErrCode + "msg: "+s.Errmsg + " "+ s.OpenId);
                 return Json(new { Code = 1, Msg = "成功" });
             }
 
@@ -46,16 +58,17 @@ namespace XmSoft.AspNetCore.Sample.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("GetAccessToken")]
-        public async Task<JsonResult> GetAccessToken()
+        public async Task<JsonResult> GetAccessToken(string AppId,string Secret)
         {
             using (var client = new WxApi.WxApiClient())
             {
                 var request = new WxApiGetAccessTokenRequest()
                 {
-                    AppId = "wx346f2583af4c5a8f",
-                    Secret = "54421a46b51f40b0956b54a736421ea9"//
+                    AppId = string.IsNullOrEmpty(AppId)? "wx3f66a34f3c56406c" : AppId,//"wx346f2583af4c5a8f",
+                    Secret = string.IsNullOrEmpty(Secret) ? "19e504a3602ab011f164b9e5a018d43c" : Secret,//"54421a46b51f40b0956b54a736421ea9"//
                 };
                 var s = await client.ExecuteAsync(request);
+                logger.Info($"token:{s.AccessToken}");
                 return Json(new { Code = 1, Msg = "成功", Data = s });
             }
 

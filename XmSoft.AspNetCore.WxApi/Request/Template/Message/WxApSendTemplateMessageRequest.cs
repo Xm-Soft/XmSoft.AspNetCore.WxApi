@@ -17,7 +17,9 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
         public WxApSendTemplateMessageRequest()
         {
         }
-
+        /// <summary>
+        /// Token
+        /// </summary>
         public string AccessToken { get; set; }
         /// <summary>
         /// 公众帐号下模板消息ID
@@ -46,12 +48,18 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
         public string Color { get; set; }
 
         #region IWxApiRequest Members
-
+        /// <summary>
+        /// 请求地址
+        /// </summary>
+        /// <returns></returns>
         public string GetRequestUrl()
         {
             return "https://api.weixin.qq.com/cgi-bin/message/template/send";
         }
-
+        /// <summary>
+        /// 请求参数
+        /// </summary>
+        /// <returns></returns>
         public IDictionary<string, object> GetParameters()
         {
             var parameters = new WxApiDictionary
@@ -66,7 +74,10 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
             };
             return parameters;
         }
-
+        /// <summary>
+        /// IsPost
+        /// </summary>
+        /// <returns></returns>
         public bool IsPost()
         {
             return true;
@@ -74,7 +85,9 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
 
         #endregion
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class MiniProgram
     {
         /// <summary>

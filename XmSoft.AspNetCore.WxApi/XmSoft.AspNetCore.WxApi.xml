@@ -688,7 +688,7 @@
             视频消息 - 公众平台
             </summary>
         </member>
-        <!-- 对于成员“P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVideoNotify.ThumbMediaId”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVideoNotify.ThumbMediaId" -->
         <member name="P:XmSoft.AspNetCore.WxApi.Notify.Message.WxApiVideoNotify.MediaId">
             <summary>
             	视频消息媒体id，可以调用获取临时素材接口拉取数据。
@@ -3165,7 +3165,7 @@
             <para>通过该接口生成的小程序码，永久有效，数量暂无限制。 更多用法详见 获取二维码。</para>
             </summary>
         </member>
-        <!-- 对于成员“P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Scene”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Scene" -->
         <member name="P:XmSoft.AspNetCore.WxApi.Request.QRCode.WxApiGetWXACodeUnlimitRequest.Page">
             <summary>
             必须是已经发布的小程序存在的页面（否则报错），例如 pages/index/index, 
@@ -3250,6 +3250,307 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest">
+            <summary>
+            组合模板并添加至帐号下的个人模板库
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest.#ctor">
+            <summary>
+            组合模板并添加至帐号下的个人模板库
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest.AccessToken">
+            <summary>
+            授权token （必填）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest.Tid">
+            <summary>
+            模板标题 id，可通过接口获取，也可登录小程序后台查看获取
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest.KidList">
+            <summary>
+            开发者自行组合好的模板关键词列表，关键词顺序可以自由搭配（例如 [3,5,4] 或 [4,5,3]），最多支持5个，最少2个关键词组合（必填）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest.SceneDesc">
+            <summary>
+            服务场景描述，15个字以内 （可选）
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiDelTemplateRequest">
+            <summary>
+            删除帐号下的个人模板 请求
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiDelTemplateRequest.#ctor">
+            <summary>
+            删除帐号下的个人模板 请求
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiDelTemplateRequest.AccessToken">
+            <summary>
+            授权token （必填）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiDelTemplateRequest.PriTmplId">
+            <summary>
+            要删除的模板id
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiDelTemplateRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiDelTemplateRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiDelTemplateRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetCategoryRequest">
+            <summary>
+            获取小程序账号的类目
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetCategoryRequest.#ctor">
+            <summary>
+            获取小程序账号的类目
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetCategoryRequest.AccessToken">
+            <summary>
+            授权token （必填）
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetCategoryRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetCategoryRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetCategoryRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateKeyWordsByIdRequest">
+            <summary>
+            获取模板标题下的关键词列表
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateKeyWordsByIdRequest.#ctor">
+            <summary>
+            获取模板标题下的关键词列表
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateKeyWordsByIdRequest.Tid">
+            <summary>
+            模板标题 id，可通过接口获取
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateKeyWordsByIdRequest.AccessToken">
+            <summary>
+            授权token （必填）
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateKeyWordsByIdRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateKeyWordsByIdRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateKeyWordsByIdRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest">
+            <summary>
+            获取帐号所属类目下的公共模板标题
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest.#ctor">
+            <summary>
+            获取帐号所属类目下的公共模板标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest.Ids">
+            <summary>
+            类目 id，多个用逗号隔开
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest.Start">
+            <summary>
+            用于分页，表示从 start 开始。从 0 开始计数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest.Limit">
+            <summary>
+            用于分页，表示拉取 limit 条记录。最大为 30
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest.AccessToken">
+            <summary>
+            授权token （必填）
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetPubTemplateTitleListRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetTemplateListRequest">
+            <summary>
+            获取当前帐号下的个人模板列表
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetTemplateListRequest.#ctor">
+            <summary>
+            获取当前帐号下的个人模板列表
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetTemplateListRequest.AccessToken">
+            <summary>
+            授权token （必填）
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetTemplateListRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetTemplateListRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiGetTemplateListRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest">
+            <summary>
+            发送订阅消息
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.#ctor">
+            <summary>
+            发送订阅消息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.AccessToken">
+            <summary>
+            授权token （必填）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.Touser">
+            <summary>
+            接收者（用户）的 openid （必填）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.Template_Id">
+            <summary>
+            所需下发的订阅模板id （必填）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.Page">
+            <summary>
+            点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数,（示例index?foo=bar）。该字段不填则模板无跳转 （可选）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.Data">
+            <summary>
+            模板内容，格式形如 { "key1": { "value": any }, "key2": { "value": any } }  （必填）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.Miniprogram_State">
+            <summary>
+            跳转小程序类型：developer为开发版；trial为体验版；formal为正式版；默认为正式版  （可选）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.Lang">
+            <summary>
+            进入小程序查看”的语言类型，支持zh_CN(简体中文)、en_US(英文)、zh_HK(繁体中文)、zh_TW(繁体中文)，默认为zh_CN （可选）
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiSendSubscribeRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiDelTemplateRequest">
             <summary>
             删除模板
@@ -3270,30 +3571,59 @@
             获取模板列表
             </summary>
         </member>
-        <!-- 对于成员“M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetAllTemplateRequest.#ctor”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetAllTemplateRequest.#ctor" -->
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetIndustryRequest">
             <summary>
             获取设置的行业信息
             </summary>
         </member>
-        <!-- 对于成员“M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetIndustryRequest.#ctor”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetIndustryRequest.#ctor" -->
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest">
             <summary>
             获得模板ID
             </summary>
         </member>
-        <!-- 对于成员“M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.#ctor”忽略有格式错误的 XML 注释 -->
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.#ctor">
+            <summary>
+            获得模板ID -- 公众平台
+            <para>从行业模板库选择模板到帐号后台，获得模板ID的过程可在微信公众平台后台完成</para>
+            <para>为方便第三方开发者，提供通过接口调用的方式来获取模板ID</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.Template_id_short">
             <summary>
             模板库中模板的编号，有“TM**”和“OPENTMTM**”等形式
             </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiGetTemplateIdRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSetIndustryRequest">
             <summary>
             设置所属行业
             </summary>
         </member>
-        <!-- 对于成员“M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSetIndustryRequest.#ctor”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSetIndustryRequest.#ctor" -->
         <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSetIndustryRequest.Industry_id1">
             <summary>
             公众号模板消息所属行业编号
@@ -3312,6 +3642,11 @@
         <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.#ctor">
             <summary>
             发送模板消息 - 公众平台
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.AccessToken">
+            <summary>
+            Token
             </summary>
         </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Template_id">
@@ -3342,6 +3677,29 @@
         <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Color">
             <summary>
             模板内容字体颜色，不填默认为黑色 非必填
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.MiniProgram">
+            <summary>
+            
             </summary>
         </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.MiniProgram.appid">
@@ -3485,7 +3843,7 @@
             </summary>
             <returns></returns>
         </member>
-        <!-- 对于成员“T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest”忽略有格式错误的 XML 注释 -->
+        <!-- Badly formed XML comment ignored for member "T:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest" -->
         <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.WxApiSendTemplateRequest.#ctor">
             <summary>
             发送模板消息
@@ -4937,6 +5295,177 @@
             	短链接。
             </summary>
         </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiAddTemplateResponse">
+            <summary>
+            组合模板并添加至帐号下的个人模板库 返回
+            <para>200014	模版 tid 参数错误</para>	
+            <para>200020	关键词列表 kidList 参数错误	</para>
+            <para>200021	场景描述 sceneDesc 参数错误	</para>
+            <para>200011	此账号已被封禁，无法操作	</para>
+            <para>200013	此模版已被封禁，无法选用	</para>
+            <para>200012	个人模版数已达上限，上限25个</para>
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiAddTemplateResponse.PriTmplId">
+            <summary>
+            添加至帐号下的模板id，发送小程序订阅消息时所需
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiDelTemplateResponse">
+            <summary>
+            删除帐号下的个人模板
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetCategoryResponse">
+            <summary>
+            获取小程序账号的类目
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetCategoryResponse.Data">
+            <summary>
+            类目列表
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.Category">
+            <summary>
+            类目
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.Category.Id">
+            <summary>
+            类目id，查询公共库模版时需要
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.Category.Name">
+            <summary>
+            类目的中文名
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetPubTemplateKeyWordsByIdResponse">
+            <summary>
+            获取模板标题下的关键词列表 返回
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetPubTemplateKeyWordsByIdResponse.Count">
+            <summary>
+            模版标题列表总数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetPubTemplateKeyWordsByIdResponse.Data">
+            <summary>
+            关键词列表
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.KeyWords">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.KeyWords.Kid">
+            <summary>
+            关键词 id，选用模板时需要
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.KeyWords.Name">
+            <summary>
+            关键词内容
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.KeyWords.Example">
+            <summary>
+            关键词内容对应的示例
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.KeyWords.Rule">
+            <summary>
+            参数类型
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetPubTemplateTitleListResponse">
+            <summary>
+            获取帐号所属类目下的公共模板标题 返回
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetPubTemplateTitleListResponse.Count">
+            <summary>
+            模版标题列表总数
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetPubTemplateTitleListResponse.Data">
+            <summary>
+            模板标题列表
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.TemplateTitle">
+            <summary>
+            模板标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.TemplateTitle.Tid">
+            <summary>
+            模版标题 id
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.TemplateTitle.Title">
+            <summary>
+            模版标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.TemplateTitle.CategoryId">
+            <summary>
+            模版类型，2 为一次性订阅，3 为长期订阅
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.TemplateTitle.Type">
+            <summary>
+            模版所属类目 id
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetTemplateListResponse">
+            <summary>
+            获取当前帐号下的个人模板列表 返回
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiGetTemplateListResponse.Data">
+            <summary>
+            个人模板列表
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.Template">
+            <summary>
+            个人模板
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.Template.PriTmplId">
+            <summary>
+            添加至帐号下的模板 id，发送小程序订阅消息时所需
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.Template.Title">
+            <summary>
+            模版标题
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.Template.Content">
+            <summary>
+            模版内容
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.Template.Example">
+            <summary>
+            模板内容示例
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.Subscribe.Template.Type">
+            <summary>
+            模版类型，2 为一次性订阅，3 为长期订阅
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.Subscribe.WxApiSendSubscribeResponse">
+            <summary>
+            发送订阅消息 返回
+            </summary>
+        </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Response.Template.Message.WxApiGetAllTemplateResponse.template_list">
             <summary>
             获取模板列表
@@ -5154,7 +5683,6 @@
             </summary>
             <typeparam name="T"></typeparam>
             <param name="request">请求对象</param>
-            <param name="UploadFilePath">文件绝对路径</param>
             <returns></returns>
         </member>
         <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.Finalize">

@@ -50,7 +50,6 @@ namespace XmSoft.AspNetCore.WxApi
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="request">请求对象</param>
-        /// <param name="UploadFilePath">文件绝对路径</param>
         /// <returns></returns>
         public async Task<T> ExecuteAsync<T>(IWxApiRequest<T> request) where T : WxApiResponse
         {
@@ -171,11 +170,11 @@ namespace XmSoft.AspNetCore.WxApi
                         {
                             var contenttype = response.ContentType;
 
-                            ///判断返回的类型是否为空，若为空，根据数据获取对应的文件类型
+                            //判断返回的类型是否为空，若为空，根据数据获取对应的文件类型
                             if(string.IsNullOrEmpty(response.ContentType)) 
                                contenttype = FileContentType.Get(response.RawBytes);
                             
-                            ///获取永久素材返回
+                            //获取永久素材返回
                             if (request is WxApiGetMaterialRequest)
                             {
                                 return new WxApiGetMaterialResponse
@@ -201,7 +200,7 @@ namespace XmSoft.AspNetCore.WxApi
                 }
 
             }
-            catch (Exception ex)
+            catch
             {
                
             }
