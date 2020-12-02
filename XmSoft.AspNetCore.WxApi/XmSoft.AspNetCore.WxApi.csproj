@@ -1,12 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net46;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net45;net46;netstandard2.0</TargetFrameworks>
+    <Version>1.0.5</Version>
+    <Authors>XmSoft</Authors>
+    <Company>XmSoft</Company>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
+		<DocumentationFile>G:\个人文档\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
     <DocumentationFile>G:\个人文档\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
   </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+		<DocumentationFile>G:\Work\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
+	</PropertyGroup>
 
   <!--<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
     <DocumentationFile>G:\Work\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
@@ -23,11 +33,21 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <DocumentationFile>G:\Work\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
   </PropertyGroup>-->
-
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-    <PackageReference Include="RestSharp" Version="106.6.9" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+		<PackageReference Include="RestSharp" Version="105.2.3" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net46'">
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+		<PackageReference Include="RestSharp" Version="106.6.9" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+		<PackageReference Include="RestSharp" Version="106.6.9" />
+   </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
+	  <Reference Include="System.Web" />
+	</ItemGroup>
 
   <ItemGroup>
     <None Update="XmSoft.AspNetCore.WxApi.xml">

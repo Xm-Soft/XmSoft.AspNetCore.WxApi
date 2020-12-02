@@ -22,7 +22,7 @@ namespace XmSoft.AspNetCore.Sample.Extensions
         public static void SwaggerConfig(this IServiceCollection services, IConfiguration configuration)
         {
             var path = System.AppDomain.CurrentDomain.BaseDirectory;
-            var commentsFile = Path.Combine(path, @"XmSoft.AspNetCore.WxApi.xml");
+            //var commentsFile = Path.Combine(path, @"XmSoft.AspNetCore.WxApi.xml");
             // 注册Swagger服务
             services.AddSwaggerGen(c =>
             {
@@ -45,7 +45,7 @@ namespace XmSoft.AspNetCore.Sample.Extensions
                 //c.OperationFilter<SecurityRequirementsOperationFilter>();
 
                 //单个xml文件注释读取
-                c.IncludeXmlComments(commentsFile);
+                //c.IncludeXmlComments(commentsFile);
   
             });
         }

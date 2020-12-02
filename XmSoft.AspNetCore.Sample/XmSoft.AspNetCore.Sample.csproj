@@ -11,10 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.csproj" />
+    <PackageReference Include="XmSoft.AspNetCore.WxApi" Version="1.0.4" />
   </ItemGroup>
 
 </Project>
