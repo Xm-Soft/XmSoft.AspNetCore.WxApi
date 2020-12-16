@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
+using XmSoft.AspNetCore.WxApi.Response;
 using XmSoft.AspNetCore.WxApi.Response.QRCode;
 
 namespace XmSoft.AspNetCore.WxApi.Request.QRCode
@@ -10,7 +11,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
     ///获取小程序码，适用于需要的码数量极多的业务场景。
     ///通过该接口生成的小程序码，永久有效，数量暂无限制。 更多用法详见 获取二维码。
     /// </summary>
-    public class WxApiGetWXACodeUnlimitRequest : IWxApiRequest<WxApiGetWXACodeUnlimitResponse>
+    public class WxApiGetWXACodeUnlimitRequest : IWxApiRequest<WxApiFileResponse>
     {
         /// <summary>
         /// 获取小程序码，适用于需要的码数量极多的业务场景。

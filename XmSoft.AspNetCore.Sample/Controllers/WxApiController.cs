@@ -17,6 +17,7 @@ using XmSoft.AspNetCore.WxApi.Request.Poi;
 using XmSoft.AspNetCore.WxApi.Request.User;
 using XmSoft.AspNetCore.WxApi.Request.Intelligent;
 using log4net;
+using XmSoft.AspNetCore.WxApi.Request.QRCode;
 
 namespace XmSoft.AspNetCore.Sample.Controllers
 {
@@ -557,6 +558,30 @@ namespace XmSoft.AspNetCore.Sample.Controllers
             }
 
         }
+
+
+        [HttpPost]
+        [Route("GetWXACodeUnlimit")]
+        public async Task<JsonResult> GetWXACodeUnlimit(string access_token)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var request = new WxApiGetWXACodeUnlimitRequest()
+                {
+                    AccessToken = "40_hcbBQzdwy7OH9gCz2RU3rI8uWt2R4i6aeswD-VHj_5aZJD04a88gJ-r3IMaVzf8n9hMUudL_5U_VoKBroSV4EAtMErT789YBr_0yCrRGEVt7EtnMMbz4NTGS5tl7T0r9aPl77cHv5hn8LheBJCUdAIAVOG",
+                    Scene = "121212",
+                    Auto_color = false,
+                    Line_color = new Line_Color { B = "0",G ="0",R = "0"},
+                    Page = "pages/index/index",
+
+                };
+                var response = await client.ExecuteAsync(request);
+
+                return Json(new { Code = 1, Msg = "成功", Data = response });
+            }
+
+        }
+
 
         #region 用户管理
 

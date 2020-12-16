@@ -12,7 +12,7 @@ using XmSoft.AspNetCore.WxApi.Request.Card;
 using XmSoft.AspNetCore.WxApi.Response;
 using XmSoft.AspNetCore.WxApi.Response.MaterialManager;
 using XmSoft.AspNetCore.WxApi.Request.QRCode;
-
+using XmSoft.AspNetCore.WxApi.Response.QRCode;
 
 namespace XmSoft.AspNetCore.WxApi
 {
@@ -163,7 +163,8 @@ namespace XmSoft.AspNetCore.WxApi
                 {
                     t.Wait();
                     var response = await t;
-                    if (request is WxApiGetTempMediaRequest || request is WxApiShowQRCodeRequest || request is WxApiGetMaterialRequest)
+                    if (request is WxApiGetTempMediaRequest || request is WxApiShowQRCodeRequest || request is WxApiGetMaterialRequest 
+                        || request is WxApiGetWXACodeUnlimitRequest || request is WxApiGetWXACodeRequest || request is WxApiCreateQRCodeRequest)
                     {
 
                         if (!response.ContentType.Contains("json") && !response.ContentType.Contains("text"))
@@ -186,6 +187,7 @@ namespace XmSoft.AspNetCore.WxApi
 
                                 } as T;
                             }
+
                             return new WxApiFileResponse
                             {
                                 ErrCode = 0,
