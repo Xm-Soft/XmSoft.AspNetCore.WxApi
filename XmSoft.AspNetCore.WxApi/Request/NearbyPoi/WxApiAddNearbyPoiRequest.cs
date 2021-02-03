@@ -50,11 +50,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.NearbyPoi
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "related_name", Related_name },
-                { "related_address", Related_address },
-                { "related_credential", Related_credential },
-                { "related_proof_material", Related_proof_material }
-
             };
             return parameters;
         }
@@ -62,6 +57,18 @@ namespace XmSoft.AspNetCore.WxApi.Request.NearbyPoi
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "related_name", Related_name },
+                { "related_address", Related_address },
+                { "related_credential", Related_credential },
+                { "related_proof_material", Related_proof_material }
+            };
+            return parameters;
         }
 
         #endregion

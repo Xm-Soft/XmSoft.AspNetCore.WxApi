@@ -47,10 +47,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Activity
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "activity_id", Activity_id },
-                { "target_state", Target_state },
-                { "template_info", Template_info == null ? null : JsonConvert.SerializeObject(Template_info) }
-              
             };
             return parameters;
         }
@@ -58,6 +54,18 @@ namespace XmSoft.AspNetCore.WxApi.Request.Activity
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "activity_id", Activity_id },
+                { "target_state", Target_state },
+                { "template_info", Template_info == null ? null : JsonConvert.SerializeObject(Template_info) }
+
+            };
+            return parameters;
         }
 
         #endregion

@@ -45,10 +45,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "kf_account", KF_account },
-                { "nickname", Nickname },
-                { "password", Password }
-
             };
             return parameters;
         }
@@ -56,6 +52,18 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "kf_account", KF_account },
+                { "nickname", Nickname },
+                { "password", Password }
+
+            };
+            return parameters;
         }
 
         #endregion

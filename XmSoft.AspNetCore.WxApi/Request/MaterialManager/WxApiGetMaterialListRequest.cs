@@ -44,10 +44,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                {"type", Type},
-                {"offset", Offset},
-                {"count", Count},
-
             };
             return parameters;
         }
@@ -55,6 +51,17 @@ namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                {"type", Type},
+                {"offset", Offset},
+                {"count", Count},
+            };
+            return parameters;
         }
 
         #endregion

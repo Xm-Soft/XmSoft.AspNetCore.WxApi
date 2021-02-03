@@ -45,7 +45,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                {"media_path",MediaPath }
             };
             return parameters;
         }
@@ -56,6 +55,15 @@ namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                {"media_path",MediaPath }
+            };
+            return parameters;
         }
 
         #endregion

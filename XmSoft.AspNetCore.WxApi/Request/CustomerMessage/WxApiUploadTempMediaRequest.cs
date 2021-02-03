@@ -41,7 +41,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
             {
                 { "access_token", AccessToken },
                 { "type", Type },
-                {"media_path",MediaPath }
             };
             return parameters;
         }
@@ -49,6 +48,15 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                {"media_path",MediaPath }
+            };
+            return parameters;
         }
 
         #endregion

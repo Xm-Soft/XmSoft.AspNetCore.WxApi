@@ -65,10 +65,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "banner", banner},
-                { "page_title", title},
-                { "can_share", can_share},
-                { "card_list", card_list == null?null:JsonConvert.SerializeObject(card_list,settings)},
             };
             return parameters;
         }
@@ -79,6 +75,18 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "banner", banner},
+                { "page_title", title},
+                { "can_share", can_share},
+                { "card_list", card_list == null?null:JsonConvert.SerializeObject(card_list,settings)},
+            };
+            return parameters;
         }
 
         #endregion

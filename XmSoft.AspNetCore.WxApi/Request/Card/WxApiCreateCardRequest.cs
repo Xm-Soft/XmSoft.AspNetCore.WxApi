@@ -51,11 +51,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "card",groupon != null ? JsonConvert.SerializeObject(groupon,settings)
-                :gift != null ? JsonConvert.SerializeObject(gift,settings)
-                :cash != null ? JsonConvert.SerializeObject(cash,settings)
-                :discount != null ? JsonConvert.SerializeObject(discount,settings)
-                :JsonConvert.SerializeObject(generalCoupon,settings) }
             };
             return parameters;
         }
@@ -66,6 +61,19 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "card",groupon != null ? JsonConvert.SerializeObject(groupon,settings)
+                :gift != null ? JsonConvert.SerializeObject(gift,settings)
+                :cash != null ? JsonConvert.SerializeObject(cash,settings)
+                :discount != null ? JsonConvert.SerializeObject(discount,settings)
+                :JsonConvert.SerializeObject(generalCoupon,settings) }
+            };
+            return parameters;
         }
 
         #endregion

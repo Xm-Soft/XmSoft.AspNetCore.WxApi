@@ -65,6 +65,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
         /// 图文消息 （点击跳转到图文消息页面） 图文消息条数限制在1条以内，注意，如果图文数超过1，则将会返回错误码45008。
         /// </summary>
         public MpNews MpNews { get; set;}
+
         #region IWxApiRequest Members
 
         public string GetRequestUrl()
@@ -77,6 +78,19 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
+            };
+            return parameters;
+        }
+
+        public bool IsPost()
+        {
+            return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
                 { "touser", Touser },
                 { "msgtype",Enum.GetName(typeof(MsgType), MsgType).ToLower() },
                 {"text",Text == null?null:JsonConvert.SerializeObject(Text) },
@@ -91,11 +105,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
 
             };
             return parameters;
-        }
-
-        public bool IsPost()
-        {
-            return true;
         }
 
         #endregion

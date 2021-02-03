@@ -45,7 +45,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Poi
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "buffer",Buffer == null ? null:JsonConvert.SerializeObject(Buffer) }
             };
             return parameters;
         }
@@ -56,6 +55,15 @@ namespace XmSoft.AspNetCore.WxApi.Request.Poi
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "buffer",Buffer == null ? null:JsonConvert.SerializeObject(Buffer) }
+            };
+            return parameters;
         }
 
         #endregion

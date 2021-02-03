@@ -23,14 +23,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
         /// 客户账号
         /// </summary>
         public string KF_account { get; set; }
-        /// <summary>
-        /// 客户名
-        /// </summary>
-        public string Nickname { get; set; }
-        /// <summary>
-        /// 密码
-        /// </summary>
-        public string Password { get; set; }
+
 
 
         #region IWxApiRequest Members
@@ -45,10 +38,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "kf_account", KF_account },
-                { "nickname", Nickname },
-                { "password", Password }
-
             };
             return parameters;
         }
@@ -56,6 +45,15 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "kf_account", KF_account },
+            };
+            return parameters;
         }
 
         #endregion

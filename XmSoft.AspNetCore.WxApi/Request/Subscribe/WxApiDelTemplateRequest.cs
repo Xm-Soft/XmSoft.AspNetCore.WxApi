@@ -26,6 +26,16 @@ namespace XmSoft.AspNetCore.WxApi.Request.Subscribe
         /// 要删除的模板id
         /// </summary>
         public string PriTmplId { get; set; }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "priTmplId",PriTmplId },
+            };
+            return parameters;
+        }
+
         /// <summary>
         /// 请求参数
         /// </summary>
@@ -35,7 +45,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Subscribe
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "priTmplId",PriTmplId },
             };
             return parameters;
         }

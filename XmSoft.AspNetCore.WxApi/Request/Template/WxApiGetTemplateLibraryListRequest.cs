@@ -47,10 +47,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "offset", Offset },
-                { "count", Count }
-
-
             };
             return parameters;
         }
@@ -61,6 +57,16 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "offset", Offset },
+                { "count", Count }
+            };
+            return parameters;
         }
 
         #endregion

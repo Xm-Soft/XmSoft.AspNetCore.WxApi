@@ -37,6 +37,12 @@ namespace XmSoft.AspNetCore.WxApi.Request.Subscribe
         /// 授权token （必填）
         /// </summary>
         public string AccessToken { get; set; }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            return new WxApiDictionary();
+        }
+
         /// <summary>
         /// 请求参数
         /// </summary>

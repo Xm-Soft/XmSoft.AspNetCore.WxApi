@@ -56,9 +56,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
                 { "format", Format },
                 { "voice_id", Voice_id },
                 { "lang", Lang },
-                { "body",Body },
-                { "media_path",MediaPath }
-
             };
             return parameters;
         }
@@ -66,6 +63,16 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "body",Body },
+                { "media_path",MediaPath }
+            };
+            return parameters;
         }
 
         #endregion

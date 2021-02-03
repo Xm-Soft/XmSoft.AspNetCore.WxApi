@@ -48,6 +48,21 @@ namespace XmSoft.AspNetCore.WxApi.Request.Subscribe
         /// 进入小程序查看”的语言类型，支持zh_CN(简体中文)、en_US(英文)、zh_HK(繁体中文)、zh_TW(繁体中文)，默认为zh_CN （可选）
         /// </summary>
         public string Lang { get; set; }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "touser", Touser },
+                { "template_id", Template_Id },
+                { "page", Page },
+                { "data", Data },
+                { "miniprogram_state", Miniprogram_State },
+                { "lang",Lang }
+            };
+            return parameters;
+        }
+
         /// <summary>
         /// 请求参数
         /// </summary>
@@ -57,14 +72,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Subscribe
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "touser", Touser },
-                { "template_id", Template_Id },
-                { "page", Page },
-                { "data", Data },
-                { "miniprogram_state", Miniprogram_State },
-                { "lang",Lang }
-
-
             };
             return parameters;
         }

@@ -53,9 +53,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "card_id",Card_id },
-                { "code",Code },
-                { "reason",Reason }
             };
             return parameters;
         }
@@ -66,6 +63,17 @@ namespace XmSoft.AspNetCore.WxApi.Request.Card
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "card_id",Card_id },
+                { "code",Code },
+                { "reason",Reason }
+            };
+            return parameters;
         }
 
         #endregion

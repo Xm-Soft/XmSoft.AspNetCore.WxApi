@@ -7,6 +7,9 @@ using XmSoft.AspNetCore.WxApi.Parser;
 
 namespace XmSoft.AspNetCore.WxApi
 {
+    /// <summary>
+    /// 回调通知
+    /// </summary>
     public class WxApiNotifyClient : IDisposable, IWxApiNotifyClient
     {
         /// <summary>
@@ -22,8 +25,7 @@ namespace XmSoft.AspNetCore.WxApi
         /// 获取的Body XML数据流转化成相应的对象
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="body"></param>
-        /// <param name="optionsName"></param>
+        /// <param name="stream"></param>
         /// <returns></returns>
         public async Task<T> ExecuteAsync<T>(Stream stream) where T : WxApiNotify
         {

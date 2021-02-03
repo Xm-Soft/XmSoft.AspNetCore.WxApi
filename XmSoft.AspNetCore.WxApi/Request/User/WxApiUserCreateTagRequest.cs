@@ -45,7 +45,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.User
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "tag", Tag }
             };
             return parameters;
         }
@@ -56,6 +55,15 @@ namespace XmSoft.AspNetCore.WxApi.Request.User
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "tag", Tag }
+            };
+            return parameters;
         }
 
         #endregion

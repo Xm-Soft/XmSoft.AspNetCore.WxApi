@@ -57,6 +57,11 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
             return false;
         }
 
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            return new WxApiDictionary();
+        }
+
         #endregion
     }
    

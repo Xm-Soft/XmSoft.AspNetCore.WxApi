@@ -44,7 +44,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 {
 
                     AppId = "wx13c069c9a4a9aa48",
-                    Code = "0518i80w3h8gOU2dKz1w38Cfdk28i80Q",
+                    Code = "001hTd1001lt8L1kPW000FX4wG1hTd1W",
                     Secret = "73cc6fe4cb0dbc22f432e297e4e685da" //oknLJ1aXS1vhkw_wg6UrKXFEGFRg
                 };
                 var s = await client.ExecuteAsync(request);

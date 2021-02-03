@@ -47,8 +47,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "template_id_short", Template_id_short },
-         
             };
             return parameters;
         }
@@ -59,6 +57,15 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "template_id_short", Template_id_short },
+            };
+            return parameters;
         }
 
         #endregion

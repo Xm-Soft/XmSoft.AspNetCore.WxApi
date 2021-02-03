@@ -58,10 +58,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Express
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "order_id", Order_id },
-                { "openid", Openid },
-                { "delivery_id", Delivery_id },
-                {"waybill_id",Waybill_id }
             };
             return parameters;
         }
@@ -72,6 +68,18 @@ namespace XmSoft.AspNetCore.WxApi.Request.Express
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "order_id", Order_id },
+                { "openid", Openid },
+                { "delivery_id", Delivery_id },
+                {"waybill_id",Waybill_id }
+            };
+            return parameters;
         }
 
         #endregion

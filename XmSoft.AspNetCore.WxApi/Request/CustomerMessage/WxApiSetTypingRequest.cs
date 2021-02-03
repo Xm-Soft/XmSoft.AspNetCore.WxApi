@@ -39,9 +39,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "touser", Touser },
-                { "command", Command }
-
             };
             return parameters;
         }
@@ -49,6 +46,16 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerMessage
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "touser", Touser },
+                { "command", Command }
+            };
+            return parameters;
         }
 
         #endregion

@@ -45,8 +45,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                   { "action_name", action_name },
-                    { "action_info",JsonConvert.SerializeObject(action_info) }
             };
             return parameters;
         }
@@ -54,6 +52,16 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "action_name", action_name },
+                { "action_info",JsonConvert.SerializeObject(action_info) }
+            };
+            return parameters;
         }
 
         #endregion

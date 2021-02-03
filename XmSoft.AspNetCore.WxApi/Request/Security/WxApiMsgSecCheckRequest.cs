@@ -49,8 +49,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Security
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                {"content",Content }
-               
             };
             return parameters;
         }
@@ -61,6 +59,15 @@ namespace XmSoft.AspNetCore.WxApi.Request.Security
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                {"content",Content }
+            };
+            return parameters;
         }
 
         #endregion

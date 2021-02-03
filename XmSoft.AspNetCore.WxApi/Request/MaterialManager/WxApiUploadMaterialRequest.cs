@@ -56,9 +56,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                {"type" ,Enum.GetName(typeof(MsgType), Type).ToLower() },
-                {"media_path",MediaPath },
-                {"description",Description == null ? null : JsonConvert.SerializeObject(Description) }
             };
             return parameters;
         }
@@ -69,6 +66,17 @@ namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                {"type" ,Enum.GetName(typeof(MsgType), Type).ToLower() },
+                {"media_path",MediaPath },
+                {"description",Description == null ? null : JsonConvert.SerializeObject(Description) }
+            };
+            return parameters;
         }
 
         #endregion

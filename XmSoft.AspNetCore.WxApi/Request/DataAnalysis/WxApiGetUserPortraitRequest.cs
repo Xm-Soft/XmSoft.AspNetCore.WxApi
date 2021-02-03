@@ -41,8 +41,6 @@ namespace XmSoft.AspNetCore.WxApi.Request
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "begin_date", BeginDate },
-                { "end_date", EndDate }
             };
             return parameters;
         }
@@ -50,6 +48,16 @@ namespace XmSoft.AspNetCore.WxApi.Request
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "begin_date", BeginDate },
+                { "end_date", EndDate }
+            };
+            return parameters;
         }
 
         #endregion

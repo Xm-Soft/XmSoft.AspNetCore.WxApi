@@ -65,12 +65,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "touser", Touser },
-                { "template_id", Template_id },
-                { "url", Url },
-                { "miniprogram", Miniprogram == null ? null: JsonConvert.SerializeObject(Miniprogram) },
-                { "data", Data }
-
             };
             return parameters;
         }
@@ -81,6 +75,19 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "touser", Touser },
+                { "template_id", Template_id },
+                { "url", Url },
+                { "miniprogram", Miniprogram == null ? null: JsonConvert.SerializeObject(Miniprogram) },
+                { "data", Data }
+            };
+            return parameters;
         }
 
         #endregion

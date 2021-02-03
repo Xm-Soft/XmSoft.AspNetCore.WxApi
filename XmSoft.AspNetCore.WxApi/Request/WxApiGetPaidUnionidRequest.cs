@@ -64,6 +64,7 @@ namespace XmSoft.AspNetCore.WxApi.Request
             };
             return parameters;
         }
+
         /// <summary>
         /// 请求方式 Post Or Get
         /// </summary>
@@ -71,6 +72,11 @@ namespace XmSoft.AspNetCore.WxApi.Request
         public bool IsPost()
         {
             return false;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            return new WxApiDictionary();
         }
 
         #endregion

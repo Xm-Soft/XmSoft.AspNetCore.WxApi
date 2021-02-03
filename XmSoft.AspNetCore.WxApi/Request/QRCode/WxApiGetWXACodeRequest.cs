@@ -56,12 +56,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "path", Path },
-                { "width", Width },
-                { "auto_color", Auto_color },
-                { "line_color", Line_color == null? null: JsonConvert.SerializeObject(Line_color) },
-                { "is_hyaline", Is_hyaline }
-               
             };
             return parameters;
         }
@@ -69,6 +63,19 @@ namespace XmSoft.AspNetCore.WxApi.Request.QRCode
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "path", Path },
+                { "width", Width },
+                { "auto_color", Auto_color },
+                { "line_color", Line_color == null? null: JsonConvert.SerializeObject(Line_color) },
+                { "is_hyaline", Is_hyaline }
+            };
+            return parameters;
         }
 
         #endregion

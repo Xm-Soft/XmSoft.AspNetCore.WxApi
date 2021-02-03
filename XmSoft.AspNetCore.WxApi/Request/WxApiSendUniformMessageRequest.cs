@@ -44,7 +44,7 @@ namespace XmSoft.AspNetCore.WxApi.Request
             return "https://api.weixin.qq.com/cgi-bin/message/wxopen/template/uniform_send";
         }
         /// <summary>
-        /// 获取参数
+        /// 获取Url参数
         /// </summary>
         /// <returns></returns>
         public IDictionary<string, object> GetParameters()
@@ -52,9 +52,6 @@ namespace XmSoft.AspNetCore.WxApi.Request
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "touser", Touser },
-                { "weapp_template_msg",Weapp_Template_Msg == null?null:JsonConvert.SerializeObject(Weapp_Template_Msg) },
-                { "mp_template_msg",Mp_Template_Msg == null ? null: JsonConvert.SerializeObject(Mp_Template_Msg) }
             };
             return parameters;
         }
@@ -65,6 +62,20 @@ namespace XmSoft.AspNetCore.WxApi.Request
         public bool IsPost()
         {
             return true;
+        }
+        /// <summary>
+        /// Body参数
+        /// </summary>
+        /// <returns></returns>
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "touser", Touser },
+                { "weapp_template_msg",Weapp_Template_Msg == null?null:JsonConvert.SerializeObject(Weapp_Template_Msg) },
+                { "mp_template_msg",Mp_Template_Msg == null ? null: JsonConvert.SerializeObject(Mp_Template_Msg) }
+            };
+            return parameters;
         }
 
         #endregion

@@ -46,7 +46,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.User
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "begin_openid", Begin_openid }
             };
             return parameters;
         }
@@ -57,6 +56,18 @@ namespace XmSoft.AspNetCore.WxApi.Request.User
         public bool IsPost()
         {
             return true;
+        }
+        /// <summary>
+        /// Body 参数
+        /// </summary>
+        /// <returns></returns>
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "begin_openid", Begin_openid }
+            };
+            return parameters;
         }
 
         #endregion

@@ -34,7 +34,18 @@ namespace XmSoft.AspNetCore.WxApi.Request.Subscribe
         /// 服务场景描述，15个字以内 （可选）
         /// </summary>
         public string SceneDesc { get; set; }
-       
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "tid", Tid },
+                { "kidList", KidList },
+                { "sceneDesc", SceneDesc },
+            };
+            return parameters;
+        }
+
         /// <summary>
         /// 请求参数
         /// </summary>
@@ -44,10 +55,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Subscribe
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "tid", Tid },
-                { "kidList", KidList },
-                { "sceneDesc", SceneDesc },
-  
             };
             return parameters;
         }

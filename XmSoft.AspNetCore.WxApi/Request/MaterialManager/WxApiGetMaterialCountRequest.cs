@@ -44,6 +44,11 @@ namespace XmSoft.AspNetCore.WxApi.Request.MaterialManager
             return false;
         }
 
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            return new WxApiDictionary();
+        }
+
         #endregion
     }
     

@@ -42,9 +42,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.NearbyPoi
             var parameters = new WxApiDictionary
             {
                 { "access_token", AccessToken },
-                { "poi_id", Poi_id },
-                {"status",Status }
-            
             };
             return parameters;
         }
@@ -52,6 +49,16 @@ namespace XmSoft.AspNetCore.WxApi.Request.NearbyPoi
         public bool IsPost()
         {
             return true;
+        }
+
+        public IDictionary<string, object> GetBodyParametes()
+        {
+            var parameters = new WxApiDictionary
+            {
+                { "poi_id", Poi_id },
+                {"status",Status }
+            };
+            return parameters;
         }
 
         #endregion
