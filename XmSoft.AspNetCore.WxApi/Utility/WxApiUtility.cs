@@ -30,14 +30,12 @@ namespace XmSoft.AspNetCore.WxApi
         /// </summary>
         /// <param name="dictionary"></param>
         /// <returns></returns>
-        public static string BulidJsonContent(SortedDictionary<string, object> dictionary,List<string> filterkey)
+        public static string BulidJsonContent(SortedDictionary<string, object> dictionary)
         {
             var content = new StringBuilder();
             content.Append("{");
             foreach (var dic in dictionary)
             {
-                if (filterkey.Contains(dic.Key))
-                    continue;
                 if (dic.Value.ToString().Contains("{") || dic.Value.ToString().Contains("[{"))
                     content.Append("\"").Append(dic.Key).Append("\":").Append(dic.Value).Append(",");
                 else
@@ -49,12 +47,13 @@ namespace XmSoft.AspNetCore.WxApi
                         content.Append("\"").Append(dic.Key).Append("\":").Append(dic.Value.ToString().ToLower()).Append(",");
                 }
             }
-            if (content.ToString() == "{") //判断Json是否有数据，否则返回null
-                return null;
-            content = content.Replace(",", "", content.Length - 1, 1);
-            content.Append("}");
-            if (content.ToString() == "{}")
-                return string.Empty; //获取的没有Json参数，返回空
+            //判断Json是否有数据，否则返回null
+            if (content.ToString() == "{") return string.Empty;
+
+            content = content.Replace(",", "", content.Length - 1, 1).Append("}");
+
+            //获取的没有Json参数，返回空
+            if (content.ToString() == "{}") return string.Empty; 
 
             return content.ToString();
         }

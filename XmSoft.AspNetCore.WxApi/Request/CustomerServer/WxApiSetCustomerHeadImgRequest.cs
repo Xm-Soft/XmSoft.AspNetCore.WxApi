@@ -34,7 +34,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.CustomerServer
 
         public string GetRequestUrl()
         {
-            return "http://api.weixin.qq.com/customservice/kfaccount/uploadheadimg";
+            return "https://api.weixin.qq.com/customservice/kfaccount/uploadheadimg";
         }
 
         public IDictionary<string, object> GetParameters()

@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using RestSharp;
 using Newtonsoft.Json;
+using XmSoft.AspNetCore.WxApi.Response;
 
 namespace XmSoft.AspNetCore.WxApi
 {
@@ -36,17 +37,80 @@ namespace XmSoft.AspNetCore.WxApi
                 var client = new RestClient(url);
                 var restRequest = new RestRequest(!IsPost ? Method.GET : Method.POST)
                 {
-                    Timeout = 12000
+                    Timeout = 12000,
                 };
                 if (IsPost)
                 {
-                    //把媒体文件上传到微信服务器
-                    //设置客服帐号的头像
-                    //提交语音
-                    //微信翻译
-                    //上传图片
-                    //新增其他类型永久素材
-                    //校验一张图片是否含有违法违规内容
+                    var body = Utility.BulidJsonContent(bodyParams);
+
+                    if (!string.IsNullOrEmpty(body))
+                    {
+                        restRequest.AddParameter(Constants.ContentType_Json, body, ParameterType.RequestBody);
+                    }
+                }
+
+                var response = await client.ExecuteTaskAsync(restRequest);
+
+                if (response.ContentType != null && !response.ContentType.Contains(Constants.Json) && !response.ContentType.Contains(Constants.Text))
+                {
+                    var contenttype = response.ContentType;
+
+                    //判断返回的类型是否为空，若为空，根据数据获取对应的文件类型
+                    if (string.IsNullOrEmpty(response.ContentType)) contenttype = FileContentType.Get(response.RawBytes);
+
+                    return new WxApiFileResponse
+                    {
+                        ErrCode = 0,
+                        Errmsg = "",
+                        Buffer = response.RawBytes,
+                        ContentType = string.IsNullOrEmpty(response.ContentType) ? contenttype : response.ContentType
+
+                    } as T;
+                }
+
+                return JsonConvert.DeserializeObject<T>(response.Content);
+
+            }
+            catch (WxApiException ex)
+            {
+                throw new WxApiException(ex.Message);
+            }
+
+        }
+
+
+        /// <summary>
+        /// 异步执行 针对文件请求 media_path / body
+        /// <para>
+        /// 1、把媒体文件上传到微信服务器
+        /// 2、设置客服帐号的头像
+        /// 3、提交语音
+        /// 4、微信翻译
+        /// 5、上传图片
+        /// 6、新增其他类型永久素材
+        /// 7、校验一张图片是否含有违法违规内容
+        /// </para>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="request">请求对象</param>
+        /// <returns></returns>
+        public async Task<T> ExecuteFileAsync<T>(IWxApiRequest<T> request) where T : WxApiResponse
+        {
+            try
+            {
+                var sortedParams = new WxApiDictionary(request.GetParameters());  //Url  参数
+                var bodyParams = new WxApiDictionary(request.GetBodyParametes()); //Body 参数
+                var content = Utility.BulidContent(sortedParams);
+                var IsPost = request.IsPost();
+                var url = !string.IsNullOrEmpty(content) ? $"{request.GetRequestUrl()}?{content}" : request.GetRequestUrl();
+
+                var client = new RestClient(url);
+                var restRequest = new RestRequest(!IsPost ? Method.GET : Method.POST)
+                {
+                    Timeout = 12000,
+                };
+                if (IsPost)
+                {
                     if (!string.IsNullOrEmpty(bodyParams.GetValue(Constants.Media_path)?.ToString()) && System.IO.File.Exists(Constants.Media_path))
                     {
                         var fileType = System.IO.Path.GetExtension(bodyParams.GetValue(Constants.Media_path).ToString());
@@ -58,38 +122,30 @@ namespace XmSoft.AspNetCore.WxApi
                             restRequest.AddParameter(Constants.Description, bodyParams.GetValue(Constants.Description));
                         }
                     }
-                    else
-                    {
-                        var body = string.Empty;
-                        var contentType = Constants.ContentType_Json;
-                        if (bodyParams.ContainsKey(Constants.Body)) //参数中是否包含 body 字符串，不是Json数据
-                        {
-                            contentType = Constants.ContentType_Text;
-                            body = bodyParams.GetValue(Constants.Body).ToString();
-                        }
-                        else
-                        {
-                            body = Utility.BulidJsonContent(bodyParams, new List<string>());
-                        }
 
+                    if (bodyParams.ContainsKey(Constants.Body)) //参数中是否包含 body 字符串，不是Json数据
+                    {
+                        var contentType = Constants.ContentType_Text;
+                        var body = bodyParams.GetValue(Constants.Body).ToString();
+                        //语音内容 或 翻译内容
                         if (!string.IsNullOrEmpty(body))
                         {
-                            restRequest.AddParameter(contentType, body, ParameterType.RequestBody);
+                            restRequest.AddParameter(contentType, body,  ParameterType.RequestBody);
                         }
                     }
+
                 }
 
                 var response = await client.ExecuteTaskAsync(restRequest);
 
-
-                if (!response.ContentType.Contains(Constants.Json) && !response.ContentType.Contains(Constants.Text))
+                if (response.ContentType != null && !response.ContentType.Contains(Constants.Json) && !response.ContentType.Contains(Constants.Text))
                 {
                     var contenttype = response.ContentType;
 
                     //判断返回的类型是否为空，若为空，根据数据获取对应的文件类型
                     if (string.IsNullOrEmpty(response.ContentType)) contenttype = FileContentType.Get(response.RawBytes);
 
-                    return new
+                    return new WxApiFileResponse
                     {
                         ErrCode = 0,
                         Errmsg = "",

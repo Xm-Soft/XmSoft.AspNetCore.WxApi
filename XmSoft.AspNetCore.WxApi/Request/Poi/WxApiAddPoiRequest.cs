@@ -34,7 +34,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Poi
         /// <returns></returns>
         public string GetRequestUrl()
         {
-            return "http://api.weixin.qq.com/cgi-bin/poi/addpoi";
+            return "https://api.weixin.qq.com/cgi-bin/poi/addpoi";
         }
         /// <summary>
         /// 获取参数

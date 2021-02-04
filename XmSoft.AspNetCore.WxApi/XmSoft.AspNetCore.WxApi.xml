@@ -2260,7 +2260,7 @@
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiQueryRecoresultfortextRequest">
             <summary>
-            提交语音
+            获取语音识别结果
             </summary>
         </member>
         <member name="M:XmSoft.AspNetCore.WxApi.Request.Intelligent.WxApiQueryRecoresultfortextRequest.#ctor">
@@ -5648,7 +5648,7 @@
             <param name="dictionary"></param>
             <returns></returns>
         </member>
-        <member name="M:XmSoft.AspNetCore.WxApi.Utility.BulidJsonContent(System.Collections.Generic.SortedDictionary{System.String,System.Object},System.Collections.Generic.List{System.String})">
+        <member name="M:XmSoft.AspNetCore.WxApi.Utility.BulidJsonContent(System.Collections.Generic.SortedDictionary{System.String,System.Object})">
             <summary>
             字典转Json字符串
             </summary>
@@ -5682,6 +5682,23 @@
         <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.ExecuteAsync``1(XmSoft.AspNetCore.WxApi.IWxApiRequest{``0})">
             <summary>
             异步执行
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.ExecuteFileAsync``1(XmSoft.AspNetCore.WxApi.IWxApiRequest{``0})">
+            <summary>
+            异步执行 针对文件请求 media_path
+            <para>
+            1、把媒体文件上传到微信服务器
+            2、设置客服帐号的头像
+            3、提交语音
+            4、微信翻译
+            5、上传图片
+            6、新增其他类型永久素材
+            7、校验一张图片是否含有违法违规内容
+            </para>
             </summary>
             <typeparam name="T"></typeparam>
             <param name="request">请求对象</param>
@@ -5738,6 +5755,11 @@
             事件类型
             </summary>
         </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.WxApiNotifyClient">
+            <summary>
+            回调通知
+            </summary>
+        </member>
         <member name="M:XmSoft.AspNetCore.WxApi.WxApiNotifyClient.#ctor">
             <summary>
             回调通知
@@ -5748,8 +5770,7 @@
             获取的Body XML数据流转化成相应的对象
             </summary>
             <typeparam name="T"></typeparam>
-            <param name="body"></param>
-            <param name="optionsName"></param>
+            <param name="stream"></param>
             <returns></returns>
         </member>
         <member name="M:XmSoft.AspNetCore.WxApi.WxApiNotifyClient.Finalize">

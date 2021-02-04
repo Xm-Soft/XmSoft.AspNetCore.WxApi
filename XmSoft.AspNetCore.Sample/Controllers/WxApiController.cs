@@ -18,6 +18,7 @@ using XmSoft.AspNetCore.WxApi.Request.User;
 using XmSoft.AspNetCore.WxApi.Request.Intelligent;
 using log4net;
 using XmSoft.AspNetCore.WxApi.Request.QRCode;
+using System.Diagnostics;
 
 namespace XmSoft.AspNetCore.Sample.Controllers
 {
@@ -36,20 +37,24 @@ namespace XmSoft.AspNetCore.Sample.Controllers
         }
         [HttpPost]
         [Route("Code2Session")]
-        public async Task<JsonResult> Code2Session()
+        public async Task<JsonResult> Code2Session(string Code)
         {
             using (var client = new WxApi.WxApiClient())
             {
+                var sw = new Stopwatch();
+                sw.Start();
                 var request = new WxApiCode2SessionRequest()
                 {
 
-                    AppId = "wx13c069c9a4a9aa48",
-                    Code = "001hTd1001lt8L1kPW000FX4wG1hTd1W",
+                    AppId =  "wx13c069c9a4a9aa48",
+                    Code =  Code,//"001hTd1001lt8L1kPW000FX4wG1hTd1W",
                     Secret = "73cc6fe4cb0dbc22f432e297e4e685da" //oknLJ1aXS1vhkw_wg6UrKXFEGFRg
                 };
                 var s = await client.ExecuteAsync(request);
                 logging.LogInformation(s.ErrCode + "msg: "+s.Errmsg + " "+ s.OpenId);
-                return Json(new { Code = 1, Msg = "成功" });
+                var time = sw.ElapsedMilliseconds;
+                sw.Stop();
+                return Json(new { Code = 1, Msg = "成功",Data = s.OpenId });
             }
 
         }
@@ -63,6 +68,8 @@ namespace XmSoft.AspNetCore.Sample.Controllers
         {
             using (var client = new WxApi.WxApiClient())
             {
+                var sw = new Stopwatch();
+                sw.Start();
                 var request = new WxApiGetAccessTokenRequest()
                 {
                     AppId = string.IsNullOrEmpty(AppId)? "wx3f66a34f3c56406c" : AppId,//"wx346f2583af4c5a8f",
@@ -70,10 +77,47 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 };
                 var s = await client.ExecuteAsync(request);
                 logger.Info($"token:{s.AccessToken}");
+                var time = sw.ElapsedMilliseconds;
+                sw.Stop();
                 return Json(new { Code = 1, Msg = "成功", Data = s });
             }
 
         }
+        [HttpPost]
+        [Route("QRCode")]
+        public async Task<JsonResult> QRCode(string AccessToken)
+        {
+            using (var client = new WxApiClient())
+            {
+                var sw = new Stopwatch();
+                sw.Start();
+                var request = new WxApiGetWXACodeUnlimitRequest
+                {
+                    Scene = "121992",
+                    AccessToken = AccessToken,
+                    Page = "pages/index/index",
+                    Auto_color = false,
+                    Line_color = new Line_Color { R = "0", B = "0", G = "0" },
+                    //Width = t.Width
+                };
+                var result = await client.ExecuteAsync(request);
+                logger.Info($"返回的Msg:{result.Errmsg}");
+                if (result != null && result.Buffer != null)
+                {
+                    //var image = Convert.ToBase64String(result.Buffer);
+                    var time = sw.ElapsedMilliseconds;
+                    sw.Stop();
+
+                    return  Json(new { Success = true, Data = result.Buffer });
+                }
+
+                var time1 = sw.ElapsedMilliseconds;
+                sw.Stop();
+
+                return Json(new { Success = false, Msg = "失败" });
+            }
+        }
+
         /// <summary>
         /// 访问留存 - 日
         /// </summary>
@@ -742,7 +786,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                     Body = "美好的一天",
                     
                 };
-                var response = await client.ExecuteAsync(request);
+                var response = await client.ExecuteFileAsync(request);
 
                 return Json(new { Code = 1, Msg = "成功", Data = response });
             }

@@ -7,7 +7,7 @@ using XmSoft.AspNetCore.WxApi.Response;
 namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
 {
     /// <summary>
-    /// 提交语音
+    /// 获取语音识别结果
     /// </summary>
     public class WxApiQueryRecoresultfortextRequest : IWxApiRequest<WxApiQueryRecoresultfortextResponse>
     {
@@ -33,7 +33,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
 
         public string GetRequestUrl()
         {
-            return "http://api.weixin.qq.com/cgi-bin/media/voice/queryrecoresultfortext";
+            return "https://api.weixin.qq.com/cgi-bin/media/voice/queryrecoresultfortext";
         }
 
         public IDictionary<string, object> GetParameters()

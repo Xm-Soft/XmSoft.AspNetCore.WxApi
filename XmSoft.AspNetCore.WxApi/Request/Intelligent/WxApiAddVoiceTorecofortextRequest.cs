@@ -45,7 +45,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Intelligent
 
         public string GetRequestUrl()
         {
-            return "http://api.weixin.qq.com/cgi-bin/media/voice/addvoicetorecofortext";
+            return "https://api.weixin.qq.com/cgi-bin/media/voice/addvoicetorecofortext";
         }
 
         public IDictionary<string, object> GetParameters()
