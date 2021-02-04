@@ -37,7 +37,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
         }
         [HttpPost]
         [Route("Code2Session")]
-        public async Task<JsonResult> Code2Session(string Code)
+        public async Task<JsonResult> Code2Session(string AppId,string Secret,string Code)
         {
             using (var client = new WxApi.WxApiClient())
             {
@@ -46,9 +46,9 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiCode2SessionRequest()
                 {
 
-                    AppId =  "wx13c069c9a4a9aa48",
+                    AppId = AppId,// "wx13c069c9a4a9aa48",
                     Code =  Code,//"001hTd1001lt8L1kPW000FX4wG1hTd1W",
-                    Secret = "73cc6fe4cb0dbc22f432e297e4e685da" //oknLJ1aXS1vhkw_wg6UrKXFEGFRg
+                    Secret = Secret,// "73cc6fe4cb0dbc22f432e297e4e685da" //oknLJ1aXS1vhkw_wg6UrKXFEGFRg
                 };
                 var s = await client.ExecuteAsync(request);
                 logging.LogInformation(s.ErrCode + "msg: "+s.Errmsg + " "+ s.OpenId);

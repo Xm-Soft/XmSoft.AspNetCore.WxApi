@@ -29,7 +29,6 @@ namespace XmSoft.AspNetCore.WxApi
             try
             {
                 var sortedParams = new WxApiDictionary(request.GetParameters());  //Url  参数
-                var bodyParams = new WxApiDictionary(request.GetBodyParametes()); //Body 参数
                 var content = Utility.BulidContent(sortedParams);
                 var IsPost = request.IsPost();
                 var url = !string.IsNullOrEmpty(content) ? $"{request.GetRequestUrl()}?{content}" : request.GetRequestUrl();
@@ -37,10 +36,11 @@ namespace XmSoft.AspNetCore.WxApi
                 var client = new RestClient(url);
                 var restRequest = new RestRequest(!IsPost ? Method.GET : Method.POST)
                 {
-                    Timeout = 12000,
+                    Timeout = 10000,
                 };
                 if (IsPost)
                 {
+                    var bodyParams = new WxApiDictionary(request.GetBodyParametes()); //Body 参数
                     var body = Utility.BulidJsonContent(bodyParams);
 
                     if (!string.IsNullOrEmpty(body))
@@ -99,7 +99,6 @@ namespace XmSoft.AspNetCore.WxApi
             try
             {
                 var sortedParams = new WxApiDictionary(request.GetParameters());  //Url  参数
-                var bodyParams = new WxApiDictionary(request.GetBodyParametes()); //Body 参数
                 var content = Utility.BulidContent(sortedParams);
                 var IsPost = request.IsPost();
                 var url = !string.IsNullOrEmpty(content) ? $"{request.GetRequestUrl()}?{content}" : request.GetRequestUrl();
@@ -111,6 +110,7 @@ namespace XmSoft.AspNetCore.WxApi
                 };
                 if (IsPost)
                 {
+                    var bodyParams = new WxApiDictionary(request.GetBodyParametes()); //Body 参数
                     if (!string.IsNullOrEmpty(bodyParams.GetValue(Constants.Media_path)?.ToString()) && System.IO.File.Exists(Constants.Media_path))
                     {
                         var fileType = System.IO.Path.GetExtension(bodyParams.GetValue(Constants.Media_path).ToString());
