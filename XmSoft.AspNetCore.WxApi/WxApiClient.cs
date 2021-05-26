@@ -51,6 +51,7 @@ namespace XmSoft.AspNetCore.WxApi
 
                 var response = await client.ExecuteTaskAsync(restRequest);
 
+
                 if (response.ContentType != null && !response.ContentType.Contains(Constants.Json) && !response.ContentType.Contains(Constants.Text))
                 {
                     var contenttype = response.ContentType;
