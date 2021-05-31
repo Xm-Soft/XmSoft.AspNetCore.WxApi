@@ -3707,66 +3707,72 @@
             公众号模板消息所属行业编号
             </summary>
         </member>
-        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest">
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest">
              <summary>
             发送模板消息
              </summary>
         </member>
-        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.#ctor">
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.#ctor">
             <summary>
             发送模板消息 - 公众平台
             </summary>
         </member>
-        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.AccessToken">
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.AccessToken">
             <summary>
             Token
             </summary>
         </member>
-        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Template_id">
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.Template_id">
             <summary>
             公众帐号下模板消息ID
             </summary>
         </member>
-        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Touser">
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.Touser">
             <summary>
             接收者openid
             </summary>
         </member>
-        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Url">
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.Url">
             <summary>
             模板跳转链接（海外帐号没有跳转能力）
             </summary>
         </member>
-        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Miniprogram">
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.Miniprogram">
             <summary>
             跳小程序所需数据，不需跳小程序可不用传该数据 非必填
             </summary>
         </member>
-        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Data">
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.Data">
             <summary>
             模板数据 Json 数据
             </summary>
         </member>
-        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.Color">
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.Color">
             <summary>
             模板内容字体颜色，不填默认为黑色 非必填
             </summary>
         </member>
-        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.GetRequestUrl">
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.GetRequestUrl">
             <summary>
             请求地址
             </summary>
             <returns></returns>
         </member>
-        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.GetParameters">
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.GetParameters">
             <summary>
             请求参数
             </summary>
             <returns></returns>
         </member>
-        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApSendTemplateMessageRequest.IsPost">
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.IsPost">
             <summary>
             IsPost
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Template.Message.WxApiSendTemplateMessageRequest.GetBodyParametes">
+            <summary>
+            获取Body
             </summary>
             <returns></returns>
         </member>

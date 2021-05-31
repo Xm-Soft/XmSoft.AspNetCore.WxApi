@@ -2,9 +2,10 @@
 
   <PropertyGroup>
     <TargetFrameworks>net45;net46;netstandard2.0</TargetFrameworks>
-    <Version>1.0.8.1</Version>
+    <Version>1.0.8.2</Version>
     <Authors>XmSoft</Authors>
     <Company>XmSoft</Company>
+    <Description>微信公众平台API和小程序服务API</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
