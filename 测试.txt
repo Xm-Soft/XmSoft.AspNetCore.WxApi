@@ -1,0 +1,16 @@
+appID
+wx346f2583af4c5a8f
+appsecret
+54421a46b51f40b0956b54a736421ea9
+
+
+
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx346f2583af4c5a8f&redirect_uri=http%3a%2f%2f224091yc80.zicp.vip%2api%2home%2unifiedorder&response_type=code&scope=snsapi_base&state=123#wechat_redirect
+
+
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx346f2583af4c5a8f&redirect_uri=http%3A%2F%2F224091yc80.zicp.vip%2Fapi%2Fhome%2Funifiedorder&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect
+
+
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx346f2583af4c5a8f&redirect_uri=http%3A%2F%2F23p90708f5.wicp.vip%2Fapi%2Fhome%2Funifiedorder&response_type=code&scope=snsapi_base&state=123#wechat_redirect
+
+http://224091yc80.zicp.vip/api/home/getcode

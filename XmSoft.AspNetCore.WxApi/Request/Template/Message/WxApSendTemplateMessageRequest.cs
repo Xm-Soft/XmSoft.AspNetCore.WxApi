@@ -9,12 +9,12 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
     /// <summary>
     ///发送模板消息
     /// </summary>
-    public class WxApSendTemplateMessageRequest : IWxApiRequest<WxApiSendTemplateMessageResponse>
+    public class WxApiSendTemplateMessageRequest : IWxApiRequest<WxApiSendTemplateMessageResponse>
     {
         /// <summary>
         /// 发送模板消息 - 公众平台
         /// </summary>
-        public WxApSendTemplateMessageRequest()
+        public WxApiSendTemplateMessageRequest()
         {
         }
         /// <summary>
@@ -41,7 +41,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
         /// <summary>
         /// 模板数据 Json 数据
         /// </summary>
-        public string Data { get; set; }
+        public object Data { get; set; }
         /// <summary>
         /// 模板内容字体颜色，不填默认为黑色 非必填
         /// </summary>
@@ -76,7 +76,10 @@ namespace XmSoft.AspNetCore.WxApi.Request.Template.Message
         {
             return true;
         }
-
+        /// <summary>
+        /// 获取Body
+        /// </summary>
+        /// <returns></returns>
         public IDictionary<string, object> GetBodyParametes()
         {
             var parameters = new WxApiDictionary

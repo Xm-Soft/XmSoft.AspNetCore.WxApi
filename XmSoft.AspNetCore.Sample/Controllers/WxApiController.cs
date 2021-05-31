@@ -19,6 +19,7 @@ using XmSoft.AspNetCore.WxApi.Request.Intelligent;
 using log4net;
 using XmSoft.AspNetCore.WxApi.Request.QRCode;
 using System.Diagnostics;
+using XmSoft.AspNetCore.WxApi.Request.Template.Message;
 
 namespace XmSoft.AspNetCore.Sample.Controllers
 {
@@ -793,5 +794,60 @@ namespace XmSoft.AspNetCore.Sample.Controllers
 
         }
         #endregion
+
+        #region 消息模板发送
+        [HttpPost("Send")]
+        public async Task<IActionResult> Send(string access_token)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var data = new 
+                {
+                    first = new 
+                    {
+                        value = "恭喜你购买成功！",
+                        color = "#173177"
+                    },
+                    keyword1 = new
+                    {
+                        value = "恭喜你购买成功！",
+                        color = "#173177"
+                    },
+                    keyword2 = new
+                    {
+                        value = "恭喜你购买成功！",
+                        color = "#173177"
+                    },
+                    remark=new
+                    {
+                        value = "备注！",
+                        color = "#173177"
+                    }
+                };
+                var request = new WxApSendTemplateMessageRequest()
+                {
+                    AccessToken = access_token,
+                    Data = JsonConvert.SerializeObject(data),
+                    Template_id = "5UU2scSumCdcLUagvkMEzQXBnFew7ORJljQ0YBNPNkk",
+                    Touser = "oyrsn1oWtGJrrMepQHaRTRao255E",
+                };
+                var response = await client.ExecuteAsync(request);
+
+                return Json(new { Code = 1, Msg = "成功", Data = response });
+            }
+        }
+
+        #endregion
+    }
+
+    public class message
+    {
+        public submessage first { get; set; }
+
+    }
+    public class submessage
+    {
+        public string value { get; set; }
+        public string color { get; set; }
     }
 }

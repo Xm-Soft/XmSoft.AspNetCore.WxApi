@@ -94,6 +94,31 @@
             消息类型
             </summary>
         </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.IWxApiClient.ExecuteAsync``1(XmSoft.AspNetCore.WxApi.IWxApiRequest{``0})">
+            <summary>
+            异步执行
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.IWxApiClient.ExecuteFileAsync``1(XmSoft.AspNetCore.WxApi.IWxApiRequest{``0})">
+            <summary>
+            异步执行 针对文件请求 media_path / body
+            <para>
+            1、把媒体文件上传到微信服务器
+            2、设置客服帐号的头像
+            3、提交语音
+            4、微信翻译
+            5、上传图片
+            6、新增其他类型永久素材
+            7、校验一张图片是否含有违法违规内容
+            </para>
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request">请求对象</param>
+            <returns></returns>
+        </member>
         <member name="P:XmSoft.AspNetCore.WxApi.Model.Card.ActionInfo.card">
             <summary>
             设置扫描二维码领取单张卡券 单张跟多张 二选一
@@ -3240,6 +3265,64 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest">
+            <summary>
+            发送订阅通知 - 公众号
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.#ctor">
+            <summary>
+            发送订阅消息
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.AccessToken">
+            <summary>
+            授权token （必填）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.Touser">
+            <summary>
+            接收者（用户）的 openid
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.Template_Id">
+            <summary>
+            所需下发的订阅模板id
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.Page">
+            <summary>
+            跳转网页时填写
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.Data">
+            <summary>
+            模板内容，格式形如 { "key1": { "value": any }, "key2": { "value": any } }
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.Miniprogram_State">
+            <summary>
+            跳转小程序时填写，格式如{ "appid": "pagepath": { "value": any } }
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.GetParameters">
+            <summary>
+            请求参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.GetRequestUrl">
+            <summary>
+            请求地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.Subscribe.Official.WxApiBizSendSubscribeRequest.IsPost">
+            <summary>
+            IsPost
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.Subscribe.WxApiAddTemplateRequest">
             <summary>
             组合模板并添加至帐号下的个人模板库
@@ -5689,7 +5772,7 @@
         </member>
         <member name="M:XmSoft.AspNetCore.WxApi.WxApiClient.ExecuteFileAsync``1(XmSoft.AspNetCore.WxApi.IWxApiRequest{``0})">
             <summary>
-            异步执行 针对文件请求 media_path
+            异步执行 针对文件请求 media_path / body
             <para>
             1、把媒体文件上传到微信服务器
             2、设置客服帐号的头像
