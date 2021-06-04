@@ -4273,6 +4273,54 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest.#ctor">
+            <summary>
+            登录凭证校验。通过 wx.login() 接口获得临时登录凭证 code 后传到开发者服务器调用此接口完成登录流程
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest.AppId">
+            <summary>
+            小程序 appId
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest.Secret">
+            <summary>
+            小程序 appSecret
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest.Code">
+             <summary>
+            登录时获取的 code
+             </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest.GrantType">
+            <summary>
+            授权类型，此处只需填写 authorization_code
+            </summary>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest.GetRequestUrl">
+            <summary>
+            请求路径
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest.GetParameters">
+            <summary>
+            获取参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XmSoft.AspNetCore.WxApi.Request.WxApiGetAccountAccessTokenRequest.IsPost">
+            <summary>
+            请求方式Post Or Get
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Request.WxApiGetPaidUnionidRequest">
             <summary>
             用户支付完成后，获取该用户的 UnionId，无需用户授权
@@ -5713,6 +5761,36 @@
         <member name="P:XmSoft.AspNetCore.WxApi.Response.User.WxApiUserInfoResponse.qr_scene_str">
             <summary>
             二维码扫码场景描述（开发者自定义）
+            </summary>
+        </member>
+        <member name="T:XmSoft.AspNetCore.WxApi.Response.WxApiGetAccountAccessTokenResponse">
+            <summary>
+            公众号 通过code换取网页授权access_token ( 获取 accesstoken 和 openid)
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.WxApiGetAccountAccessTokenResponse.AccessToken">
+            <summary>
+            网页授权接口调用凭证,注意：此access_token与基础支持的access_token不同
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.WxApiGetAccountAccessTokenResponse.ExpiresIn">
+            <summary>
+            access_token接口调用凭证超时时间，单位（秒）
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.WxApiGetAccountAccessTokenResponse.RefreshToken">
+            <summary>
+            用户刷新access_token
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.WxApiGetAccountAccessTokenResponse.OpenId">
+            <summary>
+            用户唯一标识，请注意，在未关注公众号时，用户访问公众号的网页，也会产生一个用户和公众号唯一的OpenID
+            </summary>
+        </member>
+        <member name="P:XmSoft.AspNetCore.WxApi.Response.WxApiGetAccountAccessTokenResponse.Scope">
+            <summary>
+            用户授权的作用域，使用逗号（,）分隔
             </summary>
         </member>
         <member name="T:XmSoft.AspNetCore.WxApi.Response.WxApiGetPaidUnionidResponse">

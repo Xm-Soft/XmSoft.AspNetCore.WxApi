@@ -59,6 +59,31 @@ namespace XmSoft.AspNetCore.Sample.Controllers
             }
 
         }
+
+        [HttpPost]
+        [Route("AccountAccessToken")]
+        public async Task<JsonResult> AccountAccessToken(string AppId, string Secret, string Code)
+        {
+            using (var client = new WxApi.WxApiClient())
+            {
+                var sw = new Stopwatch();
+                sw.Start();
+                var request = new WxApiGetAccountAccessTokenRequest()
+                {
+
+                    AppId = "wx5599ac7f04801a76",//AppId,// "wx13c069c9a4a9aa48",
+                    Code = "0317CP000NvjPL15k31007JWXw07CP0Y",//Code,//"001hTd1001lt8L1kPW000FX4wG1hTd1W",
+                    Secret = "d6b0301c9f671a4573e103b5b2e4225f",//Secret,// "73cc6fe4cb0dbc22f432e297e4e685da" //oknLJ1aXS1vhkw_wg6UrKXFEGFRg
+                };
+                var s = await client.ExecuteAsync(request);
+                logging.LogInformation(s.ErrCode + "msg: " + s.Errmsg + " " + s.OpenId); //oAKFHxI6SWL-4DZ7Y00_2z2hYWNY
+                var time = sw.ElapsedMilliseconds;
+                sw.Stop();
+                return Json(new { Code = 1, Msg = "成功", Data = s.OpenId });
+            }
+
+        }
+
         /// <summary>
         /// 获取AccessToken
         /// </summary>
@@ -824,7 +849,7 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                         color = "#173177"
                     }
                 };
-                var request = new WxApSendTemplateMessageRequest()
+                var request = new WxApiSendTemplateMessageRequest()
                 {
                     AccessToken = access_token,
                     Data = JsonConvert.SerializeObject(data),
