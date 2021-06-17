@@ -71,9 +71,9 @@ namespace XmSoft.AspNetCore.Sample.Controllers
                 var request = new WxApiGetAccountAccessTokenRequest()
                 {
 
-                    AppId = "wx5599ac7f04801a76",//AppId,// "wx13c069c9a4a9aa48",
-                    Code = "0317CP000NvjPL15k31007JWXw07CP0Y",//Code,//"001hTd1001lt8L1kPW000FX4wG1hTd1W",
-                    Secret = "d6b0301c9f671a4573e103b5b2e4225f",//Secret,// "73cc6fe4cb0dbc22f432e297e4e685da" //oknLJ1aXS1vhkw_wg6UrKXFEGFRg
+                    AppId = "wx97ad8e1b63d454fe",//AppId,// "wx13c069c9a4a9aa48",
+                    Code = "031mvyGa1FtycB0jcQGa1oYlA91mvyGi",//Code,//"001hTd1001lt8L1kPW000FX4wG1hTd1W",
+                    Secret = "b61883ff057d45a271680b58c63b3ad7",//Secret,// "73cc6fe4cb0dbc22f432e297e4e685da" //oknLJ1aXS1vhkw_wg6UrKXFEGFRg
                 };
                 var s = await client.ExecuteAsync(request);
                 logging.LogInformation(s.ErrCode + "msg: " + s.Errmsg + " " + s.OpenId); //oAKFHxI6SWL-4DZ7Y00_2z2hYWNY
@@ -826,35 +826,46 @@ namespace XmSoft.AspNetCore.Sample.Controllers
         {
             using (var client = new WxApi.WxApiClient())
             {
-                var data = new 
+                //var data = new 
+                //{
+                //    first = new 
+                //    {
+                //        value = "恭喜你购买成功！",
+                //        color = "#173177"
+                //    },
+                //    keyword1 = new
+                //    {
+                //        value = "恭喜你购买成功！",
+                //        color = "#173177"
+                //    },
+                //    keyword2 = new
+                //    {
+                //        value = "恭喜你购买成功！",
+                //        color = "#173177"
+                //    },
+                //    remark=new
+                //    {
+                //        value = "备注！",
+                //        color = "#173177"
+                //    }
+                //};
+
+                var data = new
                 {
-                    first = new 
-                    {
-                        value = "恭喜你购买成功！",
-                        color = "#173177"
-                    },
-                    keyword1 = new
-                    {
-                        value = "恭喜你购买成功！",
-                        color = "#173177"
-                    },
-                    keyword2 = new
-                    {
-                        value = "恭喜你购买成功！",
-                        color = "#173177"
-                    },
-                    remark=new
-                    {
-                        value = "备注！",
-                        color = "#173177"
-                    }
+                    first = new { value = "您所需的产品已不足,富生医疗提醒您订货", color = "#173177" },
+                    keyword1 = new { value = "厦门174医院", color = "#173177" },//医院名称
+                    keyword2 = new { value = "12121212", color = "#173177" },             //序列号           
+                    keyword3 = new { value = "服务提醒", color = "#173177" },             //服务类型       
+                    keyword4 = new { value = DateTime.Now.ToString("yyyy-MM-dd"), color = "#173177" },             //服务类型  
+                    remark = new { value = "请及时联系,进行采购,谢谢", color = "#173177" } //备注
                 };
+
                 var request = new WxApiSendTemplateMessageRequest()
                 {
                     AccessToken = access_token,
                     Data = JsonConvert.SerializeObject(data),
-                    Template_id = "5UU2scSumCdcLUagvkMEzQXBnFew7ORJljQ0YBNPNkk",
-                    Touser = "oyrsn1oWtGJrrMepQHaRTRao255E",
+                    Template_id = "9ITB7hwoj4XVksxeBNCoLiT4rWzNtGEMqWsKlK5SAPg",
+                    Touser = "ox0ts54xYbGTfbOqpDdQiVG2fW5E",//"oyrsn1oWtGJrrMepQHaRTRao255E",
                 };
                 var response = await client.ExecuteAsync(request);
 
