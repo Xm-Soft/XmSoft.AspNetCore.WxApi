@@ -214,6 +214,8 @@ namespace XmSoft.AspNetCore.XUnit
                 var result = client.ExecuteAsync(request);
             }
         }
+
+       
     }
 
 }

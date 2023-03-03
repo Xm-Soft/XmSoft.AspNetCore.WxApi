@@ -21,11 +21,7 @@ namespace XmSoft.AspNetCore.WxApi.Request.Express
         /// Token
         /// </summary>
         public string AccessToken { get; set; }
-        /// <summary>
-        /// 订单 ID，需保证全局唯一
-        /// </summary>
 
-        public string Order_id { get; set; }
         /// <summary>
         ///用户 openid
         /// </summary>
@@ -74,7 +70,6 @@ namespace XmSoft.AspNetCore.WxApi.Request.Express
         {
             var parameters = new WxApiDictionary
             {
-                { "order_id", Order_id },
                 { "openid", Openid },
                 { "delivery_id", Delivery_id },
                 {"waybill_id",Waybill_id }

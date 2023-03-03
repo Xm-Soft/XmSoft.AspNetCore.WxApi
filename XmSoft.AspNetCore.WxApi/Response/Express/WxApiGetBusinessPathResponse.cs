@@ -15,23 +15,23 @@ namespace XmSoft.AspNetCore.WxApi.Response.Express
         /// <summary>
         /// 用户openid
         /// </summary>
-        public string openid { get; set; }
+        public string Openid { get; set; }
         /// <summary>
         /// 快递公司 ID
         /// </summary>
-        public string delivery_id { get; set; }
+        public string Delivery_Id { get; set; }
         /// <summary>
         /// 运单 ID
         /// </summary>
-        public string waybill_id { get; set; }
+        public string Waybill_Id { get; set; }
         /// <summary>
         /// 轨迹节点数量
         /// </summary>
-        public int path_item_num { get; set; }
+        public int Path_Item_Num { get; set; }
         /// <summary>
         /// 轨迹节点列表
         /// </summary>
-        public List<PathItemList> path_item_list { get; set; }
+        public List<PathItemList> Path_Item_List { get; set; }
     }
     /// <summary>
     /// 
@@ -41,14 +41,14 @@ namespace XmSoft.AspNetCore.WxApi.Response.Express
         /// <summary>
         /// 轨迹节点 Unix 时间戳
         /// </summary>
-        public int action_time { get; set; }
+        public int Action_Time { get; set; }
         /// <summary>
         /// 轨迹节点类型
         /// </summary>
-        public int action_type { get; set; }
+        public int Action_Type { get; set; }
         /// <summary>
         /// 轨迹节点详情
         /// </summary>
-        public string action_msg { get; set; }
+        public string Action_Msg { get; set; }
     }
 }

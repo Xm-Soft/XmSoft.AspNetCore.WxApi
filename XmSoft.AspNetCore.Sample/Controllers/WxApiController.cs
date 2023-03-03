@@ -20,6 +20,7 @@ using log4net;
 using XmSoft.AspNetCore.WxApi.Request.QRCode;
 using System.Diagnostics;
 using XmSoft.AspNetCore.WxApi.Request.Template.Message;
+using XmSoft.AspNetCore.WxApi.Request.Express;
 
 namespace XmSoft.AspNetCore.Sample.Controllers
 {
@@ -873,6 +874,24 @@ namespace XmSoft.AspNetCore.Sample.Controllers
             }
         }
 
+        #endregion
+
+        #region 物流助手
+        [HttpGet("getpath")]
+        public void GetPath(string access_token)
+        {
+            using (var client = new WxApiClient())
+            {
+                var request = new WxApiGetBusinessPathRequest
+                {
+                    AccessToken = access_token ,//"66_f_98xmJ4taP1f2X0HKwngWUSdL6BAS7_Ut1x_GeFtzU6uLNbo39ey0LPP5EI7g-A_3KCEWU2nDk_Xn8EsumOVeZvvuxf1AxzUFwjVI4yyGDDfiu_sGhRc0RE9DAVVXgABABBD",
+                    Delivery_id = "YTO",
+                    Waybill_id = "YT6952486837199"
+                };
+
+                var result = client.ExecuteAsync(request).Result;
+            }
+        }
         #endregion
     }
 

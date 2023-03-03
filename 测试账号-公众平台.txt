@@ -1,0 +1,5 @@
+appid =  wx346f2583af4c5a8f
+appsecret  = 54421a46b51f40b0956b54a736421ea9
+
+
+{"subscribe":1,"openid":"oyrsn1oWtGJrrMepQHaRTRao255E","nickname":"班车","sex":1,"language":"zh_CN","city":"厦门","province":"福建","country":"中国","headimgurl":"http:\/\/thirdwx.qlogo.cn\/mmopen\/ajNVdqHZLLAp6saYQGuoqibBDMzbPQibiaTxXVJHSwm2DJzEGHD01E4VVNQK15icF64xxuDIicoO2TVKZmIdcWzM1BQ\/132","subscribe_time":1558104216,"remark":"","groupid":0,"tagid_list":[],"subscribe_scene":"ADD_SCENE_QR_CODE","qr_scene":0,"qr_scene_str":""}

@@ -1,0 +1,145 @@
+@Host = http://localhost:56667
+
+
+POST http://localhost:56667/Api/WxApi/Code2Session HTTP/1.1
+Content-Type: application/json
+
+POST http://localhost:56667/Api/WxApi/GetAccessToken HTTP/1.1
+Content-Type: application/json
+
+///访问留存
+POST http://localhost:56667/Api/WxApi/GetDailyRetain?access_token=21_JcU-g08TXJJ_PaigXQorHI8fyJNtYxwRw5pElmf1E2sgTmq0RSz6XWViW0BzJG_5K4WHAQqosKcvdC4xuaaYDhocg4Id7fxCbYANUOpfLLcZ9K0LB-LHMRMK48q9ugqV-hHe-aamqV-BCCaGGETfABAUSH HTTP/1.1
+Content-Type: application/json
+
+POST http://localhost:56667/Api/WxApi/GetMonthlyRetain?access_token=21_JcU-g08TXJJ_PaigXQorHI8fyJNtYxwRw5pElmf1E2sgTmq0RSz6XWViW0BzJG_5K4WHAQqosKcvdC4xuaaYDhocg4Id7fxCbYANUOpfLLcZ9K0LB-LHMRMK48q9ugqV-hHe-aamqV-BCCaGGETfABAUSH HTTP/1.1
+Content-Type: application/json
+
+POST http://localhost:56667/Api/WxApi/GetWeeklyRetain?access_token=21_JcU-g08TXJJ_PaigXQorHI8fyJNtYxwRw5pElmf1E2sgTmq0RSz6XWViW0BzJG_5K4WHAQqosKcvdC4xuaaYDhocg4Id7fxCbYANUOpfLLcZ9K0LB-LHMRMK48q9ugqV-hHe-aamqV-BCCaGGETfABAUSH HTTP/1.1
+Content-Type: application/json
+
+///访问趋势
+
+POST http://localhost:56667/Api/WxApi/GetDailyVisitTrend?access_token=21_JcU-g08TXJJ_PaigXQorHI8fyJNtYxwRw5pElmf1E2sgTmq0RSz6XWViW0BzJG_5K4WHAQqosKcvdC4xuaaYDhocg4Id7fxCbYANUOpfLLcZ9K0LB-LHMRMK48q9ugqV-hHe-aamqV-BCCaGGETfABAUSH HTTP/1.1
+Content-Type: application/json
+
+POST http://localhost:56667/Api/WxApi/GetMonthlyVisitTrend?access_token=21_JcU-g08TXJJ_PaigXQorHI8fyJNtYxwRw5pElmf1E2sgTmq0RSz6XWViW0BzJG_5K4WHAQqosKcvdC4xuaaYDhocg4Id7fxCbYANUOpfLLcZ9K0LB-LHMRMK48q9ugqV-hHe-aamqV-BCCaGGETfABAUSH HTTP/1.1
+Content-Type: application/json
+
+POST http://localhost:56667/Api/WxApi/GetWeeklyVisitTrend?access_token=21_JcU-g08TXJJ_PaigXQorHI8fyJNtYxwRw5pElmf1E2sgTmq0RSz6XWViW0BzJG_5K4WHAQqosKcvdC4xuaaYDhocg4Id7fxCbYANUOpfLLcZ9K0LB-LHMRMK48q9ugqV-hHe-aamqV-BCCaGGETfABAUSH HTTP/1.1
+Content-Type: application/json
+
+///获取小程序新增或活跃用户的画像分布数据。时间范围支持昨天、最近7天、最近30天。其中，新增用户数为时间范围内首次访问小程序的去重用户数，活跃用户数为时间范围内访问过小程序的去重用户数。
+POST http://localhost:56667/Api/WxApi/GetUserPortrait?access_token=21_JcU-g08TXJJ_PaigXQorHI8fyJNtYxwRw5pElmf1E2sgTmq0RSz6XWViW0BzJG_5K4WHAQqosKcvdC4xuaaYDhocg4Id7fxCbYANUOpfLLcZ9K0LB-LHMRMK48q9ugqV-hHe-aamqV-BCCaGGETfABAUSH HTTP/1.1
+Content-Type: application/json
+
+
+//获取用户小程序访问分布数据
+POST http://localhost:56667/Api/WxApi/GetVisitDistribution?access_token=21_JcU-g08TXJJ_PaigXQorHI8fyJNtYxwRw5pElmf1E2sgTmq0RSz6XWViW0BzJG_5K4WHAQqosKcvdC4xuaaYDhocg4Id7fxCbYANUOpfLLcZ9K0LB-LHMRMK48q9ugqV-hHe-aamqV-BCCaGGETfABAUSH HTTP/1.1
+Content-Type: application/json
+//访问页面。目前只提供按 page_visit_pv 排序的 top200。
+POST http://localhost:56667/Api/WxApi/GetVisitPage?access_token=21_DXYJF8806oSqNd_csa-wSBVbyKJoGmXgHjm6-x8DAu05iO_8Y0Q-lW7soS_RYWe_UbNFBsArw6kyxKOksHwEcDGDL1WCFiZ4UM65PXhM6IIp4-2tskC8P96yNVl_tp-wZnMgHfr1jTzI5UF3GIEcAEAPRN HTTP/1.1
+Content-Type: application/json
+//获取用户访问小程序数据概况
+POST http://localhost:56667/Api/WxApi/GetDailySummary?access_token=21_DXYJF8806oSqNd_csa-wSBVbyKJoGmXgHjm6-x8DAu05iO_8Y0Q-lW7soS_RYWe_UbNFBsArw6kyxKOksHwEcDGDL1WCFiZ4UM65PXhM6IIp4-2tskC8P96yNVl_tp-wZnMgHfr1jTzI5UF3GIEcAEAPRN HTTP/1.1
+Content-Type: application/json
+
+//把媒体文件上传到微信服务器。目前仅支持图片。用于发送客服消息或被动回复用户消息。
+POST http://localhost:56667/Api/WxApi/UploadTempMedia
+?access_token=21_5UkMDIr6awv8AS85ob-7yUTQplXu3W_V8b26ME7fTdqe7Y6y5FYDXl1s_rq4Q5iNMxS5Vk3cyM0ek8VY5QVbkXqyvuEzQb8Mohh_wbHX-6ZXp1syHNJLWn3IxJkTGE13JzXWUN6J0V_oVlVANPGjAGAJLC
+Content-Type: application/json
+
+//{"type":"image","media_id":"rsAQfRyfqHl-jYr6cV9oWOP3k-tYsM8FvW8KqIVXDGHdHlx1nQP09Vnq-bEsUZdg","created_at":1557741568}
+
+
+POST http://localhost:56667/Api/WxApi/GetTempMedia?access_token=21_5UkMDIr6awv8AS85ob-7yUTQplXu3W_V8b26ME7fTdqe7Y6y5FYDXl1s_rq4Q5iNMxS5Vk3cyM0ek8VY5QVbkXqyvuEzQb8Mohh_wbHX-6ZXp1syHNJLWn3IxJkTGE13JzXWUN6J0V_oVlVANPGjAGAJLC
+Content-Type: application/json
+
+
+//检查图片
+POST http://localhost:56667/Api/WxApi/ImgSecCheck
+?access_token=21_QEKwDq9sHOn4f6TUSaHpNbQTvsV5NjJ9R7hMy75Uv9gRx4A8QqwpYObh2GKh83J4ByrCJh1IF4TDPm88VbzmdOWipAbWkIsTdetYrQpeimTY5N2RHI4QdeWXbyd6LO0Y055jyx_EgsfrQRFRBNGcABAPBU
+&filePath=E:\开发代码\SVN\ZYLPC\THOA20150824\upload\PubicWxQrcodeImg\EFC624C8-361B-4285-B233-3337199BBA92\860344047281978.png
+Content-Type: application/json
+
+//检查内容
+POST https://localhost:44366/Api/Values/MsgSecCheck
+?access_token=21_QEKwDq9sHOn4f6TUSaHpNbQTvsV5NjJ9R7hMy75Uv9gRx4A8QqwpYObh2GKh83J4ByrCJh1IF4TDPm88VbzmdOWipAbWkIsTdetYrQpeimTY5N2RHI4QdeWXbyd6LO0Y055jyx_EgsfrQRFRBNGcABAPBU
+Content-Type: application/json
+
+//回调创建门店审核结果回调
+POST http://localhost:56667/Api/Notify/AddPoiNotify HTTP/1.1
+Content-Type: application/json
+
+///获取门店列表
+POST http://localhost:56667/Api/WxApi/GetPoiList
+?access_token=21_VFKgYRFptRsLOLVBGeiegoWU7VXw1y8-NU48Wk2h-C7uzoZl00oVb2kYgasbAvt0wE01zuEeSGBggI0BJXeWW43pofdUzc5Pjv5mdPRaUehSyUmMiJSpr1G_u1kylNAH07EqMN0U3Qn3XHOpGMBaAHAPVK
+Content-Type: application/json
+
+
+///获取用户信息
+POST http://localhost:56667/Api/WxApi/GetUserInfo
+?access_token=21_DTtf2asmP6xnsEVHL7MV5QEqBZk-DDgyJ55mT7bpAyi826uUyIsODzYGag2rQ5-ivrok7bRDYAL_3WA7wI8OthJjFC6jzvQxsCw7Zz7DW6iMJj-fy_IKnXS2mIHHWiSNa5wmAYnFxrN2YRJuTUEhAAAHIS
+Content-Type: application/json
+
+
+
+///上传素材
+POST http://localhost:56667/Api/WxApi/UploadMaterial
+?access_token=21_NhmTeV-6ngPu6yA1XtJQ7D-X5hYqB4qJTS9anA5Kz0IBwyuoXLJ3rCq3JRTZPm6mjoE71otcTetZq6HxFhOOK2MUIszA6T0q5jjjvNXw_BJw5nYrGONWeRy8SGTByTUN9LkQRjV_p3J0_f1rJZJcAHAWMW
+Content-Type: application/json
+
+//jPs133oSaBK1DIurK1GdZMko1Ia-fxhtO73YDafw9Kw  视频
+// MtXOCuJep2PrQjbXBFg_uGeD93-Wv6wT5cvJxy9aDOS6MdIVjPD4255TKbga124w 音频
+POST http://localhost:56667/Api/WxApi/GetMaterial
+?access_token=21_5UkMDIr6awv8AS85ob-7yUTQplXu3W_V8b26ME7fTdqe7Y6y5FYDXl1s_rq4Q5iNMxS5Vk3cyM0ek8VY5QVbkXqyvuEzQb8Mohh_wbHX-6ZXp1syHNJLWn3IxJkTGE13JzXWUN6J0V_oVlVANPGjAGAJLC
+&media_id=8Y89JjknIbm1tqtQDpUMeAJWEzZpymQkAc2AjayLBbqfAU4vpOvPMSNdewctz3Vf
+Content-Type: application/json
+
+
+POST {{Host}}/Api/WxApi/GetAccessToken
+Content-Type: application/json
+
+//21_yFzltQXyUZB38BFlJw7c4KCV6zrt4yvP-woFce1L0dlYs1FhHythAl3oHYVaLTbEjoP5FwBw6fLYq7jD-lH_4hSSRqCLfeVoNarWYoo1nqHHaukiZsZYA36uxjhWzvB9hxbiWTtgBm9Oa5AxMYCiADAGSW
+
+
+POST {{Host}}/Api/WxApi/GetUserInfo
+?access_token=21_yFzltQXyUZB38BFlJw7c4KCV6zrt4yvP-woFce1L0dlYs1FhHythAl3oHYVaLTbEjoP5FwBw6fLYq7jD-lH_4hSSRqCLfeVoNarWYoo1nqHHaukiZsZYA36uxjhWzvB9hxbiWTtgBm9Oa5AxMYCiADAGSW
+Content-Type: application/json
+
+POST {{Host}}/Api/WxApi/GetPoiList
+?access_token=21_yFzltQXyUZB38BFlJw7c4KCV6zrt4yvP-woFce1L0dlYs1FhHythAl3oHYVaLTbEjoP5FwBw6fLYq7jD-lH_4hSSRqCLfeVoNarWYoo1nqHHaukiZsZYA36uxjhWzvB9hxbiWTtgBm9Oa5AxMYCiADAGSW
+Content-Type: application/json
+
+///下发小程序和公众号统一的服务消息
+POST {{Host}}/Api/WxApi/SendUniformMessage
+?access_token=21_yFzltQXyUZB38BFlJw7c4KCV6zrt4yvP-woFce1L0dlYs1FhHythAl3oHYVaLTbEjoP5FwBw6fLYq7jD-lH_4hSSRqCLfeVoNarWYoo1nqHHaukiZsZYA36uxjhWzvB9hxbiWTtgBm9Oa5AxMYCiADAGSW
+Content-Type: application/json
+
+//上传媒体文件（图片，视频，音频）
+POST {{Host}}/Api/WxApi/UploadTempMedia
+?access_token=21_xKg8-bPVf_8F7mzO4587HDMgqSI0CvDPRrYfzUkY_y_E6Rdv2EBqWyYgeuReDpTnRcUgGvxAV3YrPxHfBLqI5Ed79JTWg5DmnxG7o2iGdnY8Et6ffpWgc8h2v6wQTNgSf8G_Qn1NKy2ICiS8LGMaAIAOJP
+Content-Type: application/json
+
+//、获取媒体文件 进行下载
+POST {{Host}}/Api/WxApi/GetTempMedia
+?access_token=21_xKg8-bPVf_8F7mzO4587HDMgqSI0CvDPRrYfzUkY_y_E6Rdv2EBqWyYgeuReDpTnRcUgGvxAV3YrPxHfBLqI5Ed79JTWg5DmnxG7o2iGdnY8Et6ffpWgc8h2v6wQTNgSf8G_Qn1NKy2ICiS8LGMaAIAOJP
+Content-Type: application/json
+
+///发送客户消息
+POST {{Host}}/Api/WxApi/SendMessage
+?access_token=21_xhZEnGWmpk_iONUmDK3HRTuXm9gdM6ftRu0f0Gmd4Pg2SAQv5kiUzbzOwP68R_lEYfP6seyG4FKVDUWwCjOjZU60-6s_SNCnDnqwIVHSJ9MCjUexOvWuNF0DMGT86aM9gc7314MGTzLqV2y9BWNiAGAVQH
+Content-Type: application/json
+
+//回调
+POST {{Host}}/Api/Notify/WxApiNotify
+Content-Type: application/json
+
+
+///获取素材列表
+POST {{Host}}/Api/WxApi/GetMaterialList
+?access_token=21_xhZEnGWmpk_iONUmDK3HRTuXm9gdM6ftRu0f0Gmd4Pg2SAQv5kiUzbzOwP68R_lEYfP6seyG4FKVDUWwCjOjZU60-6s_SNCnDnqwIVHSJ9MCjUexOvWuNF0DMGT86aM9gc7314MGTzLqV2y9BWNiAGAVQH
+&type=news
+Content-Type: application/json
+
+POST http://localhost:56667/Api/WxApi/GetAccessToken HTTP/1.1
+Content-Type: application/json

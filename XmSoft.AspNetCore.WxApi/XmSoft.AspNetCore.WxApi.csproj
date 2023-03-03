@@ -6,18 +6,13 @@
     <Authors>XmSoft</Authors>
     <Company>XmSoft</Company>
     <Description>微信公众平台API和小程序服务API</Description>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net45|AnyCPU'">
-		<DocumentationFile>G:\个人文档\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
+		<DocumentationFile></DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
-    <DocumentationFile>G:\个人文档\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
-  </PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-		<DocumentationFile>G:\Work\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
-	</PropertyGroup>
+ 
 
   <!--<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net46|AnyCPU'">
     <DocumentationFile>G:\Work\lxm\开发源码\XmSoft\XmSoft\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi\XmSoft.AspNetCore.WxApi.xml</DocumentationFile>
