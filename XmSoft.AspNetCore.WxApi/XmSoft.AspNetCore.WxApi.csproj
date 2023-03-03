@@ -31,15 +31,15 @@
   </PropertyGroup>-->
 	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-		<PackageReference Include="RestSharp" Version="105.2.3" />
+		<PackageReference Include="RestSharp" Version="106.12.0" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net46'">
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-		<PackageReference Include="RestSharp" Version="106.6.9" />
+		<PackageReference Include="RestSharp" Version="106.12.0" />
 	</ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
         <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-		<PackageReference Include="RestSharp" Version="106.6.9" />
+		<PackageReference Include="RestSharp" Version="106.12.0" />
    </ItemGroup>
 	<ItemGroup Condition="'$(TargetFramework)' == 'net45'">
 	  <Reference Include="System.Web" />
